@@ -1,0 +1,56 @@
+---
+import { site } from "../siteData.js";
+---
+
+<form class="contact-form" action="#" method="post">
+  <!-- Static placeholder form for Cloudflare Pages.
+    Future submission options:
+    1. Formspree
+    2. Basin
+    3. HubSpot Form
+    4. Cloudflare Workers + Email API
+  -->
+  <div class="form-grid">
+    <label>
+      Name
+      <input type="text" name="name" autocomplete="name" required />
+    </label>
+    <label>
+      Company
+      <input type="text" name="company" autocomplete="organization" />
+    </label>
+    <label>
+      Email
+      <input type="email" name="email" autocomplete="email" required />
+    </label>
+    <label>
+      Country
+      <input type="text" name="country" autocomplete="country-name" />
+    </label>
+    <label>
+      Product Interest
+      <select name="product_interest">
+        <option>Tape Measures</option>
+        <option>Custom Tape Measure</option>
+        <option>Utility Knives</option>
+        <option>Screwdriver Sets</option>
+        <option>OEM/ODM Hand Tools</option>
+      </select>
+    </label>
+    <label>
+      Estimated Quantity
+      <input type="text" name="estimated_quantity" placeholder="Example: 3,000 pcs" />
+    </label>
+  </div>
+  <label>
+    Message
+    <textarea name="message" rows="6" placeholder="Tell us your product, logo, packaging, target price, and delivery requirements."></textarea>
+  </label>
+  <label>
+    Upload Drawing or File
+    <input type="file" name="file_placeholder" disabled />
+    <small>File upload is a placeholder until a form service is connected.</small>
+  </label>
+  <button class="button button-primary" type="submit">Submit RFQ</button>
+  <p class="form-note">Prefer direct contact? Email <a href={`mailto:${site.email}`}>{site.email}</a> or message us on <a href={site.whatsappUrl}>WhatsApp</a>.</p>
+</form>

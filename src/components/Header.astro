@@ -1,0 +1,29 @@
+---
+import { navItems, site } from "../siteData.js";
+---
+
+<header class="site-header">
+  <a class="brand" href="/" aria-label="WOOKTOOL home">
+    <img src="/images/logo/wooktool-logo.svg" alt="WOOKTOOL logo" width="154" height="40" />
+  </a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span class="sr-only">Menu</span>
+  </button>
+  <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+    {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+    <a class="nav-quote" href="/contact/">Request a Quote</a>
+  </nav>
+</header>
+
+<script>
+  const navToggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector("#site-nav");
+  navToggle?.addEventListener("click", () => {
+    const expanded = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", String(!expanded));
+    nav?.classList.toggle("is-open", !expanded);
+  });
+</script>

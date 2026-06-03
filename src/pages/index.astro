@@ -1,0 +1,111 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import ProductCard from "../components/ProductCard.astro";
+import CTA from "../components/CTA.astro";
+import { productCategories, sellingPoints, capabilities, qcSteps } from "../siteData.js";
+---
+
+<BaseLayout
+  title="Hand Tools Manufacturer China | WOOKTOOL Custom Tape Measures"
+  description="WOOKTOOL is a China hand tools manufacturer supplying custom tape measures, utility knives, screwdriver sets, and OEM/ODM hand tools for B2B buyers."
+  path="/"
+>
+  <Hero
+    title="Custom Tape Measure & Hand Tool Manufacturer in China"
+    text="WOOKTOOL manufactures tape measures, utility knives, screwdriver sets, and OEM hand tools for importers, wholesalers, distributors, and private-label brands worldwide."
+  />
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Product categories</p>
+          <h2>Hand tool products for B2B sourcing</h2>
+        </div>
+        <p>Start with standard product lines or request a custom solution for your brand, channel, and market.</p>
+      </div>
+      <div class="grid four">
+        {productCategories.map((item) => <ProductCard {...item} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="section-inner grid two">
+      <div>
+        <p class="eyebrow">Why choose WOOKTOOL</p>
+        <h2>Built for importers, wholesalers, and private-label brands</h2>
+        <p>WOOKTOOL focuses on export-oriented hand tool manufacturing with practical customization, consistent quality control, and responsive communication for overseas buyers.</p>
+      </div>
+      <ul class="check-list">
+        {sellingPoints.map((point) => <li>{point}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Custom manufacturing</p>
+          <h2>Customization capabilities for your tool program</h2>
+        </div>
+        <p>From logo and color to blade, tape, packaging, and private-label requirements, our team helps prepare production-ready details.</p>
+      </div>
+      <div class="grid three">
+        {capabilities.map((item) => (
+          <article class="info-card">
+            <h3>{item}</h3>
+            <p>Placeholder details can be expanded after final product specifications, MOQ, and branding requirements are confirmed.</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Featured products</p>
+          <h2>Placeholder product cards ready for replacement</h2>
+        </div>
+        <p>Use these cards for early launch, then replace the placeholder images and text with real SKU photos, sizes, and packaging information.</p>
+      </div>
+      <div class="grid three">
+        {productCategories.slice(0, 3).map((item) => <ProductCard {...item} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark">
+    <div class="section-inner grid two">
+      <div>
+        <p class="eyebrow">Quality control</p>
+        <h2>Inspection points before shipment</h2>
+        <p>Every export order can be checked across materials, production, finished goods, packaging, and pre-shipment readiness.</p>
+      </div>
+      <ul class="check-list">
+        {qcSteps.map((step) => <li>{step}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner grid two">
+      <div>
+        <p class="eyebrow">Factory strength</p>
+        <h2>Stable production support for North American sourcing teams</h2>
+      </div>
+      <div class="grid two">
+        <article class="info-card"><h3>Experienced team</h3><p>Manufacturing support for tape measures and practical hand tool categories.</p></article>
+        <article class="info-card"><h3>Stable supply chain</h3><p>Supplier coordination for shells, blades, tapes, cases, and packaging materials.</p></article>
+        <article class="info-card"><h3>Export service</h3><p>Communication and documentation support for international B2B orders.</p></article>
+        <article class="info-card"><h3>Lead time control</h3><p>Production planning based on product complexity, order volume, and packaging needs.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+</BaseLayout>

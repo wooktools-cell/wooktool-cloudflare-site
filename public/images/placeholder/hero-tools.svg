@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="560" viewBox="0 0 760 560" role="img" aria-labelledby="title desc">
+  <title id="title">WOOKTOOL hand tools placeholder</title>
+  <desc id="desc">Industrial style placeholder showing tape measure, utility knife, and screwdriver set.</desc>
+  <rect width="760" height="560" fill="#eef3f7"/>
+  <rect x="54" y="64" width="652" height="428" rx="16" fill="#ffffff" stroke="#d9e0e8"/>
+  <rect x="96" y="128" width="250" height="190" rx="24" fill="#f28c28"/>
+  <circle cx="221" cy="223" r="58" fill="#0f2742"/>
+  <circle cx="221" cy="223" r="24" fill="#fff"/>
+  <rect x="390" y="142" width="262" height="58" rx="12" fill="#0f2742"/>
+  <rect x="430" y="159" width="196" height="24" rx="6" fill="#fff"/>
+  <rect x="406" y="254" width="50" height="190" rx="12" fill="#183b5f"/>
+  <rect x="484" y="224" width="50" height="220" rx="12" fill="#183b5f"/>
+  <rect x="562" y="266" width="50" height="178" rx="12" fill="#183b5f"/>
+  <rect x="96" y="360" width="250" height="44" rx="8" fill="#17202a"/>
+  <text x="116" y="388" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Product photo placeholder</text>
+</svg>

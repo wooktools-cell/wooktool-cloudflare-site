@@ -1,0 +1,24 @@
+---
+const {
+  eyebrow = "China hand tools manufacturer",
+  title,
+  text,
+  primaryLabel = "Request a Quote",
+  primaryHref = "/contact/",
+  secondaryLabel = "View Products",
+  secondaryHref = "/products/"
+} = Astro.props;
+---
+
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{title}</h1>
+    <p>{text}</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href={primaryHref}>{primaryLabel}</a>
+      <a class="button button-secondary" href={secondaryHref}>{secondaryLabel}</a>
+    </div>
+  </div>
+  <img src="/images/placeholder/hero-tools.svg" alt="Placeholder image showing WOOKTOOL hand tool product range" width="760" height="560" />
+</section>

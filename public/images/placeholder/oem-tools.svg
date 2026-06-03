@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-labelledby="title">
+  <title id="title">OEM hand tools placeholder</title>
+  <rect width="640" height="420" fill="#eef3f7"/>
+  <rect x="80" y="70" width="480" height="290" rx="16" fill="#fff" stroke="#d9e0e8"/>
+  <rect x="150" y="130" width="160" height="106" rx="16" fill="#0f2742"/>
+  <rect x="340" y="130" width="120" height="106" rx="16" fill="#f28c28"/>
+  <path d="M170 278h290" stroke="#17202a" stroke-width="18" stroke-linecap="round"/>
+  <path d="M190 278h70M306 278h70M416 278h40" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+  <text x="180" y="336" fill="#17202a" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">OEM/ODM Tools</text>
+</svg>

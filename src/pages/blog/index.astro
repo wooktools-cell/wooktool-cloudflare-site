@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { blogPosts } from "../../siteData.js";
+---
+
+<BaseLayout
+  title="Hand Tool Sourcing Blog | WOOKTOOL"
+  description="Read WOOKTOOL B2B sourcing guides about tape measure manufacturers, custom tape measures, accuracy classes, and hand tool buying."
+  path="/blog/"
+>
+  <section class="page-intro"><div><p class="eyebrow">Blog</p><h1>Hand Tool Sourcing Blog</h1><p>SEO-ready articles for importers, wholesalers, distributors, and private-label buyers sourcing tape measures and hand tools from China.</p></div></section>
+  <section class="section">
+    <div class="section-inner grid three">
+      {blogPosts.map((post) => (
+        <article class="blog-card">
+          <a href={post.href}>
+            <p class="eyebrow">{post.date}</p>
+            <h2>{post.title}</h2>
+            <p>{post.description}</p>
+            <span>Read article</span>
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+  <CTA title="Need help choosing the right hand tool supplier?" />
+</BaseLayout>

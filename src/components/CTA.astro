@@ -1,0 +1,21 @@
+---
+const {
+  title = "Looking for a Reliable Hand Tool Manufacturer?",
+  text = "Send your RFQ and our sales team will help review product type, quantity, packaging, and custom requirements.",
+  primaryLabel = "Send Your RFQ",
+  primaryHref = "/contact/",
+  secondaryLabel = "View Products",
+  secondaryHref = "/products/"
+} = Astro.props;
+---
+
+<section class="cta-band">
+  <div>
+    <h2>{title}</h2>
+    <p>{text}</p>
+  </div>
+  <div class="cta-actions">
+    <a class="button button-light" href={primaryHref}>{primaryLabel}</a>
+    <a class="button button-outline-light" href={secondaryHref}>{secondaryLabel}</a>
+  </div>
+</section>

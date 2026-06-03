@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProductCard from "../components/ProductCard.astro";
+import CTA from "../components/CTA.astro";
+import { productCategories } from "../siteData.js";
+---
+
+<BaseLayout
+  title="Custom Hand Tools Supplier | WOOKTOOL Products"
+  description="Explore WOOKTOOL product categories including tape measures, utility knives, screwdriver sets, and OEM/ODM custom hand tools."
+  path="/products/"
+>
+  <section class="page-intro"><div><p class="eyebrow">Products</p><h1>Custom Hand Tools Supplier</h1><p>Browse WOOKTOOL product categories and request custom details for your sourcing project, retail program, or private-label hand tool line.</p></div></section>
+  <section class="section">
+    <div class="section-inner">
+      <div class="grid four">
+        {productCategories.map((item) => <ProductCard {...item} />)}
+      </div>
+    </div>
+  </section>
+  <CTA title="Ready to discuss product details?" primaryLabel="Request Product Quote" />
+</BaseLayout>

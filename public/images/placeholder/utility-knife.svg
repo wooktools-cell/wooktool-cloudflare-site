@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-labelledby="title">
+  <title id="title">Utility knife product placeholder</title>
+  <rect width="640" height="420" fill="#eef3f7"/>
+  <rect x="80" y="70" width="480" height="290" rx="16" fill="#fff" stroke="#d9e0e8"/>
+  <rect x="134" y="150" width="360" height="70" rx="14" fill="#0f2742"/>
+  <rect x="420" y="162" width="88" height="46" rx="6" fill="#cfd8e2"/>
+  <rect x="168" y="168" width="140" height="18" rx="4" fill="#f28c28"/>
+  <text x="176" y="336" fill="#17202a" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Utility Knives</text>
+</svg>

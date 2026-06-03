@@ -1,0 +1,14 @@
+---
+const { title, text, href, image, alt } = Astro.props;
+---
+
+<article class="product-card">
+  <a href={href} aria-label={`View ${title}`}>
+    <img src={image} alt={alt} loading="lazy" width="640" height="420" />
+    <div>
+      <h2>{title}</h2>
+      <p>{text}</p>
+      <span>Learn more</span>
+    </div>
+  </a>
+</article>

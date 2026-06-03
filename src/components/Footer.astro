@@ -1,0 +1,27 @@
+---
+import { navItems, site } from "../siteData.js";
+---
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <img src="/images/logo/wooktool-logo-light.svg" alt="WOOKTOOL logo" width="154" height="40" />
+      <p>{site.description}</p>
+    </div>
+    <div>
+      <h2>Navigation</h2>
+      <ul>
+        {navItems.map((item) => <li><a href={item.href}>{item.label}</a></li>)}
+      </ul>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <p>Email: <a href={`mailto:${site.email}`}>{site.email}</a></p>
+      <p>WhatsApp: <a href={site.whatsappUrl}>{site.whatsapp}</a></p>
+      <p><a href={site.alibabaUrl}>Alibaba Store</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 WOOKTOOL. Built for Cloudflare Pages static deployment.</p>
+  </div>
+</footer>
