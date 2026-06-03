@@ -6,7 +6,9 @@ const {
   primaryLabel = "Request a Quote",
   primaryHref = "/contact/",
   secondaryLabel = "View Products",
-  secondaryHref = "/products/"
+  secondaryHref = "/products/",
+  image = "/images/products/custom-tape-measure.png",
+  imageAlt = "WOOKTOOL custom tape measure product for importers and private-label buyers"
 } = Astro.props;
 ---
 
@@ -20,5 +22,12 @@ const {
       <a class="button button-secondary" href={secondaryHref}>{secondaryLabel}</a>
     </div>
   </div>
-  <img src="/images/placeholder/hero-tools.svg" alt="Placeholder image showing WOOKTOOL hand tool product range" width="760" height="560" />
+  <div class="hero-product">
+    <img src={image} alt={imageAlt} width="760" height="560" />
+    <div class="hero-badges" aria-label="WOOKTOOL manufacturing strengths">
+      <span>OEM Logo</span>
+      <span>Packaging</span>
+      <span>Quality Check</span>
+    </div>
+  </div>
 </section>

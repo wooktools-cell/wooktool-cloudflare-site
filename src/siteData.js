@@ -25,29 +25,29 @@ export const productCategories = [
   {
     title: "Tape Measures",
     href: "/tape-measures/",
-    image: "/images/placeholder/tape-measure.svg",
-    alt: "Placeholder image for WOOKTOOL tape measures",
+    image: "/images/products/category-tape-measures.png",
+    alt: "WOOKTOOL steel tape measure product category for B2B buyers",
     text: "Steel tape measures with OEM logo, shell color, tape length, hook, and packaging options."
   },
   {
     title: "Utility Knives",
     href: "/utility-knives/",
-    image: "/images/placeholder/utility-knife.svg",
-    alt: "Placeholder image for WOOKTOOL utility knives",
+    image: "/images/products/category-utility-knives.png",
+    alt: "WOOKTOOL utility knife product category for importers and distributors",
     text: "Box cutters and utility knives for retail, industrial, hardware, and private-label programs."
   },
   {
     title: "Screwdriver Sets",
     href: "/screwdriver-sets/",
-    image: "/images/placeholder/screwdriver-set.svg",
-    alt: "Placeholder image for WOOKTOOL screwdriver sets",
+    image: "/images/products/category-screwdriver-sets.png",
+    alt: "WOOKTOOL screwdriver set product category with packaging customization",
     text: "Screwdriver sets with handle, bit, case, blister card, and gift-box customization."
   },
   {
     title: "OEM/ODM Hand Tools",
     href: "/oem-odm/",
-    image: "/images/placeholder/oem-tools.svg",
-    alt: "Placeholder image for OEM hand tool development",
+    image: "/images/factory/oem-tool-solutions.png",
+    alt: "WOOKTOOL OEM and ODM hand tool solutions for private-label programs",
     text: "Custom hand tool development from concept, sampling, packaging, production, QC, and shipment."
   }
 ];
@@ -77,6 +77,15 @@ export const qcSteps = [
   "Finished product inspection",
   "Packaging inspection",
   "Pre-shipment inspection"
+];
+
+export const rfqChecklist = [
+  "Product type and target market",
+  "Estimated order quantity",
+  "Logo and brand color requirements",
+  "Packaging style and barcode needs",
+  "Target price or reference product",
+  "Required delivery schedule"
 ];
 
 export const blogPosts = [

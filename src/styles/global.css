@@ -177,9 +177,42 @@ main {
   font-size: 1.1rem;
 }
 
-.hero img {
+.hero-product {
+  position: relative;
+  display: grid;
+  align-items: center;
+  min-height: 460px;
+  padding: 2.2rem;
+  background:
+    linear-gradient(135deg, rgba(242, 140, 40, 0.14), rgba(15, 39, 66, 0.08)),
+    #fff;
+  border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+}
+
+.hero-product img {
+  width: 100%;
+  max-height: 390px;
+  object-fit: contain;
+  filter: drop-shadow(0 22px 28px rgba(15, 39, 66, 0.18));
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+}
+
+.hero-badges span {
+  padding: 0.44rem 0.64rem;
+  color: var(--navy);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 800;
 }
 
 .eyebrow {
@@ -350,6 +383,23 @@ main {
   position: relative;
   padding-left: 1.7rem;
   color: #3e4d5f;
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.4rem;
+  list-style: none;
+}
+
+.feature-list li {
+  padding: 1rem;
+  color: #314256;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-weight: 700;
 }
 
 .check-list li::before {
@@ -563,8 +613,13 @@ small,
     min-height: auto;
   }
 
+  .hero-product {
+    min-height: 360px;
+  }
+
   .grid,
-  .grid.four {
+  .grid.four,
+  .feature-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -586,6 +641,7 @@ small,
   .grid,
   .grid.two,
   .grid.four,
+  .feature-list,
   .form-grid,
   .footer-grid {
     grid-template-columns: 1fr;

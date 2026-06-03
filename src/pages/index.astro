@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import ProductCard from "../components/ProductCard.astro";
 import CTA from "../components/CTA.astro";
-import { productCategories, sellingPoints, capabilities, qcSteps } from "../siteData.js";
+import { productCategories, sellingPoints, capabilities, qcSteps, rfqChecklist } from "../siteData.js";
 ---
 
 <BaseLayout
@@ -15,6 +15,21 @@ import { productCategories, sellingPoints, capabilities, qcSteps } from "../site
     title="Custom Tape Measure & Hand Tool Manufacturer in China"
     text="WOOKTOOL manufactures tape measures, utility knives, screwdriver sets, and OEM hand tools for importers, wholesalers, distributors, and private-label brands worldwide."
   />
+
+  <section class="section soft">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Fast RFQ preparation</p>
+          <h2>What buyers can send for a faster quotation</h2>
+        </div>
+        <p>Clear product and packaging details help us return practical options for sampling, MOQ, lead time, and target pricing.</p>
+      </div>
+      <ul class="feature-list">
+        {rfqChecklist.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+  </section>
 
   <section class="section">
     <div class="section-inner">

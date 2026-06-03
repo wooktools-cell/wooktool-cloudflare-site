@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ContactForm from "../components/ContactForm.astro";
-import { site } from "../siteData.js";
+import { rfqChecklist, site } from "../siteData.js";
 ---
 
 <BaseLayout
@@ -29,6 +29,20 @@ import { site } from "../siteData.js";
         <h2>RFQ form</h2>
         <ContactForm />
       </div>
+    </div>
+  </section>
+  <section class="section soft">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Before sending RFQ</p>
+          <h2>Information that helps us quote faster</h2>
+        </div>
+        <p>If you already have a reference product, packaging photo, drawing, or target price, include it in your message. It helps reduce back-and-forth communication.</p>
+      </div>
+      <ul class="feature-list">
+        {rfqChecklist.map((item) => <li>{item}</li>)}
+      </ul>
     </div>
   </section>
 </BaseLayout>

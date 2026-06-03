@@ -1,4 +1,6 @@
 User-agent: *
-Allow: /
+Disallow: /
 
+# Pre-launch setting: keep the temporary pages.dev preview out of search results.
+# Change to "Allow: /" when the final custom domain is ready.
 Sitemap: https://your-domain.com/sitemap.xml
