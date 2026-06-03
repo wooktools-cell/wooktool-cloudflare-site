@@ -3,5 +3,6 @@
   <rect width="308" height="80" rx="8" fill="#ffffff"/>
   <path d="M28 20h17l8 32 9-32h14l9 32 8-32h17l-17 40H77l-8-27-8 27H45L28 20Z" fill="#0f2742"/>
   <text x="122" y="48" fill="#0f2742" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800">WOOKTOOL</text>
-  <rect x="122" y="55" width="128" height="4" fill="#f28c28"/>
+  <rect x="122" y="55" width="128" height="4" fill="#d85f12"/>
 </svg>
+
