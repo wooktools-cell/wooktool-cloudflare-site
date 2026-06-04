@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import ProductListing from "../components/ProductListing.astro";
+import { categoryCatalogs } from "../siteData.js";
 ---
 
 <BaseLayout
@@ -31,5 +33,12 @@ import CTA from "../components/CTA.astro";
       <article class="info-card"><h3>Buyer markets</h3><p>Suitable for hardware retail, industrial supply, DIY tool kits, promotional tools, and distributor programs.</p></article>
     </div>
   </section>
+  <ProductListing
+    products={categoryCatalogs["Utility Knives"]}
+    eyebrow="Utility knife products"
+    title="5 utility knife product detail entrances"
+    description="Reserved product windows for utility knife and box cutter buyers. Each entry opens a detail page for blade format, handle options, safety checks, and packaging."
+    showPagination={false}
+  />
   <CTA title="Need custom utility knives for your market?" primaryLabel="Send Utility Knife RFQ" />
 </BaseLayout>

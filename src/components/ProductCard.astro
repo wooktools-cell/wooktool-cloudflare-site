@@ -3,21 +3,21 @@ const { title, text, href, image, alt, subcategories = [] } = Astro.props;
 ---
 
 <article class="product-card">
-  <a href={href} aria-label={`View ${title}`}>
+  <a class="product-card-main" href={href} aria-label={`View ${title}`}>
     <div class="product-card-media">
       <img src={image} alt={alt} loading="lazy" width="1000" height="1000" />
     </div>
     <div>
       <h2>{title}</h2>
       <p>{text}</p>
-      {subcategories.length > 0 && (
-        <ul class="category-submenu">
-          {subcategories.map((item) => (
-            <li><span>{item.label}</span></li>
-          ))}
-        </ul>
-      )}
       <span>View capability</span>
     </div>
   </a>
+  {subcategories.length > 0 && (
+    <nav class="category-submenu" aria-label={`${title} product detail links`}>
+      {subcategories.map((item) => (
+        <a href={item.href}>{item.label}</a>
+      ))}
+    </nav>
+  )}
 </article>

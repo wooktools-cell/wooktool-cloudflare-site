@@ -29,9 +29,11 @@ export const productCategories = [
     alt: "WOOKTOOL steel tape measure product category for B2B buyers",
     text: "Steel tape measures with OEM logo, shell color, tape length, hook, and packaging options.",
     subcategories: [
-      { label: "Steel Tape Measures", href: "/products/page/1/" },
-      { label: "Custom Tape Measures", href: "/custom-tape-measure/" },
-      { label: "Heavy Duty Tape Measures", href: "/products/heavy-duty-tape-measure/" }
+      { label: "Heavy Duty Tape Measures", href: "/products/heavy-duty-tape-measure/" },
+      { label: "Compact Tape Measures", href: "/products/compact-tape-measure/" },
+      { label: "Custom Logo Tape Measures", href: "/products/custom-logo-tape-measure/" },
+      { label: "Wide Blade Tape Measures", href: "/products/wide-blade-tape-measure/" },
+      { label: "Pocket Tape Measures", href: "/products/pocket-tape-measure/" }
     ]
   },
   {
@@ -43,7 +45,9 @@ export const productCategories = [
     subcategories: [
       { label: "Heavy Duty Utility Knives", href: "/products/heavy-duty-utility-knife/" },
       { label: "Folding Utility Knives", href: "/products/folding-utility-knife/" },
-      { label: "Replacement Blades", href: "/products/page/2/" }
+      { label: "Snap-Off Utility Knives", href: "/products/snap-off-utility-knife/" },
+      { label: "Safety Utility Knives", href: "/products/safety-utility-knife/" },
+      { label: "Replacement Blades", href: "/products/replacement-utility-knife-blades/" }
     ]
   },
   {
@@ -55,7 +59,9 @@ export const productCategories = [
     subcategories: [
       { label: "Precision Screwdriver Sets", href: "/products/precision-screwdriver-set/" },
       { label: "Household Screwdriver Sets", href: "/products/household-screwdriver-set/" },
-      { label: "Bit Sets", href: "/products/multi-bit-screwdriver-set/" }
+      { label: "Multi-Bit Screwdriver Sets", href: "/products/multi-bit-screwdriver-set/" },
+      { label: "Ratchet Screwdriver Sets", href: "/products/ratchet-screwdriver-set/" },
+      { label: "Insulated Screwdriver Sets", href: "/products/insulated-screwdriver-set/" }
     ]
   },
   {
@@ -272,6 +278,126 @@ export const catalogProducts = [
       "Assembly and completeness inspection",
       "Pre-shipment quality report placeholder"
     ]
+  },
+  {
+    slug: "wide-blade-tape-measure",
+    title: "Wide Blade Tape Measure",
+    category: "Tape Measures",
+    image: "/images/products/custom-tape-measure-1000.png",
+    summary: "Placeholder product page for wide blade tape measures for construction, contractor, and hardware retail programs.",
+    specs: {
+      Length: "5m, 7.5m, 8m, 10m optional",
+      Blade: "Wide steel blade placeholder",
+      Case: "Rubber-coated or ABS case placeholder",
+      Packaging: "Blister card, color box, display box",
+      Customization: "Logo, shell color, blade print, hook type"
+    },
+    quality: [
+      "Blade standout and rewind review",
+      "Hook riveting inspection",
+      "Case impact and assembly check",
+      "Retail packaging verification"
+    ]
+  },
+  {
+    slug: "pocket-tape-measure",
+    title: "Pocket Tape Measure",
+    category: "Tape Measures",
+    image: "/images/products/custom-tape-measure-1000.png",
+    summary: "Placeholder product page for pocket tape measures for promotional, DIY, and compact retail tool lines.",
+    specs: {
+      Length: "1m, 2m, 3m optional",
+      Case: "Mini ABS case placeholder",
+      Blade: "Steel or fiberglass tape placeholder",
+      Packaging: "OPP bag, hang card, small color box",
+      Customization: "Logo print, case color, barcode label"
+    },
+    quality: [
+      "Compact rewind function check",
+      "Printed scale readability review",
+      "Logo position inspection",
+      "Carton quantity and packing check"
+    ]
+  },
+  {
+    slug: "safety-utility-knife",
+    title: "Safety Utility Knife",
+    category: "Utility Knives",
+    image: "/images/products/utility-knife-1000.png",
+    summary: "Placeholder product page for safety utility knives with protected blade and controlled cutting functions.",
+    specs: {
+      Blade: "Protected or retractable blade placeholder",
+      Handle: "Plastic or metal safety handle placeholder",
+      Mechanism: "Auto-retract or guarded blade option",
+      Packaging: "Blister card, color box, instruction insert",
+      Customization: "Safety color, logo, warning label, barcode"
+    },
+    quality: [
+      "Blade retraction function test",
+      "Guard and handle assembly inspection",
+      "Safety warning label check",
+      "Packing and carton review"
+    ]
+  },
+  {
+    slug: "replacement-utility-knife-blades",
+    title: "Replacement Utility Knife Blades",
+    category: "Utility Knives",
+    image: "/images/products/utility-knife-1000.png",
+    summary: "Placeholder product page for replacement blade packs for snap-off, trapezoid, and heavy-duty utility knife programs.",
+    specs: {
+      Blade: "9mm, 18mm, 25mm, or trapezoid blade placeholder",
+      Material: "Carbon steel or SK steel placeholder",
+      Pack: "Tube, dispenser, blister card, or color box",
+      Quantity: "5pcs, 10pcs, 50pcs, 100pcs optional",
+      Customization: "Brand label, pack color, barcode, carton mark"
+    },
+    quality: [
+      "Blade dimension and count check",
+      "Sharpness and edge finish review",
+      "Anti-rust packing inspection",
+      "Retail label and barcode verification"
+    ]
+  },
+  {
+    slug: "ratchet-screwdriver-set",
+    title: "Ratchet Screwdriver Set",
+    category: "Screwdriver Sets",
+    image: "/images/products/screwdriver-set-1000.png",
+    summary: "Placeholder product page for ratchet screwdriver sets with bit selection, case layout, and retail packaging options.",
+    specs: {
+      Bits: "Common bit selection placeholder",
+      Handle: "Ratchet handle placeholder",
+      Case: "Storage case or blister card placeholder",
+      Packaging: "Color box, gift box, display card",
+      Customization: "Logo, bit layout, case color, insert card"
+    },
+    quality: [
+      "Ratchet function and direction switch test",
+      "Bit fit and hardness review",
+      "Case layout and completeness check",
+      "Packaging artwork verification"
+    ]
+  },
+  {
+    slug: "insulated-screwdriver-set",
+    title: "Insulated Screwdriver Set",
+    category: "Screwdriver Sets",
+    image: "/images/products/screwdriver-set-1000.png",
+    summary: "Placeholder product page for insulated screwdriver sets for electrical, hardware, and professional tool markets.",
+    specs: {
+      Pieces: "2pcs, 6pcs, 8pcs, or custom set placeholder",
+      Handle: "Insulated handle placeholder",
+      Shaft: "Insulated shaft and tip placeholder",
+      Packaging: "Blister card, pouch, color box",
+      Customization: "Handle color, logo, safety label, barcode"
+    },
+    quality: [
+      "Insulation appearance inspection",
+      "Tip size and finish review",
+      "Handle bonding check",
+      "Safety label and packing verification"
+    ]
   }
 ];
 
@@ -279,6 +405,12 @@ export const catalogPages = [
   { page: 1, href: "/products/page/1/", products: catalogProducts.slice(0, 5) },
   { page: 2, href: "/products/page/2/", products: catalogProducts.slice(5, 10) }
 ];
+
+export const categoryCatalogs = {
+  "Tape Measures": catalogProducts.filter((product) => product.category === "Tape Measures").slice(0, 5),
+  "Utility Knives": catalogProducts.filter((product) => product.category === "Utility Knives").slice(0, 5),
+  "Screwdriver Sets": catalogProducts.filter((product) => product.category === "Screwdriver Sets").slice(0, 5)
+};
 
 export const sellingPoints = [
   "Factory-direct manufacturing",

@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import ProductListing from "../components/ProductListing.astro";
+import { categoryCatalogs } from "../siteData.js";
 ---
 
 <BaseLayout
@@ -24,5 +26,12 @@ import CTA from "../components/CTA.astro";
       <img class="product-square-image" src="/images/products/screwdriver-set-1000.png" alt="WOOKTOOL OEM screwdriver set supplier product image" width="1000" height="1000" />
     </div>
   </section>
+  <ProductListing
+    products={categoryCatalogs["Screwdriver Sets"]}
+    eyebrow="Screwdriver set products"
+    title="5 screwdriver set product detail entrances"
+    description="Reserved product windows for screwdriver set buyers. Each entry opens a detail page for set configuration, materials, packaging, and quality-control placeholders."
+    showPagination={false}
+  />
   <CTA title="Planning a screwdriver set program?" primaryLabel="Request Screwdriver Set Quote" />
 </BaseLayout>

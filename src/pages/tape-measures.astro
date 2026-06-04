@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import ProductListing from "../components/ProductListing.astro";
+import { categoryCatalogs } from "../siteData.js";
 ---
 
 <BaseLayout
@@ -37,6 +39,13 @@ import CTA from "../components/CTA.astro";
       </table>
     </div>
   </section>
+  <ProductListing
+    products={categoryCatalogs["Tape Measures"]}
+    eyebrow="Tape measure products"
+    title="5 tape measure product detail entrances"
+    description="Reserved product windows for tape measure buyers. Each entry opens a detail page for specifications, quality notes, packaging, and future real product photos."
+    showPagination={false}
+  />
   <section class="section">
     <div class="section-inner grid three">
       <article class="info-card"><h3>MOQ discussion</h3><p>MOQ depends on tape length, shell color, printing method, packaging style, and whether existing molds can be used.</p></article>
