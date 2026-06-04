@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="720" viewBox="0 0 1000 720" role="img" aria-labelledby="title">
+  <title id="title">Quality control inspection photo placeholder</title>
+  <rect width="1000" height="720" fill="#ffffff"/>
+  <rect x="130" y="140" width="740" height="420" fill="#f2f4f6" stroke="#c6ced6" stroke-width="4"/>
+  <rect x="205" y="220" width="290" height="220" fill="#ffffff" stroke="#b7c0c9" stroke-width="4"/>
+  <path d="M585 245l58 58 132-142" fill="none" stroke="#236b52" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M250 490h500" stroke="#d85f12" stroke-width="12"/>
+  <text x="150" y="625" fill="#1d252f" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800">Quality Inspection</text>
+</svg>

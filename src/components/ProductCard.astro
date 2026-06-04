@@ -1,5 +1,5 @@
 ---
-const { title, text, href, image, alt } = Astro.props;
+const { title, text, href, image, alt, subcategories = [] } = Astro.props;
 ---
 
 <article class="product-card">
@@ -10,6 +10,13 @@ const { title, text, href, image, alt } = Astro.props;
     <div>
       <h2>{title}</h2>
       <p>{text}</p>
+      {subcategories.length > 0 && (
+        <ul class="category-submenu">
+          {subcategories.map((item) => (
+            <li><span>{item.label}</span></li>
+          ))}
+        </ul>
+      )}
       <span>View capability</span>
     </div>
   </a>

@@ -1,0 +1,23 @@
+---
+import CatalogProductCard from "./CatalogProductCard.astro";
+const { products, currentPage } = Astro.props;
+---
+
+<section class="section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Product catalog</p>
+        <h2>Product display page {currentPage}</h2>
+      </div>
+      <p>Each product window links to a detail page with editable specification and quality-control sections. Images and parameters are placeholders for later replacement.</p>
+    </div>
+    <div class="catalog-grid">
+      {products.map((product) => <CatalogProductCard product={product} />)}
+    </div>
+    <nav class="pagination" aria-label="Product catalog pages">
+      <a class={currentPage === 1 ? "is-active" : ""} href="/products/page/1/">Page 1</a>
+      <a class={currentPage === 2 ? "is-active" : ""} href="/products/page/2/">Page 2</a>
+    </nav>
+  </div>
+</section>

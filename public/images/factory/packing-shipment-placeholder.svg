@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="720" viewBox="0 0 1000 720" role="img" aria-labelledby="title">
+  <title id="title">Packing and shipment photo placeholder</title>
+  <rect width="1000" height="720" fill="#ffffff"/>
+  <g fill="#e7ebef" stroke="#c6ced6" stroke-width="4">
+    <rect x="150" y="260" width="180" height="150"/>
+    <rect x="370" y="210" width="220" height="200"/>
+    <rect x="630" y="280" width="200" height="130"/>
+  </g>
+  <path d="M150 260l90 70 90-70M370 210l110 90 110-90M630 280l100 64 100-64" fill="none" stroke="#b7c0c9" stroke-width="4"/>
+  <path d="M160 500h680" stroke="#323b45" stroke-width="24" stroke-linecap="round"/>
+  <path d="M190 535h620" stroke="#d85f12" stroke-width="12" stroke-linecap="round"/>
+  <text x="150" y="625" fill="#1d252f" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800">Packing and Shipment</text>
+</svg>

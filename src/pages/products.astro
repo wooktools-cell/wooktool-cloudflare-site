@@ -1,8 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProductCard from "../components/ProductCard.astro";
+import ProductListing from "../components/ProductListing.astro";
 import CTA from "../components/CTA.astro";
-import { productCategories } from "../siteData.js";
+import { catalogPages, productCategories } from "../siteData.js";
 ---
 
 <BaseLayout
@@ -13,10 +14,18 @@ import { productCategories } from "../siteData.js";
   <section class="page-intro"><div><p class="eyebrow">Products</p><h1>Custom Hand Tools Supplier</h1><p>Browse WOOKTOOL product categories and request custom details for your sourcing project, retail program, or private-label hand tool line.</p></div></section>
   <section class="section">
     <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Category menu</p>
+          <h2>Product categories and second-level entries</h2>
+        </div>
+        <p>Each category card includes second-level menu placeholders. These can later point to refined category pages, filtered product lists, or dedicated landing pages.</p>
+      </div>
       <div class="grid four">
         {productCategories.map((item) => <ProductCard {...item} />)}
       </div>
     </div>
   </section>
+  <ProductListing products={catalogPages[0].products} currentPage={1} />
   <CTA title="Ready to discuss product details?" primaryLabel="Request Product Quote" />
 </BaseLayout>

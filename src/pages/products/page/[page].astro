@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import ProductListing from "../../../components/ProductListing.astro";
+import CTA from "../../../components/CTA.astro";
+import { catalogPages } from "../../../siteData.js";
+
+export function getStaticPaths() {
+  return catalogPages.map((item) => ({
+    params: { page: String(item.page) },
+    props: { item }
+  }));
+}
+
+const { item } = Astro.props;
+---
+
+<BaseLayout
+  title={`WOOKTOOL Product Catalog Page ${item.page} | Hand Tool Products`}
+  description={`Browse WOOKTOOL product display page ${item.page}, including editable product windows for tape measures, utility knives, screwdriver sets, and OEM hand tools.`}
+  path={`/products/page/${item.page}/`}
+>
+  <section class="page-intro">
+    <div>
+      <p class="eyebrow">Catalog page {item.page}</p>
+      <h1>WOOKTOOL Product Display Page {item.page}</h1>
+      <p>This page is a product framework for future editing. Each product card can be updated with real photos, specifications, quality details, MOQ, packaging, and inquiry notes.</p>
+    </div>
+  </section>
+  <ProductListing products={item.products} currentPage={item.page} />
+  <CTA title="Need a quote for one of these products?" primaryLabel="Send Product RFQ" />
+</BaseLayout>

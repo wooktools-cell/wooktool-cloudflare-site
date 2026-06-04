@@ -1,0 +1,68 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { catalogProducts } from "../../siteData.js";
+
+export function getStaticPaths() {
+  return catalogProducts.map((product) => ({
+    params: { slug: product.slug },
+    props: { product }
+  }));
+}
+
+const { product } = Astro.props;
+---
+
+<BaseLayout
+  title={`${product.title} | WOOKTOOL Product Details`}
+  description={`${product.title} placeholder product detail page with editable specifications, quality checks, packaging, customization, and RFQ information.`}
+  path={`/products/${product.slug}/`}
+>
+  <section class="page-intro">
+    <div>
+      <p class="eyebrow">{product.category}</p>
+      <h1>{product.title}</h1>
+      <p>{product.summary}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner product-detail-layout">
+      <img class="product-square-image" src={product.image} alt={`${product.title} product placeholder on pure white background`} width="1000" height="1000" />
+      <div>
+        <p class="eyebrow">Editable product details</p>
+        <h2>Specifications</h2>
+        <table class="spec-table">
+          <tbody>
+            {Object.entries(product.specs).map(([label, value]) => (
+              <tr><th>{label}</th><td>{value}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="section-inner grid two">
+      <div>
+        <p class="eyebrow">Quality control</p>
+        <h2>Quality points for this product</h2>
+        <p>These quality-control items are placeholders. After real product confirmation, replace them with inspection standards, tolerances, photos, and test records.</p>
+      </div>
+      <ul class="check-list">
+        {product.quality.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner grid three">
+      <article class="info-card"><h3>Customization</h3><p>Logo, color, packaging, barcode, carton mark, and private-label details can be edited for this product.</p></article>
+      <article class="info-card"><h3>Packaging</h3><p>Use this block for blister card, color box, display box, pouch, or kit packaging information.</p></article>
+      <article class="info-card"><h3>RFQ notes</h3><p>Add MOQ, sample time, lead time, target price, and buyer market notes when final product data is ready.</p></article>
+    </div>
+  </section>
+
+  <CTA title={`Request a quote for ${product.title}`} primaryLabel="Send Product RFQ" />
+</BaseLayout>
