@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">OEM ODM hand tools industrial category visual</title>
+  <desc id="desc">Industrial dark category visual for OEM and ODM hand tool manufacturing.</desc>
+  <rect width="640" height="420" fill="#161d25"/>
+  <path d="M0 0h640v420H0z" fill="url(#grid)"/>
+  <path d="M52 72h536v276H52z" fill="#202a33" stroke="#45515d" stroke-width="2"/>
+  <path d="M74 96h492" stroke="#d85f12" stroke-width="4"/>
+  <path d="M92 318h456" stroke="#45515d" stroke-width="2"/>
+  <g fill="none" stroke="#d7dde3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M142 224l110-110 34 34-110 110-42 10 8-44z" stroke-width="10"/>
+    <path d="M344 130h128l30 24-30 24H344z" stroke-width="10"/>
+    <path d="M360 250h136" stroke-width="18"/>
+    <path d="M378 222l100 56" stroke-width="10"/>
+  </g>
+  <g fill="#d85f12">
+    <rect x="112" y="104" width="76" height="10"/>
+    <rect x="360" y="104" width="116" height="10"/>
+    <circle cx="510" cy="109" r="5"/>
+  </g>
+  <text x="112" y="302" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800">OEM / ODM</text>
+  <text x="112" y="336" fill="#b9c3cc" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Custom tooling, packaging, production and QC</text>
+  <defs>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0L0 28" stroke="#ffffff" stroke-opacity=".045" stroke-width="1"/>
+    </pattern>
+  </defs>
+</svg>

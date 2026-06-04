@@ -25,28 +25,28 @@ export const productCategories = [
   {
     title: "Tape Measures",
     href: "/tape-measures/",
-    image: "/images/products/category-tape-measures.png",
+    image: "/images/products/custom-tape-measure.png",
     alt: "WOOKTOOL steel tape measure product category for B2B buyers",
     text: "Steel tape measures with OEM logo, shell color, tape length, hook, and packaging options."
   },
   {
     title: "Utility Knives",
     href: "/utility-knives/",
-    image: "/images/products/category-utility-knives.png",
+    image: "/images/products/utility-knife.png",
     alt: "WOOKTOOL utility knife product category for importers and distributors",
     text: "Box cutters and utility knives for retail, industrial, hardware, and private-label programs."
   },
   {
     title: "Screwdriver Sets",
     href: "/screwdriver-sets/",
-    image: "/images/products/category-screwdriver-sets.png",
+    image: "/images/products/screwdriver-set.png",
     alt: "WOOKTOOL screwdriver set product category with packaging customization",
     text: "Screwdriver sets with handle, bit, case, blister card, and gift-box customization."
   },
   {
     title: "OEM/ODM Hand Tools",
     href: "/oem-odm/",
-    image: "/images/factory/oem-tool-solutions.png",
+    image: "/images/products/oem-odm-industrial.svg",
     alt: "WOOKTOOL OEM and ODM hand tool solutions for private-label programs",
     text: "Custom hand tool development from concept, sampling, packaging, production, QC, and shipment."
   }
