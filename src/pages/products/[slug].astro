@@ -15,7 +15,7 @@ const { product } = Astro.props;
 
 <BaseLayout
   title={`${product.title} | WOOKTOOL Product Details`}
-  description={`${product.title} placeholder product detail page with editable specifications, quality checks, packaging, customization, and RFQ information.`}
+  description={product.summary}
   path={`/products/${product.slug}/`}
 >
   <section class="page-intro">
@@ -28,9 +28,9 @@ const { product } = Astro.props;
 
   <section class="section">
     <div class="section-inner product-detail-layout">
-      <img class="product-square-image" src={product.image} alt={`${product.title} product placeholder on pure white background`} width="1000" height="1000" />
+      <img class="product-square-image" src={product.image} alt={`${product.title} main product image on white background`} width="1000" height="1000" />
       <div>
-        <p class="eyebrow">Editable product details</p>
+        <p class="eyebrow">Product details</p>
         <h2>Specifications</h2>
         <table class="spec-table">
           <tbody>
@@ -43,12 +43,31 @@ const { product } = Astro.props;
     </div>
   </section>
 
-  <section class="section soft">
+  {product.detailImages?.length > 0 && (
+    <section class="section soft">
+      <div class="section-inner">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Product photos</p>
+            <h2>Main details and packaging views</h2>
+          </div>
+          <p>Each product page keeps one main image and two detail images to balance clear product presentation with fast page loading.</p>
+        </div>
+        <div class="product-gallery">
+          {product.detailImages.map((image, index) => (
+            <img src={image} alt={`${product.title} detail image ${index + 1}`} width="1200" height="900" loading="lazy" />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="section">
     <div class="section-inner grid two">
       <div>
         <p class="eyebrow">Quality control</p>
         <h2>Quality points for this product</h2>
-        <p>These quality-control items are placeholders. After real product confirmation, replace them with inspection standards, tolerances, photos, and test records.</p>
+        <p>WOOKTOOL supports material checks, assembly inspection, functional testing, appearance review, and packaging inspection before shipment.</p>
       </div>
       <ul class="check-list">
         {product.quality.map((item) => <li>{item}</li>)}
@@ -56,11 +75,14 @@ const { product } = Astro.props;
     </div>
   </section>
 
-  <section class="section">
+  <section class="section soft">
     <div class="section-inner grid three">
-      <article class="info-card"><h3>Customization</h3><p>Logo, color, packaging, barcode, carton mark, and private-label details can be edited for this product.</p></article>
-      <article class="info-card"><h3>Packaging</h3><p>Use this block for blister card, color box, display box, pouch, or kit packaging information.</p></article>
-      <article class="info-card"><h3>RFQ notes</h3><p>Add MOQ, sample time, lead time, target price, and buyer market notes when final product data is ready.</p></article>
+      <article class="info-card">
+        <h3>Key selling points</h3>
+        <ul class="mini-list">{product.sellingPoints.map((item) => <li>{item}</li>)}</ul>
+      </article>
+      <article class="info-card"><h3>Customization</h3><p>{product.specs.Customization || "Logo, color, packaging, barcode, carton mark, and private-label details can be customized for this product."}</p></article>
+      <article class="info-card"><h3>Target buyers</h3><p>{product.targetBuyers}</p></article>
     </div>
   </section>
 

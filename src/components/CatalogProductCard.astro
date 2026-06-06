@@ -4,7 +4,7 @@ const { product } = Astro.props;
 
 <article class="catalog-card">
   <a href={`/products/${product.slug}/`} aria-label={`View ${product.title}`}>
-    <img src={product.image} alt={`${product.title} product placeholder on white background`} width="1000" height="1000" loading="lazy" />
+    <img src={product.image} alt={`${product.title} product image on white background`} width="1000" height="1000" loading="lazy" />
     <div>
       <p class="catalog-category">{product.category}</p>
       <h2>{product.title}</h2>
