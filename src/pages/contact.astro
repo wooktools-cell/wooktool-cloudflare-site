@@ -15,7 +15,7 @@ import { rfqChecklist, site } from "../siteData.js";
       <div class="contact-panel">
         <h2>Contact information</h2>
         <p><strong>Company:</strong> WOOKTOOL</p>
-        <p><strong>Website:</strong> your-domain.com</p>
+        <p><strong>Website:</strong> {site.domain.replace("https://", "")}</p>
         <p><strong>Email:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></p>
         <p><strong>WhatsApp:</strong> <a href={site.whatsappUrl}>{site.whatsapp}</a></p>
         <p><strong>Alibaba:</strong> <a href={site.alibabaUrl}>Visit placeholder store link</a></p>

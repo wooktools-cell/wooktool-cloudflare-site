@@ -608,6 +608,10 @@ main {
   gap: 1rem;
 }
 
+.catalog-grid.compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .catalog-card {
   overflow: hidden;
   background: #fff;
@@ -922,6 +926,7 @@ small,
   .grid.four,
   .feature-list,
   .catalog-grid,
+  .catalog-grid.compact,
   .factory-gallery,
   .product-gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -985,6 +990,7 @@ small,
   .grid.four,
   .feature-list,
   .catalog-grid,
+  .catalog-grid.compact,
   .factory-gallery,
   .product-gallery,
   .form-grid,

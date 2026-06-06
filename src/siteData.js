@@ -1,6 +1,6 @@
 export const site = {
   name: "WOOKTOOL",
-  domain: "https://your-domain.com",
+  domain: "https://wooktool-cloudflare-site.pages.dev",
   email: "sales@your-domain.com",
   whatsapp: "+86-000-0000-0000",
   whatsappUrl: "https://wa.me/8600000000000",

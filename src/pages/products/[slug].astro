@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
-import { catalogProducts } from "../../siteData.js";
+import CatalogProductCard from "../../components/CatalogProductCard.astro";
+import { catalogProducts, site } from "../../siteData.js";
 
 export function getStaticPaths() {
   return catalogProducts.map((product) => ({
@@ -11,12 +12,86 @@ export function getStaticPaths() {
 }
 
 const { product } = Astro.props;
+const relatedProducts = catalogProducts
+  .filter((item) => item.category === product.category && item.slug !== product.slug)
+  .slice(0, 3);
+const relatedHeadingByCategory = {
+  "Tape Measures": "More tape measure options",
+  "Utility Knives": "More utility knife options",
+  "Screwdriver Sets": "More screwdriver set options"
+};
+const productUrl = new URL(`/products/${product.slug}/`, site.domain).toString();
+const categoryPathByName = {
+  "Tape Measures": "/tape-measures/",
+  "Utility Knives": "/utility-knives/",
+  "Screwdriver Sets": "/screwdriver-sets/"
+};
+const categoryPath = categoryPathByName[product.category] || "/products/";
+const imageUrls = [product.image, ...(product.detailImages || [])].map((image) =>
+  new URL(image, site.domain).toString()
+);
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: product.title,
+  description: product.summary,
+  image: imageUrls,
+  url: productUrl,
+  brand: {
+    "@type": "Brand",
+    name: site.name
+  },
+  manufacturer: {
+    "@type": "Organization",
+    name: site.name,
+    url: site.domain
+  },
+  category: product.category,
+  additionalProperty: Object.entries(product.specs).map(([name, value]) => ({
+    "@type": "PropertyValue",
+    name,
+    value
+  }))
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: new URL("/", site.domain).toString()
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Products",
+      item: new URL("/products/", site.domain).toString()
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: product.category,
+      item: new URL(categoryPath, site.domain).toString()
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      name: product.title,
+      item: productUrl
+    }
+  ]
+};
 ---
 
 <BaseLayout
-  title={`${product.title} | WOOKTOOL Product Details`}
+  title={`${product.title} Supplier | Custom ${product.category} | WOOKTOOL`}
   description={product.summary}
   path={`/products/${product.slug}/`}
+  image={product.image}
+  type="product"
+  schema={[productSchema, breadcrumbSchema]}
 >
   <section class="page-intro">
     <div>
@@ -55,7 +130,7 @@ const { product } = Astro.props;
         </div>
         <div class="product-gallery">
           {product.detailImages.map((image, index) => (
-            <img src={image} alt={`${product.title} detail image ${index + 1}`} width="1200" height="900" loading="lazy" />
+            <img src={image} alt={`${product.title} detail view ${index + 1} for OEM buyers`} width="1200" height="900" loading="lazy" />
           ))}
         </div>
       </div>
@@ -85,6 +160,23 @@ const { product } = Astro.props;
       <article class="info-card"><h3>Target buyers</h3><p>{product.targetBuyers}</p></article>
     </div>
   </section>
+
+  {relatedProducts.length > 0 && (
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Related products</p>
+            <h2>{relatedHeadingByCategory[product.category] || `More ${product.category.toLowerCase()} options`}</h2>
+          </div>
+          <p>Compare nearby product entries for different specifications, packaging options, and custom branding directions.</p>
+        </div>
+        <div class="catalog-grid compact">
+          {relatedProducts.map((item) => <CatalogProductCard product={item} />)}
+        </div>
+      </div>
+    </section>
+  )}
 
   <CTA title={`Request a quote for ${product.title}`} primaryLabel="Send Product RFQ" />
 </BaseLayout>

@@ -3,13 +3,33 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import ProductCard from "../components/ProductCard.astro";
 import CTA from "../components/CTA.astro";
-import { productCategories, sellingPoints, capabilities, qcSteps, rfqChecklist } from "../siteData.js";
+import { productCategories, sellingPoints, capabilities, qcSteps, rfqChecklist, site } from "../siteData.js";
+
+const homeSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: site.name,
+    url: site.domain,
+    logo: new URL("/images/logo/wooktool-logo-new.webp", site.domain).toString(),
+    description: site.description
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: site.name,
+    url: site.domain,
+    description: site.description
+  }
+];
 ---
 
 <BaseLayout
   title="Hand Tools Manufacturer China | WOOKTOOL Custom Tape Measures"
   description="WOOKTOOL is a China hand tools manufacturer supplying custom tape measures, utility knives, screwdriver sets, and OEM/ODM hand tools for B2B buyers."
   path="/"
+  image="/images/hero/wooktool-hero-desktop.webp"
+  schema={homeSchema}
 >
   <Hero
     eyebrow="Factory-direct OEM/ODM hand tools"

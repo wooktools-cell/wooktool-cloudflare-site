@@ -15,9 +15,10 @@ const { item } = Astro.props;
 ---
 
 <BaseLayout
-  title={`WOOKTOOL Product Catalog Page ${item.page} | Hand Tool Products`}
-  description={`Browse WOOKTOOL product display page ${item.page}, including editable product windows for tape measures, utility knives, screwdriver sets, and OEM hand tools.`}
+  title={`WOOKTOOL Hand Tool Catalog Page ${item.page} | OEM Products`}
+  description={`Browse WOOKTOOL catalog page ${item.page} with tape measures, utility knives, screwdriver sets, OEM branding, packaging options, and QC notes.`}
   path={`/products/page/${item.page}/`}
+  image={item.products[0]?.image}
 >
   <section class="page-intro">
     <div>

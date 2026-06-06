@@ -4,7 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
-const { title, description, path = "/" } = Astro.props;
+const { title, description, path = "/", image, type, schema } = Astro.props;
 ---
 
 <!doctype html>
@@ -12,7 +12,7 @@ const { title, description, path = "/" } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <SEO title={title} description={description} path={path} />
+    <SEO title={title} description={description} path={path} image={image} type={type} schema={schema} />
   </head>
   <body>
     <Header />
