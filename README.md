@@ -122,9 +122,9 @@ src/siteData.js
 Update these fields:
 
 ```js
-email: "sales@your-domain.com"
-whatsapp: "+86-000-0000-0000"
-whatsappUrl: "https://wa.me/8600000000000"
+email: "winson@wooktools.com"
+whatsapp: "+86 150 9060 8676"
+whatsappUrl: "https://wa.me/8615090608676"
 alibabaUrl: "https://your-alibaba-store-link.com"
 ```
 

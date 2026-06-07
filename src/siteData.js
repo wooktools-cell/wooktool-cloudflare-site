@@ -3,9 +3,9 @@ import { cmsBlogPosts } from "./blogData.js";
 export const site = {
   name: "WOOKTOOL",
   domain: "https://www.wooktools.com",
-  email: "sales@your-domain.com",
-  whatsapp: "+86-000-0000-0000",
-  whatsappUrl: "https://wa.me/8600000000000",
+  email: "winson@wooktools.com",
+  whatsapp: "+86 150 9060 8676",
+  whatsappUrl: "https://wa.me/8615090608676",
   alibabaUrl: "https://your-alibaba-store-link.com",
   description:
     "WOOKTOOL is a custom tape measure and hand tool manufacturer in China serving importers, wholesalers, distributors, and private-label brands."
