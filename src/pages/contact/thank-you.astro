@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { site } from "../../siteData.js";
+---
+
+<BaseLayout
+  title="RFQ Submitted | WOOKTOOL"
+  description="Thank you for sending your WOOKTOOL hand tool RFQ. Our team will review your request and reply by email."
+  path="/contact/thank-you/"
+>
+  <section class="page-intro">
+    <div>
+      <p class="eyebrow">RFQ submitted</p>
+      <h1>Thank you for your inquiry</h1>
+      <p>Your RFQ has been sent to the WOOKTOOL sales team. We will review your product interest, quantity, customization needs, packaging, and delivery requirements.</p>
+      <div class="button-row">
+        <a class="button button-primary" href="/products/">View Products</a>
+        <a class="button button-secondary" href={site.whatsappUrl}>Contact on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

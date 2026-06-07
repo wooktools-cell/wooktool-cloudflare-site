@@ -15,6 +15,7 @@ const staticPaths = [
   "/quality-control/",
   "/factory/",
   "/contact/",
+  "/contact/thank-you/",
   "/blog/",
   "/blog/choose-tape-measure-manufacturer/",
   "/blog/custom-tape-measures-guide/",

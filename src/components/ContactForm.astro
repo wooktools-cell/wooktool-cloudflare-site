@@ -2,14 +2,17 @@
 import { site } from "../siteData.js";
 ---
 
-<form class="contact-form" action="#" method="post">
-  <!-- Static placeholder form for Cloudflare Pages.
-    Future submission options:
-    1. Formspree
-    2. Basin
-    3. HubSpot Form
-    4. Cloudflare Workers + Email API
-  -->
+<form
+  class="contact-form"
+  action={`https://formsubmit.co/${site.email}`}
+  method="post"
+  enctype="multipart/form-data"
+>
+  <input type="hidden" name="_subject" value="New WOOKTOOL RFQ from website" />
+  <input type="hidden" name="_template" value="table" />
+  <input type="hidden" name="_next" value={`${site.domain}/contact/thank-you/`} />
+  <input type="hidden" name="_captcha" value="false" />
+  <input class="form-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" />
   <div class="form-grid">
     <label>
       Name
@@ -48,9 +51,9 @@ import { site } from "../siteData.js";
   </label>
   <label>
     Upload Drawing or File
-    <input type="file" name="file_placeholder" disabled />
-    <small>File upload is a placeholder until a form service is connected.</small>
+    <input type="file" name="attachment" accept=".pdf,.jpg,.jpeg,.png,.webp" />
+    <small>Optional. Please keep files under 10MB. You can also email drawings directly to {site.email}.</small>
   </label>
   <button class="button button-primary" type="submit">Submit RFQ</button>
-  <p class="form-note">Prefer direct contact? Email <a href={`mailto:${site.email}`}>{site.email}</a> or message us on <a href={site.whatsappUrl}>WhatsApp</a>.</p>
+  <p class="form-note">Your RFQ will be sent to <a href={`mailto:${site.email}`}>{site.email}</a>. Prefer direct contact? Message us on <a href={site.whatsappUrl}>WhatsApp</a>.</p>
 </form>
