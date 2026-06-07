@@ -1,0 +1,117 @@
+backend:
+  name: github
+  repo: wooktools-cell/wooktool-cloudflare-site
+  branch: main
+  base_url: https://wooktool-cloudflare-site.pages.dev
+  auth_endpoint: auth
+  auth_scope: public_repo
+  use_graphql: true
+
+site_url: https://wooktool-cloudflare-site.pages.dev
+display_url: https://wooktool-cloudflare-site.pages.dev
+logo_url: /images/logo/wooktool-logo-new.webp
+locale: en
+local_backend: true
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: products
+    label: Products
+    label_singular: Product
+    folder: src/cms/products
+    create: true
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}} - {{category}}"
+    fields:
+      - { label: Display Order, name: order, widget: number, value_type: int, min: 1, default: 100 }
+      - { label: URL Slug, name: slug, widget: string, hint: "Use lowercase English words separated by hyphens." }
+      - { label: Product Name, name: title, widget: string }
+      - label: Category
+        name: category
+        widget: select
+        options:
+          - Tape Measures
+          - Utility Knives
+          - Screwdriver Sets
+      - { label: Main Image, name: image, widget: image, hint: "Recommended: 1000 x 1000 px, white background." }
+      - label: Detail Images
+        name: detailImages
+        widget: list
+        min: 0
+        max: 2
+        field: { label: Detail Image, name: image, widget: image, hint: "Recommended: 1200 x 900 px." }
+      - { label: Short Summary, name: summary, widget: text }
+      - label: Selling Points
+        name: sellingPoints
+        widget: list
+        field: { label: Selling Point, name: point, widget: string }
+      - label: Specifications
+        name: specs
+        widget: list
+        summary: "{{fields.label}}: {{fields.value}}"
+        fields:
+          - { label: Label, name: label, widget: string }
+          - { label: Value, name: value, widget: text }
+      - label: Quality Notes
+        name: quality
+        widget: list
+        field: { label: Quality Note, name: note, widget: string }
+      - { label: Target Buyers, name: targetBuyers, widget: text, default: "Importers, distributors, wholesalers, and private-label brands" }
+
+  - name: factory
+    label: Factory Page
+    files:
+      - label: Factory Gallery
+        name: gallery
+        file: src/cms/factory/gallery.json
+        fields:
+          - label: Gallery Items
+            name: items
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Image Alt Text, name: alt, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+
+  - name: blog
+    label: Blog Posts
+    label_singular: Blog Post
+    folder: src/cms/blog
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: URL Slug, name: slug, widget: string }
+      - { label: Meta Description, name: description, widget: text }
+      - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: Cover Image, name: image, widget: image, required: false }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: pages
+    label: SEO Pages
+    label_singular: SEO Page
+    folder: src/cms/pages
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: URL Slug, name: slug, widget: string }
+      - { label: Eyebrow, name: eyebrow, widget: string, required: false }
+      - { label: Meta Description, name: description, widget: text }
+      - { label: Main Image, name: image, widget: image, required: false }
+      - { label: Body, name: body, widget: markdown }

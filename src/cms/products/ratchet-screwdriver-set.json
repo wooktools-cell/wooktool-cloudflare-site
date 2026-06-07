@@ -1,0 +1,50 @@
+{
+  "order": 14,
+  "slug": "ratchet-screwdriver-set",
+  "title": "Ratchet Screwdriver Set",
+  "category": "Screwdriver Sets",
+  "image": "/images/products/catalog/ratchet-screwdriver-set-main.webp",
+  "detailImages": [
+    "/images/products/catalog/ratchet-screwdriver-set-detail-1.webp",
+    "/images/products/catalog/ratchet-screwdriver-set-detail-2.webp"
+  ],
+  "summary": "Ratchet screwdriver set with adjustable length, reversible dual-end structure, chrome vanadium steel material, and custom handle color or packaging options for wholesalers and private-label brands.",
+  "sellingPoints": [
+    "Multi-bit stubby screwdriver",
+    "Adjustable length",
+    "Reversible dual-end design"
+  ],
+  "specs": [
+    {
+      "label": "Sizes",
+      "value": "100mm, 125mm, 150mm, 200mm, 250mm, 300mm"
+    },
+    {
+      "label": "Material",
+      "value": "Chrome vanadium steel"
+    },
+    {
+      "label": "Customization",
+      "value": "Handle color accepted"
+    },
+    {
+      "label": "Packaging",
+      "value": "Custom color boxes accepted"
+    },
+    {
+      "label": "MOQ",
+      "value": "Flexible MOQ, to be confirmed by order details"
+    },
+    {
+      "label": "Lead time",
+      "value": "Custom logo samples ready in about 3 days. Bulk lead time can be negotiated based on order quantity and packaging requirements."
+    }
+  ],
+  "quality": [
+    "Raw material inspection before manufacturing",
+    "Assembly process and function testing",
+    "Appearance, packaging, and quantity check before shipment",
+    "Support for buyer-specific quality-control requirements"
+  ],
+  "targetBuyers": "Importers, distributors, wholesalers, and private-label brands"
+}

@@ -1,0 +1,50 @@
+{
+  "order": 4,
+  "slug": "wide-blade-tape-measure",
+  "title": "Wide Blade Tape Measure",
+  "category": "Tape Measures",
+  "image": "/images/products/catalog/wide-blade-tape-measure-main.webp",
+  "detailImages": [
+    "/images/products/catalog/wide-blade-tape-measure-detail-1.webp",
+    "/images/products/catalog/wide-blade-tape-measure-detail-2.webp"
+  ],
+  "summary": "Wide blade tape measure with ergonomic case, 0.14 mm thick steel blade, stable extension performance, and customizable logo, color, packaging, and specifications for construction and hardware buyers.",
+  "sellingPoints": [
+    "Ergonomic case design",
+    "Wide tape with 0.14 mm thickness",
+    "Stable extension up to 2.8 m"
+  ],
+  "specs": [
+    {
+      "label": "Length",
+      "value": "3m/10ft, 5m/16ft, 7.5m/25ft, 10m/33ft"
+    },
+    {
+      "label": "Material",
+      "value": "High-carbon steel tape, ABS shell, nylon lanyard, stainless steel hook, belt clip"
+    },
+    {
+      "label": "Customization",
+      "value": "Custom logo sticker and Pantone color accepted"
+    },
+    {
+      "label": "Packaging",
+      "value": "OPP bag, color box, carton"
+    },
+    {
+      "label": "MOQ",
+      "value": "Flexible MOQ, to be confirmed by order details"
+    },
+    {
+      "label": "Lead time",
+      "value": "Custom logo samples ready in about 3 days. Bulk lead time can be negotiated based on order quantity and packaging requirements."
+    }
+  ],
+  "quality": [
+    "Raw material inspection before manufacturing",
+    "Assembly process and function testing",
+    "Appearance, packaging, and quantity check before shipment",
+    "Support for buyer-specific quality-control requirements"
+  ],
+  "targetBuyers": "Importers, distributors, wholesalers, and private-label brands"
+}

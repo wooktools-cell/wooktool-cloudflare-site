@@ -1,0 +1,50 @@
+{
+  "order": 10,
+  "slug": "replacement-utility-knife-blades",
+  "title": "Replacement Utility Knife Blades",
+  "category": "Utility Knives",
+  "image": "/images/products/catalog/replacement-utility-knife-blades-main.webp",
+  "detailImages": [
+    "/images/products/catalog/replacement-utility-knife-blades-detail-1.webp",
+    "/images/products/catalog/replacement-utility-knife-blades-detail-2.webp"
+  ],
+  "summary": "Replacement utility knife blades in 9 mm and 18 mm sizes, available in high-carbon steel, SK5, SK4, or SK2 materials, with customizable blade color, packaging, and barcode options.",
+  "sellingPoints": [
+    "9 mm and 18 mm blade options",
+    "High-carbon steel, SK5, SK4, or SK2 available",
+    "Silver and black blade color options"
+  ],
+  "specs": [
+    {
+      "label": "Blade",
+      "value": "18mm, 9mm"
+    },
+    {
+      "label": "Material",
+      "value": "High-carbon steel, SK5, SK4, SK2"
+    },
+    {
+      "label": "Customization",
+      "value": "Silver or black blade color, custom packaging options"
+    },
+    {
+      "label": "Packaging",
+      "value": "Custom blade pack and carton options"
+    },
+    {
+      "label": "MOQ",
+      "value": "Flexible MOQ, to be confirmed by order details"
+    },
+    {
+      "label": "Lead time",
+      "value": "Custom logo samples ready in about 3 days. Bulk lead time can be negotiated based on order quantity and packaging requirements."
+    }
+  ],
+  "quality": [
+    "Raw material inspection before manufacturing",
+    "Assembly process and function testing",
+    "Appearance, packaging, and quantity check before shipment",
+    "Support for buyer-specific quality-control requirements"
+  ],
+  "targetBuyers": "Importers, distributors, wholesalers, and private-label brands"
+}

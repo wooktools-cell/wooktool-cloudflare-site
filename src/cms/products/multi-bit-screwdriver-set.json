@@ -1,0 +1,50 @@
+{
+  "order": 13,
+  "slug": "multi-bit-screwdriver-set",
+  "title": "Multi-Bit Screwdriver Set",
+  "category": "Screwdriver Sets",
+  "image": "/images/products/catalog/multi-bit-screwdriver-set-main.webp",
+  "detailImages": [
+    "/images/products/catalog/multi-bit-screwdriver-set-detail-1.webp",
+    "/images/products/catalog/multi-bit-screwdriver-set-detail-2.webp"
+  ],
+  "summary": "Multi-bit screwdriver set with 12-in-1 ratchet design, switchable Phillips bits, portable tool kit format, chrome vanadium steel construction, and custom color box options for B2B buyers.",
+  "sellingPoints": [
+    "12-in-1 ratchet screwdriver set",
+    "Switchable multi-bit design",
+    "Portable tool kit for home and DIY repairs"
+  ],
+  "specs": [
+    {
+      "label": "Head style",
+      "value": "Phillips 12 type"
+    },
+    {
+      "label": "Material",
+      "value": "Chrome vanadium steel"
+    },
+    {
+      "label": "Customization",
+      "value": "Handle color accepted"
+    },
+    {
+      "label": "Packaging",
+      "value": "Custom color boxes accepted"
+    },
+    {
+      "label": "MOQ",
+      "value": "Flexible MOQ, to be confirmed by order details"
+    },
+    {
+      "label": "Lead time",
+      "value": "Custom logo samples ready in about 3 days. Bulk lead time can be negotiated based on order quantity and packaging requirements."
+    }
+  ],
+  "quality": [
+    "Raw material inspection before manufacturing",
+    "Assembly process and function testing",
+    "Appearance, packaging, and quantity check before shipment",
+    "Support for buyer-specific quality-control requirements"
+  ],
+  "targetBuyers": "Importers, distributors, wholesalers, and private-label brands"
+}

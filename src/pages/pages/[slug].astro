@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+export async function getStaticPaths() {
+  const pageModules = import.meta.glob("../../cms/pages/*.md", { eager: true });
+  return Object.entries(pageModules).map(([path, page]) => {
+    const slug = page.frontmatter.slug || path.split("/").pop().replace(/\.md$/, "");
+    return {
+      params: { slug },
+      props: { page }
+    };
+  });
+}
+
+const { page } = Astro.props;
+const { Content } = page;
+const slug = page.frontmatter.slug || Astro.params.slug;
+---
+
+<BaseLayout
+  title={page.frontmatter.title}
+  description={page.frontmatter.description}
+  path={`/pages/${slug}/`}
+  image={page.frontmatter.image}
+>
+  <section class="page-intro">
+    <div>
+      <p class="eyebrow">{page.frontmatter.eyebrow || "WOOKTOOL"}</p>
+      <h1>{page.frontmatter.title}</h1>
+      <p>{page.frontmatter.description}</p>
+    </div>
+  </section>
+  <article class="article">
+    <Content />
+  </article>
+  <CTA />
+</BaseLayout>

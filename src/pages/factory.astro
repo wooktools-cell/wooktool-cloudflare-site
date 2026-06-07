@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import factoryGallery from "../cms/factory/gallery.json";
 ---
 
 <BaseLayout
@@ -34,26 +35,13 @@ import CTA from "../components/CTA.astro";
         <p>These image blocks are placeholders for future real factory photos. They are designed to show production capability, quality control, packing, and shipment readiness for overseas buyers.</p>
       </div>
       <div class="factory-gallery">
-        <article>
-          <img src="/images/factory/factory-exterior-placeholder.svg" alt="Factory exterior image placeholder for WOOKTOOL manufacturing site" width="1000" height="720" />
-          <h3>Factory exterior</h3>
-          <p>Use this position for workshop exterior, office entrance, or factory sign photos.</p>
-        </article>
-        <article>
-          <img src="/images/factory/production-line-placeholder.svg" alt="Production line image placeholder for hand tool manufacturing" width="1000" height="720" />
-          <h3>Production line</h3>
-          <p>Use this position for tape measure assembly, utility knife production, or screwdriver packing lines.</p>
-        </article>
-        <article>
-          <img src="/images/factory/qc-inspection-placeholder.svg" alt="Quality control inspection image placeholder for hand tools" width="1000" height="720" />
-          <h3>Quality inspection</h3>
-          <p>Use this position for material checks, function tests, finished product checks, or inspection reports.</p>
-        </article>
-        <article>
-          <img src="/images/factory/packing-shipment-placeholder.svg" alt="Packing and shipment image placeholder for export hand tool orders" width="1000" height="720" />
-          <h3>Packing and shipment</h3>
-          <p>Use this position for cartons, pallets, warehouse, loading, and export shipment photos.</p>
-        </article>
+        {factoryGallery.items.map((item) => (
+          <article>
+            <img src={item.image} alt={item.alt} width="1000" height="720" />
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </article>
+        ))}
       </div>
     </div>
   </section>

@@ -1,3 +1,5 @@
+import { cmsBlogPosts } from "./blogData.js";
+
 export const site = {
   name: "WOOKTOOL",
   domain: "https://wooktool-cloudflare-site.pages.dev",
@@ -116,7 +118,7 @@ export const rfqChecklist = [
   "Required delivery schedule"
 ];
 
-export const blogPosts = [
+const staticBlogPosts = [
   {
     title: "How to Choose a Reliable Tape Measure Manufacturer in China",
     href: "/blog/choose-tape-measure-manufacturer/",
@@ -139,3 +141,5 @@ export const blogPosts = [
     date: "2026-06-03"
   }
 ];
+
+export const blogPosts = [...cmsBlogPosts, ...staticBlogPosts];

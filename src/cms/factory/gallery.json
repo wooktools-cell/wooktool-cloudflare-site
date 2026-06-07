@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "image": "/images/factory/factory-exterior-placeholder.svg",
+      "alt": "Factory exterior image placeholder for WOOKTOOL manufacturing site",
+      "title": "Factory exterior",
+      "description": "Use this position for workshop exterior, office entrance, or factory sign photos."
+    },
+    {
+      "image": "/images/factory/production-line-placeholder.svg",
+      "alt": "Production line image placeholder for hand tool manufacturing",
+      "title": "Production line",
+      "description": "Use this position for tape measure assembly, utility knife production, or screwdriver packing lines."
+    },
+    {
+      "image": "/images/factory/qc-inspection-placeholder.svg",
+      "alt": "Quality control inspection image placeholder for hand tools",
+      "title": "Quality inspection",
+      "description": "Use this position for material checks, function tests, finished product checks, or inspection reports."
+    },
+    {
+      "image": "/images/factory/packing-shipment-placeholder.svg",
+      "alt": "Packing and shipment image placeholder for export hand tool orders",
+      "title": "Packing and shipment",
+      "description": "Use this position for cartons, pallets, warehouse, loading, and export shipment photos."
+    }
+  ]
+}

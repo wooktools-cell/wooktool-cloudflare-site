@@ -1,0 +1,50 @@
+{
+  "order": 11,
+  "slug": "screwdriver-set",
+  "title": "Screwdriver Set",
+  "category": "Screwdriver Sets",
+  "image": "/images/products/catalog/screwdriver-set-main.webp",
+  "detailImages": [
+    "/images/products/catalog/screwdriver-set-detail-1.webp",
+    "/images/products/catalog/screwdriver-set-detail-2.webp"
+  ],
+  "summary": "Screwdriver set with reversible dual-end design, magnetic head, tappable tail, chrome vanadium steel construction, and custom handle color or color box options for retail tool programs.",
+  "sellingPoints": [
+    "7-piece screwdriver set",
+    "Reversible dual-end design",
+    "Magnetic head and tappable tail"
+  ],
+  "specs": [
+    {
+      "label": "Sizes",
+      "value": "6 x 105mm, 6 x 130mm, 6 x 150mm, 8 x 200mm"
+    },
+    {
+      "label": "Material",
+      "value": "Chrome vanadium steel"
+    },
+    {
+      "label": "Customization",
+      "value": "Handle color accepted"
+    },
+    {
+      "label": "Packaging",
+      "value": "Custom color boxes accepted"
+    },
+    {
+      "label": "MOQ",
+      "value": "Flexible MOQ, to be confirmed by order details"
+    },
+    {
+      "label": "Lead time",
+      "value": "Custom logo samples ready in about 3 days. Bulk lead time can be negotiated based on order quantity and packaging requirements."
+    }
+  ],
+  "quality": [
+    "Raw material inspection before manufacturing",
+    "Assembly process and function testing",
+    "Appearance, packaging, and quantity check before shipment",
+    "Support for buyer-specific quality-control requirements"
+  ],
+  "targetBuyers": "Importers, distributors, wholesalers, and private-label brands"
+}

@@ -1,12 +1,14 @@
 ---
 import CatalogProductCard from "./CatalogProductCard.astro";
+import { catalogPages } from "../siteData.js";
 const {
   products,
   currentPage,
   eyebrow = "Product catalog",
   title = currentPage ? `Product display page ${currentPage}` : "Product detail entrances",
   description = "Each product window links to a detail page with product photos, specifications, customization options, packaging details, and quality-control notes.",
-  showPagination = Boolean(currentPage)
+  showPagination = Boolean(currentPage),
+  paginationPages = catalogPages
 } = Astro.props;
 ---
 
@@ -24,8 +26,9 @@ const {
     </div>
     {showPagination && (
       <nav class="pagination" aria-label="Product catalog pages">
-        <a class={currentPage === 1 ? "is-active" : ""} href="/products/page/1/">Page 1</a>
-        <a class={currentPage === 2 ? "is-active" : ""} href="/products/page/2/">Page 2</a>
+        {paginationPages.map((page) => (
+          <a class={currentPage === page.page ? "is-active" : ""} href={page.href}>Page {page.page}</a>
+        ))}
       </nav>
     )}
   </div>

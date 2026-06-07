@@ -1,0 +1,50 @@
+{
+  "order": 7,
+  "slug": "folding-utility-knife",
+  "title": "Folding Utility Knife",
+  "category": "Utility Knives",
+  "image": "/images/products/catalog/folding-utility-knife-main.webp",
+  "detailImages": [
+    "/images/products/catalog/folding-utility-knife-detail-1.webp",
+    "/images/products/catalog/folding-utility-knife-detail-2.webp"
+  ],
+  "summary": "Folding utility knife with SK5 heavy duty blade, ABS handle, blade storage design, and extra blades, suitable for carton cutting, DIY use, retail packaging, and private-label tool programs.",
+  "sellingPoints": [
+    "SK5 heavy duty folding box cutter",
+    "Blade storage design with extra blades",
+    "Suitable for cartons, cardboard, and boxes"
+  ],
+  "specs": [
+    {
+      "label": "Blade",
+      "value": "60mm x 18mm x 0.6mm"
+    },
+    {
+      "label": "Material",
+      "value": "ABS handle, high-carbon steel blade"
+    },
+    {
+      "label": "Customization",
+      "value": "Custom logo printing and Pantone color accepted"
+    },
+    {
+      "label": "Packaging",
+      "value": "Hanging card, blister packaging, customizable printing"
+    },
+    {
+      "label": "MOQ",
+      "value": "Flexible MOQ, to be confirmed by order details"
+    },
+    {
+      "label": "Lead time",
+      "value": "Custom logo samples ready in about 3 days. Bulk lead time can be negotiated based on order quantity and packaging requirements."
+    }
+  ],
+  "quality": [
+    "Raw material inspection before manufacturing",
+    "Assembly process and function testing",
+    "Appearance, packaging, and quantity check before shipment",
+    "Support for buyer-specific quality-control requirements"
+  ],
+  "targetBuyers": "Importers, distributors, wholesalers, and private-label brands"
+}
