@@ -1,17 +1,15 @@
 {
-  "order": 2,
-  "slug": "compact-tape-measure",
-  "title": "Compact Tape Measure",
-  "category": "Tape Measures",
-  "image": "/images/products/catalog/compact-tape-measure-main.webp",
+  "summary": "Compact tape measure with easy-read dual-side steel blade, magnetic hook, shockproof ABS case, and custom logo or color options for retail, hardware, and private-label sourcing programs.",
   "detailImages": [
     "/images/products/catalog/compact-tape-measure-detail-1.webp",
     "/images/products/catalog/compact-tape-measure-detail-2.webp"
   ],
-  "summary": "Compact tape measure with easy-read dual-side steel blade, magnetic hook, shockproof ABS case, and custom logo or color options for retail, hardware, and private-label sourcing programs.",
+  "slug": "compact-tape-measure",
+  "order": 2,
+  "targetBuyers": "Importers, distributors, wholesalers, and private-label brands",
   "sellingPoints": [
     "Easy-read both-side metal blade",
-    "Magnetic hook and shockproof case",
+    "Magnetic hook and shockproof shell",
     "Custom logo printing and Pantone color accepted"
   ],
   "specs": [
@@ -40,11 +38,13 @@
       "value": "Custom logo samples ready in about 3 days. Bulk lead time can be negotiated based on order quantity and packaging requirements."
     }
   ],
+  "title": "Compact Tape Measure",
+  "image": "/images/products/catalog/compact-tape-measure-main.webp",
+  "category": "Tape Measures",
   "quality": [
     "Raw material inspection before manufacturing",
     "Assembly process and function testing",
     "Appearance, packaging, and quantity check before shipment",
     "Support for buyer-specific quality-control requirements"
-  ],
-  "targetBuyers": "Importers, distributors, wholesalers, and private-label brands"
+  ]
 }
