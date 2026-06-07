@@ -7,8 +7,8 @@
 | 图片类型 | 后台字段 | 建议尺寸 | 文件格式 | 背景 | 数量 | 命名建议 | 用途 |
 |---|---|---:|---|---|---:|---|---|
 | 产品主图 | Main Image | 1000 x 1000 px | JPG / PNG / WebP | 纯白色 | 1 张 | `product-name-main.jpg` | 产品卡片、产品详情页首图、分享图 |
-| 产品详情图 1 | Detail Images | 1200 x 900 px | JPG / PNG / WebP | 真实细节或白底说明图 | 1 张 | `product-name-detail-1.jpg` | 展示结构、材质、功能细节 |
-| 产品详情图 2 | Detail Images | 1200 x 900 px | JPG / PNG / WebP | 包装、应用、细节 | 1 张 | `product-name-detail-2.jpg` | 展示包装、配件、应用场景 |
+| 产品详情图 1 | Detail Images | 1000 x 1000 px | JPG / PNG / WebP | 纯白色 | 1 张 | `product-name-detail-1.jpg` | 展示结构、材质、功能细节 |
+| 产品详情图 2 | Detail Images | 1000 x 1000 px | JPG / PNG / WebP | 纯白色 | 1 张 | `product-name-detail-2.jpg` | 展示包装、配件、应用场景 |
 | 工厂图片 | Factory Gallery | 1000 x 720 px 或 4:3 | JPG / WebP | 真实工厂照片 | 按模块上传 | `factory-production-line.jpg` | 增强客户信任 |
 | 博客封面图 | Cover Image | 1200 x 630 px | JPG / WebP | 清晰、专业 | 1 张，可选 | `blog-topic-cover.jpg` | 社交分享和文章视觉 |
 
@@ -23,7 +23,7 @@
 | Product Name | 必填 | 产品名称简洁清楚，包含产品类型。 | `Compact Tape Measure` |
 | Category | 必填 | 只能选已有分类，避免新建相近分类。 | `Tape Measures` |
 | Main Image | 必填 | 上传 1000 x 1000 白底产品主图。 | `/images/uploads/compact-tape-measure-main.jpg` |
-| Detail Images | 建议必填 | 最多 2 张，优先展示结构、包装、应用细节。 | `detail-1`, `detail-2` |
+| Detail Images | 建议必填 | 最多 2 张，上传 1000 x 1000 白底产品详情图，优先展示结构、包装、应用细节。 | `detail-1`, `detail-2` |
 | Short Summary | 必填 | 1 句话，130-180 个英文字符左右，包含产品、核心特点、买家对象。 | 见第 3 节 |
 | Selling Points | 必填 | 3 条最佳，每条 4-10 个英文单词。 | `Magnetic hook and shockproof shell` |
 | Specifications | 必填 | 用标准参数表，不要把所有信息堆在 Summary。 | 见第 4 节 |
