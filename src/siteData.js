@@ -6,7 +6,7 @@ export const site = {
   email: "winson@wooktools.com",
   whatsapp: "+86 150 9060 8676",
   whatsappUrl: "https://wa.me/8615090608676",
-  alibabaUrl: "https://your-alibaba-store-link.com",
+  alibabaUrl: "https://vooktool.en.alibaba.com",
   description:
     "WOOKTOOL is a custom tape measure and hand tool manufacturer in China serving importers, wholesalers, distributors, and private-label brands."
 };

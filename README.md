@@ -125,7 +125,7 @@ Update these fields:
 email: "winson@wooktools.com"
 whatsapp: "+86 150 9060 8676"
 whatsappUrl: "https://wa.me/8615090608676"
-alibabaUrl: "https://your-alibaba-store-link.com"
+alibabaUrl: "https://vooktool.en.alibaba.com"
 ```
 
 The contact page and footer will update automatically.
