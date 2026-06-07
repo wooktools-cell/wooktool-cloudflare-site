@@ -1,7 +1,6 @@
 User-agent: *
-Disallow: /
+Allow: /
 
-# Pre-launch setting: keep the temporary pages.dev preview out of search results.
-# Change to "Allow: /" when the final custom domain is ready.
-Sitemap: https://wooktool-cloudflare-site.pages.dev/sitemap.xml
+# Production sitemap for the canonical domain.
+Sitemap: https://www.wooktools.com/sitemap.xml
 

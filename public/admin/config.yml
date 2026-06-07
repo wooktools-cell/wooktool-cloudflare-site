@@ -2,13 +2,13 @@ backend:
   name: github
   repo: wooktools-cell/wooktool-cloudflare-site
   branch: main
-  base_url: https://wooktool-cloudflare-site.pages.dev
+  base_url: https://www.wooktools.com
   auth_endpoint: auth
   auth_scope: public_repo
   use_graphql: true
 
-site_url: https://wooktool-cloudflare-site.pages.dev
-display_url: https://wooktool-cloudflare-site.pages.dev
+site_url: https://www.wooktools.com
+display_url: https://www.wooktools.com
 logo_url: /images/logo/wooktool-logo-new.webp
 locale: en
 local_backend: true

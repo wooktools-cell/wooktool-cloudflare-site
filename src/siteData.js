@@ -2,7 +2,7 @@ import { cmsBlogPosts } from "./blogData.js";
 
 export const site = {
   name: "WOOKTOOL",
-  domain: "https://wooktool-cloudflare-site.pages.dev",
+  domain: "https://www.wooktools.com",
   email: "sales@your-domain.com",
   whatsapp: "+86-000-0000-0000",
   whatsappUrl: "https://wa.me/8600000000000",

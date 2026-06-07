@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://your-domain.com",
+  site: "https://www.wooktools.com",
   trailingSlash: "always"
 });

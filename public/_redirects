@@ -2,6 +2,9 @@
 # Keep these redirects when the custom domain is connected so indexed legacy URLs
 # pass visitors and search signals to the closest new pages.
 
+https://wooktool-cloudflare-site.pages.dev/* https://www.wooktools.com/:splat 301
+https://wooktools.com/* https://www.wooktools.com/:splat 301
+
 /productList.html /products/ 301
 /about-us.html /about/ 301
 /site-page/aea362dea1b34351.html /blog/ 301

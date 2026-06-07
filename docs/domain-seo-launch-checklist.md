@@ -2,6 +2,8 @@
 
 Use this checklist when `www.wooktools.com` is ready to replace the temporary Cloudflare Pages URL.
 
+Current status: `www.wooktools.com` is connected to Cloudflare Pages. The site domain, CMS display URL, `robots.txt`, and sitemap URL have been switched to the canonical domain.
+
 ## Phase 1: Already prepared
 
 - Keep `robots.txt` as `Disallow: /` while the site is still on the temporary `pages.dev` preview URL.
@@ -15,14 +17,14 @@ Use this checklist when `www.wooktools.com` is ready to replace the temporary Cl
   - `https://www.wooktools.com/products/`
   - `https://www.wooktools.com/sitemap.xml`
   - `https://www.wooktools.com/admin/`
-- Update the production site domain from `https://wooktool-cloudflare-site.pages.dev` to `https://www.wooktools.com`.
+- Update the production site domain from `https://wooktool-cloudflare-site.pages.dev` to `https://www.wooktools.com`. Done.
 - Update `public/robots.txt`:
-  - Change `Disallow: /` to `Allow: /`.
-  - Change the sitemap URL to `https://www.wooktools.com/sitemap.xml`.
+  - Change `Disallow: /` to `Allow: /`. Done.
+  - Change the sitemap URL to `https://www.wooktools.com/sitemap.xml`. Done.
 - Update Decap CMS settings:
-  - `base_url`
-  - `site_url`
-  - `display_url`
+  - `base_url`. Done.
+  - `site_url`. Done.
+  - `display_url`. Done.
 - Update the GitHub OAuth callback URL to:
   - `https://www.wooktools.com/callback`
 - Configure redirects so non-canonical domains point to `https://www.wooktools.com`:
