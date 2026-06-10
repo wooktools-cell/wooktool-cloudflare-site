@@ -651,6 +651,41 @@ main {
   font-weight: 800;
 }
 
+.component-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.component-card {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 26px rgba(16, 22, 29, 0.07);
+}
+
+.component-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #fff;
+  border-bottom: 1px solid #cfd6dd;
+}
+
+.component-card div {
+  padding: 1rem;
+}
+
+.component-card h3 {
+  font-size: 1rem;
+}
+
+.component-card p {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
 .catalog-category {
   margin-bottom: 0.45rem;
   color: var(--steel-dark) !important;
@@ -977,6 +1012,7 @@ small,
   .feature-list,
   .catalog-grid,
   .catalog-grid.compact,
+  .component-grid,
   .factory-gallery,
   .product-gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1045,6 +1081,7 @@ small,
   .feature-list,
   .catalog-grid,
   .catalog-grid.compact,
+  .component-grid,
   .factory-gallery,
   .product-gallery,
   .form-grid,

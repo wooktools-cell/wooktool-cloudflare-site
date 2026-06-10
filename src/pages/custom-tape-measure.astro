@@ -30,6 +30,45 @@ const customTapeSchema = [
   ]),
   faqSchema(customTapeFaq)
 ];
+
+const tapeComponents = [
+  {
+    title: "Yellow blade background",
+    image: "/images/products/tape-measure-components/yellow-background-tape-options.png",
+    alt: "WOOKTOOL custom tape measure yellow blade background options with metric and inch markings",
+    text: "Common yellow tape blade options for metric, inch, and dual-unit markets, suitable for construction, hardware retail, and general tool programs."
+  },
+  {
+    title: "White blade background",
+    image: "/images/products/tape-measure-components/white-background-tape-options.png",
+    alt: "WOOKTOOL custom tape measure white blade background options with different printing layouts",
+    text: "White blade options support clean visual presentation, custom markings, logo elements, and market-specific printing requirements."
+  },
+  {
+    title: "Black blade with green font",
+    image: "/images/products/tape-measure-components/black-background-green-font-tape.png",
+    alt: "WOOKTOOL black background tape blade with fluorescent green font for custom tape measures",
+    text: "Black blade with high-contrast fluorescent green font can be discussed for differentiated private-label and promotional tape measure programs."
+  },
+  {
+    title: "Tape blade width",
+    image: "/images/products/tape-measure-components/tape-measure-width-options.png",
+    alt: "WOOKTOOL tape measure blade width options including 13mm 16mm 19mm and 25mm",
+    text: "Blade widths such as 13mm, 16mm, 19mm, and 25mm can be selected based on tape length, product grade, target price, and market positioning."
+  },
+  {
+    title: "Hook type options",
+    image: "/images/products/tape-measure-components/tape-measure-hook-options.png",
+    alt: "WOOKTOOL tape measure hook type options including magnetic and reinforced hooks",
+    text: "Hook options can include standard, reinforced, black finish, wide hook, and magnetic hook designs depending on application and buyer requirements."
+  },
+  {
+    title: "Nylon and PVC rope options",
+    image: "/images/products/tape-measure-components/tape-measure-rope-options.png",
+    alt: "WOOKTOOL tape measure nylon rope and PVC rope color options",
+    text: "Nylon rope and PVC wrist strap options help match brand color, retail appearance, and user handling preferences."
+  }
+];
 ---
 
 <BaseLayout
@@ -74,6 +113,28 @@ const customTapeSchema = [
           <li><a href="/quality-control/">Quality control</a></li>
           <li><a href="/contact/">Send custom tape measure RFQ</a></li>
         </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Optional components</p>
+          <h2>Tape measure component options for custom programs</h2>
+        </div>
+        <p>Buyers can combine blade background, blade width, hook type, rope style, shell color, logo, and packaging into one production-ready private-label tape measure specification.</p>
+      </div>
+      <div class="component-grid">
+        {tapeComponents.map((item) => (
+          <article class="component-card">
+            <img src={item.image} alt={item.alt} width="1000" height="1000" loading="lazy" />
+            <div>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </div>
+          </article>
+        ))}
       </div>
     </div>
   </section>
