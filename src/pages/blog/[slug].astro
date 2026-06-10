@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
+import { site } from "../../siteData.js";
+import { breadcrumbSchema } from "../../schema.js";
 
 export async function getStaticPaths() {
   const postModules = import.meta.glob("../../cms/blog/*.md", { eager: true });
@@ -16,13 +18,42 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = post;
 const slug = post.frontmatter.slug || Astro.params.slug;
+const path = `/blog/${slug}/`;
+const blogSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.frontmatter.title,
+    description: post.frontmatter.description,
+    datePublished: post.frontmatter.date,
+    author: {
+      "@type": "Organization",
+      name: "wooktools"
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "wooktools",
+      logo: {
+        "@type": "ImageObject",
+        url: new URL("/images/logo/wooktool-logo-new.webp", site.domain).toString()
+      }
+    },
+    mainEntityOfPage: new URL(path, site.domain).toString()
+  },
+  breadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Blog", path: "/blog/" },
+    { name: post.frontmatter.title, path }
+  ])
+];
 ---
 
 <BaseLayout
   title={post.frontmatter.title}
   description={post.frontmatter.description}
-  path={`/blog/${slug}/`}
+  path={path}
   image={post.frontmatter.image}
+  schema={blogSchema}
 >
   <section class="page-intro">
     <div>

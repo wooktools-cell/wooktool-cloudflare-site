@@ -16,9 +16,9 @@ import { navItems, site } from "../siteData.js";
     </div>
     <div>
       <h2>Contact</h2>
-      <p>Email: <a href={`mailto:${site.email}`}>{site.email}</a></p>
-      <p>WhatsApp: <a href={site.whatsappUrl}>{site.whatsapp}</a></p>
-      <p><a href={site.alibabaUrl}>Alibaba Store</a></p>
+      <p>Email: <a href={`mailto:${site.email}`} data-track="email_click">{site.email}</a></p>
+      <p>WhatsApp: <a href={site.whatsappUrl} data-track="whatsapp_click">{site.whatsapp}</a></p>
+      <p><a href={site.alibabaUrl} data-track="alibaba_click">Alibaba Store</a></p>
     </div>
   </div>
   <div class="footer-bottom">

@@ -15,7 +15,7 @@ const {
     <p>{text}</p>
   </div>
   <div class="cta-actions">
-    <a class="button button-light" href={primaryHref}>{primaryLabel}</a>
-    <a class="button button-outline-light" href={secondaryHref}>{secondaryLabel}</a>
+    <a class="button button-light" href={primaryHref} data-track="request_quote_click">{primaryLabel}</a>
+    <a class="button button-outline-light" href={secondaryHref} data-track="cta_secondary_click">{secondaryLabel}</a>
   </div>
 </section>

@@ -4,47 +4,34 @@ import Hero from "../components/Hero.astro";
 import ProductCard from "../components/ProductCard.astro";
 import CTA from "../components/CTA.astro";
 import { productCategories, sellingPoints, capabilities, qcSteps, rfqChecklist, site } from "../siteData.js";
+import { organizationSchema, websiteSchema, breadcrumbSchema } from "../schema.js";
 
-const homeSchema = [
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: site.name,
-    url: site.domain,
-    logo: new URL("/images/logo/wooktool-logo-new.webp", site.domain).toString(),
-    description: site.description
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: site.name,
-    url: site.domain,
-    description: site.description
-  }
-];
+const homeSchema = [organizationSchema, websiteSchema, breadcrumbSchema([{ name: "Home", path: "/" }])];
 ---
 
 <BaseLayout
-  title="Hand Tools Manufacturer China | WOOKTOOL Custom Tape Measures"
-  description="WOOKTOOL is a China hand tools manufacturer supplying custom tape measures, utility knives, screwdriver sets, and OEM/ODM hand tools for B2B buyers."
+  title="Custom Hand Tools Manufacturer in China | wooktools"
+  description="wooktools is a China-based custom hand tools manufacturer supplying WOOKTOOL tape measures, utility knives, screwdriver sets, OEM/ODM tools, private label packaging, and factory-direct solutions for global B2B buyers."
   path="/"
   image="/images/hero/wooktool-hero-desktop.webp"
   schema={homeSchema}
 >
   <Hero
     eyebrow="Factory-direct OEM/ODM hand tools"
-    title="Custom Hand Tools Manufacturer for Private-Label Brands"
-    text="WOOKTOOL supplies tape measures, utility knives, screwdriver sets, and custom hand tool programs with logo, color, specification, packaging, mold, and quality-control support for importers, distributors, wholesalers, and brand owners."
+    title="Custom Hand Tools Manufacturer in China"
+    text="wooktools manufactures and supplies WOOKTOOL tape measures, utility knives, screwdriver sets, and OEM/ODM hand tools for importers, distributors, wholesalers, and private-label brands worldwide."
+    primaryLabel="Request a Quote"
+    secondaryLabel="View Products"
   />
 
   <section class="section soft">
     <div class="section-inner">
       <div class="section-header">
         <div>
-          <p class="eyebrow">Fast RFQ preparation</p>
+          <p class="eyebrow">B2B sourcing support</p>
           <h2>What buyers can send for a faster quotation</h2>
         </div>
-        <p>Clear product and packaging details help us return practical options for sampling, MOQ, lead time, and target pricing.</p>
+        <p>Clear product and packaging details help the wooktools sales team return practical options for sampling, MOQ, lead time, and target pricing.</p>
       </div>
       <ul class="feature-list">
         {rfqChecklist.map((item) => <li>{item}</li>)}
@@ -59,7 +46,7 @@ const homeSchema = [
           <p class="eyebrow">Product categories</p>
           <h2>Hand tool products for B2B sourcing</h2>
         </div>
-        <p>Start with standard product lines or request a custom solution for your brand, channel, and market.</p>
+        <p>Start with standard WOOKTOOL product lines or request a custom solution for your brand, channel, and market.</p>
       </div>
       <div class="grid four">
         {productCategories.map((item) => <ProductCard {...item} />)}
@@ -70,9 +57,9 @@ const homeSchema = [
   <section class="section soft">
     <div class="section-inner grid two">
       <div>
-        <p class="eyebrow">Why choose WOOKTOOL</p>
+        <p class="eyebrow">Why choose wooktools</p>
         <h2>Built for importers, wholesalers, and private-label brands</h2>
-        <p>WOOKTOOL focuses on export-oriented hand tool manufacturing with practical customization, consistent quality control, and responsive communication for overseas buyers.</p>
+        <p>wooktools focuses on export-oriented hand tool manufacturing under the WOOKTOOL brand, with practical customization, consistent quality control, and responsive communication for overseas buyers.</p>
       </div>
       <ul class="check-list">
         {sellingPoints.map((point) => <li>{point}</li>)}
@@ -87,13 +74,20 @@ const homeSchema = [
           <p class="eyebrow">Custom manufacturing</p>
           <h2>Customization capabilities for your tool program</h2>
         </div>
-        <p>From logo and color to blade, tape, packaging, and private-label requirements, our team helps prepare production-ready details.</p>
+        <p>From logo and color to blade, tape, packaging, and private-label requirements, wooktools helps prepare production-ready details before sampling and bulk manufacturing.</p>
       </div>
       <div class="grid three">
-        {capabilities.map((item) => (
+        {capabilities.map((item, index) => (
           <article class="info-card">
             <h3>{item}</h3>
-            <p>Placeholder details can be expanded after final product specifications, MOQ, and branding requirements are confirmed.</p>
+            <p>{[
+              "Add your logo to product shells, labels, packaging artwork, and carton marks for private-label programs.",
+              "Match handle, case, or shell colors to your brand plan, target market, or retail shelf style.",
+              "Confirm tape lengths, blade formats, bit selections, materials, and functional details before sampling.",
+              "Prepare blister cards, color boxes, display boxes, barcode labels, carton marks, and retail-ready packaging.",
+              "Share reference products or drawings so wooktools can help review structure, tooling, cost, and sample direction.",
+              "Build WOOKTOOL or private-label export programs for importers, distributors, wholesalers, and online sellers."
+            ][index]}</p>
           </article>
         ))}
       </div>
@@ -107,7 +101,7 @@ const homeSchema = [
           <p class="eyebrow">Featured products</p>
           <h2>Popular product categories for OEM sourcing</h2>
         </div>
-        <p>Explore tape measures, utility knives, and screwdriver sets with real product photos, B2B customization options, and quality-control notes.</p>
+        <p>Explore tape measures, utility knives, and screwdriver sets with product photos, B2B customization options, and quality-control notes.</p>
       </div>
       <div class="grid three">
         {productCategories.slice(0, 3).map((item) => <ProductCard {...item} />)}
@@ -133,6 +127,7 @@ const homeSchema = [
       <div>
         <p class="eyebrow">Factory strength</p>
         <h2>Stable production support for global sourcing teams</h2>
+        <p>wooktools supports overseas buyers with product confirmation, sample communication, production planning, quality checks, and export packaging coordination.</p>
       </div>
       <div class="grid two">
         <article class="info-card"><h3>Experienced team</h3><p>Manufacturing support for tape measures and practical hand tool categories.</p></article>
@@ -143,5 +138,31 @@ const homeSchema = [
     </div>
   </section>
 
-  <CTA />
+  <section class="section soft">
+    <div class="section-inner content-grid">
+      <div class="content-copy">
+        <p class="eyebrow">Private label packaging</p>
+        <h2>Retail-ready tool programs for your market</h2>
+        <p>wooktools can support private label hand tools for hardware stores, importer catalogs, wholesale channels, Amazon and eBay sellers, and regional distributors. Buyers can prepare logo files, product references, barcode needs, packaging style, and estimated order quantity before quotation.</p>
+        <p>Common packaging options include blister cards, hanging cards, color boxes, display boxes, inner cartons, master cartons, barcode labels, and buyer-specific carton marks. These details help keep product presentation, warehouse handling, and retail requirements aligned from sample stage to shipment.</p>
+      </div>
+      <div class="info-card">
+        <h3>Quick links</h3>
+        <ul class="link-list">
+          <li><a href="/custom-tape-measure/">Custom tape measure supplier</a></li>
+          <li><a href="/oem-odm/">OEM hand tools manufacturer</a></li>
+          <li><a href="/quality-control/">Quality control process</a></li>
+          <li><a href="/contact/">Request a quote</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    title="Looking for a reliable hand tools manufacturer?"
+    text="Tell us your product type, logo requirement, packaging style, target market, and estimated quantity. The wooktools team will help you confirm suitable WOOKTOOL product options and provide a quotation."
+    primaryLabel="Request a Quote"
+    secondaryLabel="Discuss OEM Project"
+    secondaryHref="/oem-odm/"
+  />
 </BaseLayout>

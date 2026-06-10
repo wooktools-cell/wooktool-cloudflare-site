@@ -2,27 +2,37 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ContactForm from "../components/ContactForm.astro";
 import { rfqChecklist, site } from "../siteData.js";
+import { breadcrumbSchema } from "../schema.js";
+
+const contactSchema = [
+  breadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Contact", path: "/contact/" }
+  ])
+];
 ---
 
 <BaseLayout
-  title="Request a Quote Hand Tools | Contact WOOKTOOL"
-  description="Contact WOOKTOOL to request a quote for tape measures, utility knives, screwdriver sets, custom hand tools, and OEM/ODM manufacturing."
+  title="Contact wooktools | Request a WOOKTOOL Hand Tools Quote"
+  description="Contact wooktools to request a quote for WOOKTOOL tape measures, utility knives, screwdriver sets, OEM/ODM hand tools, private label packaging, and wholesale supply."
   path="/contact/"
+  schema={contactSchema}
 >
-  <section class="page-intro"><div><p class="eyebrow">Contact</p><h1>Request a Quote for Hand Tools</h1><p>Send your RFQ details and our sales team will review product interest, estimated quantity, customization needs, packaging, and delivery requirements.</p></div></section>
+  <section class="page-intro"><div><p class="eyebrow">Contact</p><h1>Send Your RFQ to wooktools</h1><p>Send your RFQ details and the wooktools sales team will review product interest, estimated quantity, customization needs, packaging, target market, and delivery requirements.</p></div></section>
   <section class="section">
     <div class="section-inner grid two">
       <div class="contact-panel">
         <h2>Contact information</h2>
-        <p><strong>Company:</strong> WOOKTOOL</p>
+        <p><strong>Company:</strong> wooktools</p>
+        <p><strong>Brand:</strong> WOOKTOOL</p>
         <p><strong>Website:</strong> {site.domain.replace("https://", "")}</p>
         <p><strong>Email:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></p>
         <p><strong>WhatsApp:</strong> <a href={site.whatsappUrl}>{site.whatsapp}</a></p>
         <p><strong>Alibaba:</strong> <a href={site.alibabaUrl}>Visit WOOKTOOL Alibaba store</a></p>
         <div class="button-row">
-          <a class="button button-primary" href={`mailto:${site.email}`}>Email Sales Team</a>
-          <a class="button button-secondary" href={site.whatsappUrl}>WhatsApp</a>
-          <a class="button button-secondary" href={site.alibabaUrl}>Alibaba Store</a>
+          <a class="button button-primary" href={`mailto:${site.email}`} data-track="email_click">Email Sales Team</a>
+          <a class="button button-secondary" href={site.whatsappUrl} data-track="whatsapp_click">WhatsApp</a>
+          <a class="button button-secondary" href={site.alibabaUrl} data-track="alibaba_click">Alibaba Store</a>
         </div>
       </div>
       <div class="contact-panel">
@@ -38,7 +48,7 @@ import { rfqChecklist, site } from "../siteData.js";
           <p class="eyebrow">Before sending RFQ</p>
           <h2>Information that helps us quote faster</h2>
         </div>
-        <p>If you already have a reference product, packaging photo, drawing, or target price, include it in your message. It helps reduce back-and-forth communication.</p>
+        <p>Tell us your product type, logo requirement, packaging style, estimated quantity, target market, and delivery schedule. If you already have a reference product, packaging photo, drawing, or target price, include it in your message.</p>
       </div>
       <ul class="feature-list">
         {rfqChecklist.map((item) => <li>{item}</li>)}

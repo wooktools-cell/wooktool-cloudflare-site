@@ -1,23 +1,61 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import FAQ from "../components/FAQ.astro";
 import ProductListing from "../components/ProductListing.astro";
 import { categoryCatalogs } from "../siteData.js";
+import { breadcrumbSchema, faqSchema, productCollectionSchema } from "../schema.js";
+
+const utilityKnifeFaq = [
+  {
+    question: "What types of utility knives can wooktools supply?",
+    answer: "wooktools can supply WOOKTOOL heavy-duty utility knives, folding utility knives, snap-off knives, safety utility knives, box cutters, and replacement blade packs."
+  },
+  {
+    question: "Can we customize handle color and logo?",
+    answer: "Yes. Buyers can discuss handle color, logo placement, blister card, hanging card, color box, barcode labels, and carton marks for private-label utility knife programs."
+  },
+  {
+    question: "What blade options are available?",
+    answer: "Blade options can include 9 mm, 18 mm, snap-off blades, trapezoid blades, SK5 or other selected materials, and replacement blade packs based on project requirements."
+  },
+  {
+    question: "What quality checks are recommended?",
+    answer: "Recommended checks include blade sharpness, blade replacement fit, lock function, handle assembly, safety mechanism, packaging artwork, barcode, quantity, and carton condition."
+  }
+];
+
+const utilityDescription = "wooktools supplies custom WOOKTOOL utility knives, box cutters, snap-off knives, safety cutters, and replacement blades with OEM logo, handle color, packaging, QC, and flexible MOQ.";
+
+const utilitySchema = [
+  productCollectionSchema({
+    name: "WOOKTOOL Utility Knives",
+    description: utilityDescription,
+    path: "/utility-knives/",
+    image: "/images/products/catalog/heavy-duty-utility-knife-main.webp"
+  }),
+  breadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Utility Knives", path: "/utility-knives/" }
+  ]),
+  faqSchema(utilityKnifeFaq)
+];
 ---
 
 <BaseLayout
   title="Utility Knife Manufacturer China | OEM Box Cutter Supplier"
-  description="WOOKTOOL supplies custom utility knives, box cutters, snap-off knives, safety cutters, and replacement blades with OEM logo, handle color, packaging, QC, and flexible MOQ."
+  description={utilityDescription}
   path="/utility-knives/"
   image="/images/products/catalog/heavy-duty-utility-knife-main.webp"
+  schema={utilitySchema}
 >
-  <section class="page-intro"><div><p class="eyebrow">Utility knives</p><h1>Custom Utility Knife Manufacturer in China</h1><p>WOOKTOOL supplies utility knives, box cutters, snap-off knives, safety cutters, and replacement blades for hardware importers, industrial distributors, retailers, and private-label tool brands.</p></div></section>
+  <section class="page-intro"><div><p class="eyebrow">Utility knives</p><h1>Custom Utility Knife Manufacturer in China</h1><p>wooktools supplies WOOKTOOL utility knives, box cutters, snap-off knives, safety cutters, and replacement blades for hardware importers, industrial distributors, retailers, and private-label tool brands.</p></div></section>
   <section class="section">
     <div class="section-inner grid two">
       <img class="product-square-image" src="/images/products/catalog/heavy-duty-utility-knife-main.webp" alt="WOOKTOOL custom utility knife supplier product image" width="1000" height="1000" />
       <div>
         <h2>OEM box cutter and utility knife capability</h2>
-        <p>WOOKTOOL supports utility knife manufacturing with custom handle colors, logo placement, blade format, lock style, replacement blade packs, blister cards, hanging cards, color boxes, and carton marks.</p>
+        <p>wooktools supports utility knife manufacturing with custom handle colors, logo placement, blade format, lock style, replacement blade packs, blister cards, hanging cards, color boxes, and carton marks.</p>
         <ul class="check-list">
           <li>Custom utility knife supplier for global importer programs</li>
           <li>Box cutter factory support for retail and industrial channels</li>
@@ -41,5 +79,6 @@ import { categoryCatalogs } from "../siteData.js";
     description="Reserved product windows for utility knife and box cutter buyers. Each entry opens a detail page for blade format, handle options, safety checks, and packaging."
     showPagination={false}
   />
+  <FAQ items={utilityKnifeFaq} title="Utility knife sourcing FAQ" />
   <CTA title="Need custom utility knives for your market?" primaryLabel="Send Utility Knife RFQ" />
 </BaseLayout>

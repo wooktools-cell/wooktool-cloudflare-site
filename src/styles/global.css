@@ -710,6 +710,48 @@ main {
   color: var(--muted);
 }
 
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.content-copy p + p {
+  margin-top: 1rem;
+}
+
+.link-list {
+  display: grid;
+  gap: 0.65rem;
+  list-style: none;
+}
+
+.link-list a {
+  color: var(--accent-dark);
+  font-weight: 800;
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.faq-item {
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.faq-item h3 {
+  margin-bottom: 0.45rem;
+}
+
+.faq-item p {
+  color: var(--muted);
+}
+
 .factory-gallery {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -941,6 +983,10 @@ small,
   }
 
   .product-detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .content-grid {
     grid-template-columns: 1fr;
   }
 }

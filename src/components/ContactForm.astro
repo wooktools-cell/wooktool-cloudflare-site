@@ -7,6 +7,7 @@ import { site } from "../siteData.js";
   action={`https://formsubmit.co/${site.email}`}
   method="post"
   enctype="multipart/form-data"
+  data-track="form_submit"
 >
   <input type="hidden" name="_subject" value="New WOOKTOOL RFQ from website" />
   <input type="hidden" name="_template" value="table" />
@@ -47,7 +48,7 @@ import { site } from "../siteData.js";
   </div>
   <label>
     Message
-    <textarea name="message" rows="6" placeholder="Tell us your product, logo, packaging, target price, and delivery requirements."></textarea>
+    <textarea name="message" rows="6" placeholder="Tell us your product type, logo requirement, packaging style, estimated quantity, target price, and delivery requirements." required></textarea>
   </label>
   <label>
     Upload Drawing or File

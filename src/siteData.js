@@ -2,13 +2,18 @@ import { cmsBlogPosts } from "./blogData.js";
 
 export const site = {
   name: "WOOKTOOL",
+  companyName: "wooktools",
   domain: "https://www.wooktools.com",
   email: "winson@wooktools.com",
   whatsapp: "+86 150 9060 8676",
   whatsappUrl: "https://wa.me/8615090608676",
   alibabaUrl: "https://vooktool.en.alibaba.com",
+  analytics: {
+    ga4Id: "",
+    clarityId: ""
+  },
   description:
-    "WOOKTOOL is a custom tape measure and hand tool manufacturer in China serving importers, wholesalers, distributors, and private-label brands."
+    "wooktools is a China-based custom hand tools manufacturer supplying WOOKTOOL tape measures, utility knives, screwdriver sets, OEM/ODM tools, and private-label packaging for global B2B buyers."
 };
 
 export const navItems = [
@@ -89,7 +94,7 @@ export const sellingPoints = [
   "Quality control before shipment",
   "Packaging customization",
   "Reliable lead time",
-  "Support for importers, wholesalers, and private-label brands"
+  "Support for importers, wholesalers, distributors, and private-label brands"
 ];
 
 export const capabilities = [

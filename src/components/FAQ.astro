@@ -1,0 +1,25 @@
+---
+const { eyebrow = "FAQ", title = "Frequently asked questions", items = [] } = Astro.props;
+---
+
+{items.length > 0 && (
+  <section class="section soft">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">{eyebrow}</p>
+          <h2>{title}</h2>
+        </div>
+        <p>Short answers for importers, distributors, wholesalers, and private-label buyers preparing a sourcing inquiry.</p>
+      </div>
+      <div class="faq-list">
+        {items.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+)}

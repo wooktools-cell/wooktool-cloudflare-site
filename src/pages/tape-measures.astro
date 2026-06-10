@@ -1,28 +1,95 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import FAQ from "../components/FAQ.astro";
 import ProductListing from "../components/ProductListing.astro";
 import { categoryCatalogs } from "../siteData.js";
+import { breadcrumbSchema, faqSchema, productCollectionSchema } from "../schema.js";
+
+const tapeMeasureFaq = [
+  {
+    question: "What is your MOQ for custom tape measures?",
+    answer: "MOQ depends on the tape measure model, shell color, logo method, and packaging requirement. wooktools can recommend suitable options for small and medium-sized B2B buyers."
+  },
+  {
+    question: "Can you print our logo on WOOKTOOL tape measures?",
+    answer: "Yes. wooktools supports custom logo printing on tape measure cases and packaging. Buyers can provide logo files, color requirements, and placement preferences."
+  },
+  {
+    question: "Can you provide private label packaging?",
+    answer: "Yes. wooktools supports blister card packaging, color box packaging, display box packaging, barcode labels, and carton marks for private-label buyers."
+  },
+  {
+    question: "Can we customize blade length and measuring units?",
+    answer: "Yes. Common lengths include 3m, 5m, 7.5m, 8m, 10m, 16ft, and 25ft. Metric, inch, and dual-unit markings can be selected based on market needs."
+  },
+  {
+    question: "Can we get samples before bulk production?",
+    answer: "Yes. Samples can be arranged before mass production so buyers can confirm product quality, logo effect, packaging, and details."
+  },
+  {
+    question: "What do you inspect before shipment?",
+    answer: "wooktools can inspect appearance, blade printing, locking function, retraction performance, hook assembly, packaging quality, and carton condition before shipment."
+  }
+];
+
+const pageDescription = "wooktools manufactures WOOKTOOL tape measures for global B2B buyers, offering custom logo printing, case color customization, private label packaging, flexible MOQ, and factory-direct wholesale supply.";
+
+const tapeMeasureSchema = [
+  productCollectionSchema({
+    name: "WOOKTOOL Tape Measures",
+    description: pageDescription,
+    path: "/tape-measures/",
+    image: "/images/products/catalog/heavy-duty-tape-measure-main.webp"
+  }),
+  breadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Tape Measures", path: "/tape-measures/" }
+  ]),
+  faqSchema(tapeMeasureFaq)
+];
 ---
 
 <BaseLayout
-  title="Custom Tape Measure Manufacturer China | OEM Measuring Tape Supplier"
-  description="WOOKTOOL manufactures custom tape measures for global importers, distributors, and private-label brands with OEM logo, colors, packaging, QC, and flexible MOQ."
+  title="Tape Measure Manufacturer in China | Custom WOOKTOOL Tape Measures"
+  description={pageDescription}
   path="/tape-measures/"
   image="/images/products/catalog/heavy-duty-tape-measure-main.webp"
+  schema={tapeMeasureSchema}
 >
-  <section class="page-intro"><div><p class="eyebrow">Tape measures</p><h1>Custom Tape Measure Manufacturer in China</h1><p>WOOKTOOL supplies steel measuring tapes for global importers, hardware distributors, wholesalers, and private-label tool brands that need stable production, OEM branding, and export-ready packaging.</p></div></section>
+  <section class="page-intro"><div><p class="eyebrow">Tape measures</p><h1>Tape Measure Manufacturer in China</h1><p>wooktools manufactures and supplies WOOKTOOL steel tape measures for global importers, hardware distributors, wholesalers, and private-label tool brands that need stable production, OEM branding, and export-ready packaging.</p></div></section>
   <section class="section">
     <div class="section-inner grid two">
       <img class="product-square-image" src="/images/products/catalog/heavy-duty-tape-measure-main.webp" alt="WOOKTOOL custom tape measure product image for OEM tape measure manufacturer" width="1000" height="1000" />
       <div>
         <h2>OEM measuring tape production capability</h2>
-        <p>We support custom tape measure manufacturing for shell colors, printed logos, tape lengths, blade finishes, hook styles, belt clips, blister cards, color boxes, display boxes, and carton marks.</p>
+        <p>wooktools supports custom tape measure manufacturing for shell colors, printed logos, tape lengths, blade finishes, hook styles, belt clips, wrist straps, blister cards, color boxes, display boxes, barcode labels, and carton marks.</p>
         <ul class="check-list">
           <li>Custom tape measure supplier for private-label tool buyers</li>
           <li>Measuring tape factory support for importer and distributor programs</li>
           <li>OEM tape measure manufacturer with retail packaging customization</li>
-          <li>RFQ review for blade length, case material, MOQ, and target market</li>
+          <li>Flexible MOQ discussion for selected models and packaging directions</li>
+          <li>RFQ review for blade length, case material, MOQ, target price, and market</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-inner content-grid">
+      <div class="content-copy">
+        <p class="eyebrow">Wholesale tape measure supply</p>
+        <h2>Bulk tape measures for importers and private-label buyers</h2>
+        <p>As a tape measure manufacturer in China, wooktools helps B2B buyers build practical measuring tape programs under the WOOKTOOL brand or with private-label packaging. Common buyer groups include hardware importers, tool distributors, wholesalers, promotional product buyers, Amazon and eBay sellers, construction tool suppliers, and retail chains.</p>
+        <p>Common tape measure lengths include 3m, 5m, 7.5m, 8m, 10m, 16ft, and 25ft. Buyers can discuss metric, inch, or dual-unit blade printing, blade width, case material, lock design, hook style, belt clip, wrist strap, and packaging presentation. For brand projects, wooktools can support custom logo tape measures, custom shell colors, barcode-ready packaging, and carton marks for warehouse and retail handling.</p>
+        <p>Before quotation, buyers can send a reference product photo, target market, estimated order quantity, required length, logo file, packaging style, target price, and delivery schedule. This helps the wooktools team confirm whether an existing mold, standard WOOKTOOL model, or adjusted private-label solution is most suitable.</p>
+      </div>
+      <div class="info-card">
+        <h3>Useful buyer links</h3>
+        <ul class="link-list">
+          <li><a href="/custom-tape-measure/">Custom tape measure supplier</a></li>
+          <li><a href="/oem-odm/">OEM hand tools manufacturer</a></li>
+          <li><a href="/quality-control/">Tape measure quality control</a></li>
+          <li><a href="/contact/">Send tape measure RFQ</a></li>
         </ul>
       </div>
     </div>
@@ -32,10 +99,18 @@ import { categoryCatalogs } from "../siteData.js";
       <h2>Common tape measure specifications</h2>
       <table class="spec-table">
         <tbody>
-          <tr><th>Product types</th><td>Heavy-duty tape measures, compact measuring tapes, custom logo tape measures, wide blade tape measures, pocket tape measures</td></tr>
-          <tr><th>Customization</th><td>Logo, shell color, tape length, blade printing, hook, clip, lanyard, packaging, barcode label, carton mark</td></tr>
-          <tr><th>Applications</th><td>Construction tools, hardware retail, DIY tool sets, promotional gifts, importer catalog programs</td></tr>
-          <tr><th>Inquiry details</th><td>Quantity, length, target market, packaging style, logo file, target price, delivery schedule</td></tr>
+          <tr><th>Product Type</th><td>Heavy-duty tape measure, compact measuring tape, custom logo tape measure, wide blade tape measure, pocket tape measure</td></tr>
+          <tr><th>Blade Length</th><td>3m, 5m, 7.5m, 8m, 10m, 16ft, 25ft, or buyer-specific options by model</td></tr>
+          <tr><th>Blade Width</th><td>Common options can be reviewed based on tape length, market grade, and target price</td></tr>
+          <tr><th>Blade Material</th><td>Steel blade with selected coating and printed markings</td></tr>
+          <tr><th>Case Material</th><td>ABS, rubberized case options, or model-specific shell material</td></tr>
+          <tr><th>Measuring Units</th><td>Metric, inch, or dual-unit markings</td></tr>
+          <tr><th>Lock System</th><td>Slide lock or model-specific locking design</td></tr>
+          <tr><th>Hook Type</th><td>Standard hook, reinforced hook, or customized direction by project</td></tr>
+          <tr><th>Logo Options</th><td>Logo on case, label area, packaging, barcode label, and carton mark</td></tr>
+          <tr><th>Packaging Options</th><td>Blister card, hang card, color box, display box, inner carton, master carton</td></tr>
+          <tr><th>MOQ</th><td>Flexible MOQ discussion based on model, color, logo method, and packaging</td></tr>
+          <tr><th>Sample Availability</th><td>Samples can be arranged after confirming product model, logo, and packaging direction</td></tr>
         </tbody>
       </table>
     </div>
@@ -43,8 +118,8 @@ import { categoryCatalogs } from "../siteData.js";
   <ProductListing
     products={categoryCatalogs["Tape Measures"]}
     eyebrow="Tape measure products"
-    title="5 tape measure product detail entrances"
-    description="Reserved product windows for tape measure buyers. Each entry opens a detail page for specifications, quality notes, packaging, and future real product photos."
+    title="WOOKTOOL tape measure product range"
+    description="Each product entry opens a detail page for specifications, quality notes, packaging, target buyers, and custom branding options."
     showPagination={false}
   />
   <section class="section">
@@ -54,5 +129,6 @@ import { categoryCatalogs } from "../siteData.js";
       <article class="info-card"><h3>Export packaging</h3><p>Support blister cards, color boxes, display boxes, inner cartons, master cartons, barcode labels, and carton marks.</p></article>
     </div>
   </section>
+  <FAQ items={tapeMeasureFaq} title="Tape measure sourcing FAQ" />
   <CTA title="Request a custom tape measure quote" primaryLabel="Send Tape Measure RFQ" />
 </BaseLayout>

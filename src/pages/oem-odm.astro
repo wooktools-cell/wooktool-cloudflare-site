@@ -1,23 +1,103 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import FAQ from "../components/FAQ.astro";
+import { breadcrumbSchema, faqSchema } from "../schema.js";
+
+const oemFaq = [
+  {
+    question: "What OEM/ODM hand tools can wooktools support?",
+    answer: "wooktools can support WOOKTOOL tape measures, utility knives, screwdriver sets, selected hand tool kits, private-label packaging, and buyer-specific product development projects."
+  },
+  {
+    question: "Can you help develop a new product or mold?",
+    answer: "Yes. Buyers can share drawings, reference products, target cost, and market requirements. wooktools can review structure, tooling direction, sampling needs, and production feasibility."
+  },
+  {
+    question: "Can we customize logo, color, and packaging together?",
+    answer: "Yes. wooktools can help coordinate product logo, handle or shell color, packaging artwork, barcode label, display box, carton mark, and other private-label details."
+  },
+  {
+    question: "Do you support flexible MOQ?",
+    answer: "Flexible MOQ can be discussed for selected existing models. MOQ depends on product type, color, logo method, packaging complexity, and whether new tooling is required."
+  }
+];
+
+const oemSchema = [
+  breadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "OEM/ODM", path: "/oem-odm/" }
+  ]),
+  faqSchema(oemFaq)
+];
 ---
 
 <BaseLayout
-  title="OEM Hand Tools Manufacturer | WOOKTOOL OEM ODM Service"
-  description="WOOKTOOL provides OEM/ODM hand tool services from product design, sampling, packaging, production, quality inspection, and shipment."
+  title="OEM/ODM Hand Tools Manufacturer in China | wooktools"
+  description="wooktools provides OEM/ODM hand tool manufacturing for WOOKTOOL tape measures, utility knives, screwdriver sets, private label packaging, sample development, quality control, and factory-direct production."
   path="/oem-odm/"
+  image="/images/products/oem-odm-1000.png"
+  schema={oemSchema}
 >
-  <section class="page-intro"><div><p class="eyebrow">OEM/ODM service</p><h1>OEM Hand Tools Manufacturer</h1><p>WOOKTOOL helps B2B buyers turn hand tool ideas, private-label requirements, and packaging concepts into production-ready sourcing programs.</p></div></section>
+  <section class="page-intro"><div><p class="eyebrow">OEM/ODM service</p><h1>OEM/ODM Hand Tools Manufacturer</h1><p>wooktools helps B2B buyers turn WOOKTOOL product ideas, private-label requirements, custom packaging, and new hand tool concepts into production-ready sourcing programs.</p></div></section>
   <section class="section">
-    <div class="section-inner grid three">
-      <article class="process-card"><h3>Product design</h3><p>Clarify product type, market, materials, branding, packaging, and target price.</p></article>
-      <article class="process-card"><h3>Sampling</h3><p>Prepare sample direction after specifications, logo files, and packaging needs are confirmed.</p></article>
-      <article class="process-card"><h3>Packaging</h3><p>Support blister card, color box, display box, barcode label, and carton mark requirements.</p></article>
-      <article class="process-card"><h3>Production</h3><p>Plan manufacturing around confirmed order quantity, tooling needs, and delivery window.</p></article>
-      <article class="process-card"><h3>Quality check</h3><p>Inspect key product and packaging checkpoints before shipment preparation.</p></article>
-      <article class="process-card"><h3>Shipment support</h3><p>Coordinate export-ready information and communication for international buyers.</p></article>
+    <div class="section-inner grid two">
+      <div class="content-copy">
+        <p class="eyebrow">Custom manufacturing service</p>
+        <h2>OEM and ODM support for global hand tool buyers</h2>
+        <p>wooktools manufactures and supplies custom hand tools under the WOOKTOOL brand, supporting importers, wholesalers, distributors, hardware stores, online sellers, and private-label buyers worldwide. Our OEM/ODM service covers product requirement review, custom logo, custom color, packaging confirmation, sample development, production coordination, quality inspection, and export communication.</p>
+        <p>Buyers can start from existing WOOKTOOL models or send reference products for new development. Common projects include custom tape measures, utility knives, screwdriver sets, private-label tool kits, retail packaging, barcode labels, carton marks, and buyer-specific presentation for regional markets.</p>
+      </div>
+      <img class="product-square-image" src="/images/products/oem-odm-1000.png" alt="WOOKTOOL OEM and ODM hand tool product customization" width="1000" height="1000" />
     </div>
   </section>
+  <section class="section soft">
+    <div class="section-inner grid three">
+      <article class="info-card"><h3>Custom logo service</h3><p>Add buyer logos to product shells, labels, packaging artwork, barcode labels, and carton marks.</p></article>
+      <article class="info-card"><h3>Custom color service</h3><p>Match case, handle, shell, or accent colors to your brand plan and target market.</p></article>
+      <article class="info-card"><h3>Custom packaging service</h3><p>Prepare blister cards, color boxes, display boxes, hanging cards, and retail-ready packaging.</p></article>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">OEM/ODM process</p>
+          <h2>From product requirement to shipment arrangement</h2>
+        </div>
+        <p>This process helps reduce repeated communication and keeps product, packaging, quality, and delivery expectations aligned before mass production.</p>
+      </div>
+    </div>
+    <div class="section-inner grid three">
+      <article class="process-card"><h3>1. Requirement confirmation</h3><p>Clarify product type, target market, material, specification, quantity, target price, and delivery needs.</p></article>
+      <article class="process-card"><h3>2. Logo and packaging review</h3><p>Confirm logo files, color direction, packaging style, barcode label, carton mark, and artwork requirements.</p></article>
+      <article class="process-card"><h3>3. Sample production</h3><p>Prepare samples based on confirmed model, available mold, customized parts, and packaging direction.</p></article>
+      <article class="process-card"><h3>4. Sample approval</h3><p>Review sample appearance, function, logo effect, packaging layout, and any changes before bulk order.</p></article>
+      <article class="process-card"><h3>5. Bulk production</h3><p>Plan manufacturing around confirmed order quantity, tooling needs, production schedule, and delivery window.</p></article>
+      <article class="process-card"><h3>6. Quality inspection</h3><p>Check material, function, assembly, appearance, packaging, quantity, and buyer-specific quality points.</p></article>
+      <article class="process-card"><h3>7. Packaging and carton check</h3><p>Review retail packaging, barcode, inner carton, master carton, carton marks, and shipment preparation.</p></article>
+      <article class="process-card"><h3>8. Shipment arrangement</h3><p>Coordinate export-ready information, delivery communication, and shipment support for international buyers.</p></article>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-inner content-grid">
+      <div class="content-copy">
+        <p class="eyebrow">Buyer types</p>
+        <h2>Built for private-label and wholesale hand tool programs</h2>
+        <p>wooktools is suitable for buyers who need factory-direct supply, custom logo hand tools, private label packaging, flexible MOQ discussion, quality control, and repeatable production communication. This includes importers, distributors, wholesalers, hardware store groups, regional tool brands, Amazon sellers, eBay sellers, and sourcing teams preparing new product lines.</p>
+      </div>
+      <div class="info-card">
+        <h3>Start with these details</h3>
+        <ul class="mini-list">
+          <li>Product type or reference photo</li>
+          <li>Logo and color requirements</li>
+          <li>Packaging style and barcode needs</li>
+          <li>Estimated order quantity and target market</li>
+          <li>Sample timeline and delivery schedule</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <FAQ items={oemFaq} title="OEM/ODM hand tools FAQ" />
   <CTA title="Need OEM/ODM support for hand tools?" primaryLabel="Get Custom Solution" />
 </BaseLayout>

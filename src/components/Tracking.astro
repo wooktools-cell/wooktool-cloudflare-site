@@ -1,0 +1,53 @@
+---
+import { site } from "../siteData.js";
+
+const { ga4Id = "", clarityId = "" } = site.analytics || {};
+---
+
+{ga4Id && (
+  <>
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`}></script>
+    <script define:vars={{ ga4Id }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", ga4Id);
+    </script>
+  </>
+)}
+
+{clarityId && (
+  <script define:vars={{ clarityId }}>
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", clarityId);
+  </script>
+)}
+
+<script>
+  const trackEvent = (eventName, params = {}) => {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", eventName, params);
+    }
+    if (typeof window.clarity === "function") {
+      window.clarity("event", eventName);
+    }
+  };
+
+  document.addEventListener("click", (event) => {
+    const target = event.target instanceof Element ? event.target.closest("[data-track]") : null;
+    if (!target) return;
+    trackEvent(target.getAttribute("data-track"), {
+      link_url: target.getAttribute("href") || "",
+      link_text: target.textContent?.trim() || ""
+    });
+  });
+
+  document.addEventListener("submit", (event) => {
+    const form = event.target instanceof Element ? event.target.closest("[data-track]") : null;
+    if (!form) return;
+    trackEvent(form.getAttribute("data-track"));
+  });
+</script>

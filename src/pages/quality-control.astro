@@ -5,17 +5,23 @@ import { qcSteps } from "../siteData.js";
 ---
 
 <BaseLayout
-  title="Hand Tools Quality Control | WOOKTOOL Inspection Process"
-  description="WOOKTOOL hand tools quality control includes raw material inspection, process inspection, finished product inspection, packaging checks, and pre-shipment inspection."
+  title="Hand Tools Quality Control | wooktools Inspection Process"
+  description="wooktools quality control for WOOKTOOL hand tools includes raw material inspection, process inspection, finished product inspection, packaging checks, and pre-shipment inspection."
   path="/quality-control/"
 >
-  <section class="page-intro"><div><p class="eyebrow">Quality control</p><h1>Hand Tools Quality Control</h1><p>Quality control is planned around practical inspection points so buyers can reduce risk before shipment.</p></div></section>
+  <section class="page-intro"><div><p class="eyebrow">Quality control</p><h1>Hand Tools Quality Control</h1><p>wooktools plans quality control around practical inspection points so buyers can reduce product, packaging, and shipment risk before delivery.</p></div></section>
   <section class="section">
     <div class="section-inner grid three">
-      {qcSteps.map((step) => (
+      {qcSteps.map((step, index) => (
         <article class="process-card">
           <h3>{step}</h3>
-          <p>Inspection detail placeholders can be expanded with your real standards, product tolerances, photos, and test records.</p>
+          <p>{[
+            "Check selected materials, surface condition, blade or tape quality, and key components before production starts.",
+            "Review assembly, printing, function, color, and packaging preparation during manufacturing.",
+            "Inspect finished product appearance, dimensions, moving parts, lock function, blade or tape performance, and buyer-specific requirements.",
+            "Check retail packaging, barcode labels, carton quantity, carton marks, and product presentation before shipment.",
+            "Review final order condition, packaging integrity, quantity, and export readiness before goods leave the factory."
+          ][index]}</p>
         </article>
       ))}
     </div>

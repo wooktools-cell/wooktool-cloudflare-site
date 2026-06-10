@@ -1,24 +1,56 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import FAQ from "../components/FAQ.astro";
+import { breadcrumbSchema, faqSchema } from "../schema.js";
+
+const customTapeFaq = [
+  {
+    question: "What can be customized on a WOOKTOOL tape measure?",
+    answer: "Buyers can discuss logo printing, shell color, blade length, blade width, metric or inch markings, hook style, wrist strap, belt clip, packaging artwork, barcode labels, and carton marks."
+  },
+  {
+    question: "Can wooktools make tape measures for private label brands?",
+    answer: "Yes. wooktools supports private-label tape measure projects with custom logo, retail packaging, barcode-ready labels, and buyer-specific presentation for importer and retail programs."
+  },
+  {
+    question: "Do you support Amazon-ready or retail-ready packaging?",
+    answer: "wooktools can help prepare blister cards, color boxes, display boxes, barcode labels, and carton marks. Buyers should provide platform or retailer requirements before packaging confirmation."
+  },
+  {
+    question: "How does the sample confirmation process work?",
+    answer: "The buyer confirms product model, logo file, color, packaging direction, quantity, and target market. wooktools then reviews sample options, cost, lead time, and artwork requirements."
+  }
+];
+
+const customTapeSchema = [
+  breadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Custom Tape Measure", path: "/custom-tape-measure/" }
+  ]),
+  faqSchema(customTapeFaq)
+];
 ---
 
 <BaseLayout
-  title="Custom Tape Measure Supplier | OEM Tape Measures by WOOKTOOL"
-  description="WOOKTOOL offers custom tape measure services including logo, shell color, tape length, material, packaging, hang card, and private-label branding."
+  title="Custom Tape Measure Supplier | Private Label WOOKTOOL Tape Measures"
+  description="Create custom WOOKTOOL tape measures with your logo, color, blade length, measurement units, hook style, and retail packaging. wooktools supports OEM/ODM tape measure projects for importers and private-label buyers."
   path="/custom-tape-measure/"
+  image="/images/products/custom-tape-measure-1000.png"
+  schema={customTapeSchema}
 >
-  <section class="page-intro"><div><p class="eyebrow">Custom tape measure</p><h1>Custom Tape Measure Supplier</h1><p>Create private-label tape measures with custom logo, shell color, tape length, blade finish, packaging, hang card, and barcode requirements.</p></div></section>
+  <section class="page-intro"><div><p class="eyebrow">Custom tape measure</p><h1>Custom Tape Measure Supplier for Private Label Buyers</h1><p>Create WOOKTOOL or private-label tape measures with custom logo, shell color, tape length, blade markings, hook style, packaging, hang card, barcode, and carton mark requirements.</p></div></section>
   <section class="section">
     <div class="section-inner grid two">
       <div>
-        <h2>Customization options</h2>
+        <h2>What can be customized</h2>
         <ul class="check-list">
           <li>Logo printing on shell or label area</li>
-          <li>Shell color selection for brand programs</li>
-          <li>Tape length and blade material choices</li>
+          <li>Custom shell color for brand programs</li>
+          <li>Tape length, blade width, and blade material choices</li>
+          <li>Metric, inch, or dual-unit blade markings</li>
           <li>Hook, clip, and wrist strap options</li>
-          <li>Blister card, color box, display box, and hang card packaging</li>
+          <li>Blister card, color box, display box, hang card, and Amazon-ready packaging</li>
           <li>Private-label barcode and carton mark support</li>
         </ul>
       </div>
@@ -26,10 +58,30 @@ import CTA from "../components/CTA.astro";
     </div>
   </section>
   <section class="section soft">
+    <div class="section-inner content-grid">
+      <div class="content-copy">
+        <p class="eyebrow">Private-label tape measure program</p>
+        <h2>From logo idea to production-ready specification</h2>
+        <p>A custom tape measure project should start with the target market and sales channel. A hardware distributor may need durable packaging and clear carton marks, while an Amazon or eBay seller may need barcode-ready packaging, compact product presentation, and stable visual consistency across repeat orders.</p>
+        <p>wooktools helps buyers review logo placement, shell color, blade length, blade width, metric or inch markings, hook design, belt clip, wrist strap, and packaging structure. For WOOKTOOL branded supply or private-label orders, these details are confirmed before sampling so the quotation and sample direction stay practical.</p>
+        <p>Buyers can send a reference product, logo file, Pantone or color direction, packaging reference, target quantity, target price, and required delivery schedule. This information helps wooktools confirm whether an existing model, adjusted color, standard packaging, or deeper OEM/ODM development is the best route.</p>
+      </div>
+      <div class="info-card">
+        <h3>Related sourcing pages</h3>
+        <ul class="link-list">
+          <li><a href="/tape-measures/">Tape measure manufacturer</a></li>
+          <li><a href="/oem-odm/">OEM/ODM hand tools</a></li>
+          <li><a href="/quality-control/">Quality control</a></li>
+          <li><a href="/contact/">Send custom tape measure RFQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section soft">
     <div class="section-inner grid three">
-      <article class="process-card"><h3>1. Confirm requirements</h3><p>Share product type, logo, tape length, packaging, quantity, and target market.</p></article>
-      <article class="process-card"><h3>2. Sample and quotation</h3><p>Review cost, sample options, production timeline, and packaging artwork needs.</p></article>
-      <article class="process-card"><h3>3. Production and QC</h3><p>After approval, production follows confirmed specifications with inspection before shipment.</p></article>
+      <article class="process-card"><h3>1. Confirm requirements</h3><p>Share product type, logo, shell color, tape length, packaging, quantity, target market, and delivery needs.</p></article>
+      <article class="process-card"><h3>2. Review sample direction</h3><p>Confirm cost, available model, artwork requirements, sample option, production timeline, and packaging structure.</p></article>
+      <article class="process-card"><h3>3. Produce and inspect</h3><p>After approval, production follows confirmed specifications with product, appearance, function, and packaging checks before shipment.</p></article>
     </div>
   </section>
   <section class="section">
@@ -45,11 +97,12 @@ import CTA from "../components/CTA.astro";
         <tbody>
           <tr><th>Branding</th><td>Logo file, print position, shell color, tape blade marking, packaging artwork</td></tr>
           <tr><th>Product</th><td>Length, width, blade coating, lock style, hook style, belt clip, wrist strap</td></tr>
-          <tr><th>Packaging</th><td>Blister card, hang card, color box, display box, barcode label, carton mark</td></tr>
+          <tr><th>Packaging</th><td>Blister card, hang card, color box, display box, barcode label, Amazon-ready packaging, retail-ready packaging, carton mark</td></tr>
           <tr><th>Order planning</th><td>Target quantity, sample deadline, delivery date, destination market, inspection requirements</td></tr>
         </tbody>
       </table>
     </div>
   </section>
+  <FAQ items={customTapeFaq} title="Custom tape measure FAQ" />
   <CTA title="Build a custom tape measure for your brand" primaryLabel="Get Custom Solution" />
 </BaseLayout>

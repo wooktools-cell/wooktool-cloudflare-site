@@ -14,7 +14,7 @@ import { navItems, site } from "../siteData.js";
   </button>
   <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
     {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
-    <a class="nav-quote" href="/contact/">Request a Quote</a>
+    <a class="nav-quote" href="/contact/" data-track="request_quote_click">Request a Quote</a>
   </nav>
 </header>
 

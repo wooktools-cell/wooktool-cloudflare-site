@@ -1,22 +1,60 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import FAQ from "../components/FAQ.astro";
 import ProductListing from "../components/ProductListing.astro";
 import { categoryCatalogs } from "../siteData.js";
+import { breadcrumbSchema, faqSchema, productCollectionSchema } from "../schema.js";
+
+const screwdriverFaq = [
+  {
+    question: "What screwdriver sets can wooktools manufacture?",
+    answer: "wooktools can supply WOOKTOOL screwdriver sets, household screwdriver sets, multi-bit screwdriver sets, ratchet screwdriver sets, and hex key wrench sets."
+  },
+  {
+    question: "Can screwdriver sets be customized for private-label packaging?",
+    answer: "Yes. Buyers can customize handle color, logo, bit selection, case layout, blister card, color box, gift box, barcode labels, and carton marks."
+  },
+  {
+    question: "What materials are commonly used?",
+    answer: "Common options include chrome vanadium steel shafts or bits, selected handle materials, magnetic tips, and model-specific cases or holders based on the product program."
+  },
+  {
+    question: "Can we get samples before bulk production?",
+    answer: "Yes. Samples can be arranged after confirming product model, set configuration, logo, packaging, quantity, and target market."
+  }
+];
+
+const screwdriverDescription = "wooktools is a custom screwdriver set manufacturer in China supplying OEM WOOKTOOL hand tool sets, ratchet screwdrivers, multi-bit kits, hex key sets, retail packaging, QC, and flexible MOQ.";
+
+const screwdriverSchema = [
+  productCollectionSchema({
+    name: "WOOKTOOL Screwdriver Sets",
+    description: screwdriverDescription,
+    path: "/screwdriver-sets/",
+    image: "/images/products/catalog/screwdriver-set-main.webp"
+  }),
+  breadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Screwdriver Sets", path: "/screwdriver-sets/" }
+  ]),
+  faqSchema(screwdriverFaq)
+];
 ---
 
 <BaseLayout
   title="Screwdriver Set Manufacturer China | OEM Hand Tool Sets"
-  description="WOOKTOOL is a custom screwdriver set manufacturer in China supplying OEM hand tool sets, ratchet screwdrivers, multi-bit kits, hex key sets, retail packaging, QC, and flexible MOQ."
+  description={screwdriverDescription}
   path="/screwdriver-sets/"
   image="/images/products/catalog/screwdriver-set-main.webp"
+  schema={screwdriverSchema}
 >
   <section class="page-intro"><div><p class="eyebrow">Screwdriver sets</p><h1>Custom Screwdriver Set Manufacturer in China</h1><p>Develop OEM screwdriver sets, ratchet screwdriver kits, multi-bit tool sets, household screwdriver sets, and hex key wrench sets for hardware importers, distributors, retailers, and private-label tool brands.</p></div></section>
   <section class="section">
     <div class="section-inner grid two">
       <div>
         <h2>OEM screwdriver set factory support</h2>
-        <p>We help buyers define screwdriver sizes, bit selection, handle material, handle color, magnetic tip design, case layout, blister card, color box, barcode, labeling, and carton marks for repeatable screwdriver set supply programs.</p>
+        <p>wooktools helps buyers define screwdriver sizes, bit selection, handle material, handle color, magnetic tip design, case layout, blister card, color box, barcode, labeling, and carton marks for repeatable screwdriver set supply programs.</p>
         <ul class="check-list">
           <li>OEM screwdriver set supplier for global B2B buyers</li>
           <li>Custom handle color, logo, bit selection, and case layout</li>
@@ -35,5 +73,6 @@ import { categoryCatalogs } from "../siteData.js";
     description="Five product entrances for screwdriver set buyers. Each detail page covers material, set configuration, customization, packaging, quality-control checks, and suitable buyer channels."
     showPagination={false}
   />
+  <FAQ items={screwdriverFaq} title="Screwdriver set sourcing FAQ" />
   <CTA title="Planning a screwdriver set program?" primaryLabel="Request Screwdriver Set Quote" />
 </BaseLayout>

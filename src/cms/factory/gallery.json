@@ -1,28 +1,28 @@
 {
   "items": [
     {
-      "image": "/images/uploads/1.jpg",
-      "alt": "Factory exterior image placeholder for WOOKTOOL manufacturing site",
+      "image": "/images/factory/oem-tool-solutions.png",
+      "alt": "wooktools factory exterior for WOOKTOOL hand tools manufacturing",
       "title": "Factory exterior",
-      "description": "Use this position for workshop exterior, office entrance, or factory sign photos."
+      "description": "Factory exterior and entrance view for overseas buyers reviewing manufacturing background."
     },
     {
       "image": "/images/uploads/2.jpg",
-      "alt": "Production line image placeholder for hand tool manufacturing",
+      "alt": "wooktools hand tool production line for tape measures utility knives and screwdriver sets",
       "title": "Production line",
-      "description": "Use this position for tape measure assembly, utility knife production, or screwdriver packing lines."
+      "description": "Production and assembly area for WOOKTOOL tape measures, utility knives, screwdriver sets, and related hand tools."
     },
     {
       "image": "/images/uploads/4.jpg",
-      "alt": "Quality control inspection image placeholder for hand tools",
+      "alt": "wooktools quality control inspection for WOOKTOOL hand tools",
       "title": "Quality inspection",
-      "description": "Use this position for material checks, function tests, finished product checks, or inspection reports."
+      "description": "Quality inspection area for material checks, function tests, finished product review, and packaging checks."
     },
     {
       "image": "/images/uploads/3.jpg",
-      "alt": "Packing and shipment image placeholder for export hand tool orders",
+      "alt": "wooktools packing and shipment preparation for export hand tool orders",
       "title": "Packing and shipment",
-      "description": "Use this position for cartons, pallets, warehouse, loading, and export shipment photos."
+      "description": "Packing and shipment preparation for cartons, pallets, warehouse handling, and export orders."
     }
   ]
 }
