@@ -133,6 +133,8 @@ const packagingOptions = [
     details: "Buyer-specific barcode labels, SKU labels, carton marks, and shipping marks can be reviewed before production."
   }
 ];
+
+const rfqHref = "/contact/#rfq-form";
 ---
 
 <BaseLayout
@@ -200,6 +202,14 @@ const packagingOptions = [
           </article>
         ))}
       </div>
+      <div class="inline-rfq">
+        <div>
+          <p class="eyebrow">Ready to quote</p>
+          <h3>Send your blade, hook, rope, logo, and packaging requirements for review.</h3>
+          <p>WOOKTOOL can help confirm practical component combinations before sampling and mass production.</p>
+        </div>
+        <a class="button button-primary" href={rfqHref} data-track="custom_tape_mid_rfq_click">Request Custom Tape Measure Quote</a>
+      </div>
     </div>
   </section>
   <section class="section soft">
@@ -265,6 +275,14 @@ const packagingOptions = [
           </article>
         ))}
       </div>
+      <div class="inline-rfq inline-rfq-dark">
+        <div>
+          <p class="eyebrow">Packaging review</p>
+          <h3>Need barcode, carton mark, or retail-ready packaging for your tape measure order?</h3>
+          <p>Share your sales channel and packaging reference so WOOKTOOL can check artwork, label, and carton requirements before quotation.</p>
+        </div>
+        <a class="button button-light" href={rfqHref} data-track="custom_tape_packaging_rfq_click">Send Packaging RFQ</a>
+      </div>
     </div>
   </section>
   <section class="section soft">
@@ -294,5 +312,12 @@ const packagingOptions = [
     </div>
   </section>
   <FAQ items={customTapeFaq} title="Custom tape measure FAQ" />
-  <CTA title="Build a custom tape measure for your brand" primaryLabel="Get Custom Solution" />
+  <CTA
+    title="Build a custom tape measure for your brand"
+    text="Send your logo, shell color, blade specification, packaging style, target quantity, and delivery schedule. WOOKTOOL will review the practical sample direction for your program."
+    primaryLabel="Request Custom Tape Measure Quote"
+    primaryHref={rfqHref}
+    secondaryLabel="View Tape Measures"
+    secondaryHref="/tape-measures/"
+  />
 </BaseLayout>
