@@ -27,6 +27,10 @@ const categoryPathByName = {
   "Screwdriver Sets": "/screwdriver-sets/"
 };
 const categoryPath = categoryPathByName[product.category] || "/products/";
+const customizationPath =
+  product.category === "Tape Measures" ? "/custom-tape-measure/" : "/oem-odm/";
+const customizationLabel =
+  product.category === "Tape Measures" ? "Customize This Tape Measure" : "Customize This Product";
 const imageUrls = [product.image, ...(product.detailImages || [])].map((image) =>
   new URL(image, site.domain).toString()
 );
@@ -114,6 +118,10 @@ const breadcrumbSchema = {
             ))}
           </tbody>
         </table>
+        <div class="product-action-row">
+          <a class="button button-primary" href="/contact/#rfq-form" data-track="product_detail_rfq_click">Ask for Price</a>
+          <a class="button button-secondary" href={customizationPath} data-track="product_detail_custom_click">{customizationLabel}</a>
+        </div>
       </div>
     </div>
   </section>
@@ -178,5 +186,12 @@ const breadcrumbSchema = {
     </section>
   )}
 
-  <CTA title={`Request a quote for ${product.title}`} primaryLabel="Send Product RFQ" />
+  <CTA
+    title={`Request a quote for ${product.title}`}
+    text="Send your target quantity, logo, packaging, and delivery requirements. WOOKTOOL will review quotation and customization options for this product."
+    primaryLabel="Send Product RFQ"
+    primaryHref="/contact/#rfq-form"
+    secondaryLabel={customizationLabel}
+    secondaryHref={customizationPath}
+  />
 </BaseLayout>
