@@ -34,6 +34,7 @@ import { site } from "../siteData.js";
     <label>
       Product Interest
       <select name="product_interest">
+        <option value="">Select product type</option>
         <option>Tape Measures</option>
         <option>Custom Tape Measure</option>
         <option>Utility Knives</option>
@@ -45,13 +46,47 @@ import { site } from "../siteData.js";
       Estimated Quantity
       <input type="text" name="estimated_quantity" placeholder="Example: 3,000 pcs" />
     </label>
+    <label>
+      Custom Logo Needed
+      <select name="custom_logo_needed">
+        <option value="">Select option</option>
+        <option>Yes, custom logo needed</option>
+        <option>No logo needed</option>
+        <option>Not sure yet</option>
+      </select>
+    </label>
+    <label>
+      Packaging Requirement
+      <select name="packaging_requirement">
+        <option value="">Select packaging</option>
+        <option>Blister card</option>
+        <option>Color box</option>
+        <option>Display box</option>
+        <option>Hang card</option>
+        <option>Bulk pack</option>
+        <option>Barcode / carton mark needed</option>
+        <option>Not sure yet</option>
+      </select>
+    </label>
+    <label>
+      Target Market
+      <input type="text" name="target_market" placeholder="Example: USA, Germany, Middle East" />
+    </label>
+    <label>
+      Delivery Schedule
+      <input type="text" name="delivery_schedule" placeholder="Example: Need goods ready in 45 days" />
+    </label>
+    <label>
+      Target Price
+      <input type="text" name="target_price" placeholder="Optional: target price or price range" />
+    </label>
   </div>
   <label>
-    Message
-    <textarea name="message" rows="6" placeholder="Tell us your product type, logo requirement, packaging style, estimated quantity, target price, and delivery requirements." required></textarea>
+    RFQ Details
+    <textarea name="message" rows="7" placeholder="Tell us your product type, size/specification, logo position, color requirement, packaging style, estimated quantity, target price, and delivery requirements." required></textarea>
   </label>
   <label>
-    Upload Drawing or File
+    Upload Logo, Drawing, or Reference Photo
     <input type="file" name="attachment" accept=".pdf,.jpg,.jpeg,.png,.webp" />
     <small>Optional. Please keep files under 10MB. You can also email drawings directly to {site.email}.</small>
   </label>
