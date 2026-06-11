@@ -9,8 +9,8 @@ export const site = {
   whatsappUrl: "https://wa.me/8615090608676",
   alibabaUrl: "https://vooktool.en.alibaba.com",
   analytics: {
-    ga4Id: "",
-    clarityId: ""
+    ga4Id: "G-EPEPG206H1",
+    clarityId: "x5cu6wot04"
   },
   description:
     "wooktools is a China-based custom hand tools manufacturer supplying WOOKTOOL tape measures, utility knives, screwdriver sets, OEM/ODM tools, and private-label packaging for global B2B buyers."
