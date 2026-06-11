@@ -686,6 +686,105 @@ main {
   font-size: 0.94rem;
 }
 
+.custom-option-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.custom-option-card,
+.quote-checklist {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 26px rgba(16, 22, 29, 0.07);
+}
+
+.custom-option-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.25rem;
+}
+
+.custom-option-card > span {
+  display: block;
+  width: 2.4rem;
+  height: 4px;
+  margin-bottom: 1rem;
+  background: var(--accent);
+}
+
+.custom-option-card h3 {
+  font-size: 1rem;
+}
+
+.custom-option-card p {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.custom-option-card ul {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 1rem;
+  list-style: none;
+}
+
+.custom-option-card li {
+  position: relative;
+  padding-left: 1rem;
+  color: #35404b;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.custom-option-card li::before {
+  position: absolute;
+  top: 0.7em;
+  left: 0;
+  width: 0.4rem;
+  height: 2px;
+  background: var(--accent-dark);
+  content: "";
+}
+
+.quote-checklist {
+  padding: 1.25rem;
+}
+
+.quote-checklist h3 {
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.quote-checklist dl {
+  display: grid;
+  grid-template-columns: minmax(7rem, 0.42fr) 1fr;
+  gap: 0;
+  margin: 0;
+}
+
+.quote-checklist dt,
+.quote-checklist dd {
+  margin: 0;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid #e2e6ea;
+}
+
+.quote-checklist dt {
+  color: var(--navy);
+  font-weight: 800;
+}
+
+.quote-checklist dd {
+  color: var(--muted);
+}
+
+.quote-checklist dt:last-of-type,
+.quote-checklist dd:last-child {
+  border-bottom: 0;
+}
+
 .catalog-category {
   margin-bottom: 0.45rem;
   color: var(--steel-dark) !important;
@@ -1013,6 +1112,7 @@ small,
   .catalog-grid,
   .catalog-grid.compact,
   .component-grid,
+  .custom-option-grid,
   .factory-gallery,
   .product-gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1082,11 +1182,25 @@ small,
   .catalog-grid,
   .catalog-grid.compact,
   .component-grid,
+  .custom-option-grid,
   .factory-gallery,
   .product-gallery,
   .form-grid,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .quote-checklist dl {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-checklist dt {
+    padding-bottom: 0.2rem;
+    border-bottom: 0;
+  }
+
+  .quote-checklist dd {
+    padding-top: 0;
   }
 
   .cta-band {

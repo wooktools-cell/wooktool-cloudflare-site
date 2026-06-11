@@ -69,6 +69,37 @@ const tapeComponents = [
     text: "Nylon rope and PVC wrist strap options help match brand color, retail appearance, and user handling preferences."
   }
 ];
+
+const customizationModules = [
+  {
+    title: "Shell color matching",
+    lead: "Match the tape measure shell to your brand system, retail series, or distributor color plan.",
+    points: ["Pantone or reference color review", "Single-color or two-tone shell options", "Color consistency checked before mass production"]
+  },
+  {
+    title: "Logo and label placement",
+    lead: "Choose practical logo positions that keep the brand visible without affecting product function.",
+    points: ["Front label, side area, blade print, or packaging logo", "Silk print, sticker label, or artwork review by model", "Buyer logo file checked before sample confirmation"]
+  },
+  {
+    title: "Retail packaging options",
+    lead: "Prepare packaging for hardware stores, distributors, Amazon sellers, and private-label programs.",
+    points: ["Blister card, hang card, color box, display box", "Barcode label and carton mark support", "Packaging artwork review before production"]
+  },
+  {
+    title: "MOQ and delivery planning",
+    lead: "Select a practical custom level based on target quantity, budget, and launch schedule.",
+    points: ["Flexible MOQ discussion for existing models", "Sampling before bulk order when artwork is required", "Production schedule confirmed after sample approval"]
+  }
+];
+
+const customizationChecklist = [
+  ["Logo file", "AI, PDF, EPS, SVG, or high-resolution PNG preferred"],
+  ["Color direction", "Pantone number, reference product, or brand color guide"],
+  ["Tape specification", "Length, width, unit system, blade background, hook, clip, and strap"],
+  ["Packaging", "Blister card, color box, display box, barcode, carton mark, and sales channel needs"],
+  ["Order target", "Estimated quantity, delivery date, destination market, and inspection requirements"]
+];
 ---
 
 <BaseLayout
@@ -135,6 +166,50 @@ const tapeComponents = [
             </div>
           </article>
         ))}
+      </div>
+    </div>
+  </section>
+  <section class="section soft">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">OEM/ODM details</p>
+          <h2>Custom tape measure specification modules</h2>
+        </div>
+        <p>These modules help private-label buyers confirm the visible brand details, packaging format, and order plan before sample development.</p>
+      </div>
+      <div class="custom-option-grid">
+        {customizationModules.map((item) => (
+          <article class="custom-option-card">
+            <span aria-hidden="true"></span>
+            <h3>{item.title}</h3>
+            <p>{item.lead}</p>
+            <ul>
+              {item.points.map((point) => <li>{point}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-inner content-grid">
+      <div class="content-copy">
+        <p class="eyebrow">Before quotation</p>
+        <h2>Information buyers can prepare for faster custom tape measure sampling</h2>
+        <p>For custom logo tape measures, the fastest way to move from idea to sample is to confirm the model, color, logo position, blade specification, packaging, and target order plan together. This helps wooktools avoid unclear artwork revisions and gives importers a more accurate quotation.</p>
+        <p>For a brand launch, distributor program, or retail promotion, buyers can start with an existing model and adjust the visible brand details. For a deeper OEM/ODM tape measure project, wooktools can review mold direction, component choices, packaging structure, and quality requirements before sampling.</p>
+      </div>
+      <div class="quote-checklist">
+        <h3>RFQ checklist</h3>
+        <dl>
+          {customizationChecklist.map(([term, detail]) => (
+            <>
+              <dt>{term}</dt>
+              <dd>{detail}</dd>
+            </>
+          ))}
+        </dl>
       </div>
     </div>
   </section>
