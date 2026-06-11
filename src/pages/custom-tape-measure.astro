@@ -100,6 +100,39 @@ const customizationChecklist = [
   ["Packaging", "Blister card, color box, display box, barcode, carton mark, and sales channel needs"],
   ["Order target", "Estimated quantity, delivery date, destination market, and inspection requirements"]
 ];
+
+const packagingOptions = [
+  {
+    name: "Blister card",
+    bestFor: "Retail shelf display and hardware store programs",
+    details: "Suitable for visible product presentation, hang-hole display, barcode labels, and brand artwork on the backing card."
+  },
+  {
+    name: "Color box",
+    bestFor: "Private-label orders, distributor programs, and online sales",
+    details: "Supports full-color packaging artwork, product specification, barcode, warning text, and brand story panels."
+  },
+  {
+    name: "Display box",
+    bestFor: "Counter display, wholesale promotion, and mixed retail packs",
+    details: "Helps retailers present multiple tape measures together while keeping cartons organized for repeat sales."
+  },
+  {
+    name: "Hang card",
+    bestFor: "Cost-conscious retail display and promotional programs",
+    details: "A practical option when buyers need visible branding, simple product information, and efficient packing volume."
+  },
+  {
+    name: "Bulk pack",
+    bestFor: "Industrial supply, project orders, and price-sensitive distribution",
+    details: "Reduces packaging cost for buyers focused on jobsite use, wholesale channels, or secondary local repacking."
+  },
+  {
+    name: "Barcode and carton mark",
+    bestFor: "Amazon-ready, warehouse-ready, and importer receiving requirements",
+    details: "Buyer-specific barcode labels, SKU labels, carton marks, and shipping marks can be reviewed before production."
+  }
+];
 ---
 
 <BaseLayout
@@ -210,6 +243,27 @@ const customizationChecklist = [
             </>
           ))}
         </dl>
+      </div>
+    </div>
+  </section>
+  <section class="section soft">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Packaging options</p>
+          <h2>Retail-ready packaging for custom tape measure programs</h2>
+        </div>
+        <p>Packaging should match the sales channel. WOOKTOOL can support tape measure packaging for hardware stores, importers, Amazon sellers, wholesalers, and private-label retail programs.</p>
+      </div>
+      <div class="packaging-grid">
+        {packagingOptions.map((item, index) => (
+          <article class="packaging-card">
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <h3>{item.name}</h3>
+            <p><strong>Best for:</strong> {item.bestFor}</p>
+            <p>{item.details}</p>
+          </article>
+        ))}
       </div>
     </div>
   </section>
