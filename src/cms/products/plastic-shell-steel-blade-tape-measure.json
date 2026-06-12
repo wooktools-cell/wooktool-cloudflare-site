@@ -1,50 +1,50 @@
 {
-  "summary": "Plastic shell steel blade tape measure for wholesale and retail tool programs, supporting logo customization, metric or inch markings, and export-ready packaging.",
+  "summary": "Plastic shell steel blade tape measure for wholesale, hardware retail, and private-label tool programs, with clear blade markings, OEM logo options, and export-ready packaging.",
   "detailImages": [
     "/images/uploads/5.jpg",
     "/images/uploads/3.jpg"
   ],
   "slug": "plastic-shell-steel-blade-tape-measure",
   "order": 7,
-  "targetBuyers": "Hardware importers, retail tool distributors, construction tool wholesalers, and private-label brands",
+  "targetBuyers": "Hardware importers, retail tool distributors, construction tool wholesalers, value-focused private-label brands, and general tool suppliers",
   "sellingPoints": [
-    "Steel blade with clear measuring marks",
-    "Plastic shell design for practical everyday use",
-    "OEM logo, color, and packaging options"
+    "Cost-effective plastic case with steel blade for everyday measuring work",
+    "Metric, inch, or dual-unit blade options for different destination markets",
+    "OEM logo, shell color, barcode label, and packaging customization"
   ],
   "specs": [
     {
       "label": "Length",
-      "value": "3m/10ft, 5m/16ft, 7.5m/25ft, or custom options by project"
+      "value": "3m/10ft, 5m/16ft, 7.5m/25ft, or buyer-specific options by project"
     },
     {
       "label": "Material",
-      "value": "Steel measuring blade, plastic case, metal hook, belt clip"
+      "value": "Steel measuring blade, plastic case, metal hook, belt clip, optional strap"
     },
     {
       "label": "Customization",
-      "value": "Case logo, brand color, blade unit, packaging artwork, and carton mark"
+      "value": "Case logo, brand color, blade unit system, packaging artwork, barcode, and carton mark"
     },
     {
       "label": "Packaging",
-      "value": "OPP bag, color box, blister card, display box, or bulk carton"
+      "value": "OPP bag, color box, blister card, display box, hang card, or bulk carton"
     },
     {
       "label": "MOQ",
-      "value": "To be confirmed by model, color, packaging, and order quantity"
+      "value": "To be confirmed by tape length, shell color, packaging style, and order quantity"
     },
     {
-      "label": "Source reference",
-      "value": "Alibaba product link provided by WOOKTOOL team"
+      "label": "OEM Service",
+      "value": "Logo file review, packaging artwork check, sample confirmation, and repeat-order support"
     }
   ],
   "title": "Plastic Shell Steel Blade Tape Measure",
   "image": "/images/uploads/plastic-shell.jpg",
   "category": "Tape Measures",
   "quality": [
-    "Blade coating and number printing inspection",
-    "Retraction, lock, and hook function test",
-    "Plastic case appearance and assembly review",
-    "Packaging quantity and carton condition check"
+    "Blade coating, number printing, and measurement readability inspection",
+    "Retraction, lock, hook, and belt clip function test",
+    "Plastic case appearance, color consistency, and assembly review",
+    "Packaging quantity, barcode label, and carton condition check"
   ]
 }
