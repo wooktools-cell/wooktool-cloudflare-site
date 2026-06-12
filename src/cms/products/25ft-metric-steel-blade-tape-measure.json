@@ -1,14 +1,12 @@
 {
-  "order": 8,
-  "slug": "25ft-metric-steel-blade-tape-measure",
-  "title": "25FT Metric Steel Blade Tape Measure",
-  "category": "Tape Measures",
-  "image": "/images/products/catalog/wide-blade-tape-measure-main.webp",
-  "detailImages": [
-    "/images/products/catalog/wide-blade-tape-measure-detail-1.webp",
-    "/images/products/catalog/wide-blade-tape-measure-detail-2.webp"
-  ],
   "summary": "25FT metric steel blade tape measure for construction, hardware retail, and private-label supply, with dual-unit blade options and custom packaging support.",
+  "detailImages": [
+    "/images/uploads/81bf8jyaapl._ac_sl1500_.jpg",
+    "/images/uploads/81-2vrzrsol._ac_sl1500_.jpg"
+  ],
+  "slug": "25ft-metric-steel-blade-tape-measure",
+  "order": 8,
+  "targetBuyers": "Construction tool distributors, hardware wholesalers, retail chains, and OEM/private-label tape measure buyers",
   "sellingPoints": [
     "25FT / 7.5m measuring range for jobsite use",
     "Metric, inch, or dual-unit blade marking options",
@@ -40,11 +38,13 @@
       "value": "Alibaba product link provided by WOOKTOOL team"
     }
   ],
+  "title": "25FT Metric Steel Blade Tape Measure",
+  "image": "/images/uploads/blue.jpg",
+  "category": "Tape Measures",
   "quality": [
     "Blade length, printing, and readability review",
     "Locking, retraction, and hook inspection",
     "Case assembly and belt clip check",
     "Retail packaging and carton mark confirmation"
-  ],
-  "targetBuyers": "Construction tool distributors, hardware wholesalers, retail chains, and OEM/private-label tape measure buyers"
+  ]
 }
