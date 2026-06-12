@@ -1,14 +1,12 @@
 {
-  "order": 6,
-  "slug": "custom-logo-self-winding-tape-measure",
-  "title": "Custom Logo Self Winding Tape Measure",
-  "category": "Tape Measures",
-  "image": "/images/products/catalog/custom-logo-tape-measure-main.webp",
-  "detailImages": [
-    "/images/products/catalog/custom-logo-tape-measure-detail-1.webp",
-    "/images/products/catalog/custom-logo-tape-measure-detail-2.webp"
-  ],
   "summary": "Custom logo self winding tape measure for private-label tool programs, with steel blade, plastic shell, OEM branding, shell color, and retail packaging options.",
+  "detailImages": [
+    "/images/uploads/7.5m25ft-logo-wooktool-7.png",
+    "/images/uploads/7.5m25ft-logo-wooktool-5.png"
+  ],
+  "slug": "custom-logo-self-winding-tape-measure",
+  "order": 6,
+  "targetBuyers": "Private-label tool brands, hardware importers, distributors, promotional product buyers, and online sellers",
   "sellingPoints": [
     "Self-winding steel blade for daily measuring work",
     "Custom logo and private-label packaging support",
@@ -40,11 +38,13 @@
       "value": "Alibaba product link provided by WOOKTOOL team"
     }
   ],
+  "title": "Custom Logo Self Winding Tape Measure",
+  "image": "/images/uploads/7.5m25ft-logo-wooktool-1.png",
+  "category": "Tape Measures",
   "quality": [
     "Blade printing and readability check",
     "Self-winding retraction and lock function test",
     "Shell assembly, hook, clip, and strap inspection",
     "Logo, packaging, barcode, and carton mark review"
-  ],
-  "targetBuyers": "Private-label tool brands, hardware importers, distributors, promotional product buyers, and online sellers"
+  ]
 }
