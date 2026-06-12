@@ -1,28 +1,40 @@
 {
   "items": [
     {
-      "image": "/images/factory/oem-tool-solutions.png",
-      "alt": "wooktools factory exterior for WOOKTOOL hand tools manufacturing",
-      "title": "Factory exterior",
-      "description": "Factory exterior and entrance view for overseas buyers reviewing manufacturing background."
+      "image": "/images/factory/tape-measure-assembly-line-1.jpg",
+      "alt": "WOOKTOOL tape measure assembly line for OEM measuring tape production in China",
+      "title": "Tape Measure Assembly Line",
+      "description": "Assembly line for WOOKTOOL tape measures, supporting OEM logo, case color, blade length, hook, clip, strap, and packaging requirements for B2B buyers."
     },
     {
-      "image": "/images/uploads/1.jpg",
-      "alt": "wooktools hand tool production line for tape measures utility knives and screwdriver sets",
-      "title": "Production line",
-      "description": "Production and assembly area for WOOKTOOL tape measures, utility knives, screwdriver sets, and related hand tools."
+      "image": "/images/factory/tape-measure-assembly-line-2.jpg",
+      "alt": "WOOKTOOL measuring tape assembly workshop for wholesale tape measure production",
+      "title": "Bulk Measuring Tape Production",
+      "description": "Workshop view for bulk tape measure orders, helping importers, wholesalers, distributors, and private-label tool brands plan stable repeat supply."
     },
     {
-      "image": "/images/uploads/4.jpg",
-      "alt": "wooktools quality control inspection for WOOKTOOL hand tools",
-      "title": "Quality inspection",
-      "description": "Quality inspection area for material checks, function tests, finished product review, and packaging checks."
+      "image": "/images/factory/custom-tool-mold-workshop.jpg",
+      "alt": "custom mold workshop for OEM hand tool and tape measure shell development",
+      "title": "Custom Mold Workshop",
+      "description": "Custom mold capability for tape measure shells and OEM hand tool parts, suitable for buyers developing new products, private-label designs, and exclusive tooling."
     },
     {
-      "image": "/images/uploads/3.jpg",
-      "alt": "wooktools packing and shipment preparation for export hand tool orders",
-      "title": "Packing and shipment",
-      "description": "Packing and shipment preparation for cartons, pallets, warehouse handling, and export orders."
+      "image": "/images/factory/tape-measure-quality-inspection.jpg",
+      "alt": "WOOKTOOL tape measure quality inspection for blade printing assembly and product control",
+      "title": "Quality Inspection",
+      "description": "Quality control area for checking tape blade printing, assembly condition, product appearance, function, packaging details, and buyer-specific inspection standards."
+    },
+    {
+      "image": "/images/factory/testing-equipment-room.jpg",
+      "alt": "testing equipment room for WOOKTOOL hand tool quality control and product development",
+      "title": "Testing Equipment",
+      "description": "Testing equipment and workshop support for product development, sampling, material checks, durability review, and production quality control."
+    },
+    {
+      "image": "/images/factory/packing-shipping-warehouse.jpg",
+      "alt": "WOOKTOOL packing and shipping warehouse for export hand tool orders",
+      "title": "Packing and Shipping",
+      "description": "Packing and shipping area for export hand tool orders, including carton handling, warehouse preparation, shipment coordination, and delivery planning."
     }
   ]
 }
