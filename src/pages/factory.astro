@@ -2,6 +2,33 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import factoryGallery from "../cms/factory/gallery.json";
+
+const certificates = [
+  {
+    image: "/images/certificates/ce-rohs-certificate-htt2026031155r.jpg",
+    alt: "WOOKTOOL tape measure CE and RoHS certificate of conformity HTT2026031155R",
+    title: "CE / RoHS Certificate",
+    meta: "Certificate No. HTT2026031155R",
+    description: "Certificate of conformity for tape measure products, supporting buyer review for CE mark and RoHS compliance documentation.",
+    file: "/documents/certificates/ce-rohs-certificate-htt2026031155r.pdf",
+  },
+  {
+    image: "/images/certificates/rohs-test-report-htt2026031155ch.jpg",
+    alt: "WOOKTOOL tape measure RoHS test report HTT2026031155CH with PASS conclusion",
+    title: "RoHS Test Report",
+    meta: "Report No. HTT2026031155CH",
+    description: "RoHS test report for tape measure samples, including restricted substance testing and PASS conclusion for compliance review.",
+    file: "/documents/certificates/rohs-test-report-htt2026031155ch.pdf",
+  },
+  {
+    image: "/images/certificates/tape-measure-rohs-test-report-nts2411570r.jpg",
+    alt: "WOOKTOOL tape measure RoHS product test report NTS2411570R for buyer compliance review",
+    title: "Product Test Report",
+    meta: "Report No. NTS2411570R",
+    description: "Independent RoHS product testing document for tape measure samples, useful for importer, distributor, and private-label compliance files.",
+    file: "/documents/certificates/tape-measure-rohs-test-report-nts2411570r.pdf",
+  },
+];
 ---
 
 <BaseLayout
@@ -51,6 +78,32 @@ import factoryGallery from "../cms/factory/gallery.json";
       <article class="info-card"><h3>QC records</h3><p>Inspection standards, product checks, packaging review, and buyer-specific quality notes can be confirmed before shipment.</p></article>
       <article class="info-card"><h3>Packaging proof</h3><p>Display private-label packaging, carton marks, barcode labels, and retail presentation.</p></article>
       <article class="info-card"><h3>Export support</h3><p>Use this section for shipment preparation, lead time planning, and documentation support.</p></article>
+    </div>
+  </section>
+  <section class="section soft">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Compliance documents</p>
+          <h2>CE certificate and product test reports</h2>
+        </div>
+        <p>These documents help purchasing teams review WOOKTOOL tape measure compliance, RoHS testing, and product quality records before placing OEM, wholesale, or private-label orders.</p>
+      </div>
+      <div class="certificate-grid">
+        {certificates.map((certificate) => (
+          <article class="certificate-card">
+            <a class="certificate-preview" href={certificate.file} target="_blank" rel="noopener">
+              <img src={certificate.image} alt={certificate.alt} width="1100" height="1556" loading="lazy" />
+            </a>
+            <div class="certificate-body">
+              <p class="certificate-meta">{certificate.meta}</p>
+              <h3>{certificate.title}</h3>
+              <p>{certificate.description}</p>
+              <a class="button button-secondary" href={certificate.file} download>Download PDF</a>
+            </div>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
   <CTA title="Looking for stable hand tool production?" primaryLabel="Send Factory Inquiry" />
