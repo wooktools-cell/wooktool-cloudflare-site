@@ -1,0 +1,50 @@
+{
+  "order": 9,
+  "slug": "custom-printed-logo-plastic-measuring-tape",
+  "title": "Custom Printed Logo Plastic Measuring Tape",
+  "category": "Tape Measures",
+  "image": "/images/products/catalog/custom-logo-tape-measure-main.webp",
+  "detailImages": [
+    "/images/products/catalog/custom-logo-tape-measure-detail-1.webp",
+    "/images/products/catalog/custom-logo-tape-measure-detail-2.webp"
+  ],
+  "summary": "Custom printed logo plastic measuring tape for brand promotion, retail packaging, and private-label tool programs, with flexible color and packaging options.",
+  "sellingPoints": [
+    "Custom printed logo for brand and promotional programs",
+    "Plastic shell with practical steel blade construction",
+    "Packaging options for retail, online, and wholesale channels"
+  ],
+  "specs": [
+    {
+      "label": "Length",
+      "value": "Common 3m, 5m, 7.5m, 16ft, and 25ft options by model"
+    },
+    {
+      "label": "Material",
+      "value": "Plastic case, steel blade, metal hook, belt clip, wrist strap"
+    },
+    {
+      "label": "Customization",
+      "value": "Printed logo, shell color, label design, blade unit, packaging artwork"
+    },
+    {
+      "label": "Packaging",
+      "value": "Color box, blister card, display box, hang card, barcode label, carton mark"
+    },
+    {
+      "label": "MOQ",
+      "value": "Depends on logo method, shell color, and packaging requirement"
+    },
+    {
+      "label": "Source reference",
+      "value": "Alibaba product link provided by WOOKTOOL team"
+    }
+  ],
+  "quality": [
+    "Logo position and printing appearance check",
+    "Blade readability and coating review",
+    "Lock, hook, and retraction function test",
+    "Packaging artwork, barcode, and carton mark inspection"
+  ],
+  "targetBuyers": "Brand owners, importers, Amazon sellers, hardware retailers, promotional buyers, and private-label distributors"
+}

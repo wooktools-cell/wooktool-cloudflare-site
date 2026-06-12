@@ -46,7 +46,7 @@ export const catalogProducts = Object.values(productModules)
 export const catalogPages = chunkProducts(catalogProducts, 5);
 
 export const categoryCatalogs = {
-  "Tape Measures": catalogProducts.filter((product) => product.category === "Tape Measures").slice(0, 5),
-  "Utility Knives": catalogProducts.filter((product) => product.category === "Utility Knives").slice(0, 5),
-  "Screwdriver Sets": catalogProducts.filter((product) => product.category === "Screwdriver Sets").slice(0, 5)
+  "Tape Measures": catalogProducts.filter((product) => product.category === "Tape Measures"),
+  "Utility Knives": catalogProducts.filter((product) => product.category === "Utility Knives"),
+  "Screwdriver Sets": catalogProducts.filter((product) => product.category === "Screwdriver Sets")
 };
