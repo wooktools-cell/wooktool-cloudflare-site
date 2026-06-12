@@ -1,14 +1,12 @@
 {
-  "order": 3,
-  "slug": "custom-logo-tape-measure",
-  "title": "Custom Logo Tape Measure",
-  "category": "Tape Measures",
-  "image": "/images/products/catalog/custom-logo-tape-measure-main.webp",
+  "summary": "Custom logo tape measure for private-label tool programs, with metric/imperial blade, finger brake, compact shell, OEM brand label, color matching, and packaging customization.",
   "detailImages": [
     "/images/products/catalog/custom-logo-tape-measure-detail-1.webp",
     "/images/products/catalog/custom-logo-tape-measure-detail-2.webp"
   ],
-  "summary": "Custom logo tape measure for private-label tool programs, with metric/imperial blade, finger brake, compact shell, OEM brand label, color matching, and packaging customization.",
+  "slug": "custom-logo-tape-measure",
+  "order": 3,
+  "targetBuyers": "Private-label tool brands, promotional product buyers, hardware importers, distributors, and retail program managers",
   "sellingPoints": [
     "OEM logo label for private-label brands",
     "Metric and imperial blade options",
@@ -40,11 +38,13 @@
       "value": "Custom logo samples ready in about 3 days. Bulk lead time can be negotiated based on order quantity and packaging requirements."
     }
   ],
+  "title": "Custom Logo Tape Measure",
+  "image": "/images/uploads/custom-logo-tape-measure-main.jpg",
+  "category": "Tape Measures",
   "quality": [
     "Logo position, color and print appearance check",
     "Metric/imperial blade marking readability review",
     "Brake, hook and retraction function testing",
     "Packaging artwork, barcode and carton mark review"
-  ],
-  "targetBuyers": "Private-label tool brands, promotional product buyers, hardware importers, distributors, and retail program managers"
+  ]
 }
