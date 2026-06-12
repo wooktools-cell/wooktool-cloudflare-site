@@ -1,14 +1,12 @@
 {
-  "order": 10,
-  "slug": "promotional-plastic-measuring-tape",
-  "title": "Promotional Plastic Measuring Tape",
-  "category": "Tape Measures",
-  "image": "/images/products/catalog/pocket-tape-measure-main.webp",
-  "detailImages": [
-    "/images/products/catalog/pocket-tape-measure-detail-1.webp",
-    "/images/products/catalog/pocket-tape-measure-detail-2.webp"
-  ],
   "summary": "Promotional plastic measuring tape for custom logo, retail display, and value-focused wholesale programs, suitable for brand campaigns and hardware distribution.",
+  "detailImages": [
+    "/images/uploads/4.jpg",
+    "/images/uploads/7.jpg"
+  ],
+  "slug": "promotional-plastic-measuring-tape",
+  "order": 10,
+  "targetBuyers": "Promotional product buyers, hardware importers, wholesalers, retailers, and private-label tool brands",
   "sellingPoints": [
     "Value-focused plastic measuring tape for promotional orders",
     "Logo, color, and packaging can be adjusted for brand campaigns",
@@ -40,11 +38,13 @@
       "value": "Alibaba product link provided by WOOKTOOL team"
     }
   ],
+  "title": "Promotional Plastic Measuring Tape",
+  "image": "/images/uploads/1.jpg",
+  "category": "Tape Measures",
   "quality": [
     "Logo and shell appearance inspection",
     "Blade printing and measurement readability check",
     "Retraction and hook function test",
     "Packaging presentation and carton quantity review"
-  ],
-  "targetBuyers": "Promotional product buyers, hardware importers, wholesalers, retailers, and private-label tool brands"
+  ]
 }
