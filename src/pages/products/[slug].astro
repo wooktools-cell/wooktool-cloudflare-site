@@ -31,6 +31,11 @@ const customizationPath =
   product.category === "Tape Measures" ? "/custom-tape-measure/" : "/oem-odm/";
 const customizationLabel =
   product.category === "Tape Measures" ? "Customize This Tape Measure" : "Customize This Product";
+const productSeoTitle =
+  product.metaTitle || `${product.title} Supplier China | OEM WOOKTOOL`;
+const productSeoDescription =
+  product.metaDescription ||
+  `Source ${product.title} from WOOKTOOL with OEM logo, packaging, QC inspection, flexible MOQ, and export support for B2B buyers.`;
 const imageUrls = [product.image, ...(product.detailImages || [])].map((image) =>
   new URL(image, site.domain).toString()
 );
@@ -90,8 +95,8 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title={`${product.title} Supplier | Custom ${product.category} | WOOKTOOL`}
-  description={product.summary}
+  title={productSeoTitle}
+  description={productSeoDescription}
   path={`/products/${product.slug}/`}
   image={product.image}
   type="product"

@@ -1,7 +1,7 @@
 ---
 title: "Top 5 Quality Defects in Imported Tape Measures and How to Avoid Them"
 slug: "tape-measure-quality-defects"
-description: "Learn the common tape measure quality defects importers should check, including blade printing, lock function, hook assembly, retraction, packaging, and carton condition."
+description: "Learn the tape measure quality defects importers should check before shipment, including blade printing, lock function, hook assembly, retraction, and packaging."
 date: "2026-06-10"
 ---
 
