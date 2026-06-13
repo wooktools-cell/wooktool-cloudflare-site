@@ -1,21 +1,21 @@
 {
-  "summary": "Auto-lock tape measure supplier for retail and hardware programs, featuring dual-side easy-read steel blade, magnetic hook, shockproof ABS case, OEM logo, color, and packaging options.",
+  "summary": "Auto-lock tape measure for hardware retail and distributor programs, with easy-read steel blade, magnetic hook, shockproof ABS case, OEM logo, and custom packaging.",
   "detailImages": [
     "/images/uploads/auto-lock-tape-measure-details1.jpg",
     "/images/uploads/auto-lock-tape-measure-details2.png"
   ],
-  "slug": "Auto-lock-tape-measure",
+  "slug": "auto-lock-tape-measure",
   "order": 2,
-  "targetBuyers": "Importers, distributors, wholesalers, and private-label brands",
+  "targetBuyers": "Hardware importers, retail program buyers, tool distributors, wholesalers, and private-label tape measure brands",
   "sellingPoints": [
-    "Dual-side easy-read steel blade",
-    "Magnetic hook and shockproof ABS case",
-    "OEM logo, color and retail packaging"
+    "Auto-lock mechanism with one-button rewind for easier daily use",
+    "Dual-side easy-read steel blade with magnetic hook option",
+    "OEM logo, shell color, barcode label and retail packaging support"
   ],
   "specs": [
     {
       "label": "Length",
-      "value": "3m/10ft, 5m/16ft, 7.5m/25ft"
+      "value": "3m/10ft, 5m/16ft, 7.5m/25ft and other lengths by request"
     },
     {
       "label": "Material",
@@ -23,11 +23,11 @@
     },
     {
       "label": "Customization",
-      "value": "Custom logo printing and Pantone color accepted"
+      "value": "Logo label or printing, Pantone shell color, magnetic hook option, blade specification, barcode, carton mark, and retail packaging"
     },
     {
       "label": "Packaging",
-      "value": "OPP bag, color box, carton"
+      "value": "OPP bag, color box, blister card, display box, export carton, buyer barcode, and carton mark"
     },
     {
       "label": "MOQ",
@@ -42,9 +42,9 @@
   "image": "/images/uploads/auto-lock-tape-measure.jpg",
   "category": "Tape Measures",
   "quality": [
-    "The Measuring tape locks automatically and rewinds with single button.",
-    "Magnetic hook, lock and retraction test",
-    "ABS shell assembly and drop-resistance review",
-    "Retail packaging and carton quantity inspection"
+    "Auto-lock release and one-button rewind function test",
+    "Magnetic hook alignment, rivet strength, and blade readability check",
+    "ABS shell assembly, drop-resistance, belt clip, and lanyard inspection",
+    "Retail packaging, carton quantity, barcode, and carton mark review"
   ]
 }

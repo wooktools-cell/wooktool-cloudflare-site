@@ -37,7 +37,7 @@ export const productCategories = [
     text: "Steel tape measures with OEM logo, shell color, tape length, hook, and packaging options.",
     subcategories: [
       { label: "Heavy Duty Tape Measures", href: "/products/heavy-duty-tape-measure/" },
-      { label: "Compact Tape Measures", href: "/products/compact-tape-measure/" },
+      { label: "Auto-Lock Tape Measures", href: "/products/auto-lock-tape-measure/" },
       { label: "Custom Logo Tape Measures", href: "/products/custom-logo-tape-measure/" },
       { label: "Wide Blade Tape Measures", href: "/products/wide-blade-tape-measure/" },
       { label: "Pocket Tape Measures", href: "/products/pocket-tape-measure/" }

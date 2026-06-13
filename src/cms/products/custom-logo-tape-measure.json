@@ -1,5 +1,5 @@
 {
-  "summary": "Custom logo tape measure for private-label tool programs, with metric/imperial blade, finger brake, compact shell, OEM brand label, color matching, and packaging customization.",
+  "summary": "Custom logo tape measure for private-label tool programs, with OEM brand label, metric/imperial blade, shell color matching, barcode, and retail packaging support.",
   "detailImages": [
     "/images/products/catalog/custom-logo-tape-measure-detail-1.webp",
     "/images/products/catalog/custom-logo-tape-measure-detail-2.webp"
@@ -8,14 +8,14 @@
   "order": 3,
   "targetBuyers": "Private-label tool brands, promotional product buyers, hardware importers, distributors, and retail program managers",
   "sellingPoints": [
-    "OEM logo label for private-label brands",
-    "Metric and imperial blade options",
-    "Color box, blister card and display packaging"
+    "Logo label or printing support for private-label tape measure brands",
+    "Metric, inch, or dual-unit blade options for different markets",
+    "Color box, blister card, barcode label, display box and carton mark support"
   ],
   "specs": [
     {
       "label": "Length",
-      "value": "3m/10ft, 5m/16ft, 7.5m/25ft, 10m/33ft"
+      "value": "3m/10ft, 5m/16ft, 7.5m/25ft, 10m/33ft and buyer-specific lengths by request"
     },
     {
       "label": "Material",
@@ -23,11 +23,11 @@
     },
     {
       "label": "Customization",
-      "value": "Custom logo sticker and Pantone color accepted"
+      "value": "Logo label or printing, Pantone shell color, blade printing, hook, belt clip, lanyard, barcode, carton mark, and private-label packaging"
     },
     {
       "label": "Packaging",
-      "value": "OPP bag, color box, carton"
+      "value": "OPP bag, color box, blister card, display box, export carton, buyer barcode, and carton mark"
     },
     {
       "label": "MOQ",
@@ -42,9 +42,9 @@
   "image": "/images/uploads/custom-logo-tape-measure-main.jpg",
   "category": "Tape Measures",
   "quality": [
-    "Logo position, color and print appearance check",
-    "Metric/imperial blade marking readability review",
-    "Brake, hook and retraction function testing",
-    "Packaging artwork, barcode and carton mark review"
+    "Logo position, color matching, and print appearance check",
+    "Metric/imperial blade marking readability and coating review",
+    "Brake, hook rivet, retraction, belt clip, and lanyard function testing",
+    "Packaging artwork, barcode label, carton mark, and pre-shipment quantity review"
   ]
 }

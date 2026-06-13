@@ -8,28 +8,28 @@
     "/images/products/catalog/pocket-tape-measure-detail-1.webp",
     "/images/products/catalog/pocket-tape-measure-detail-2.webp"
   ],
-  "summary": "Pocket tape measure for promotional gifts and retail programs, with compact keychain design, ABS/PVC cover, carbon steel tape, custom logo, color, and packaging options.",
+  "summary": "Pocket tape measure for promotional gifts, retail checkout programs, and private-label tool kits, with compact keychain design, custom logo, color, and packaging options.",
   "sellingPoints": [
-    "Compact keychain design for daily carry",
-    "Suitable for promotional gift programs",
-    "Custom logo, color and retail packaging"
+    "Compact keychain size for promotional gifts and retail checkout displays",
+    "Custom logo and color options for brand campaigns",
+    "OPP bag, color box, display box, and bulk carton support"
   ],
   "specs": [
     {
       "label": "Length",
-      "value": "1m/6ft"
+      "value": "1m/3ft, 1m/6ft, 1.5m/5ft, or custom compact lengths by request"
     },
     {
       "label": "Material",
-      "value": "ABS with PVC cover, carbon steel tape"
+      "value": "ABS or PVC cover, carbon steel tape, keychain ring, and compact shell"
     },
     {
       "label": "Customization",
-      "value": "Custom logo sticker and Pantone color accepted"
+      "value": "Logo printing or sticker, Pantone shell color, keychain style, blade specification, barcode, carton mark, and retail packaging"
     },
     {
       "label": "Packaging",
-      "value": "OPP bag, color box, carton"
+      "value": "OPP bag, color box, display box, bulk polybag, export carton, buyer barcode, and carton mark"
     },
     {
       "label": "MOQ",
@@ -41,10 +41,10 @@
     }
   ],
   "quality": [
-    "Tape pull-out and rewind function check",
-    "Keychain, cover and shell assembly inspection",
-    "Logo appearance and color matching review",
-    "Bulk packaging and quantity inspection"
+    "Tape pull-out, rewind, and end-stop function check",
+    "Keychain ring, cover, shell assembly, and surface appearance inspection",
+    "Logo print or sticker position, color matching, and readability review",
+    "Bulk packing, quantity, barcode label, and carton mark inspection"
   ],
   "targetBuyers": "Promotional product importers, gift program buyers, retail distributors, and private-label tool brands"
 }

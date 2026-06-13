@@ -10,7 +10,9 @@ https://wooktools.com/* https://www.wooktools.com/:splat 301
 /site-page/aea362dea1b34351.html /blog/ 301
 
 /products/Heavy-Duty-16ft-25ft-Tape-Measure-with-Fractional-Metal-Tape-and-Magnetic-Tip.html /products/heavy-duty-tape-measure/ 301
-/products/Self-locking-tape-measure-double-sided-reading-customizable-colors.html /products/compact-tape-measure/ 301
+/products/Self-locking-tape-measure-double-sided-reading-customizable-colors.html /products/auto-lock-tape-measure/ 301
+/products/compact-tape-measure/ /products/auto-lock-tape-measure/ 301
+/products/Auto-lock-tape-measure/ /products/auto-lock-tape-measure/ 301
 /products/Tape-Measures-Retractable-Fabric-Measuring-Tape-60-Inch-Small-Sewing-Tape-Measure.html /products/pocket-tape-measure/ 301
 /products/21445.html /products/pocket-tape-measure/ 301
 /products/Easy-Retractable-Ruler-Tape-Measure-Mini-Portable-Pull-Ruler-Keychain-1m3ft.html /products/pocket-tape-measure/ 301

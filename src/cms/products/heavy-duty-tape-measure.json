@@ -1,21 +1,21 @@
 {
-  "summary": "Heavy duty tape measure manufacturer for OEM tool brands, with shock-resistant rubber case, high-carbon steel blade, custom logo, shell color, packaging, and flexible MOQ support.",
+  "summary": "Heavy duty tape measure for construction and hardware distributors, with rubberized ABS case, steel blade, OEM logo, color, packaging, and export-ready QC support.",
   "detailImages": [
     "/images/products/catalog/heavy-duty-tape-measure-detail-1.webp",
     "/images/products/catalog/heavy-duty-tape-measure-detail-2.webp"
   ],
   "slug": "heavy-duty-tape-measure",
   "order": 1,
-  "targetBuyers": "Global importers, hardware distributors, construction tool wholesalers, and private-label hand tool brands",
+  "targetBuyers": "Construction tool importers, hardware distributors, building supply wholesalers, industrial safety suppliers, and private-label tape measure brands",
   "sellingPoints": [
-    "Shock-resistant rubber case for jobsite use",
-    "High-carbon steel blade with clear markings",
-    "OEM logo, color and packaging support"
+    "Rubberized shock-resistant case for construction and jobsite channels",
+    "High-carbon steel blade with clear metric/inch printing options",
+    "Private-label logo, shell color, barcode and retail packaging support"
   ],
   "specs": [
     {
       "label": "Length",
-      "value": "3m/10ft, 5m/16ft, 7.5m/25ft, 10m/33ft"
+      "value": "3m/10ft, 5m/16ft, 7.5m/25ft, 10m/33ft and custom lengths by request"
     },
     {
       "label": "Material",
@@ -23,11 +23,11 @@
     },
     {
       "label": "Customization",
-      "value": "Custom logo sticker and Pantone color accepted"
+      "value": "Logo label or printing, Pantone shell color, blade specification, hook, belt clip, lanyard, barcode, carton mark, and retail packaging"
     },
     {
       "label": "Packaging",
-      "value": "OPP bag, color box, carton"
+      "value": "OPP bag, color box, blister card, display box, export carton, buyer barcode, and carton mark"
     },
     {
       "label": "MOQ",
@@ -42,9 +42,9 @@
   "image": "/images/uploads/heavy-duty-tape-measure-main.png",
   "category": "Tape Measures",
   "quality": [
-    "Blade printing and measurement readability check",
-    "Locking, retraction and hook function test",
-    "Case assembly, belt clip and lanyard inspection",
-    "Packaging, barcode and carton mark review"
+    "Blade printing, measurement readability, and surface coating check",
+    "Lock button, retraction speed, hook rivet, and belt clip function test",
+    "Drop-resistance, case assembly, lanyard, and surface appearance inspection",
+    "Retail packaging, barcode label, carton mark, and pre-shipment quantity review"
   ]
 }
