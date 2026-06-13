@@ -6,6 +6,83 @@ import ProductListing from "../components/ProductListing.astro";
 import { categoryCatalogs } from "../siteData.js";
 import { breadcrumbSchema, faqSchema, productCollectionSchema } from "../schema.js";
 
+const productRoutes = {
+  heavyDuty: "/products/heavy-duty-utility-knife/",
+  folding: "/products/folding-utility-knife/",
+  snapOff: "/products/snap-off-utility-knife/",
+  safety: "/products/safety-utility-knife/",
+  blades: "/products/replacement-utility-knife-blades/"
+};
+
+const sourcingGoals = [
+  {
+    title: "Industrial and warehouse cutting",
+    text: "Choose heavy-duty utility knives or safety cutters for carton opening, warehouse work, and industrial supply programs.",
+    href: productRoutes.heavyDuty
+  },
+  {
+    title: "Retail and DIY tool programs",
+    text: "Use folding utility knives or snap-off cutters for hardware retail shelves, DIY kits, and online tool bundles.",
+    href: productRoutes.folding
+  },
+  {
+    title: "Safety-focused cutting tools",
+    text: "Select safety utility knives when buyers need protected cutting, controlled blade exposure, and workplace use.",
+    href: productRoutes.safety
+  },
+  {
+    title: "Replacement blade supply",
+    text: "Build recurring blade pack programs with 9 mm, 18 mm, SK5, SK4, SK2, black, or silver blade options.",
+    href: productRoutes.blades
+  }
+];
+
+const customOptions = [
+  {
+    title: "Handle and branding",
+    text: "Handle color, logo position, private-label artwork, barcode label, and buyer carton mark.",
+    items: ["Custom handle color", "Logo placement", "Private-label artwork"]
+  },
+  {
+    title: "Blade configuration",
+    text: "Snap-off blades, trapezoid blades, SK5 or selected steel, blade storage, replacement blade packs, and cutting direction.",
+    items: ["9 mm and 18 mm blades", "SK5 blade option", "Replacement blade packs"]
+  },
+  {
+    title: "Safety and mechanism",
+    text: "Retractable design, folding lock, automatic lock, safety guard, blade change method, and handle grip direction.",
+    items: ["Retractable mechanism", "Folding lock", "Safety cutter option"]
+  },
+  {
+    title: "Retail packaging",
+    text: "Blister card, hang card, color box, bulk pack, display box, barcode label, and export carton.",
+    items: ["Blister card", "Hang card", "Color box"]
+  }
+];
+
+const qualityFlow = [
+  {
+    step: "01",
+    title: "Blade and mechanism review",
+    text: "Confirm blade format, blade storage, lock structure, handle material, logo method, packaging, and target market before sampling."
+  },
+  {
+    step: "02",
+    title: "Sample confirmation",
+    text: "Check blade fit, replacement process, handle grip, logo position, packaging artwork, barcode, and carton mark."
+  },
+  {
+    step: "03",
+    title: "Functional inspection",
+    text: "Inspect blade sharpness, blade lock, retractable movement, folding action, safety mechanism, handle assembly, and appearance."
+  },
+  {
+    step: "04",
+    title: "Packing and shipment check",
+    text: "Review blade pack quantity, retail packaging, barcode label, carton mark, master carton condition, and pre-shipment readiness."
+  }
+];
+
 const utilityKnifeFaq = [
   {
     question: "What types of utility knives can wooktools supply?",
@@ -49,7 +126,39 @@ const utilitySchema = [
   image="/images/products/catalog/heavy-duty-utility-knife-main.webp"
   schema={utilitySchema}
 >
-  <section class="page-intro"><div><p class="eyebrow">Utility knives</p><h1>Custom Utility Knife Manufacturer in China</h1><p>wooktools supplies WOOKTOOL utility knives, box cutters, snap-off knives, safety cutters, and replacement blades for hardware importers, industrial distributors, retailers, and private-label tool brands.</p></div></section>
+  <section class="page-intro">
+    <div>
+      <p class="eyebrow">Utility knives</p>
+      <h1>Custom Utility Knife Manufacturer in China</h1>
+      <p>wooktools supplies WOOKTOOL utility knives, box cutters, snap-off knives, safety cutters, and replacement blades for hardware importers, industrial distributors, retailers, and private-label tool brands.</p>
+      <div class="button-row">
+        <a class="button button-primary" href="/contact/#rfq-form" data-track="utility_knife_page_rfq_click">Send Utility Knife RFQ</a>
+        <a class="button button-secondary" href="/oem-odm/" data-track="utility_knife_page_oem_click">Discuss OEM Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Buyer paths</p>
+          <h2>Choose utility knives by sourcing goal</h2>
+        </div>
+        <p>Start with the buyer channel and cutting scenario, then confirm blade format, handle structure, logo, packaging, and MOQ direction.</p>
+      </div>
+      <div class="grid four">
+        {sourcingGoals.map((goal) => (
+          <article class="info-card">
+            <h3>{goal.title}</h3>
+            <p>{goal.text}</p>
+            <a class="button button-secondary" href={goal.href}>View option</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="section-inner grid two">
       <img class="product-square-image" src="/images/products/catalog/heavy-duty-utility-knife-main.webp" alt="WOOKTOOL custom utility knife supplier product image" width="1000" height="1000" />
@@ -62,23 +171,95 @@ const utilitySchema = [
           <li>OEM utility knife manufacturer with private-label packaging options</li>
           <li>RFQ review for blade format, handle material, lock design, MOQ, and target market</li>
         </ul>
+        <div class="product-action-row">
+          <a class="button button-primary" href="/contact/#rfq-form" data-track="utility_knife_capability_rfq_click">Ask for Quote</a>
+          <a class="button button-secondary" href="/factory/">View Factory</a>
+        </div>
       </div>
     </div>
   </section>
+
   <section class="section soft">
-    <div class="section-inner grid three">
-      <article class="info-card"><h3>Blade options</h3><p>Discuss 9 mm, 18 mm, SK5, snap-off, trapezoid, replacement blade pack, safety lock, retractable mechanism, and use scenario.</p></article>
-      <article class="info-card"><h3>Branding options</h3><p>Support handle color, logo placement, blister card, hanging card, color box, barcode label, and private-label packaging needs.</p></article>
-      <article class="info-card"><h3>Buyer markets</h3><p>Suitable for hardware retail, industrial supply, DIY tool kits, warehouse use, promotional tools, and distributor programs.</p></article>
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">OEM customization</p>
+          <h2>Custom utility knife options for B2B buyers</h2>
+        </div>
+        <p>Use these options to prepare an RFQ for box cutters, snap-off knives, folding utility knives, safety cutters, and replacement blade packs.</p>
+      </div>
+      <div class="custom-option-grid">
+        {customOptions.map((option) => (
+          <article class="custom-option-card">
+            <span></span>
+            <h3>{option.title}</h3>
+            <p>{option.text}</p>
+            <ul>{option.items.map((item) => <li>{item}</li>)}</ul>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
+
   <ProductListing
     products={categoryCatalogs["Utility Knives"]}
     eyebrow="Utility knife products"
-    title="5 utility knife product detail entrances"
+    title="WOOKTOOL utility knife product range"
     description="Reserved product windows for utility knife and box cutter buyers. Each entry opens a detail page for blade format, handle options, safety checks, and packaging."
     showPagination={false}
   />
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Quality and delivery</p>
+          <h2>How we support utility knife orders</h2>
+        </div>
+        <p>Each utility knife project is reviewed around blade safety, handle assembly, lock function, replacement blade fit, retail packaging, and shipment readiness.</p>
+      </div>
+      <div class="packaging-grid">
+        {qualityFlow.map((item) => (
+          <article class="packaging-card">
+            <span>{item.step}</span>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark">
+    <div class="section-inner content-grid">
+      <div class="content-copy">
+        <p class="eyebrow">RFQ checklist</p>
+        <h2>Send these details for a faster quotation</h2>
+        <p>A clear utility knife RFQ helps us match blade type, handle material, lock structure, packaging, and suitable MOQ direction for your channel.</p>
+        <div class="button-row">
+          <a class="button button-primary" href="/contact/#rfq-form" data-track="utility_knife_rfq_checklist_click">Send RFQ Now</a>
+          <a class="button button-outline-light" href="/products/heavy-duty-utility-knife/">View Heavy Duty Knife</a>
+        </div>
+      </div>
+      <div class="quote-checklist">
+        <h3>Recommended RFQ details</h3>
+        <dl>
+          <dt>Product type</dt><dd>Heavy-duty, folding, snap-off, safety cutter, box cutter, or replacement blade pack.</dd>
+          <dt>Blade</dt><dd>9 mm, 18 mm, trapezoid blade, SK5 or selected material, blade pack quantity, and replacement method.</dd>
+          <dt>Branding</dt><dd>Handle color, logo placement, packaging artwork, barcode label, and carton mark requirements.</dd>
+          <dt>Order plan</dt><dd>Estimated quantity, target market, packaging style, safety requirement, target price, and delivery schedule.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
   <FAQ items={utilityKnifeFaq} title="Utility knife sourcing FAQ" />
-  <CTA title="Need custom utility knives for your market?" primaryLabel="Send Utility Knife RFQ" />
+  <CTA
+    title="Need custom utility knives for your market?"
+    text="Send blade type, handle color, logo, packaging, quantity, and target channel. WOOKTOOL will review suitable box cutter and utility knife options for your program."
+    primaryLabel="Send Utility Knife RFQ"
+    primaryHref="/contact/#rfq-form"
+    secondaryLabel="View OEM/ODM Service"
+    secondaryHref="/oem-odm/"
+  />
 </BaseLayout>

@@ -6,6 +6,83 @@ import ProductListing from "../components/ProductListing.astro";
 import { categoryCatalogs } from "../siteData.js";
 import { breadcrumbSchema, faqSchema, productCollectionSchema } from "../schema.js";
 
+const productRoutes = {
+  standard: "/products/screwdriver-set/",
+  household: "/products/household-screwdriver-set/",
+  multiBit: "/products/multi-bit-screwdriver-set/",
+  ratchet: "/products/ratchet-screwdriver-set/",
+  hexKey: "/products/hex-key-wrench-set/"
+};
+
+const sourcingGoals = [
+  {
+    title: "Retail screwdriver sets",
+    text: "Use standard screwdriver sets with color box, blister card, barcode label, and private-label artwork for retail programs.",
+    href: productRoutes.standard
+  },
+  {
+    title: "Household and DIY kits",
+    text: "Choose household screwdriver sets for home repair, DIY tool kits, supermarket channels, and promotional bundles.",
+    href: productRoutes.household
+  },
+  {
+    title: "Compact repair programs",
+    text: "Use multi-bit or ratchet screwdriver sets when buyers need portable repair kits and higher perceived value.",
+    href: productRoutes.multiBit
+  },
+  {
+    title: "Hex key wrench supply",
+    text: "Build metric or inch hex key wrench programs with finish, holder, packaging, barcode, and carton mark options.",
+    href: productRoutes.hexKey
+  }
+];
+
+const customOptions = [
+  {
+    title: "Set configuration",
+    text: "Phillips, slotted, Torx, precision bits, ratchet handle, dual-end shaft, hex key sizes, and buyer-specific set layout.",
+    items: ["Bit selection", "Set quantity", "Case layout"]
+  },
+  {
+    title: "Material and function",
+    text: "Chrome vanadium steel, magnetic tips, ratchet mechanism, ergonomic handle, non-slip grip, and finish direction.",
+    items: ["CR-V steel option", "Magnetic tip", "Ratchet mechanism"]
+  },
+  {
+    title: "Branding",
+    text: "Handle color, logo placement, case label, packaging artwork, barcode label, and buyer carton mark.",
+    items: ["Custom handle color", "Logo on handle or case", "Private-label artwork"]
+  },
+  {
+    title: "Packaging",
+    text: "Blister card, color box, gift box, plastic case, display box, export carton, and retail shelf presentation.",
+    items: ["Blister card", "Color box", "Gift box"]
+  }
+];
+
+const qualityFlow = [
+  {
+    step: "01",
+    title: "Set plan confirmation",
+    text: "Confirm screwdriver sizes, bit selection, handle style, material, logo method, case layout, packaging, and target market."
+  },
+  {
+    step: "02",
+    title: "Sample and artwork review",
+    text: "Review handle color, logo position, bit fit, case layout, packaging artwork, barcode label, and carton mark."
+  },
+  {
+    step: "03",
+    title: "Production inspection",
+    text: "Check shaft or bit appearance, magnetic tip, ratchet function, handle assembly, set completeness, and packaging presentation."
+  },
+  {
+    step: "04",
+    title: "Pre-shipment check",
+    text: "Confirm set quantity, retail packaging, barcode, carton mark, master carton condition, and shipment readiness."
+  }
+];
+
 const screwdriverFaq = [
   {
     question: "What screwdriver sets can wooktools manufacture?",
@@ -49,7 +126,39 @@ const screwdriverSchema = [
   image="/images/products/catalog/screwdriver-set-main.webp"
   schema={screwdriverSchema}
 >
-  <section class="page-intro"><div><p class="eyebrow">Screwdriver sets</p><h1>Custom Screwdriver Set Manufacturer in China</h1><p>Develop OEM screwdriver sets, ratchet screwdriver kits, multi-bit tool sets, household screwdriver sets, and hex key wrench sets for hardware importers, distributors, retailers, and private-label tool brands.</p></div></section>
+  <section class="page-intro">
+    <div>
+      <p class="eyebrow">Screwdriver sets</p>
+      <h1>Custom Screwdriver Set Manufacturer in China</h1>
+      <p>Develop OEM screwdriver sets, ratchet screwdriver kits, multi-bit tool sets, household screwdriver sets, and hex key wrench sets for hardware importers, distributors, retailers, and private-label tool brands.</p>
+      <div class="button-row">
+        <a class="button button-primary" href="/contact/#rfq-form" data-track="screwdriver_page_rfq_click">Send Screwdriver Set RFQ</a>
+        <a class="button button-secondary" href="/oem-odm/" data-track="screwdriver_page_oem_click">Discuss OEM Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Buyer paths</p>
+          <h2>Choose screwdriver sets by sourcing goal</h2>
+        </div>
+        <p>Start from the buyer channel and set type, then confirm configuration, material, handle color, logo, packaging, MOQ, and sample direction.</p>
+      </div>
+      <div class="grid four">
+        {sourcingGoals.map((goal) => (
+          <article class="info-card">
+            <h3>{goal.title}</h3>
+            <p>{goal.text}</p>
+            <a class="button button-secondary" href={goal.href}>View option</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="section-inner grid two">
       <div>
@@ -62,17 +171,96 @@ const screwdriverSchema = [
           <li>QC checks for blade material, magnetic tip, handle assembly, and packaging</li>
           <li>Flexible MOQ and sample support for private-label tool programs</li>
         </ul>
+        <div class="product-action-row">
+          <a class="button button-primary" href="/contact/#rfq-form" data-track="screwdriver_capability_rfq_click">Ask for Quote</a>
+          <a class="button button-secondary" href="/factory/">View Factory</a>
+        </div>
       </div>
       <img class="product-square-image" src="/images/products/catalog/screwdriver-set-main.webp" alt="WOOKTOOL OEM screwdriver set supplier product image" width="1000" height="1000" />
     </div>
   </section>
+
+  <section class="section soft">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">OEM customization</p>
+          <h2>Custom screwdriver set options for private-label buyers</h2>
+        </div>
+        <p>Use these options to prepare a clear RFQ for screwdriver set configuration, handle design, packaging, and target retail channel.</p>
+      </div>
+      <div class="custom-option-grid">
+        {customOptions.map((option) => (
+          <article class="custom-option-card">
+            <span></span>
+            <h3>{option.title}</h3>
+            <p>{option.text}</p>
+            <ul>{option.items.map((item) => <li>{item}</li>)}</ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <ProductListing
     products={categoryCatalogs["Screwdriver Sets"]}
     eyebrow="Screwdriver set products"
-    title="OEM screwdriver set product options"
+    title="WOOKTOOL screwdriver set product range"
     description="Five product entrances for screwdriver set buyers. Each detail page covers material, set configuration, customization, packaging, quality-control checks, and suitable buyer channels."
     showPagination={false}
   />
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Quality and delivery</p>
+          <h2>How we support screwdriver set orders</h2>
+        </div>
+        <p>Each screwdriver set program is reviewed around set configuration, material direction, handle assembly, packaging accuracy, and export delivery readiness.</p>
+      </div>
+      <div class="packaging-grid">
+        {qualityFlow.map((item) => (
+          <article class="packaging-card">
+            <span>{item.step}</span>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark">
+    <div class="section-inner content-grid">
+      <div class="content-copy">
+        <p class="eyebrow">RFQ checklist</p>
+        <h2>Send these details for a faster quotation</h2>
+        <p>A clear screwdriver set RFQ helps us confirm the right model, bit selection, case layout, packaging, MOQ direction, and sample plan.</p>
+        <div class="button-row">
+          <a class="button button-primary" href="/contact/#rfq-form" data-track="screwdriver_rfq_checklist_click">Send RFQ Now</a>
+          <a class="button button-outline-light" href="/products/screwdriver-set/">View Standard Set</a>
+        </div>
+      </div>
+      <div class="quote-checklist">
+        <h3>Recommended RFQ details</h3>
+        <dl>
+          <dt>Set type</dt><dd>Standard, household, multi-bit, ratchet screwdriver set, precision kit, or hex key wrench set.</dd>
+          <dt>Configuration</dt><dd>Sizes, bit types, set quantity, shaft or bit material, magnetic tip, handle style, and case layout.</dd>
+          <dt>Branding</dt><dd>Handle color, logo file, case label, packaging artwork, barcode label, and carton mark needs.</dd>
+          <dt>Order plan</dt><dd>Estimated quantity, target market, packaging style, target price, sample requirement, and delivery schedule.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
   <FAQ items={screwdriverFaq} title="Screwdriver set sourcing FAQ" />
-  <CTA title="Planning a screwdriver set program?" primaryLabel="Request Screwdriver Set Quote" />
+  <CTA
+    title="Planning a screwdriver set program?"
+    text="Send set configuration, handle color, logo, packaging, quantity, and target market. WOOKTOOL will review suitable screwdriver set options for your sourcing plan."
+    primaryLabel="Request Screwdriver Set Quote"
+    primaryHref="/contact/#rfq-form"
+    secondaryLabel="View OEM/ODM Service"
+    secondaryHref="/oem-odm/"
+  />
 </BaseLayout>
