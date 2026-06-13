@@ -1,5 +1,5 @@
 {
-  "summary": "Promotional plastic measuring tape for custom logo campaigns, retail display, and value-focused wholesale programs, suitable for brand giveaways, hardware promotions, and distributor orders.",
+  "summary": "Promotional plastic measuring tape for custom logo campaigns, retail displays, and value-focused wholesale programs, suitable for giveaways, hardware promotions, and distributor orders.",
   "detailImages": [
     "/images/uploads/4.jpg",
     "/images/uploads/7.jpg"
@@ -15,7 +15,7 @@
   "specs": [
     {
       "label": "Length",
-      "value": "Pocket, 3m, 5m, 7.5m, 16ft, 25ft, or promotional sizes available by model"
+      "value": "Pocket, 3m, 5m, 7.5m, 16ft, 25ft, or promotional sizes by model"
     },
     {
       "label": "Material",
@@ -23,11 +23,11 @@
     },
     {
       "label": "Customization",
-      "value": "Custom logo, shell color, packaging card, barcode label, carton mark, and promotional artwork"
+      "value": "Custom logo, shell color, packaging card, blade unit, barcode label, carton mark, and promotional artwork"
     },
     {
       "label": "Packaging",
-      "value": "OPP bag, hang card, color box, blister card, display box, counter display, or bulk pack"
+      "value": "OPP bag, hang card, color box, blister card, display box, counter display, bulk pack, buyer barcode, and carton mark"
     },
     {
       "label": "MOQ",
@@ -42,9 +42,9 @@
   "image": "/images/uploads/1.jpg",
   "category": "Tape Measures",
   "quality": [
-    "Logo, shell color, and exterior appearance inspection",
-    "Blade printing, measurement readability, and coating check",
+    "Logo, shell color, label position, and exterior appearance inspection",
+    "Blade printing, measurement readability, unit marking, and coating check",
     "Retraction, hook, strap, and belt clip function test",
-    "Packaging presentation, barcode, carton quantity, and shipping mark review"
+    "Packaging presentation, barcode label, carton quantity, and shipping mark review"
   ]
 }

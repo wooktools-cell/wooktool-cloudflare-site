@@ -1,5 +1,5 @@
 {
-  "summary": "Plastic shell steel blade tape measure for wholesale, hardware retail, and private-label tool programs, with clear blade markings, OEM logo options, and export-ready packaging.",
+  "summary": "Plastic shell steel blade tape measure for wholesale and hardware retail programs, with clear blade markings, OEM logo options, flexible MOQ, and export-ready packaging.",
   "detailImages": [
     "/images/uploads/5.jpg",
     "/images/uploads/3.jpg"
@@ -10,12 +10,12 @@
   "sellingPoints": [
     "Cost-effective plastic case with steel blade for everyday measuring work",
     "Metric, inch, or dual-unit blade options for different destination markets",
-    "OEM logo, shell color, barcode label, and packaging customization"
+    "OEM logo, shell color, barcode label, and retail packaging customization"
   ],
   "specs": [
     {
       "label": "Length",
-      "value": "3m/10ft, 5m/16ft, 7.5m/25ft, or buyer-specific options by project"
+      "value": "3m/10ft, 5m/16ft, 7.5m/25ft, 8m, or buyer-specific options by project"
     },
     {
       "label": "Material",
@@ -23,11 +23,11 @@
     },
     {
       "label": "Customization",
-      "value": "Case logo, brand color, blade unit system, packaging artwork, barcode, and carton mark"
+      "value": "Case logo, brand color, blade unit system, hook style, belt clip, packaging artwork, barcode, and carton mark"
     },
     {
       "label": "Packaging",
-      "value": "OPP bag, color box, blister card, display box, hang card, or bulk carton"
+      "value": "OPP bag, color box, blister card, display box, hang card, bulk carton, buyer barcode, and carton mark"
     },
     {
       "label": "MOQ",
@@ -42,9 +42,9 @@
   "image": "/images/uploads/plastic-shell.jpg",
   "category": "Tape Measures",
   "quality": [
-    "Blade coating, number printing, and measurement readability inspection",
-    "Retraction, lock, hook, and belt clip function test",
-    "Plastic case appearance, color consistency, and assembly review",
-    "Packaging quantity, barcode label, and carton condition check"
+    "Blade coating, number printing, unit marking, and measurement readability inspection",
+    "Retraction, lock, hook rivet, and belt clip function test",
+    "Plastic case appearance, color consistency, assembly, and surface review",
+    "Packaging quantity, barcode label, carton mark, and carton condition check"
   ]
 }
