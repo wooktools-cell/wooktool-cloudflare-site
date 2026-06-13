@@ -6,6 +6,83 @@ import ProductListing from "../components/ProductListing.astro";
 import { categoryCatalogs } from "../siteData.js";
 import { breadcrumbSchema, faqSchema, productCollectionSchema } from "../schema.js";
 
+const productRoutes = {
+  heavyDuty: "/products/heavy-duty-tape-measure/",
+  autoLock: "/products/auto-lock-tape-measure/",
+  customLogo: "/products/custom-logo-tape-measure/",
+  wideBlade: "/products/wide-blade-tape-measure/",
+  pocket: "/products/pocket-tape-measure/"
+};
+
+const sourcingGoals = [
+  {
+    title: "Construction and jobsite supply",
+    text: "Choose heavy-duty or wide blade tape measures for hardware channels, contractors, and building material distributors.",
+    href: productRoutes.heavyDuty
+  },
+  {
+    title: "Retail and private-label programs",
+    text: "Use custom logo tape measures with buyer artwork, shell colors, barcode labels, and retail-ready packaging.",
+    href: productRoutes.customLogo
+  },
+  {
+    title: "Auto-lock measuring tools",
+    text: "Select auto-lock tape measures when buyers need easy one-button rewind and clear blade readability for daily use.",
+    href: productRoutes.autoLock
+  },
+  {
+    title: "Promotional and compact tools",
+    text: "Use pocket or plastic measuring tapes for giveaways, checkout displays, tool kits, and value-focused wholesale orders.",
+    href: productRoutes.pocket
+  }
+];
+
+const customOptions = [
+  {
+    title: "Branding",
+    text: "Logo label, pad printing, product sticker, packaging artwork, barcode label, and buyer carton mark.",
+    items: ["Logo on case", "Private-label packaging", "Barcode and carton mark"]
+  },
+  {
+    title: "Blade and hook",
+    text: "Metric, inch, dual-unit blade printing, blade length, blade width direction, hook style, and magnetic hook options.",
+    items: ["3m to 10m options", "16ft and 25ft options", "Hook and blade choices"]
+  },
+  {
+    title: "Case and accessories",
+    text: "ABS shell, rubberized case, shell color matching, belt clip, wrist strap, nylon lanyard, and product finish.",
+    items: ["Pantone shell color", "Belt clip and strap", "Rubberized case option"]
+  },
+  {
+    title: "Retail packaging",
+    text: "OPP bag, color box, blister card, hang card, display box, bulk carton, and export carton setup.",
+    items: ["Color box", "Blister card", "Display box"]
+  }
+];
+
+const qualityFlow = [
+  {
+    step: "01",
+    title: "Specification confirmation",
+    text: "Confirm length, blade units, shell color, logo method, hook, strap, MOQ direction, and packaging before sampling."
+  },
+  {
+    step: "02",
+    title: "Sample and artwork review",
+    text: "Review logo placement, blade marking, case assembly, packaging artwork, barcode label, and buyer carton mark."
+  },
+  {
+    step: "03",
+    title: "Production inspection",
+    text: "Check blade readability, lock, retraction, hook rivet, belt clip, shell appearance, and assembly consistency."
+  },
+  {
+    step: "04",
+    title: "Packaging and shipment check",
+    text: "Confirm packaging quantity, carton condition, barcode, carton mark, and pre-shipment readiness."
+  }
+];
+
 const tapeMeasureFaq = [
   {
     question: "What is your MOQ for custom tape measures?",
@@ -33,7 +110,7 @@ const tapeMeasureFaq = [
   }
 ];
 
-const pageDescription = "wooktools manufactures WOOKTOOL tape measures for global B2B buyers, offering custom logo printing, case color customization, private label packaging, flexible MOQ, and factory-direct wholesale supply.";
+const pageDescription = "WOOKTOOL tape measure manufacturer in China for importers, distributors, and private-label brands, supporting custom logo, shell color, blade units, hooks, packaging, QC, and flexible MOQ.";
 
 const tapeMeasureSchema = [
   productCollectionSchema({
@@ -57,7 +134,39 @@ const tapeMeasureSchema = [
   image="/images/products/catalog/heavy-duty-tape-measure-main.webp"
   schema={tapeMeasureSchema}
 >
-  <section class="page-intro"><div><p class="eyebrow">Tape measures</p><h1>Tape Measure Manufacturer in China</h1><p>wooktools manufactures and supplies WOOKTOOL steel tape measures for global importers, hardware distributors, wholesalers, and private-label tool brands that need stable production, OEM branding, and export-ready packaging.</p></div></section>
+  <section class="page-intro">
+    <div>
+      <p class="eyebrow">Tape measures</p>
+      <h1>Tape Measure Manufacturer in China</h1>
+      <p>wooktools manufactures and supplies WOOKTOOL steel tape measures for global importers, hardware distributors, wholesalers, and private-label tool brands that need stable production, OEM branding, quality control, and export-ready packaging.</p>
+      <div class="button-row">
+        <a class="button button-primary" href="/contact/#rfq-form" data-track="tape_measure_page_rfq_click">Send Tape Measure RFQ</a>
+        <a class="button button-secondary" href="/custom-tape-measure/" data-track="tape_measure_page_custom_click">View Custom Options</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Buyer paths</p>
+          <h2>Choose tape measures by sourcing goal</h2>
+        </div>
+        <p>Different buyer programs need different models. Start from the use case, then confirm length, blade units, logo, packaging, and MOQ.</p>
+      </div>
+      <div class="grid four">
+        {sourcingGoals.map((goal) => (
+          <article class="info-card">
+            <h3>{goal.title}</h3>
+            <p>{goal.text}</p>
+            <a class="button button-secondary" href={goal.href}>View option</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="section-inner grid two">
       <img class="product-square-image" src="/images/products/catalog/heavy-duty-tape-measure-main.webp" alt="WOOKTOOL custom tape measure product image for OEM tape measure manufacturer" width="1000" height="1000" />
@@ -71,9 +180,44 @@ const tapeMeasureSchema = [
           <li>Flexible MOQ discussion for selected models and packaging directions</li>
           <li>RFQ review for blade length, case material, MOQ, target price, and market</li>
         </ul>
+        <div class="product-action-row">
+          <a class="button button-primary" href="/contact/#rfq-form" data-track="tape_measure_capability_rfq_click">Ask for Quote</a>
+          <a class="button button-secondary" href="/factory/">View Factory</a>
+        </div>
       </div>
     </div>
   </section>
+
+  <section class="section soft">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">OEM customization</p>
+          <h2>Custom tape measure options for private-label buyers</h2>
+        </div>
+        <p>Use these options to prepare a clearer RFQ. We can help review which model, mold, and packaging direction fits your market and target price.</p>
+      </div>
+      <div class="custom-option-grid">
+        {customOptions.map((option) => (
+          <article class="custom-option-card">
+            <span></span>
+            <h3>{option.title}</h3>
+            <p>{option.text}</p>
+            <ul>{option.items.map((item) => <li>{item}</li>)}</ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <ProductListing
+    products={categoryCatalogs["Tape Measures"]}
+    eyebrow="Tape measure products"
+    title="WOOKTOOL tape measure product range"
+    description="Each product entry opens a detail page for specifications, quality notes, packaging, target buyers, and custom branding options."
+    showPagination={false}
+  />
+
   <section class="section">
     <div class="section-inner content-grid">
       <div class="content-copy">
@@ -94,6 +238,7 @@ const tapeMeasureSchema = [
       </div>
     </div>
   </section>
+
   <section class="section soft">
     <div class="section-inner">
       <h2>Common tape measure specifications</h2>
@@ -115,20 +260,58 @@ const tapeMeasureSchema = [
       </table>
     </div>
   </section>
-  <ProductListing
-    products={categoryCatalogs["Tape Measures"]}
-    eyebrow="Tape measure products"
-    title="WOOKTOOL tape measure product range"
-    description="Each product entry opens a detail page for specifications, quality notes, packaging, target buyers, and custom branding options."
-    showPagination={false}
-  />
+
   <section class="section">
-    <div class="section-inner grid three">
-      <article class="info-card"><h3>MOQ discussion</h3><p>MOQ depends on tape length, shell color, printing method, packaging style, and whether existing molds can be used.</p></article>
-      <article class="info-card"><h3>Sample support</h3><p>Samples can be prepared after confirming model, logo artwork, packaging direction, and target market requirements.</p></article>
-      <article class="info-card"><h3>Export packaging</h3><p>Support blister cards, color boxes, display boxes, inner cartons, master cartons, barcode labels, and carton marks.</p></article>
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Quality and delivery</p>
+          <h2>How we support tape measure orders</h2>
+        </div>
+        <p>From RFQ to shipment, each project is reviewed around specification, sample confirmation, production stability, and export packaging.</p>
+      </div>
+      <div class="packaging-grid">
+        {qualityFlow.map((item) => (
+          <article class="packaging-card">
+            <span>{item.step}</span>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
+
+  <section class="section dark">
+    <div class="section-inner content-grid">
+      <div class="content-copy">
+        <p class="eyebrow">RFQ checklist</p>
+        <h2>Send these details for a faster quotation</h2>
+        <p>A clear RFQ helps us match the correct tape measure model, confirm whether existing molds are suitable, and estimate sample and bulk production direction more quickly.</p>
+        <div class="button-row">
+          <a class="button button-primary" href="/contact/#rfq-form" data-track="tape_measure_rfq_checklist_click">Send RFQ Now</a>
+          <a class="button button-outline-light" href="/custom-tape-measure/">Review Custom Page</a>
+        </div>
+      </div>
+      <div class="quote-checklist">
+        <h3>Recommended RFQ details</h3>
+        <dl>
+          <dt>Product type</dt><dd>Heavy-duty, auto-lock, custom logo, wide blade, pocket, or promotional tape measure.</dd>
+          <dt>Specification</dt><dd>Length, blade width, metric/inch units, hook type, lock system, case material, and accessories.</dd>
+          <dt>Branding</dt><dd>Logo file, shell color, blade printing, packaging artwork, barcode, and carton mark needs.</dd>
+          <dt>Order plan</dt><dd>Estimated quantity, target price, market, packaging style, delivery schedule, and sample requirement.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
   <FAQ items={tapeMeasureFaq} title="Tape measure sourcing FAQ" />
-  <CTA title="Request a custom tape measure quote" primaryLabel="Send Tape Measure RFQ" />
+  <CTA
+    title="Request a custom tape measure quote"
+    text="Send your target model, length, logo, shell color, packaging, quantity, and delivery requirements. WOOKTOOL will review suitable options for your sourcing program."
+    primaryLabel="Send Tape Measure RFQ"
+    primaryHref="/contact/#rfq-form"
+    secondaryLabel="View Custom Tape Measure Options"
+    secondaryHref="/custom-tape-measure/"
+  />
 </BaseLayout>
