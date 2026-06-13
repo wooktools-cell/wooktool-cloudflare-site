@@ -1,10 +1,10 @@
 {
-  "summary": "Compact tape measure supplier for retail and hardware programs, featuring dual-side easy-read steel blade, magnetic hook, shockproof ABS case, OEM logo, color, and packaging options.",
+  "summary": "Auto-lock tape measure supplier for retail and hardware programs, featuring dual-side easy-read steel blade, magnetic hook, shockproof ABS case, OEM logo, color, and packaging options.",
   "detailImages": [
-    "/images/products/catalog/compact-tape-measure-detail-1.webp",
-    "/images/products/catalog/compact-tape-measure-detail-2.webp"
+    "/images/uploads/auto-lock-tape-measure-details1.jpg",
+    "/images/uploads/auto-lock-tape-measure-details2.png"
   ],
-  "slug": "compact-tape-measure",
+  "slug": "Auto-lock-tape-measure",
   "order": 2,
   "targetBuyers": "Importers, distributors, wholesalers, and private-label brands",
   "sellingPoints": [
@@ -38,11 +38,11 @@
       "value": "Custom logo samples ready in about 3 days. Bulk lead time can be negotiated based on order quantity and packaging requirements."
     }
   ],
-  "title": "Compact Tape Measure",
-  "image": "/images/products/catalog/compact-tape-measure-main.webp",
+  "title": "Auto-Lock Tape Measure",
+  "image": "/images/uploads/auto-lock-tape-measure.jpg",
   "category": "Tape Measures",
   "quality": [
-    "Blade readability and coating appearance check",
+    "The Measuring tape locks automatically and rewinds with single button.",
     "Magnetic hook, lock and retraction test",
     "ABS shell assembly and drop-resistance review",
     "Retail packaging and carton quantity inspection"
