@@ -133,14 +133,17 @@ Each article should include:
 
 Recommended article structure:
 
-1. H1 with the main keyword and buyer intent.
-2. Short opening paragraph naming the buyer type.
-3. Section: what the buyer should confirm.
-4. Section: common mistakes or risk points.
-5. Section: customization or packaging options.
-6. Section: quality-control checklist.
-7. Section: how to send a better RFQ.
-8. CTA linking to `/contact/#rfq-form`.
+1. H1 with the main buyer problem and the primary topic.
+2. Short opening paragraph naming the buyer type and sourcing problem.
+3. Industry or buyer-context section with real data, current market context, or WOOKTOOL production/RFQ observations.
+4. Product evidence section using real product photos, factory photos, specifications, test reports, or packaging examples where relevant.
+5. Section: what the buyer should confirm.
+6. Section: common mistakes or risk points.
+7. Section: customization, packaging, MOQ, or quality-control implications.
+8. Practical checklist or comparison table.
+9. CTA linking to `/contact/#rfq-form`.
+
+Every new article must also follow `docs/blog-content-standard.md`.
 
 ## Publishing Rhythm
 
@@ -171,4 +174,3 @@ Main keywords:
 - hand tool inspection checklist
 - pre-shipment inspection hand tools
 - hand tool supplier quality check
-
