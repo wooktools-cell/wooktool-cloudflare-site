@@ -60,6 +60,95 @@ const customOptions = [
   }
 ];
 
+const marketFit = [
+  {
+    market: "Industrial distributors",
+    recommended: "Heavy-duty utility knives and replacement blade packs",
+    reason: "Industrial buyers usually need durable handles, reliable blade locking, stable repeat supply, and blade refill programs for warehouse and jobsite use.",
+    links: [
+      { label: "Heavy duty utility knife", href: productRoutes.heavyDuty },
+      { label: "Replacement utility knife blades", href: productRoutes.blades }
+    ]
+  },
+  {
+    market: "Hardware retail programs",
+    recommended: "Folding utility knives, snap-off cutters, and blister-card box cutters",
+    reason: "Retail channels need clear packaging, barcode labels, attractive shelf presentation, and product types that are easy for end users to understand.",
+    links: [
+      { label: "Folding utility knife", href: productRoutes.folding },
+      { label: "Snap-off utility knife", href: productRoutes.snapOff }
+    ]
+  },
+  {
+    market: "Warehouse and safety programs",
+    recommended: "Safety utility knives with controlled blade exposure",
+    reason: "Workplace buyers often care about safe cutting, stable retraction, simple blade replacement, and fewer accidents during carton opening.",
+    links: [
+      { label: "Safety utility knife", href: productRoutes.safety },
+      { label: "Quality control", href: "/quality-control/" }
+    ]
+  },
+  {
+    market: "Private-label tool brands",
+    recommended: "Custom handle color, logo, blister card, color box, and carton mark",
+    reason: "Brand buyers need consistent handle color, logo placement, artwork control, barcode readiness, and export carton labeling across repeat orders.",
+    links: [
+      { label: "OEM/ODM service", href: "/oem-odm/" },
+      { label: "Private-label guide", href: "/blog/private-label-hand-tools-guide/" }
+    ]
+  }
+];
+
+const riskChecks = [
+  {
+    risk: "Blade lock feels loose",
+    buyerImpact: "End users may lose confidence if the blade moves during cutting or if the folding lock feels unstable.",
+    control: "Confirm lock structure, blade fit, folding action, retractable movement, and safety mechanism during sample review.",
+    href: "/quality-control/"
+  },
+  {
+    risk: "Wrong blade format",
+    buyerImpact: "A model may not fit the target market if the buyer needs 9 mm, 18 mm, trapezoid blades, or refill packs.",
+    control: "Match blade format, blade thickness, replacement method, and refill quantity to the sales channel before quotation.",
+    href: "/blog/sourcing-utility-knives-from-china/"
+  },
+  {
+    risk: "Retail packaging is not ready",
+    buyerImpact: "Incorrect artwork, weak blister cards, or missing barcodes can delay listing, receiving, or retail launch.",
+    control: "Review blister card, hang card, color box, barcode label, warning text, inner pack, and master carton before shipment.",
+    href: "/blog/private-label-hand-tools-guide/"
+  },
+  {
+    risk: "Supplier cannot explain inspection",
+    buyerImpact: "Buyers may receive inconsistent sharpness, poor handle assembly, or mixed blade pack quantities.",
+    control: "Ask how the factory checks blade sharpness, lock function, handle assembly, replacement blade fit, and packing quantity.",
+    href: "/blog/what-buyers-should-check-in-hand-tools-factory-china/"
+  }
+];
+
+const relatedGuides = [
+  {
+    title: "Sourcing utility knives from China",
+    text: "Review blade format, handle material, safety design, packaging, MOQ, samples, and quality control before ordering.",
+    href: "/blog/sourcing-utility-knives-from-china/"
+  },
+  {
+    title: "Private-label hand tools guide",
+    text: "Plan logo, handle color, packaging artwork, barcode labels, carton marks, and repeat-order control for retail programs.",
+    href: "/blog/private-label-hand-tools-guide/"
+  },
+  {
+    title: "Hand tool quality checklist",
+    text: "Use this importer checklist to inspect blade sharpness, lock function, handle assembly, packaging, and shipment readiness.",
+    href: "/blog/hand-tool-quality-control-checklist-for-importers/"
+  },
+  {
+    title: "How to check a hand tools factory",
+    text: "Evaluate factory capability, production process, inspection support, communication, and export experience before cooperation.",
+    href: "/blog/what-buyers-should-check-in-hand-tools-factory-china/"
+  }
+];
+
 const qualityFlow = [
   {
     step: "01",
@@ -99,6 +188,14 @@ const utilityKnifeFaq = [
   {
     question: "What quality checks are recommended?",
     answer: "Recommended checks include blade sharpness, blade replacement fit, lock function, handle assembly, safety mechanism, packaging artwork, barcode, quantity, and carton condition."
+  },
+  {
+    question: "Which utility knife type is better for warehouse buyers?",
+    answer: "Warehouse buyers usually compare heavy-duty utility knives, safety utility knives, and replacement blade packs. The best option depends on blade exposure, lock stability, cutting workload, and refill requirements."
+  },
+  {
+    question: "Can utility knives be packed for retail shelves?",
+    answer: "Yes. wooktools can support blister cards, hanging cards, color boxes, barcode labels, warning text, display boxes, and export cartons for retail and private-label programs."
   }
 ];
 
@@ -160,6 +257,34 @@ const utilitySchema = [
   </section>
 
   <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Buyer channel fit</p>
+          <h2>Match utility knife models to your sales channel</h2>
+        </div>
+        <p>Utility knife buyers should choose by cutting scenario, safety expectation, refill strategy, and packaging channel rather than appearance alone.</p>
+      </div>
+      <table class="spec-table">
+        <tbody>
+          {marketFit.map((item) => (
+            <tr>
+              <th>{item.market}</th>
+              <td>
+                <strong>{item.recommended}</strong>
+                <p>{item.reason}</p>
+                <ul class="link-list">
+                  {item.links.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+                </ul>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="section-inner grid two">
       <img class="product-square-image" src="/images/products/catalog/heavy-duty-utility-knife-main.webp" alt="WOOKTOOL custom utility knife supplier product image" width="1000" height="1000" />
       <div>
@@ -201,6 +326,29 @@ const utilitySchema = [
     </div>
   </section>
 
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Sampling checklist</p>
+          <h2>Quality risks buyers should clarify before production</h2>
+        </div>
+        <p>For utility knife orders, blade safety and packaging details affect buyer confidence, user reviews, and repeat sales. Clarify these points before bulk production.</p>
+      </div>
+      <div class="packaging-grid">
+        {riskChecks.map((check, index) => (
+          <article class="packaging-card">
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <h3>{check.risk}</h3>
+            <p><strong>Buyer impact:</strong> {check.buyerImpact}</p>
+            <p><strong>Control point:</strong> {check.control}</p>
+            <a class="button button-secondary" href={check.href}>Review guide</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <ProductListing
     products={categoryCatalogs["Utility Knives"]}
     eyebrow="Utility knife products"
@@ -224,6 +372,27 @@ const utilitySchema = [
             <span>{item.step}</span>
             <h3>{item.title}</h3>
             <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Related sourcing guides</p>
+          <h2>Plan a safer utility knife buying program</h2>
+        </div>
+        <p>These guides connect product selection, factory evaluation, quality control, packaging, and RFQ preparation for utility knife buyers.</p>
+      </div>
+      <div class="grid four">
+        {relatedGuides.map((guide) => (
+          <article class="info-card">
+            <h3>{guide.title}</h3>
+            <p>{guide.text}</p>
+            <a class="button button-secondary" href={guide.href}>Read guide</a>
           </article>
         ))}
       </div>
