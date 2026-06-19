@@ -7,10 +7,13 @@ export const site = {
   email: "winson@wooktools.com",
   whatsapp: "+86 150 9060 8676",
   whatsappUrl: "https://wa.me/8615090608676",
+  facebookUrl: "https://www.facebook.com/wooktools",
+  linkedinUrl: "",
   alibabaUrl: "https://vooktool.en.alibaba.com",
   analytics: {
     ga4Id: "G-EPEPG206H1",
-    clarityId: "x5cu6wot04"
+    clarityId: "x5cu6wot04",
+    metaPixelId: ""
   },
   description:
     "wooktools is a China-based custom hand tools manufacturer supplying WOOKTOOL tape measures, utility knives, screwdriver sets, OEM/ODM tools, and private-label packaging for global B2B buyers."

@@ -1,5 +1,10 @@
 ---
 import { navItems, site } from "../siteData.js";
+
+const socialLinks = [
+  { label: "Facebook", href: site.facebookUrl, track: "facebook_click" },
+  { label: "LinkedIn", href: site.linkedinUrl, track: "linkedin_click" }
+].filter((item) => item.href);
 ---
 
 <footer class="site-footer">
@@ -18,6 +23,11 @@ import { navItems, site } from "../siteData.js";
       <h2>Contact</h2>
       <p>Email: <a href={`mailto:${site.email}`} data-track="email_click">{site.email}</a></p>
       <p>WhatsApp: <a href={site.whatsappUrl} data-track="whatsapp_click">{site.whatsapp}</a></p>
+      <div class="footer-social-links" aria-label="WOOKTOOL social media links">
+        {socialLinks.map((item) => (
+          <a href={item.href} data-track={item.track}>{item.label}</a>
+        ))}
+      </div>
       <p><a href={site.alibabaUrl} data-track="alibaba_click">Alibaba Store</a></p>
     </div>
   </div>
