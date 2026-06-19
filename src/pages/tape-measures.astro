@@ -60,6 +60,95 @@ const customOptions = [
   }
 ];
 
+const marketFit = [
+  {
+    market: "Hardware distributors",
+    recommended: "Heavy-duty 5m, 7.5m, 8m, or 25ft tape measures",
+    reason: "Distributors usually need durable cases, stable repeat supply, clear carton marks, and practical price tiers for different customer groups.",
+    links: [
+      { label: "Heavy duty tape measure", href: productRoutes.heavyDuty },
+      { label: "Wide blade tape measure", href: productRoutes.wideBlade }
+    ]
+  },
+  {
+    market: "Retail and private-label brands",
+    recommended: "Custom logo tape measures with color box, blister card, or display box",
+    reason: "Retail programs need shelf-ready packaging, barcode labels, consistent appearance, and artwork control across repeat orders.",
+    links: [
+      { label: "Custom logo tape measure", href: productRoutes.customLogo },
+      { label: "Custom options", href: "/custom-tape-measure/" }
+    ]
+  },
+  {
+    market: "Online sellers and tool kits",
+    recommended: "Compact, auto-lock, or pocket tape measures",
+    reason: "Online and kit projects often care about product photo consistency, compact packaging size, review-friendly function, and flexible MOQ planning.",
+    links: [
+      { label: "Auto-lock tape measure", href: productRoutes.autoLock },
+      { label: "Pocket tape measure", href: productRoutes.pocket }
+    ]
+  },
+  {
+    market: "Promotional and value programs",
+    recommended: "Pocket tape measures or plastic measuring tapes with simple logo packaging",
+    reason: "Promotion buyers often need visible branding, controlled cost, simple packaging, and clear quantity planning for event or seasonal orders.",
+    links: [
+      { label: "Pocket tape measure", href: productRoutes.pocket },
+      { label: "Promotional measuring tape", href: "/products/promotional-plastic-measuring-tape/" }
+    ]
+  }
+];
+
+const riskChecks = [
+  {
+    risk: "Unclear blade printing",
+    buyerImpact: "Returns, bad reviews, and trust loss if metric or inch marks are hard to read.",
+    control: "Confirm blade unit, color contrast, printing sample, and market requirement before bulk production.",
+    href: "/blog/tape-measure-quality-defects/"
+  },
+  {
+    risk: "Weak lock or unstable retraction",
+    buyerImpact: "End users may complain if the blade slips, rewinds too fast, or feels unsafe during daily work.",
+    control: "Check lock holding force, rewind smoothness, spring behavior, and blade movement during sampling and inspection.",
+    href: "/quality-control/"
+  },
+  {
+    risk: "Wrong hook or blade width",
+    buyerImpact: "A model can look correct but fail the target use case if hook, width, or standout is mismatched.",
+    control: "Match hook type, blade width, and tape length to the buyer channel, target price, and user scenario.",
+    href: "/custom-tape-measure/"
+  },
+  {
+    risk: "Packaging not ready for retail",
+    buyerImpact: "Barcode errors, weak cartons, or inconsistent artwork can delay receiving, listing, or retail launch.",
+    control: "Review color box, blister card, barcode label, carton mark, inner quantity, and master carton before shipment.",
+    href: "/blog/private-label-hand-tools-guide/"
+  }
+];
+
+const relatedGuides = [
+  {
+    title: "How to choose a tape measure manufacturer",
+    text: "Use this checklist when comparing factories, samples, communication, and quality control before placing a repeat order.",
+    href: "/blog/choose-tape-measure-manufacturer/"
+  },
+  {
+    title: "Custom tape measures before ordering",
+    text: "Review logo, shell color, tape length, blade printing, packaging, MOQ, and lead time before confirming samples.",
+    href: "/blog/custom-tape-measures-guide/"
+  },
+  {
+    title: "Tape measure accuracy classes",
+    text: "Understand why accuracy expectations, market positioning, and inspection requirements should be discussed early.",
+    href: "/blog/tape-measure-accuracy-classes/"
+  },
+  {
+    title: "Common tape measure quality defects",
+    text: "Check blade printing, lock function, hook assembly, retraction, appearance, and packaging before shipment.",
+    href: "/blog/tape-measure-quality-defects/"
+  }
+];
+
 const qualityFlow = [
   {
     step: "01",
@@ -99,6 +188,10 @@ const tapeMeasureFaq = [
   {
     question: "Can we customize blade length and measuring units?",
     answer: "Yes. Common lengths include 3m, 5m, 7.5m, 8m, 10m, 16ft, and 25ft. Metric, inch, and dual-unit markings can be selected based on market needs."
+  },
+  {
+    question: "Which tape measure model is better for hardware distributors?",
+    answer: "Hardware distributors usually start with heavy-duty or wide blade tape measures because they offer stronger case options, practical lengths, and better fit for construction, jobsite, and retail supply programs."
   },
   {
     question: "Can we get samples before bulk production?",
@@ -168,6 +261,34 @@ const tapeMeasureSchema = [
   </section>
 
   <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Buyer channel fit</p>
+          <h2>Match tape measure models to your sales channel</h2>
+        </div>
+        <p>Use the table below to narrow the product direction before sampling. It helps buyers avoid choosing only by appearance and instead match the model to channel, packaging, and repeat-order needs.</p>
+      </div>
+      <table class="spec-table">
+        <tbody>
+          {marketFit.map((item) => (
+            <tr>
+              <th>{item.market}</th>
+              <td>
+                <strong>{item.recommended}</strong>
+                <p>{item.reason}</p>
+                <ul class="link-list">
+                  {item.links.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+                </ul>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="section-inner grid two">
       <img class="product-square-image" src="/images/products/catalog/heavy-duty-tape-measure-main.webp" alt="WOOKTOOL custom tape measure product image for OEM tape measure manufacturer" width="1000" height="1000" />
       <div>
@@ -204,6 +325,29 @@ const tapeMeasureSchema = [
             <h3>{option.title}</h3>
             <p>{option.text}</p>
             <ul>{option.items.map((item) => <li>{item}</li>)}</ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Sampling checklist</p>
+          <h2>Quality risks buyers should clarify before production</h2>
+        </div>
+        <p>For custom tape measure orders, small specification details can affect reviews, returns, and repeat sales. These points should be checked before bulk production.</p>
+      </div>
+      <div class="packaging-grid">
+        {riskChecks.map((check, index) => (
+          <article class="packaging-card">
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <h3>{check.risk}</h3>
+            <p><strong>Buyer impact:</strong> {check.buyerImpact}</p>
+            <p><strong>Control point:</strong> {check.control}</p>
+            <a class="button button-secondary" href={check.href}>Review guide</a>
           </article>
         ))}
       </div>
@@ -276,6 +420,27 @@ const tapeMeasureSchema = [
             <span>{item.step}</span>
             <h3>{item.title}</h3>
             <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Related sourcing guides</p>
+          <h2>Plan a better tape measure buying program</h2>
+        </div>
+        <p>These guides help buyers compare factories, prepare custom specifications, and reduce sampling mistakes before placing a bulk order.</p>
+      </div>
+      <div class="grid four">
+        {relatedGuides.map((guide) => (
+          <article class="info-card">
+            <h3>{guide.title}</h3>
+            <p>{guide.text}</p>
+            <a class="button button-secondary" href={guide.href}>Read guide</a>
           </article>
         ))}
       </div>
