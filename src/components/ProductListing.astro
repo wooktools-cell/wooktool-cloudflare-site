@@ -8,7 +8,9 @@ const {
   title = currentPage ? `Product display page ${currentPage}` : "Product detail entrances",
   description = "Each product window links to a detail page with product photos, specifications, customization options, packaging details, and quality-control notes.",
   showPagination = Boolean(currentPage),
-  paginationPages = catalogPages
+  paginationPages = catalogPages,
+  moreHref,
+  moreLabel = "View more products"
 } = Astro.props;
 ---
 
@@ -24,6 +26,11 @@ const {
     <div class="catalog-grid">
       {products.map((product) => <CatalogProductCard product={product} />)}
     </div>
+    {moreHref && (
+      <div class="product-action-row">
+        <a class="button button-secondary" href={moreHref}>{moreLabel}</a>
+      </div>
+    )}
     {showPagination && (
       <nav class="pagination" aria-label="Product catalog pages">
         {paginationPages.map((page) => (

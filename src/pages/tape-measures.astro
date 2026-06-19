@@ -6,37 +6,6 @@ import ProductListing from "../components/ProductListing.astro";
 import { categoryCatalogs } from "../siteData.js";
 import { breadcrumbSchema, faqSchema, productCollectionSchema } from "../schema.js";
 
-const productRoutes = {
-  heavyDuty: "/products/heavy-duty-tape-measure/",
-  autoLock: "/products/auto-lock-tape-measure/",
-  customLogo: "/products/custom-logo-tape-measure/",
-  wideBlade: "/products/wide-blade-tape-measure/",
-  pocket: "/products/pocket-tape-measure/"
-};
-
-const sourcingGoals = [
-  {
-    title: "Construction and jobsite supply",
-    text: "Choose heavy-duty or wide blade tape measures for hardware channels, contractors, and building material distributors.",
-    href: productRoutes.heavyDuty
-  },
-  {
-    title: "Retail and private-label programs",
-    text: "Use custom logo tape measures with buyer artwork, shell colors, barcode labels, and retail-ready packaging.",
-    href: productRoutes.customLogo
-  },
-  {
-    title: "Auto-lock measuring tools",
-    text: "Select auto-lock tape measures when buyers need easy one-button rewind and clear blade readability for daily use.",
-    href: productRoutes.autoLock
-  },
-  {
-    title: "Promotional and compact tools",
-    text: "Use pocket or plastic measuring tapes for giveaways, checkout displays, tool kits, and value-focused wholesale orders.",
-    href: productRoutes.pocket
-  }
-];
-
 const customOptions = [
   {
     title: "Branding",
@@ -57,45 +26,6 @@ const customOptions = [
     title: "Retail packaging",
     text: "OPP bag, color box, blister card, hang card, display box, bulk carton, and export carton setup.",
     items: ["Color box", "Blister card", "Display box"]
-  }
-];
-
-const marketFit = [
-  {
-    market: "Hardware distributors",
-    recommended: "Heavy-duty 5m, 7.5m, 8m, or 25ft tape measures",
-    reason: "Distributors usually need durable cases, stable repeat supply, clear carton marks, and practical price tiers for different customer groups.",
-    links: [
-      { label: "Heavy duty tape measure", href: productRoutes.heavyDuty },
-      { label: "Wide blade tape measure", href: productRoutes.wideBlade }
-    ]
-  },
-  {
-    market: "Retail and private-label brands",
-    recommended: "Custom logo tape measures with color box, blister card, or display box",
-    reason: "Retail programs need shelf-ready packaging, barcode labels, consistent appearance, and artwork control across repeat orders.",
-    links: [
-      { label: "Custom logo tape measure", href: productRoutes.customLogo },
-      { label: "Custom options", href: "/custom-tape-measure/" }
-    ]
-  },
-  {
-    market: "Online sellers and tool kits",
-    recommended: "Compact, auto-lock, or pocket tape measures",
-    reason: "Online and kit projects often care about product photo consistency, compact packaging size, review-friendly function, and flexible MOQ planning.",
-    links: [
-      { label: "Auto-lock tape measure", href: productRoutes.autoLock },
-      { label: "Pocket tape measure", href: productRoutes.pocket }
-    ]
-  },
-  {
-    market: "Promotional and value programs",
-    recommended: "Pocket tape measures or plastic measuring tapes with simple logo packaging",
-    reason: "Promotion buyers often need visible branding, controlled cost, simple packaging, and clear quantity planning for event or seasonal orders.",
-    links: [
-      { label: "Pocket tape measure", href: productRoutes.pocket },
-      { label: "Promotional measuring tape", href: "/products/promotional-plastic-measuring-tape/" }
-    ]
   }
 ];
 
@@ -190,10 +120,6 @@ const tapeMeasureFaq = [
     answer: "Yes. Common lengths include 3m, 5m, 7.5m, 8m, 10m, 16ft, and 25ft. Metric, inch, and dual-unit markings can be selected based on market needs."
   },
   {
-    question: "Which tape measure model is better for hardware distributors?",
-    answer: "Hardware distributors usually start with heavy-duty or wide blade tape measures because they offer stronger case options, practical lengths, and better fit for construction, jobsite, and retail supply programs."
-  },
-  {
     question: "Can we get samples before bulk production?",
     answer: "Yes. Samples can be arranged before mass production so buyers can confirm product quality, logo effect, packaging, and details."
   },
@@ -239,54 +165,15 @@ const tapeMeasureSchema = [
     </div>
   </section>
 
-  <section class="section soft">
-    <div class="section-inner">
-      <div class="section-header">
-        <div>
-          <p class="eyebrow">Buyer paths</p>
-          <h2>Choose tape measures by sourcing goal</h2>
-        </div>
-        <p>Different buyer programs need different models. Start from the use case, then confirm length, blade units, logo, packaging, and MOQ.</p>
-      </div>
-      <div class="grid four">
-        {sourcingGoals.map((goal) => (
-          <article class="info-card">
-            <h3>{goal.title}</h3>
-            <p>{goal.text}</p>
-            <a class="button button-secondary" href={goal.href}>View option</a>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-inner">
-      <div class="section-header">
-        <div>
-          <p class="eyebrow">Buyer channel fit</p>
-          <h2>Match tape measure models to your sales channel</h2>
-        </div>
-        <p>Use the table below to narrow the product direction before sampling. It helps buyers avoid choosing only by appearance and instead match the model to channel, packaging, and repeat-order needs.</p>
-      </div>
-      <table class="spec-table">
-        <tbody>
-          {marketFit.map((item) => (
-            <tr>
-              <th>{item.market}</th>
-              <td>
-                <strong>{item.recommended}</strong>
-                <p>{item.reason}</p>
-                <ul class="link-list">
-                  {item.links.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
-                </ul>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  </section>
+  <ProductListing
+    products={categoryCatalogs["Tape Measures"]}
+    eyebrow="Tape measure products"
+    title="WOOKTOOL tape measure product range"
+    description="Browse WOOKTOOL tape measure styles first, then send your preferred model, logo, color, packaging, quantity, and target market for quotation."
+    showPagination={false}
+    moreHref="/products/"
+    moreLabel="View More Product Styles"
+  />
 
   <section class="section">
     <div class="section-inner grid two">
@@ -340,7 +227,7 @@ const tapeMeasureSchema = [
         </div>
         <p>For custom tape measure orders, small specification details can affect reviews, returns, and repeat sales. These points should be checked before bulk production.</p>
       </div>
-      <div class="packaging-grid">
+      <div class="grid four">
         {riskChecks.map((check, index) => (
           <article class="packaging-card">
             <span>{String(index + 1).padStart(2, "0")}</span>
@@ -353,14 +240,6 @@ const tapeMeasureSchema = [
       </div>
     </div>
   </section>
-
-  <ProductListing
-    products={categoryCatalogs["Tape Measures"]}
-    eyebrow="Tape measure products"
-    title="WOOKTOOL tape measure product range"
-    description="Each product entry opens a detail page for specifications, quality notes, packaging, target buyers, and custom branding options."
-    showPagination={false}
-  />
 
   <section class="section">
     <div class="section-inner content-grid">
