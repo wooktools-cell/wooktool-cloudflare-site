@@ -10,11 +10,12 @@ const {
   showPagination = Boolean(currentPage),
   paginationPages = catalogPages,
   moreHref,
-  moreLabel = "View more products"
+  moreLabel = "View more products",
+  sectionClass = "section"
 } = Astro.props;
 ---
 
-<section class="section">
+<section class={sectionClass}>
   <div class="section-inner">
     <div class="section-header">
       <div>

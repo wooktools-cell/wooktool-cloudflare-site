@@ -622,7 +622,10 @@ main {
 
 .catalog-card a {
   display: block;
-  height: 100%;
+}
+
+.catalog-media-link {
+  display: block;
 }
 
 .catalog-card img {
@@ -633,7 +636,7 @@ main {
   border-bottom: 1px solid #cfd6dd;
 }
 
-.catalog-card div {
+.catalog-card > div {
   padding: 1rem;
 }
 
@@ -649,6 +652,94 @@ main {
 .catalog-card span {
   color: var(--accent-dark);
   font-weight: 800;
+}
+
+.catalog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.95rem;
+}
+
+.catalog-detail-link,
+.catalog-rfq-link {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0.55rem 0.7rem;
+  border-radius: var(--radius);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.catalog-detail-link {
+  color: #fff;
+  background: var(--steel-dark);
+}
+
+.catalog-rfq-link {
+  color: var(--accent-dark);
+  background: #fff;
+  border: 1px solid #c8d0d8;
+}
+
+.catalog-section-stack {
+  display: grid;
+  gap: 3.25rem;
+}
+
+.catalog-listing-block .section-inner {
+  max-width: none;
+}
+
+.catalog-listing-block + .catalog-listing-block {
+  padding-top: 0.5rem;
+  border-top: 1px solid #d9dee4;
+}
+
+.sourcing-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.sourcing-strip article {
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 26px rgba(16, 22, 29, 0.07);
+}
+
+.sourcing-strip span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  margin-bottom: 0.85rem;
+  color: #fff;
+  background: var(--navy);
+  border-radius: var(--radius);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.sourcing-strip h2 {
+  font-size: 1.1rem;
+}
+
+.sourcing-strip p {
+  color: var(--muted);
+}
+
+.catalog-page-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: flex-end;
 }
 
 .component-grid {
@@ -1288,7 +1379,8 @@ small,
   .packaging-grid,
   .factory-gallery,
   .certificate-grid,
-  .product-gallery {
+  .product-gallery,
+  .sourcing-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1362,9 +1454,14 @@ small,
   .factory-gallery,
   .certificate-grid,
   .product-gallery,
+  .sourcing-strip,
   .form-grid,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .catalog-page-links {
+    justify-content: flex-start;
   }
 
   .quote-checklist dl {

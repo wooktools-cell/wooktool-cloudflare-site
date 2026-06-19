@@ -3,7 +3,34 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import ProductCard from "../components/ProductCard.astro";
 import ProductListing from "../components/ProductListing.astro";
 import CTA from "../components/CTA.astro";
-import { catalogPages, productCategories } from "../siteData.js";
+import { catalogPages, categoryCatalogs, productCategories } from "../siteData.js";
+
+const productSections = [
+  {
+    key: "Tape Measures",
+    eyebrow: "Tape measure catalog",
+    title: "Tape measures for custom logo and wholesale programs",
+    description: "Compare steel tape measures for distributor, retail, hardware, promotional, and private-label sourcing. Each detail page includes product photos, specifications, customization options, packaging, and QC notes.",
+    moreHref: "/tape-measures/",
+    moreLabel: "View Tape Measure Category"
+  },
+  {
+    key: "Utility Knives",
+    eyebrow: "Utility knife catalog",
+    title: "Utility knives, box cutters, and replacement blades",
+    description: "Browse utility knives for hardware retail, warehouse use, industrial supply, and private-label programs, including handle color, logo, blade format, and packaging options.",
+    moreHref: "/utility-knives/",
+    moreLabel: "View Utility Knife Category"
+  },
+  {
+    key: "Screwdriver Sets",
+    eyebrow: "Screwdriver set catalog",
+    title: "Screwdriver sets for kits, retail, and OEM packaging",
+    description: "Review screwdriver sets, multi-bit kits, ratchet screwdrivers, household sets, and hex key wrench sets with material, set configuration, case, and packaging details.",
+    moreHref: "/screwdriver-sets/",
+    moreLabel: "View Screwdriver Set Category"
+  }
+];
 ---
 
 <BaseLayout
@@ -12,7 +39,40 @@ import { catalogPages, productCategories } from "../siteData.js";
   path="/products/"
   image="/images/hero/wooktool-hero-desktop.webp"
 >
-  <section class="page-intro"><div><p class="eyebrow">Products</p><h1>Custom Hand Tools Supplier</h1><p>Browse WOOKTOOL product categories and request custom details for your sourcing project, retail program, or private-label hand tool line.</p></div></section>
+  <section class="page-intro">
+    <div>
+      <p class="eyebrow">Products</p>
+      <h1>WOOKTOOL Product Catalog for Global B2B Buyers</h1>
+      <p>Browse tape measures, utility knives, screwdriver sets, and OEM/ODM hand tool options. Choose a product style, review the detail page, then send your logo, color, packaging, quantity, and delivery requirements for quotation.</p>
+      <div class="button-row">
+        <a class="button button-primary" href="#product-catalog">Browse Product Catalog</a>
+        <a class="button button-secondary" href="/contact/#rfq-form">Send Product RFQ</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="section-inner">
+      <div class="sourcing-strip">
+        <article>
+          <span>01</span>
+          <h2>Choose category</h2>
+          <p>Start with tape measures, utility knives, screwdriver sets, or OEM/ODM hand tools.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h2>Review product details</h2>
+          <p>Open product pages for photos, specifications, selling points, packaging, and QC notes.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h2>Send RFQ</h2>
+          <p>Share quantity, logo, color, packaging, target market, and delivery plan for quotation.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="section-inner">
       <div class="section-header">
@@ -27,6 +87,49 @@ import { catalogPages, productCategories } from "../siteData.js";
       </div>
     </div>
   </section>
-  <ProductListing products={catalogPages[0].products} currentPage={1} />
+
+  <section class="section soft" id="product-catalog">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Product catalog</p>
+          <h2>Browse products by category</h2>
+        </div>
+        <p>Use the product cards below as a practical catalog. Each product has a detail page and a direct RFQ entry so buyers can move from selection to quotation faster.</p>
+      </div>
+      <div class="catalog-section-stack">
+        {productSections.map((section) => (
+          <ProductListing
+            products={categoryCatalogs[section.key]}
+            eyebrow={section.eyebrow}
+            title={section.title}
+            description={section.description}
+            showPagination={false}
+            moreHref={section.moreHref}
+            moreLabel={section.moreLabel}
+            sectionClass="catalog-listing-block"
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="inline-rfq">
+        <div>
+          <p class="eyebrow">Full catalog pages</p>
+          <h2>Need to browse every product entry?</h2>
+          <p>Use the full product catalog pages for all listed WOOKTOOL product entrances, or send your RFQ directly if you already have a reference product or target specification.</p>
+        </div>
+        <div class="catalog-page-links" aria-label="Full product catalog pages">
+          {catalogPages.map((page) => (
+            <a class="button button-secondary" href={page.href}>Page {page.page}</a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
   <CTA title="Ready to discuss product details?" primaryLabel="Request Product Quote" />
 </BaseLayout>
