@@ -8,7 +8,7 @@ export const site = {
   whatsapp: "+86 150 9060 8676",
   whatsappUrl: "https://wa.me/8615090608676",
   facebookUrl: "https://www.facebook.com/wooktools",
-  linkedinUrl: "",
+  linkedinUrl: "https://www.linkedin.com/in/winson-wooktools",
   alibabaUrl: "https://vooktool.en.alibaba.com",
   analytics: {
     ga4Id: "G-EPEPG206H1",
