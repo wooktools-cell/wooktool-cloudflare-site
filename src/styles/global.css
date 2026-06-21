@@ -1275,6 +1275,45 @@ small,
   padding-left: 1.2rem;
 }
 
+.article img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1.75rem 0 2rem;
+  border: 1px solid #d8e0e8;
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.article table {
+  display: block;
+  width: 100%;
+  margin: 1.5rem 0 2rem;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.article th,
+.article td {
+  min-width: 140px;
+  padding: 0.85rem 0.9rem;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #d8e0e8;
+}
+
+.article th {
+  color: var(--ink);
+  background: #f2f5f7;
+}
+
+.article td {
+  color: #415066;
+  background: #fff;
+}
+
 .site-footer {
   color: #dce6ef;
   background: #0c1c2d;
