@@ -9,7 +9,6 @@ const legacyRedirects = new Map(
     "/products/heavy-duty-16ft-25ft-tape-measure-with-fractional-metal-tape-and-magnetic-tip.html": "/products/heavy-duty-tape-measure/",
     "/products/self-locking-tape-measure-double-sided-reading-customizable-colors.html": "/products/auto-lock-tape-measure/",
     "/products/compact-tape-measure/": "/products/auto-lock-tape-measure/",
-    "/products/auto-lock-tape-measure/": "/products/auto-lock-tape-measure/",
     "/products/tape-measures-retractable-fabric-measuring-tape-60-inch-small-sewing-tape-measure.html": "/products/pocket-tape-measure/",
     "/products/21241.html": "/products/heavy-duty-tape-measure/",
     "/products/21445.html": "/products/pocket-tape-measure/",
