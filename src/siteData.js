@@ -88,7 +88,7 @@ export const productCategories = [
   }
 ];
 
-export { catalogProducts, catalogPages, categoryCatalogs } from "./productData.js";
+export { catalogProducts, catalogPages, categoryCatalogs, productRoutes } from "./productData.js";
 
 export const sellingPoints = [
   "Factory-direct manufacturing",

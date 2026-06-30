@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import CompactRFQ from "../components/CompactRFQ.astro";
 import FAQ from "../components/FAQ.astro";
 import { breadcrumbSchema, faqSchema } from "../schema.js";
 
@@ -312,6 +313,15 @@ const rfqHref = "/contact/#rfq-form";
     </div>
   </section>
   <FAQ items={customTapeFaq} title="Custom tape measure FAQ" />
+  <section class="section soft">
+    <div class="section-inner">
+      <CompactRFQ
+        title="Request Product Quote for Custom Tape Measures"
+        productInterest="Custom logo tape measure"
+        source="custom-tape-measure"
+      />
+    </div>
+  </section>
   <CTA
     title="Build a custom tape measure for your brand"
     text="Send your logo, shell color, blade specification, packaging style, target quantity, and delivery schedule. WOOKTOOL will review the practical sample direction for your program."

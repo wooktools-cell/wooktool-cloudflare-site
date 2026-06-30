@@ -1,0 +1,39 @@
+---
+import { site } from "../siteData.js";
+
+const {
+  title = "Request Product Quote",
+  eyebrow = "Fast RFQ",
+  productInterest = "WOOKTOOL hand tools",
+  source = "compact-rfq"
+} = Astro.props;
+---
+
+<section class="compact-rfq" id="product-rfq">
+  <div class="compact-rfq-copy">
+    <p class="eyebrow">{eyebrow}</p>
+    <h2>{title}</h2>
+    <p>Send your product interest, quantity, country, and custom requirements. wooktools will review the WOOKTOOL model, packaging direction, and quotation details.</p>
+  </div>
+  <form
+    class="compact-rfq-form"
+    action={`https://formsubmit.co/${site.email}`}
+    method="POST"
+    data-track="compact_rfq_submit"
+  >
+    <input type="hidden" name="_subject" value={`New RFQ from ${productInterest}`} />
+    <input type="hidden" name="_template" value="table" />
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_next" value={`${site.domain}/contact/thank-you/`} />
+    <input type="hidden" name="Lead Source" value={source} />
+    <div class="form-grid">
+      <label>Name<input type="text" name="Name" autocomplete="name" required /></label>
+      <label>Email<input type="email" name="Email" autocomplete="email" required /></label>
+      <label>Country<input type="text" name="Country" autocomplete="country-name" /></label>
+      <label>Product Interest<input type="text" name="Product Interest" value={productInterest} /></label>
+      <label>Estimated Quantity<input type="text" name="Estimated Quantity" placeholder="Example: 1,000 pcs" /></label>
+      <label>Message<textarea name="Message" rows="4" placeholder="Logo, color, packaging, target market, delivery schedule"></textarea></label>
+    </div>
+    <button class="button button-primary" type="submit" data-track="request_quote_button_click">Request Product Quote</button>
+  </form>
+</section>

@@ -1,4 +1,4 @@
-import { catalogPages, catalogProducts, site } from "../siteData.js";
+import { catalogPages, productRoutes, site } from "../siteData.js";
 import { cmsBlogPosts } from "../blogData.js";
 
 const cmsPageModules = import.meta.glob("../cms/pages/*.md", { eager: true });
@@ -29,7 +29,7 @@ const cmsPagePaths = Object.entries(cmsPageModules).map(([path, module]) => {
   return `/pages/${slug}/`;
 });
 
-const productPaths = catalogProducts.map((product) => `/products/${product.slug}/`);
+const productPaths = productRoutes.map((product) => `/products/${product.slug}/`);
 const catalogPagePaths = catalogPages.map((page) => page.href);
 const cmsBlogPaths = cmsBlogPosts.map((post) => post.href);
 

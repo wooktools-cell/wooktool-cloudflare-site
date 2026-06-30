@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import ProductCard from "../components/ProductCard.astro";
 import ProductListing from "../components/ProductListing.astro";
 import CTA from "../components/CTA.astro";
+import CompactRFQ from "../components/CompactRFQ.astro";
 import { catalogPages, categoryCatalogs, productCategories } from "../siteData.js";
 
 const productSections = [
@@ -128,6 +129,16 @@ const productSections = [
           ))}
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="section-inner">
+      <CompactRFQ
+        title="Request Product Quote"
+        productInterest="WOOKTOOL hand tools"
+        source="products-catalog"
+      />
     </div>
   </section>
 

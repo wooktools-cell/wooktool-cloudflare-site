@@ -1,11 +1,14 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
+import CompactRFQ from "../../components/CompactRFQ.astro";
+import FAQ from "../../components/FAQ.astro";
 import CatalogProductCard from "../../components/CatalogProductCard.astro";
-import { catalogProducts, site } from "../../siteData.js";
+import { catalogProducts, productRoutes, site } from "../../siteData.js";
+import { faqSchema } from "../../schema.js";
 
 export function getStaticPaths() {
-  return catalogProducts.map((product) => ({
+  return productRoutes.map((product) => ({
     params: { slug: product.slug },
     props: { product }
   }));
@@ -36,6 +39,74 @@ const productSeoTitle =
 const productSeoDescription =
   product.metaDescription ||
   `Source ${product.title} from WOOKTOOL with OEM logo, packaging, QC inspection, flexible MOQ, and export support for B2B buyers.`;
+const categoryLabel = product.category?.toLowerCase() || "hand tools";
+const buyerText = product.targetBuyers || "importers, distributors, wholesalers, and private-label brands";
+const packagingText =
+  product.specs.Packaging ||
+  "Blister card, color box, display box, hang card, bulk pack, export carton, buyer barcode, and carton mark";
+const packagingOptions = packagingText
+  .split(",")
+  .map((item) => item.trim())
+  .filter(Boolean)
+  .slice(0, 8);
+const qualitySummary =
+  product.quality.length > 0
+    ? product.quality.slice(0, 3).join(", ").toLowerCase()
+    : "material, function, appearance, packaging, and carton condition";
+const productIntroParagraphs =
+  product.introduction ||
+  [
+    `${product.title} is a WOOKTOOL ${categoryLabel} option supplied by wooktools for B2B buyers who need reliable factory production, private-label support, and practical export packaging. The product is suitable for ${buyerText.toLowerCase()} that want a clear specification, repeatable quality, and responsive sourcing communication before placing a bulk order.`,
+    `For OEM and ODM projects, buyers can discuss logo position, product color, market packaging, barcode labels, carton marks, and target price with the wooktools team. We can help review whether an existing WOOKTOOL model, adjusted specification, or custom packaging direction is most suitable for your sales channel.`,
+    `Before quotation, send your estimated quantity, target market, preferred packaging, logo file, delivery schedule, and any reference product photos. This helps us confirm material selection, sample direction, inspection points, and bulk production feasibility more quickly. Each order can be reviewed around function, appearance, packaging, and pre-shipment quality control.`
+  ];
+const productFaq =
+  product.faq || [
+    {
+      question: `Can wooktools customize ${product.title}?`,
+      answer: `${product.specs.Customization || "Yes. Logo, color, packaging, barcode, carton mark, and private-label details can be customized based on the selected model and order quantity."}`
+    },
+    {
+      question: `What packaging options are available for ${product.title}?`,
+      answer: packagingText
+    },
+    {
+      question: `What is the MOQ for this product?`,
+      answer: product.specs.MOQ || "MOQ depends on the selected model, customization level, and packaging requirement. wooktools can review a suitable option after receiving your RFQ details."
+    },
+    {
+      question: "Can I request samples before bulk production?",
+      answer: "Yes. Samples can be arranged after confirming product specification, logo method, packaging direction, and target market requirement."
+    },
+    {
+      question: "What quality points are checked before shipment?",
+      answer: `Common checks include ${qualitySummary}, plus packaging and carton confirmation before shipment.`
+    },
+    {
+      question: "Who is this product suitable for?",
+      answer: `${product.title} is suitable for ${buyerText.toLowerCase()}.`
+    }
+  ];
+const internalLinks = [
+  {
+    href: categoryPath,
+    label:
+      product.category === "Tape Measures"
+        ? "tape measure manufacturer"
+        : product.category === "Utility Knives"
+          ? "utility knife manufacturer"
+          : "screwdriver set supplier"
+  },
+  { href: "/oem-odm/", label: "OEM hand tools supplier" },
+  {
+    href: "/quality-control/",
+    label: product.category === "Tape Measures" ? "tape measure quality control" : "hand tools quality control"
+  },
+  { href: "/contact/#product-rfq", label: "Request Product Quote" }
+];
+if (product.category === "Tape Measures") {
+  internalLinks.splice(1, 0, { href: "/custom-tape-measure/", label: "custom tape measure supplier" });
+}
 const imageUrls = [product.image, ...(product.detailImages || [])].map((image) =>
   new URL(image, site.domain).toString()
 );
@@ -52,10 +123,16 @@ const productSchema = {
   },
   manufacturer: {
     "@type": "Organization",
-    name: site.name,
+    name: site.companyName,
     url: site.domain
   },
   category: product.category,
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+    url: productUrl
+  },
   additionalProperty: Object.entries(product.specs).map(([name, value]) => ({
     "@type": "PropertyValue",
     name,
@@ -92,6 +169,7 @@ const breadcrumbSchema = {
     }
   ]
 };
+const productPageSchema = [productSchema, breadcrumbSchema, faqSchema(productFaq)];
 ---
 
 <BaseLayout
@@ -100,7 +178,7 @@ const breadcrumbSchema = {
   path={`/products/${product.slug}/`}
   image={product.image}
   type="product"
-  schema={[productSchema, breadcrumbSchema]}
+  schema={productPageSchema}
 >
   <section class="page-intro">
     <div>
@@ -124,10 +202,26 @@ const breadcrumbSchema = {
           </tbody>
         </table>
         <div class="product-action-row">
-          <a class="button button-primary" href="/contact/#rfq-form" data-track="product_detail_rfq_click">Ask for Price</a>
+          <a class="button button-primary" href="#product-rfq" data-track="product_detail_rfq_click">Request Product Quote</a>
           <a class="button button-secondary" href={customizationPath} data-track="product_detail_custom_click">{customizationLabel}</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="section-inner content-grid">
+      <div class="content-copy">
+        <p class="eyebrow">Sourcing overview</p>
+        <h2>{product.title} for B2B sourcing programs</h2>
+        {productIntroParagraphs.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+      <article class="info-card">
+        <h3>Internal buyer links</h3>
+        <ul class="link-list">
+          {internalLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+        </ul>
+      </article>
     </div>
   </section>
 
@@ -173,6 +267,39 @@ const breadcrumbSchema = {
       <article class="info-card"><h3>Target buyers</h3><p>{product.targetBuyers}</p></article>
     </div>
   </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Packaging options</p>
+          <h2>Export-ready packaging for this product</h2>
+        </div>
+        <p>Packaging can be reviewed around retail display, barcode needs, carton marks, shipping protection, and the buyer's target sales channel.</p>
+      </div>
+      <div class="packaging-grid">
+        {packagingOptions.map((option, index) => (
+          <article class="packaging-card">
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <h3>{option}</h3>
+            <p>wooktools can confirm artwork, label, quantity, and carton requirements for this packaging direction during RFQ review.</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="section-inner">
+      <CompactRFQ
+        title={`Request Product Quote for ${product.title}`}
+        productInterest={product.title}
+        source={`product-${product.slug}`}
+      />
+    </div>
+  </section>
+
+  <FAQ items={productFaq} title={`${product.title} FAQ`} />
 
   {relatedProducts.length > 0 && (
     <section class="section">

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import CompactRFQ from "../components/CompactRFQ.astro";
 import FAQ from "../components/FAQ.astro";
 import ProductListing from "../components/ProductListing.astro";
 import { categoryCatalogs } from "../siteData.js";
@@ -350,6 +351,15 @@ const tapeMeasureSchema = [
   </section>
 
   <FAQ items={tapeMeasureFaq} title="Tape measure sourcing FAQ" />
+  <section class="section soft">
+    <div class="section-inner">
+      <CompactRFQ
+        title="Request Product Quote for Tape Measures"
+        productInterest="Custom tape measures"
+        source="category-tape-measures"
+      />
+    </div>
+  </section>
   <CTA
     title="Request a custom tape measure quote"
     text="Send your target model, length, logo, shell color, packaging, quantity, and delivery requirements. WOOKTOOL will review suitable options for your sourcing program."

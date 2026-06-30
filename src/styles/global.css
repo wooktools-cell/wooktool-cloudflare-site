@@ -1037,6 +1037,39 @@ main {
   margin-top: 1.1rem;
 }
 
+.compact-rfq {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.45fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background:
+    linear-gradient(90deg, rgba(216, 95, 18, 0.08), rgba(255, 255, 255, 0) 52%),
+    #fff;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 30px rgba(16, 22, 29, 0.08);
+}
+
+.compact-rfq-copy p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+.compact-rfq-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.compact-rfq-form .form-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.compact-rfq-form label:nth-last-child(1) {
+  grid-column: span 3;
+}
+
 .mini-list {
   display: grid;
   gap: 0.55rem;
@@ -1452,6 +1485,15 @@ small,
 
   .content-grid {
     grid-template-columns: 1fr;
+  }
+
+  .compact-rfq,
+  .compact-rfq-form .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .compact-rfq-form label:nth-last-child(1) {
+    grid-column: auto;
   }
 }
 

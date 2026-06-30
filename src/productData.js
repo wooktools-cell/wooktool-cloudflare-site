@@ -39,9 +39,13 @@ const chunkProducts = (products, size) =>
     products: products.slice(index * size, index * size + size)
   }));
 
-export const catalogProducts = Object.values(productModules)
+const allProducts = Object.values(productModules)
   .map((module) => normalizeProduct(module.default || module))
   .sort((a, b) => (a.order || 999) - (b.order || 999));
+
+export const productRoutes = allProducts;
+
+export const catalogProducts = allProducts.filter((product) => !product.excludeFromCatalog);
 
 export const catalogPages = chunkProducts(catalogProducts, 5);
 

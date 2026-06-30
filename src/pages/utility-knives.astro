@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import CompactRFQ from "../components/CompactRFQ.astro";
 import FAQ from "../components/FAQ.astro";
 import ProductListing from "../components/ProductListing.astro";
 import { categoryCatalogs } from "../siteData.js";
@@ -423,6 +424,15 @@ const utilitySchema = [
   </section>
 
   <FAQ items={utilityKnifeFaq} title="Utility knife sourcing FAQ" />
+  <section class="section soft">
+    <div class="section-inner">
+      <CompactRFQ
+        title="Request Product Quote for Utility Knives"
+        productInterest="Utility knives and replacement blades"
+        source="category-utility-knives"
+      />
+    </div>
+  </section>
   <CTA
     title="Need custom utility knives for your market?"
     text="Send blade type, handle color, logo, packaging, quantity, and target channel. WOOKTOOL will review suitable box cutter and utility knife options for your program."
