@@ -17,10 +17,17 @@ const legacyRedirects = new Map(
     "/products/easy-retractable-ruler-tape-measure-mini-portable-pull-ruler-keychain-1m3ft.html": "/products/pocket-tape-measure/",
     "/products/measuring-tape-retractable-easy-read-imperialmetric-scale-measurement-tape-for-designer.html": "/products/auto-lock-tape-measure/",
     "/products/retractable-and-easy-read-measuring-tape-bulk-set-min-18-inch-fraction-and-1mm-scale.html": "/products/wide-blade-tape-measure/",
+    "/products/tape-measures-centimeters---tough-outer-shell---thumb-and-quick-lock---autowind---belt-clip.html": "/products/auto-lock-tape-measure/",
+    "/products/5m16-metric-self-lock-tape-measure-yellowblack.html": "/products/auto-lock-tape-measure/",
+    "/products/sewing-tape-measure-upgradedual-sided-leather-tape-measureautomatic-retractable.html": "/products/pocket-tape-measure/",
     "/products/tape-measure-portable-steel-frame-ruler-galvanized-iron-stainless-steel-measuring-tape.html": "/products/heavy-duty-tape-measure/",
     "/products/utility-knife-box-cutter-retractable-blade-storage-design-quick-change-blades.html": "/products/heavy-duty-utility-knife/",
     "/products/folding-utility-knife-with-5-piece-extra-quick-change-blades-safely-lock-back-design.html": "/products/folding-utility-knife/",
-    "/products/ratchet-screwdriver-with-soft-rubber-handle-easy-to-switch-and-replace-bits.html": "/products/ratchet-screwdriver-set/"
+    "/products/ratchet-screwdriver-with-soft-rubber-handle-easy-to-switch-and-replace-bits.html": "/products/ratchet-screwdriver-set/",
+    "/products/20433.html": "/products/",
+    "/products/22204.html": "/products/",
+    "/products/24336.html": "/products/",
+    "/products/26324.html": "/products/"
   })
 );
 
