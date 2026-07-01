@@ -1,13 +1,44 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import CompactRFQ from "../components/CompactRFQ.astro";
+import FAQ from "../components/FAQ.astro";
 import { qcSteps } from "../siteData.js";
+import { breadcrumbSchema, faqSchema } from "../schema.js";
+
+const qualityFaq = [
+  {
+    question: "What quality checks does wooktools perform before shipment?",
+    answer: "wooktools can review raw materials, production process, finished goods, packaging, carton marks, and shipment readiness based on the buyer's product and order requirements."
+  },
+  {
+    question: "Can inspection points be customized for our market?",
+    answer: "Yes. Buyers can share their retail, distributor, or private-label requirements so wooktools can focus on key risk points such as logo, color, packaging, barcode, function, and carton condition."
+  },
+  {
+    question: "What should buyers confirm before production?",
+    answer: "Buyers should confirm product specification, target market, material direction, logo files, packaging artwork, estimated quantity, and any required inspection standards before sampling or bulk production."
+  },
+  {
+    question: "Do you check packaging and carton marks?",
+    answer: "Yes. Packaging artwork, barcode labels, carton quantity, carton marks, and export carton condition can be checked before shipment."
+  }
+];
+
+const qualitySchema = [
+  breadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Quality Control", path: "/quality-control/" }
+  ]),
+  faqSchema(qualityFaq)
+];
 ---
 
 <BaseLayout
   title="Hand Tools Quality Control | WOOKTOOL Inspection"
   description="WOOKTOOL hand tools quality control covers material checks, production inspection, function testing, packaging review, and pre-shipment inspection."
   path="/quality-control/"
+  schema={qualitySchema}
 >
   <section class="page-intro"><div><p class="eyebrow">Quality control</p><h1>Hand Tools Quality Control</h1><p>wooktools plans quality control around practical inspection points so buyers can reduce product, packaging, and shipment risk before delivery.</p></div></section>
   <section class="section">
@@ -24,6 +55,35 @@ import { qcSteps } from "../siteData.js";
           ][index]}</p>
         </article>
       ))}
+    </div>
+  </section>
+  <section class="section soft">
+    <div class="section-inner content-grid">
+      <div class="content-copy">
+        <p class="eyebrow">Before inquiry checklist</p>
+        <h2>Quality details buyers should confirm early</h2>
+        <p>A clear inspection standard helps wooktools match the right product grade, packaging method, and production direction. For tape measures, buyers should confirm blade printing, lock function, hook type, retraction, shell color, and packaging. For utility knives, blade material, lock structure, handle assembly, and blade pack quantity are important. For screwdriver sets, bit selection, handle quality, magnetic tip, case layout, and set completeness should be reviewed.</p>
+      </div>
+      <div class="info-card">
+        <h3>Useful quality links</h3>
+        <ul class="link-list">
+          <li><a href="/tape-measures/">Tape measure manufacturer</a></li>
+          <li><a href="/utility-knives/">Utility knife manufacturer</a></li>
+          <li><a href="/screwdriver-sets/">Screwdriver set manufacturer</a></li>
+          <li><a href="/oem-odm/">OEM hand tools supplier</a></li>
+          <li><a href="/contact/">Send quality requirements</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <FAQ items={qualityFaq} title="Hand tools quality control FAQ" />
+  <section class="section soft">
+    <div class="section-inner">
+      <CompactRFQ
+        title="Request Product Quote with Quality Requirements"
+        productInterest="Hand tools quality control"
+        source="quality-control"
+      />
     </div>
   </section>
   <CTA title="Want inspection details for your RFQ?" primaryLabel="Contact Sales Team" />

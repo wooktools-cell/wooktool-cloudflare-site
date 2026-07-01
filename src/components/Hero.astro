@@ -39,8 +39,8 @@ const {
         {highlights.map((item) => <span>{item}</span>)}
       </div>
       <div class="hero-actions">
-        <a class="button button-primary" href={primaryHref}>{primaryLabel}</a>
-        <a class="button button-secondary" href={secondaryHref}>{secondaryLabel}</a>
+        <a class="button button-primary" href={primaryHref} data-track="hero_primary_click">{primaryLabel}</a>
+        <a class="button button-secondary" href={secondaryHref} data-track="hero_secondary_click">{secondaryLabel}</a>
       </div>
     </div>
   </div>

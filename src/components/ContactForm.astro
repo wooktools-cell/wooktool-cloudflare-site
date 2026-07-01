@@ -6,22 +6,23 @@ import { site } from "../siteData.js";
   class="contact-form"
   action={`https://formsubmit.co/${site.email}`}
   method="post"
-  enctype="multipart/form-data"
   data-track="form_submit"
 >
   <input type="hidden" name="_subject" value="New WOOKTOOL RFQ from website" />
   <input type="hidden" name="_template" value="table" />
   <input type="hidden" name="_next" value={`${site.domain}/contact/thank-you/`} />
   <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="lead_source" value="website" data-source-field="lead_source" />
+  <input type="hidden" name="utm_source" data-source-field="utm_source" />
+  <input type="hidden" name="utm_medium" data-source-field="utm_medium" />
+  <input type="hidden" name="utm_campaign" data-source-field="utm_campaign" />
+  <input type="hidden" name="utm_content" data-source-field="utm_content" />
+  <input type="hidden" name="utm_term" data-source-field="utm_term" />
   <input class="form-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" />
   <div class="form-grid">
     <label>
       Name
       <input type="text" name="name" autocomplete="name" required />
-    </label>
-    <label>
-      Company
-      <input type="text" name="company" autocomplete="organization" />
     </label>
     <label>
       Email
@@ -33,7 +34,7 @@ import { site } from "../siteData.js";
     </label>
     <label>
       Product Interest
-      <select name="product_interest">
+      <select name="product_interest" required>
         <option value="">Select product type</option>
         <option>Tape Measures</option>
         <option>Custom Tape Measure</option>
@@ -44,52 +45,31 @@ import { site } from "../siteData.js";
     </label>
     <label>
       Estimated Quantity
-      <input type="text" name="estimated_quantity" placeholder="Example: 3,000 pcs" />
-    </label>
-    <label>
-      Custom Logo Needed
-      <select name="custom_logo_needed">
-        <option value="">Select option</option>
-        <option>Yes, custom logo needed</option>
-        <option>No logo needed</option>
-        <option>Not sure yet</option>
-      </select>
-    </label>
-    <label>
-      Packaging Requirement
-      <select name="packaging_requirement">
-        <option value="">Select packaging</option>
-        <option>Blister card</option>
-        <option>Color box</option>
-        <option>Display box</option>
-        <option>Hang card</option>
-        <option>Bulk pack</option>
-        <option>Barcode / carton mark needed</option>
-        <option>Not sure yet</option>
-      </select>
-    </label>
-    <label>
-      Target Market
-      <input type="text" name="target_market" placeholder="Example: USA, Germany, Middle East" />
-    </label>
-    <label>
-      Delivery Schedule
-      <input type="text" name="delivery_schedule" placeholder="Example: Need goods ready in 45 days" />
-    </label>
-    <label>
-      Target Price
-      <input type="text" name="target_price" placeholder="Optional: target price or price range" />
+      <input type="text" name="estimated_quantity" />
     </label>
   </div>
   <label>
-    RFQ Details
-    <textarea name="message" rows="7" placeholder="Tell us your product type, size/specification, logo position, color requirement, packaging style, estimated quantity, target price, and delivery requirements." required></textarea>
+    Message
+    <textarea name="message" rows="7" required></textarea>
   </label>
-  <label>
-    Upload Logo, Drawing, or Reference Photo
-    <input type="file" name="attachment" accept=".pdf,.jpg,.jpeg,.png,.webp" />
-    <small>Optional. Please keep files under 10MB. You can also email drawings directly to {site.email}.</small>
-  </label>
-  <button class="button button-primary" type="submit">Submit RFQ</button>
-  <p class="form-note">Your RFQ will be sent to <a href={`mailto:${site.email}`}>{site.email}</a>. Prefer direct contact? Message us on <a href={site.whatsappUrl}>WhatsApp</a>.</p>
+  <button class="button button-primary" type="submit" data-track="contact_form_submit_click">Send Your RFQ to wooktools</button>
+  <p class="form-note">Your RFQ will be sent to <a href={`mailto:${site.email}`} data-track="email_click">{site.email}</a>. Prefer direct contact? Message us on <a href={site.whatsappUrl} data-track="whatsapp_click">WhatsApp</a> or follow <a href={site.facebookUrl} data-track="facebook_contact_form_click">WOOKTOOL on Facebook</a>.</p>
 </form>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const sourceFields = document.querySelectorAll("[data-source-field]");
+
+  sourceFields.forEach((field) => {
+    if (!(field instanceof HTMLInputElement)) return;
+    const fieldName = field.getAttribute("data-source-field");
+    if (!fieldName) return;
+    const value = params.get(fieldName);
+    if (value) field.value = value;
+  });
+
+  const leadSource = document.querySelector("[data-source-field='lead_source']");
+  if (leadSource instanceof HTMLInputElement) {
+    leadSource.value = params.get("utm_source") || document.referrer || "website";
+  }
+</script>

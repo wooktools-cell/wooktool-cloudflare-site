@@ -1,7 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import CompactRFQ from "../components/CompactRFQ.astro";
 import factoryGallery from "../cms/factory/gallery.json";
+import { breadcrumbSchema } from "../schema.js";
+
+const factorySchema = [
+  breadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Factory", path: "/factory/" }
+  ])
+];
 
 const certificates = [
   {
@@ -35,6 +44,7 @@ const certificates = [
   title="Hand Tools Factory China | OEM Tool Production"
   description="View the wooktools hand tools factory for tape measure assembly, injection molding, custom molds, quality inspection, packing, certificates, and export support."
   path="/factory/"
+  schema={factorySchema}
 >
   <section class="page-intro"><div><p class="eyebrow">Factory</p><h1>Hand Tools Factory China</h1><p>wooktools provides factory-direct tape measure and hand tool manufacturing support for B2B buyers who need stable production, OEM customization, quality control, and export delivery planning.</p></div></section>
   <section class="section">
@@ -81,6 +91,24 @@ const certificates = [
     </div>
   </section>
   <section class="section soft">
+    <div class="section-inner content-grid">
+      <div class="content-copy">
+        <p class="eyebrow">Before factory inquiry</p>
+        <h2>What buyers can ask wooktools to verify</h2>
+        <p>Factory proof should connect to the actual product program. Buyers can ask about injection molding support, assembly workflow, custom mold direction, quality-control checkpoints, packaging readiness, barcode labels, carton marks, and export support. This helps connect factory capability with practical RFQ decisions.</p>
+      </div>
+      <div class="info-card">
+        <h3>Factory-related links</h3>
+        <ul class="link-list">
+          <li><a href="/oem-odm/">OEM/ODM hand tools</a></li>
+          <li><a href="/quality-control/">Quality control process</a></li>
+          <li><a href="/tape-measures/">Tape measure manufacturer</a></li>
+          <li><a href="/contact/">Send factory inquiry</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section soft">
     <div class="section-inner">
       <div class="section-header">
         <div>
@@ -104,6 +132,15 @@ const certificates = [
           </article>
         ))}
       </div>
+    </div>
+  </section>
+  <section class="section soft">
+    <div class="section-inner">
+      <CompactRFQ
+        title="Request Product Quote from wooktools Factory"
+        productInterest="Factory-direct OEM hand tools"
+        source="factory"
+      />
     </div>
   </section>
   <CTA title="Looking for stable hand tool production?" primaryLabel="Send Factory Inquiry" />

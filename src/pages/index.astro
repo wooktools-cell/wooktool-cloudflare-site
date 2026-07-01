@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import ProductCard from "../components/ProductCard.astro";
 import CTA from "../components/CTA.astro";
+import CompactRFQ from "../components/CompactRFQ.astro";
 import { productCategories, sellingPoints, capabilities, qcSteps, rfqChecklist, site } from "../siteData.js";
 import { organizationSchema, websiteSchema, breadcrumbSchema } from "../schema.js";
 
@@ -21,6 +22,7 @@ const homeSchema = [organizationSchema, websiteSchema, breadcrumbSchema([{ name:
     title="Custom Hand Tools Manufacturer in China"
     text="wooktools manufactures and supplies WOOKTOOL tape measures, utility knives, screwdriver sets, and OEM/ODM hand tools for importers, distributors, wholesalers, and private-label brands worldwide."
     primaryLabel="Request a Quote"
+    primaryHref="/contact/#rfq-form"
     secondaryLabel="View Products"
   />
 
@@ -155,6 +157,16 @@ const homeSchema = [organizationSchema, websiteSchema, breadcrumbSchema([{ name:
           <li><a href="/contact/">Request a quote</a></li>
         </ul>
       </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <CompactRFQ
+        title="Request a Quote from wooktools"
+        productInterest="WOOKTOOL hand tools"
+        source="homepage"
+      />
     </div>
   </section>
 

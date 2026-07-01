@@ -1,7 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import CompactRFQ from "../components/CompactRFQ.astro";
 import FAQ from "../components/FAQ.astro";
+import { productCategories } from "../siteData.js";
 import { breadcrumbSchema, faqSchema } from "../schema.js";
 
 const oemFaq = [
@@ -62,6 +64,26 @@ const oemSchema = [
     <div class="section-inner">
       <div class="section-header">
         <div>
+          <p class="eyebrow">Product categories</p>
+          <h2>OEM/ODM categories wooktools can support</h2>
+        </div>
+        <p>Start from an existing WOOKTOOL category or share a reference product for adjusted specifications, private-label packaging, or new product development.</p>
+      </div>
+      <div class="grid four">
+        {productCategories.map((item) => (
+          <article class="info-card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+            <a class="button button-secondary" href={item.href}>View category</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
           <p class="eyebrow">OEM/ODM process</p>
           <h2>From product requirement to shipment arrangement</h2>
         </div>
@@ -87,7 +109,7 @@ const oemSchema = [
         <p>wooktools is suitable for buyers who need factory-direct supply, custom logo hand tools, private label packaging, flexible MOQ discussion, quality control, and repeatable production communication. This includes importers, distributors, wholesalers, hardware store groups, regional tool brands, Amazon sellers, eBay sellers, and sourcing teams preparing new product lines.</p>
       </div>
       <div class="info-card">
-        <h3>Start with these details</h3>
+        <h3>Before inquiry checklist</h3>
         <ul class="mini-list">
           <li>Product type or reference photo</li>
           <li>Logo and color requirements</li>
@@ -98,6 +120,22 @@ const oemSchema = [
       </div>
     </div>
   </section>
+  <section class="section soft">
+    <div class="section-inner grid three">
+      <article class="info-card"><h3>Export support</h3><p>We can help review packaging labels, carton marks, SKU needs, and shipment preparation details for international orders.</p></article>
+      <article class="info-card"><h3>Quality control process</h3><p>Projects can include material checks, function testing, appearance review, packaging inspection, and pre-shipment confirmation.</p></article>
+      <article class="info-card"><h3>Private label tools China</h3><p>wooktools supports custom hand tools factory programs for buyers building private-label product lines.</p></article>
+    </div>
+  </section>
   <FAQ items={oemFaq} title="OEM/ODM hand tools FAQ" />
+  <section class="section soft">
+    <div class="section-inner">
+      <CompactRFQ
+        title="Request Product Quote for OEM/ODM Hand Tools"
+        productInterest="OEM/ODM hand tools"
+        source="oem-odm"
+      />
+    </div>
+  </section>
   <CTA title="Need OEM/ODM support for hand tools?" primaryLabel="Get Custom Solution" />
 </BaseLayout>
