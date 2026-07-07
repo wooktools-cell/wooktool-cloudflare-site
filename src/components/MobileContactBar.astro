@@ -1,0 +1,9 @@
+---
+import { site } from "../siteData.js";
+---
+
+<nav class="mobile-contact-bar" aria-label="Quick contact actions">
+  <a href="/contact/#rfq-form" data-track="mobile_sticky_rfq_click">Request Quote</a>
+  <a href={site.whatsappUrl} data-track="mobile_sticky_whatsapp_click">WhatsApp</a>
+  <a href={`mailto:${site.email}`} data-track="mobile_sticky_email_click">Email</a>
+</nav>

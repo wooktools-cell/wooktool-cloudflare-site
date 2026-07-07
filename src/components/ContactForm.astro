@@ -34,14 +34,14 @@ import { site } from "../siteData.js";
     </label>
     <label>
       Product Interest
-      <select name="product_interest" required>
-        <option value="">Select product type</option>
-        <option>Tape Measures</option>
-        <option>Custom Tape Measure</option>
-        <option>Utility Knives</option>
-        <option>Screwdriver Sets</option>
-        <option>OEM/ODM Hand Tools</option>
-      </select>
+      <input type="text" name="product_interest" list="product-interest-options" placeholder="Tape measures, utility knives, OEM/ODM..." required />
+      <datalist id="product-interest-options">
+        <option value="Tape Measures"></option>
+        <option value="Custom Tape Measure"></option>
+        <option value="Utility Knives"></option>
+        <option value="Screwdriver Sets"></option>
+        <option value="OEM/ODM Hand Tools"></option>
+      </datalist>
     </label>
     <label>
       Estimated Quantity
@@ -59,6 +59,13 @@ import { site } from "../siteData.js";
 <script>
   const params = new URLSearchParams(window.location.search);
   const sourceFields = document.querySelectorAll("[data-source-field]");
+  const productInterest = document.querySelector("[name='product_interest']");
+  const productParam = params.get("product");
+
+  const formatProductName = (value) =>
+    value
+      .replace(/[-_]+/g, " ")
+      .replace(/\b\w/g, (letter) => letter.toUpperCase());
 
   sourceFields.forEach((field) => {
     if (!(field instanceof HTMLInputElement)) return;
@@ -71,5 +78,9 @@ import { site } from "../siteData.js";
   const leadSource = document.querySelector("[data-source-field='lead_source']");
   if (leadSource instanceof HTMLInputElement) {
     leadSource.value = params.get("utm_source") || document.referrer || "website";
+  }
+
+  if (productParam && productInterest instanceof HTMLInputElement) {
+    productInterest.value = formatProductName(productParam);
   }
 </script>

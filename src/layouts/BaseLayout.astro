@@ -3,6 +3,7 @@ import SEO from "../components/SEO.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Tracking from "../components/Tracking.astro";
+import MobileContactBar from "../components/MobileContactBar.astro";
 import "../styles/global.css";
 
 const { title, description, path = "/", image, type, schema } = Astro.props;
@@ -22,5 +23,6 @@ const { title, description, path = "/", image, type, schema } = Astro.props;
       <slot />
     </main>
     <Footer />
+    <MobileContactBar />
   </body>
 </html>
