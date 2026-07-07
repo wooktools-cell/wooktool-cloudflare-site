@@ -31,6 +31,29 @@ export const breadcrumbSchema = (items = []) => ({
   }))
 });
 
+export const articleSchema = ({ title, description, path, image, datePublished, dateModified }) => ({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description,
+  image: image ? new URL(image, site.domain).toString() : undefined,
+  datePublished,
+  dateModified: dateModified || datePublished,
+  author: {
+    "@type": "Organization",
+    name: "wooktools"
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "wooktools",
+    logo: {
+      "@type": "ImageObject",
+      url: new URL("/images/logo/wooktool-logo-new.webp", site.domain).toString()
+    }
+  },
+  mainEntityOfPage: new URL(path, site.domain).toString()
+});
+
 export const faqSchema = (items = []) => ({
   "@context": "https://schema.org",
   "@type": "FAQPage",

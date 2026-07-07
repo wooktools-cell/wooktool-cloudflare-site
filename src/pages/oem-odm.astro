@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import CompactRFQ from "../components/CompactRFQ.astro";
 import FAQ from "../components/FAQ.astro";
+import SeoResourceLinks from "../components/SeoResourceLinks.astro";
 import { productCategories } from "../siteData.js";
 import { breadcrumbSchema, faqSchema } from "../schema.js";
 
@@ -31,6 +32,39 @@ const oemSchema = [
     { name: "OEM/ODM", path: "/oem-odm/" }
   ]),
   faqSchema(oemFaq)
+];
+
+const oemSeoClusters = [
+  {
+    title: "OEM hand tools categories",
+    text: "Start from WOOKTOOL product categories and move into custom branding, packaging, and quote details.",
+    links: [
+      { label: "Tape measure manufacturer", href: "/tape-measures/" },
+      { label: "Utility knife manufacturer", href: "/utility-knives/" },
+      { label: "Screwdriver set manufacturer", href: "/screwdriver-sets/" },
+      { label: "All WOOKTOOL products", href: "/products/" }
+    ]
+  },
+  {
+    title: "Private label sourcing guides",
+    text: "Use these articles to prepare OEM requirements, MOQ expectations, supplier checks, and quality standards.",
+    links: [
+      { label: "Private label hand tools checklist", href: "/blog/private-label-hand-tools-checklist/" },
+      { label: "Private label hand tools guide", href: "/blog/private-label-hand-tools-guide/" },
+      { label: "What affects MOQ for custom hand tools", href: "/blog/what-affects-moq-for-custom-hand-tools/" },
+      { label: "Chinese manufacturing quality perspective", href: "/blog/is-chinese-manufacturing-low-quality-hand-tools/" }
+    ]
+  },
+  {
+    title: "Factory trust and RFQ",
+    text: "Review production capability, inspection process, certificates, and the information needed for a faster quotation.",
+    links: [
+      { label: "Hand tools factory China", href: "/factory/" },
+      { label: "Quality control process", href: "/quality-control/" },
+      { label: "Hand tool QC checklist", href: "/blog/hand-tool-quality-control-checklist-for-importers/" },
+      { label: "Send OEM/ODM RFQ", href: "/contact/#rfq-form" }
+    ]
+  }
 ];
 ---
 
@@ -127,6 +161,12 @@ const oemSchema = [
       <article class="info-card"><h3>Private label tools China</h3><p>wooktools supports custom hand tools factory programs for buyers building private-label product lines.</p></article>
     </div>
   </section>
+  <SeoResourceLinks
+    eyebrow="OEM/ODM SEO cluster"
+    title="Connect your OEM project to product, factory, and quality pages"
+    description="These internal links support the main OEM hand tools supplier topic and guide buyers toward quote-ready sourcing pages."
+    clusters={oemSeoClusters}
+  />
   <FAQ items={oemFaq} title="OEM/ODM hand tools FAQ" />
   <section class="section soft">
     <div class="section-inner">

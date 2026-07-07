@@ -1,12 +1,33 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
+import { articleSchema, breadcrumbSchema } from "../../schema.js";
+
+const title = "How to Choose a Reliable Tape Measure Manufacturer in China";
+const description =
+  "A B2B sourcing guide for choosing a reliable tape measure manufacturer in China, covering factory capability, customization, quality control, and communication.";
+const path = "/blog/choose-tape-measure-manufacturer/";
+const schema = [
+  articleSchema({
+    title,
+    description,
+    path,
+    datePublished: "2026-06-03"
+  }),
+  breadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Blog", path: "/blog/" },
+    { name: title, path }
+  ])
+];
 ---
 
 <BaseLayout
-  title="How to Choose a Reliable Tape Measure Manufacturer in China"
-  description="A B2B sourcing guide for choosing a reliable tape measure manufacturer in China, covering factory capability, customization, quality control, and communication."
-  path="/blog/choose-tape-measure-manufacturer/"
+  title={title}
+  description={description}
+  path={path}
+  type="article"
+  schema={schema}
 >
   <article class="article">
     <p class="eyebrow">B2B sourcing guide</p>

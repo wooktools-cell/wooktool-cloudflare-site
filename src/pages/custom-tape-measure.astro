@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import CompactRFQ from "../components/CompactRFQ.astro";
 import FAQ from "../components/FAQ.astro";
+import SeoResourceLinks from "../components/SeoResourceLinks.astro";
 import { breadcrumbSchema, faqSchema } from "../schema.js";
 
 const customTapeFaq = [
@@ -30,6 +31,39 @@ const customTapeSchema = [
     { name: "Custom Tape Measure", path: "/custom-tape-measure/" }
   ]),
   faqSchema(customTapeFaq)
+];
+
+const customTapeSeoClusters = [
+  {
+    title: "Private label tape measure",
+    text: "Review product, logo, packaging, and buyer-ready specification pages before starting a custom order.",
+    links: [
+      { label: "Custom logo tape measure", href: "/products/custom-logo-tape-measure/" },
+      { label: "Clear mini tape measure", href: "/products/clear-mini-tape-measure/" },
+      { label: "Compact 5.5m tape measure", href: "/products/compact-55m-tape-measure/" },
+      { label: "Tape measure manufacturer", href: "/tape-measures/" }
+    ]
+  },
+  {
+    title: "Customization knowledge",
+    text: "Use these guides to decide blade width, logo method, MOQ, packaging, and target-market details.",
+    links: [
+      { label: "Custom tape measures guide", href: "/blog/custom-tape-measures-guide/" },
+      { label: "How to choose tape measure blade width", href: "/blog/how-to-choose-tape-measure-blade-width/" },
+      { label: "What affects MOQ for custom hand tools", href: "/blog/what-affects-moq-for-custom-hand-tools/" },
+      { label: "Why the cheapest tape measure costs more", href: "/blog/why-cheapest-tape-measure-costs-more/" }
+    ]
+  },
+  {
+    title: "Factory and QC proof",
+    text: "Connect custom design decisions with factory capability, inspection, and export-ready order planning.",
+    links: [
+      { label: "OEM/ODM hand tools supplier", href: "/oem-odm/" },
+      { label: "Tape measure quality control", href: "/quality-control/" },
+      { label: "Hand tools factory China", href: "/factory/" },
+      { label: "Request custom tape measure quote", href: "/contact/#rfq-form" }
+    ]
+  }
 ];
 
 const tapeComponents = [
@@ -312,6 +346,12 @@ const rfqHref = "/contact/#rfq-form";
       </table>
     </div>
   </section>
+  <SeoResourceLinks
+    eyebrow="Custom tape measure SEO cluster"
+    title="Plan a private-label tape measure order"
+    description="These pages connect custom tape measure supplier intent with product examples, MOQ guidance, quality control, and RFQ preparation."
+    clusters={customTapeSeoClusters}
+  />
   <FAQ items={customTapeFaq} title="Custom tape measure FAQ" />
   <section class="section soft">
     <div class="section-inner">

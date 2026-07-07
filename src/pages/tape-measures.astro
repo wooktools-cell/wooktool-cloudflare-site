@@ -4,6 +4,7 @@ import CTA from "../components/CTA.astro";
 import CompactRFQ from "../components/CompactRFQ.astro";
 import FAQ from "../components/FAQ.astro";
 import ProductListing from "../components/ProductListing.astro";
+import SeoResourceLinks from "../components/SeoResourceLinks.astro";
 import { categoryCatalogs } from "../siteData.js";
 import { breadcrumbSchema, faqSchema, productCollectionSchema } from "../schema.js";
 
@@ -77,6 +78,39 @@ const relatedGuides = [
     title: "Common tape measure quality defects",
     text: "Check blade printing, lock function, hook assembly, retraction, appearance, and packaging before shipment.",
     href: "/blog/tape-measure-quality-defects/"
+  }
+];
+
+const tapeMeasureSeoClusters = [
+  {
+    title: "Custom tape measure decisions",
+    text: "Use these pages to confirm logo, blade, shell color, packaging, MOQ, and sample direction before ordering.",
+    links: [
+      { label: "Custom tape measure supplier", href: "/custom-tape-measure/" },
+      { label: "Custom logo tape measure", href: "/products/custom-logo-tape-measure/" },
+      { label: "25ft tape measure supplier", href: "/products/25ft-steel-tape-measure/" },
+      { label: "Custom tape measures guide", href: "/blog/custom-tape-measures-guide/" }
+    ]
+  },
+  {
+    title: "Tape measure quality control",
+    text: "Connect product selection with inspection standards, defect prevention, and factory process checks.",
+    links: [
+      { label: "Tape measure quality control", href: "/quality-control/" },
+      { label: "Top tape measure quality defects", href: "/blog/tape-measure-quality-defects/" },
+      { label: "Tape measure accuracy classes", href: "/blog/tape-measure-accuracy-classes/" },
+      { label: "Factory production photos", href: "/factory/" }
+    ]
+  },
+  {
+    title: "Quote-ready product options",
+    text: "Open detailed WOOKTOOL tape measure pages before sending model, quantity, packaging, and logo requirements.",
+    links: [
+      { label: "Auto-lock tape measure", href: "/products/auto-lock-tape-measure/" },
+      { label: "Wide blade tape measure", href: "/products/wide-blade-tape-measure/" },
+      { label: "Clear mini tape measure", href: "/products/clear-mini-tape-measure/" },
+      { label: "Send tape measure RFQ", href: "/contact/#rfq-form" }
+    ]
   }
 ];
 
@@ -326,6 +360,13 @@ const tapeMeasureSchema = [
       </div>
     </div>
   </section>
+
+  <SeoResourceLinks
+    eyebrow="Tape measure SEO cluster"
+    title="Related tape measure sourcing paths"
+    description="These links concentrate authority around custom tape measure supplier, tape measure manufacturer, quality control, and quote-ready product pages."
+    clusters={tapeMeasureSeoClusters}
+  />
 
   <section class="section dark">
     <div class="section-inner content-grid">

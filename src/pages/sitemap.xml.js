@@ -1,7 +1,5 @@
-import { catalogPages, productRoutes, site } from "../siteData.js";
+import { productRoutes, site } from "../siteData.js";
 import { cmsBlogPosts } from "../blogData.js";
-
-const cmsPageModules = import.meta.glob("../cms/pages/*.md", { eager: true });
 
 const staticPaths = [
   "/",
@@ -15,25 +13,16 @@ const staticPaths = [
   "/quality-control/",
   "/factory/",
   "/contact/",
-  "/contact/thank-you/",
   "/blog/",
   "/blog/choose-tape-measure-manufacturer/",
   "/blog/custom-tape-measures-guide/",
   "/blog/tape-measure-accuracy-classes/"
 ];
 
-const slugFromPath = (path) => path.split("/").pop().replace(/\.md$/, "");
-
-const cmsPagePaths = Object.entries(cmsPageModules).map(([path, module]) => {
-  const slug = module.frontmatter.slug || slugFromPath(path);
-  return `/pages/${slug}/`;
-});
-
 const productPaths = productRoutes.map((product) => `/products/${product.slug}/`);
-const catalogPagePaths = catalogPages.map((page) => page.href);
 const cmsBlogPaths = cmsBlogPosts.map((post) => post.href);
 
-const uniquePaths = [...new Set([...staticPaths, ...catalogPagePaths, ...productPaths, ...cmsBlogPaths, ...cmsPagePaths])];
+const uniquePaths = [...new Set([...staticPaths, ...productPaths, ...cmsBlogPaths])];
 
 export function GET() {
   const urls = uniquePaths

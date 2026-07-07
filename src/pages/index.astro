@@ -4,10 +4,43 @@ import Hero from "../components/Hero.astro";
 import ProductCard from "../components/ProductCard.astro";
 import CTA from "../components/CTA.astro";
 import CompactRFQ from "../components/CompactRFQ.astro";
+import SeoResourceLinks from "../components/SeoResourceLinks.astro";
 import { productCategories, sellingPoints, capabilities, qcSteps, rfqChecklist, site } from "../siteData.js";
 import { organizationSchema, websiteSchema, breadcrumbSchema } from "../schema.js";
 
 const homeSchema = [organizationSchema, websiteSchema, breadcrumbSchema([{ name: "Home", path: "/" }])];
+const homeSeoClusters = [
+  {
+    title: "Custom tape measure supplier",
+    text: "Start with the strongest tape measure pages for private-label, logo, blade, packaging, and RFQ decisions.",
+    links: [
+      { label: "Custom tape measure supplier", href: "/custom-tape-measure/" },
+      { label: "Tape measure manufacturer", href: "/tape-measures/" },
+      { label: "Custom logo tape measure", href: "/products/custom-logo-tape-measure/" },
+      { label: "Tape measure quality defects guide", href: "/blog/tape-measure-quality-defects/" }
+    ]
+  },
+  {
+    title: "OEM hand tools supplier",
+    text: "Review factory-direct OEM/ODM support for importers, distributors, wholesalers, and private-label brands.",
+    links: [
+      { label: "OEM/ODM hand tools manufacturer", href: "/oem-odm/" },
+      { label: "Hand tools factory China", href: "/factory/" },
+      { label: "Quality control process", href: "/quality-control/" },
+      { label: "Private label hand tools checklist", href: "/blog/private-label-hand-tools-checklist/" }
+    ]
+  },
+  {
+    title: "Product category entry points",
+    text: "Move from category research to detailed WOOKTOOL product pages and quote-ready specifications.",
+    links: [
+      { label: "Utility knife manufacturer", href: "/utility-knives/" },
+      { label: "Screwdriver set manufacturer", href: "/screwdriver-sets/" },
+      { label: "All product pages", href: "/products/" },
+      { label: "Send RFQ to wooktools", href: "/contact/#rfq-form" }
+    ]
+  }
+];
 ---
 
 <BaseLayout
@@ -159,6 +192,13 @@ const homeSchema = [organizationSchema, websiteSchema, breadcrumbSchema([{ name:
       </div>
     </div>
   </section>
+
+  <SeoResourceLinks
+    eyebrow="SEO content paths"
+    title="Fast paths for buyers and Google"
+    description="These internal links connect the homepage to the highest-intent product, customization, factory, quality, and sourcing pages."
+    clusters={homeSeoClusters}
+  />
 
   <section class="section">
     <div class="section-inner">

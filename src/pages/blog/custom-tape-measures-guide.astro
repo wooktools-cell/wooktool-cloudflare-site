@@ -1,12 +1,36 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
+import { articleSchema, breadcrumbSchema } from "../../schema.js";
+
+const title = "Custom Tape Measures: What Importers Need to Know Before Ordering";
+const description =
+  "Learn what importers should confirm before ordering custom tape measures, including logo, shell color, tape length, blade, MOQ, packaging, and lead time.";
+const path = "/blog/custom-tape-measures-guide/";
+const image = "/images/products/tape-measure-components/tape-measure-width-options.png";
+const schema = [
+  articleSchema({
+    title,
+    description,
+    path,
+    image,
+    datePublished: "2026-06-03"
+  }),
+  breadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Blog", path: "/blog/" },
+    { name: title, path }
+  ])
+];
 ---
 
 <BaseLayout
-  title="Custom Tape Measures: What Importers Need to Know Before Ordering"
-  description="Learn what importers should confirm before ordering custom tape measures, including logo, shell color, tape length, blade, MOQ, packaging, and lead time."
-  path="/blog/custom-tape-measures-guide/"
+  title={title}
+  description={description}
+  path={path}
+  image={image}
+  type="article"
+  schema={schema}
 >
   <article class="article">
     <p class="eyebrow">Importer guide</p>

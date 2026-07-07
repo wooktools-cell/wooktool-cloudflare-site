@@ -1,12 +1,33 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
+import { articleSchema, breadcrumbSchema } from "../../schema.js";
+
+const title = "Tape Measure Accuracy Classes Explained for B2B Buyers";
+const description =
+  "A simple explanation of tape measure accuracy classes for B2B buyers comparing measuring tape products, quality expectations, and market requirements.";
+const path = "/blog/tape-measure-accuracy-classes/";
+const schema = [
+  articleSchema({
+    title,
+    description,
+    path,
+    datePublished: "2026-06-03"
+  }),
+  breadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Blog", path: "/blog/" },
+    { name: title, path }
+  ])
+];
 ---
 
 <BaseLayout
-  title="Tape Measure Accuracy Classes Explained for B2B Buyers"
-  description="A simple explanation of tape measure accuracy classes for B2B buyers comparing measuring tape products, quality expectations, and market requirements."
-  path="/blog/tape-measure-accuracy-classes/"
+  title={title}
+  description={description}
+  path={path}
+  type="article"
+  schema={schema}
 >
   <article class="article">
     <p class="eyebrow">Product knowledge</p>
