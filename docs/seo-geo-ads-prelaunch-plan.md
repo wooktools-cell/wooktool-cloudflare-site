@@ -137,3 +137,19 @@ Recommended next sprint:
 6. Build and push.
 7. Submit the two new URLs in Google Search Console.
 8. Start a Google Ads Search-only test after GA4 key events are active.
+
+## Parallel Off-Site Authority Work
+
+Start backlink and off-site authority work in parallel with the first SEO/GEO landing pages.
+
+Detailed plan:
+
+- `docs/backlink-outreach-plan.md`
+
+Execution priority:
+
+1. Confirm owned profiles and social profiles are consistent.
+2. Build a qualified prospect list.
+3. Promote useful sourcing and quality-control guides, not only commercial pages.
+4. Track every outreach contact, live link, anchor text, and link attribute.
+5. Avoid bulk paid links, private blog networks, spam comments, and exact-match anchor manipulation.
