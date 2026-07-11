@@ -2,6 +2,7 @@
 import { site } from "../siteData.js";
 
 const { ga4Id = "", clarityId = "" } = site.analytics || {};
+const { metaPixelId = "" } = site.analytics || {};
 ---
 
 {ga4Id && (
@@ -26,28 +27,93 @@ const { ga4Id = "", clarityId = "" } = site.analytics || {};
   </script>
 )}
 
+{metaPixelId && (
+  <>
+    <script define:vars={{ metaPixelId }}>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,"script",
+      "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", metaPixelId);
+      fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src={`https://www.facebook.com/tr?id=${metaPixelId}&ev=PageView&noscript=1`} /></noscript>
+  </>
+)}
+
 <script>
+  const getFormValue = (form, names) => {
+    for (const name of names) {
+      const field = form.elements.namedItem(name);
+      if (field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement || field instanceof HTMLSelectElement) {
+        if (field.value) return field.value;
+      }
+    }
+    return "";
+  };
+
   const trackEvent = (eventName, params = {}) => {
+    if (!eventName) return;
     if (typeof window.gtag === "function") {
       window.gtag("event", eventName, params);
     }
     if (typeof window.clarity === "function") {
       window.clarity("event", eventName);
     }
+    if (typeof window.fbq === "function") {
+      window.fbq("trackCustom", eventName, params);
+    }
   };
 
   document.addEventListener("click", (event) => {
     const target = event.target instanceof Element ? event.target.closest("[data-track]") : null;
     if (!target) return;
-    trackEvent(target.getAttribute("data-track"), {
+    const eventName = target.getAttribute("data-track");
+    const params = {
       link_url: target.getAttribute("href") || "",
-      link_text: target.textContent?.trim() || ""
-    });
+      link_text: target.textContent?.trim() || "",
+      page_location: window.location.href,
+      page_path: window.location.pathname
+    };
+    trackEvent(eventName, params);
+
+    if (eventName === "whatsapp_click" || eventName === "email_click") {
+      trackEvent("generate_lead", {
+        ...params,
+        method: eventName === "whatsapp_click" ? "whatsapp" : "email"
+      });
+      if (typeof window.fbq === "function") {
+        window.fbq("track", "Lead", params);
+      }
+    }
   });
 
   document.addEventListener("submit", (event) => {
-    const form = event.target instanceof Element ? event.target.closest("[data-track]") : null;
+    const form = event.target instanceof HTMLFormElement ? event.target.closest("[data-track]") : null;
     if (!form) return;
-    trackEvent(form.getAttribute("data-track"));
+    const eventName = form.getAttribute("data-track");
+    const leadParams = {
+      form_id: form.getAttribute("id") || "",
+      form_name: form.getAttribute("class") || "",
+      page_location: window.location.href,
+      page_path: window.location.pathname,
+      lead_source: getFormValue(form, ["lead_source", "Lead Source"]) || "website",
+      product_interest: getFormValue(form, ["product_interest", "Product Interest"]),
+      estimated_quantity: getFormValue(form, ["estimated_quantity", "Estimated Quantity"]),
+      country: getFormValue(form, ["country", "Country"])
+    };
+
+    trackEvent(eventName, leadParams);
+    trackEvent("generate_lead", {
+      ...leadParams,
+      method: "rfq_form"
+    });
+    if (typeof window.fbq === "function") {
+      window.fbq("track", "Lead", leadParams);
+    }
   });
 </script>
