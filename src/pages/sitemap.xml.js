@@ -1,4 +1,4 @@
-import { productRoutes, site } from "../siteData.js";
+import { catalogPages, productRoutes, site } from "../siteData.js";
 import { cmsBlogPosts } from "../blogData.js";
 
 const staticPaths = [
@@ -20,9 +20,14 @@ const staticPaths = [
 ];
 
 const productPaths = productRoutes.map((product) => `/products/${product.slug}/`);
+const productCatalogPagePaths = catalogPages
+  .filter((page) => page.page > 1)
+  .map((page) => page.href);
 const cmsBlogPaths = cmsBlogPosts.map((post) => post.href);
 
-const uniquePaths = [...new Set([...staticPaths, ...productPaths, ...cmsBlogPaths])];
+const uniquePaths = [
+  ...new Set([...staticPaths, ...productCatalogPagePaths, ...productPaths, ...cmsBlogPaths])
+];
 
 export function GET() {
   const urls = uniquePaths
