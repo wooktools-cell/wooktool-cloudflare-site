@@ -107,6 +107,33 @@ const internalLinks = [
 if (product.category === "Tape Measures") {
   internalLinks.splice(1, 0, { href: "/custom-tape-measure/", label: "custom tape measure supplier" });
 }
+const buyerGuideLinks = [
+  { href: "/buyer-guides/", label: "hand tools buyer guides" },
+  {
+    href:
+      product.category === "Tape Measures"
+        ? "/blog/how-to-customize-tape-measures/"
+        : product.category === "Utility Knives"
+          ? "/blog/utility-knife-quality-checklist/"
+          : "/blog/sourcing-screwdriver-sets-from-china/",
+    label:
+      product.category === "Tape Measures"
+        ? "custom tape measure buying guide"
+        : product.category === "Utility Knives"
+          ? "utility knife quality checklist"
+          : "screwdriver set sourcing guide"
+  },
+  {
+    href:
+      product.category === "Tape Measures"
+        ? "/blog/tape-measure-quality-defects/"
+        : "/blog/hand-tool-quality-control-checklist-for-importers/",
+    label:
+      product.category === "Tape Measures"
+        ? "tape measure quality control guide"
+        : "hand tool quality control checklist"
+  }
+];
 const imageUrls = [product.image, ...(product.detailImages || [])].map((image) =>
   new URL(image, site.domain).toString()
 );
@@ -127,6 +154,11 @@ const productSchema = {
     url: site.domain
   },
   category: product.category,
+  keywords: product.keywords?.join(", "),
+  audience: {
+    "@type": "BusinessAudience",
+    audienceType: product.targetBuyers
+  },
   offers: {
     "@type": "Offer",
     priceCurrency: "USD",
@@ -220,6 +252,35 @@ const productPageSchema = [productSchema, breadcrumbSchema, faqSchema(productFaq
         <h3>Internal buyer links</h3>
         <ul class="link-list">
           {internalLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner content-grid">
+      <div>
+        <p class="eyebrow">Buyer decision guide</p>
+        <h2>How to evaluate this product before ordering</h2>
+        <table class="spec-table">
+          <tbody>
+            {product.buyerFit.map((item) => (
+              <tr><th>{item.label}</th><td>{item.value}</td></tr>
+            ))}
+            {product.keywords?.length > 0 && (
+              <tr><th>SEO sourcing terms</th><td>{product.keywords.join(", ")}</td></tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+      <article class="info-card">
+        <h3>Before inquiry checklist</h3>
+        <ul class="mini-list">
+          {product.inquiryChecklist.map((item) => <li>{item}</li>)}
+        </ul>
+        <h3>Related buyer guides</h3>
+        <ul class="link-list">
+          {buyerGuideLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
         </ul>
       </article>
     </div>

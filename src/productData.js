@@ -1,3 +1,5 @@
+import { categorySeoDefaults, productSeoEnhancements } from "./productSeoEnhancements.js";
+
 const productModules = import.meta.glob("./cms/products/*.json", { eager: true });
 
 const normalizeSpecs = (specs = []) => {
@@ -23,14 +25,23 @@ const normalizeTextList = (items = []) =>
     })
     .filter(Boolean);
 
-const normalizeProduct = (product) => ({
-  ...product,
-  detailImages: normalizeTextList(product.detailImages),
-  sellingPoints: normalizeTextList(product.sellingPoints),
-  specs: normalizeSpecs(product.specs),
-  quality: normalizeTextList(product.quality),
-  targetBuyers: product.targetBuyers || "Importers, distributors, wholesalers, and private-label brands"
-});
+const normalizeProduct = (product) => {
+  const enhancement = productSeoEnhancements[product.slug] || {};
+  const categoryDefault = categorySeoDefaults[product.category] || {};
+  const merged = { ...product, ...enhancement };
+
+  return {
+    ...merged,
+    detailImages: normalizeTextList(merged.detailImages),
+    sellingPoints: normalizeTextList(merged.sellingPoints),
+    specs: normalizeSpecs(merged.specs),
+    quality: normalizeTextList(merged.quality),
+    targetBuyers: merged.targetBuyers || "Importers, distributors, wholesalers, and private-label brands",
+    keywords: normalizeTextList(merged.keywords || categoryDefault.keywords),
+    buyerFit: merged.buyerFit || categoryDefault.buyerFit || [],
+    inquiryChecklist: normalizeTextList(merged.inquiryChecklist || categoryDefault.inquiryChecklist)
+  };
+};
 
 const chunkProducts = (products, size) =>
   Array.from({ length: Math.ceil(products.length / size) }, (_, index) => ({
