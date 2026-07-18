@@ -51,6 +51,39 @@ const guideGroups = [
 
 const postMap = new Map(blogPosts.map((post) => [post.href, post]));
 
+const longTailProductGroups = [
+  {
+    title: "Tape measure landing pages",
+    text: "High-intent pages for buyers searching by private label, OEM, and bulk 25ft tape measure needs.",
+    links: [
+      { label: "Private label tape measure", href: "/products/private-label-tape-measure/" },
+      { label: "OEM tape measure China", href: "/products/oem-tape-measure/" },
+      { label: "Bulk 25ft tape measure", href: "/products/bulk-25ft-tape-measure/" },
+      { label: "Custom logo tape measure", href: "/products/custom-logo-tape-measure/" }
+    ]
+  },
+  {
+    title: "Utility knife landing pages",
+    text: "Pages for box cutter and utility knife buyers comparing OEM, private label, safety, and blade refill programs.",
+    links: [
+      { label: "OEM utility knife", href: "/products/oem-utility-knife/" },
+      { label: "Private label box cutter", href: "/products/private-label-box-cutter/" },
+      { label: "Snap-off utility knife", href: "/products/snap-off-utility-knife/" },
+      { label: "Replacement utility blades", href: "/products/replacement-utility-blades/" }
+    ]
+  },
+  {
+    title: "Screwdriver set landing pages",
+    text: "Pages for buyers preparing custom screwdriver set and private-label screwdriver set programs.",
+    links: [
+      { label: "Custom screwdriver set", href: "/products/custom-screwdriver-set/" },
+      { label: "Private label screwdriver set", href: "/products/private-label-screwdriver-set/" },
+      { label: "Multi-bit screwdriver set", href: "/products/multi-bit-screwdriver-set/" },
+      { label: "Ratchet screwdriver set", href: "/products/ratchet-screwdriver-set/" }
+    ]
+  }
+];
+
 const buyerGuidesSchema = [
   {
     "@context": "https://schema.org",
@@ -138,6 +171,25 @@ const buyerGuidesSchema = [
 
   <section class="content-section">
     <div class="section-heading">
+      <p class="eyebrow">High-intent product pages</p>
+      <h2>Long-tail sourcing pages for quote-ready buyers</h2>
+      <p>These pages target buyers searching with product + sourcing intent, such as private label, OEM, bulk supply, and custom set requirements.</p>
+    </div>
+    <div class="card-grid three">
+      {longTailProductGroups.map((group) => (
+        <article class="info-card">
+          <h3>{group.title}</h3>
+          <p>{group.text}</p>
+          <ul class="link-list">
+            {group.links.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="section-heading">
       <p class="eyebrow">Core pages</p>
       <h2>Move from research to product selection</h2>
     </div>
@@ -157,4 +209,3 @@ const buyerGuidesSchema = [
     secondaryHref="/products/"
   />
 </BaseLayout>
-

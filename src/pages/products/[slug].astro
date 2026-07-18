@@ -134,6 +134,22 @@ const buyerGuideLinks = [
         : "hand tool quality control checklist"
   }
 ];
+const longTailLandingLinksByCategory = {
+  "Tape Measures": [
+    { href: "/products/private-label-tape-measure/", label: "private label tape measure" },
+    { href: "/products/oem-tape-measure/", label: "OEM tape measure China" },
+    { href: "/products/bulk-25ft-tape-measure/", label: "bulk 25ft tape measure" }
+  ],
+  "Utility Knives": [
+    { href: "/products/oem-utility-knife/", label: "OEM utility knife" },
+    { href: "/products/private-label-box-cutter/", label: "private label box cutter" }
+  ],
+  "Screwdriver Sets": [
+    { href: "/products/custom-screwdriver-set/", label: "custom screwdriver set" },
+    { href: "/products/private-label-screwdriver-set/", label: "private label screwdriver set" }
+  ]
+};
+const longTailLandingLinks = longTailLandingLinksByCategory[product.category] || [];
 const imageUrls = [product.image, ...(product.detailImages || [])].map((image) =>
   new URL(image, site.domain).toString()
 );
@@ -282,6 +298,16 @@ const productPageSchema = [productSchema, breadcrumbSchema, faqSchema(productFaq
         <ul class="link-list">
           {buyerGuideLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
         </ul>
+        {longTailLandingLinks.length > 0 && (
+          <>
+            <h3>Related sourcing pages</h3>
+            <ul class="link-list">
+              {longTailLandingLinks
+                .filter((link) => link.href !== `/products/${product.slug}/`)
+                .map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+            </ul>
+          </>
+        )}
       </article>
     </div>
   </section>

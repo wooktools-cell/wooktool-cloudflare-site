@@ -44,7 +44,10 @@ export const productCategories = [
       { label: "Auto-Lock Tape Measures", href: "/products/auto-lock-tape-measure/" },
       { label: "Custom Logo Tape Measures", href: "/products/custom-logo-tape-measure/" },
       { label: "Wide Blade Tape Measures", href: "/products/wide-blade-tape-measure/" },
-      { label: "Pocket Tape Measures", href: "/products/pocket-tape-measure/" }
+      { label: "Pocket Tape Measures", href: "/products/pocket-tape-measure/" },
+      { label: "Private Label Tape Measures", href: "/products/private-label-tape-measure/" },
+      { label: "OEM Tape Measures", href: "/products/oem-tape-measure/" },
+      { label: "Bulk 25ft Tape Measures", href: "/products/bulk-25ft-tape-measure/" }
     ]
   },
   {
@@ -58,7 +61,9 @@ export const productCategories = [
       { label: "Folding Utility Knives", href: "/products/folding-utility-knife/" },
       { label: "Snap-Off Utility Knives", href: "/products/snap-off-utility-knife/" },
       { label: "Safety Utility Knives", href: "/products/safety-utility-knife/" },
-      { label: "Replacement Blades", href: "/products/replacement-utility-knife-blades/" }
+      { label: "Replacement Blades", href: "/products/replacement-utility-knife-blades/" },
+      { label: "OEM Utility Knives", href: "/products/oem-utility-knife/" },
+      { label: "Private Label Box Cutters", href: "/products/private-label-box-cutter/" }
     ]
   },
   {
@@ -72,7 +77,9 @@ export const productCategories = [
       { label: "Household Screwdriver Sets", href: "/products/household-screwdriver-set/" },
       { label: "Multi-Bit Screwdriver Sets", href: "/products/multi-bit-screwdriver-set/" },
       { label: "Ratchet Screwdriver Sets", href: "/products/ratchet-screwdriver-set/" },
-      { label: "Hex Key Wrench Sets", href: "/products/hex-key-wrench-set/" }
+      { label: "Hex Key Wrench Sets", href: "/products/hex-key-wrench-set/" },
+      { label: "Custom Screwdriver Sets", href: "/products/custom-screwdriver-set/" },
+      { label: "Private Label Screwdriver Sets", href: "/products/private-label-screwdriver-set/" }
     ]
   },
   {

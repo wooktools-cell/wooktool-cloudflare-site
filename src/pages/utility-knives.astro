@@ -12,7 +12,9 @@ const productRoutes = {
   folding: "/products/folding-utility-knife/",
   snapOff: "/products/snap-off-utility-knife/",
   safety: "/products/safety-utility-knife/",
-  blades: "/products/replacement-utility-knife-blades/"
+  blades: "/products/replacement-utility-knife-blades/",
+  oem: "/products/oem-utility-knife/",
+  privateLabel: "/products/private-label-box-cutter/"
 };
 
 const sourcingGoals = [
@@ -25,6 +27,11 @@ const sourcingGoals = [
     title: "Retail and DIY tool programs",
     text: "Use folding utility knives or snap-off cutters for hardware retail shelves, DIY kits, and online tool bundles.",
     href: productRoutes.folding
+  },
+  {
+    title: "OEM and private-label box cutters",
+    text: "Use OEM utility knife and private-label box cutter pages when buyers need logo, handle color, blade format, barcode, and retail packaging.",
+    href: productRoutes.oem
   },
   {
     title: "Safety-focused cutting tools",
@@ -94,6 +101,8 @@ const marketFit = [
     recommended: "Custom handle color, logo, blister card, color box, and carton mark",
     reason: "Brand buyers need consistent handle color, logo placement, artwork control, barcode readiness, and export carton labeling across repeat orders.",
     links: [
+      { label: "OEM utility knife", href: productRoutes.oem },
+      { label: "Private label box cutter", href: productRoutes.privateLabel },
       { label: "OEM/ODM service", href: "/oem-odm/" },
       { label: "Private-label guide", href: "/blog/private-label-hand-tools-guide/" }
     ]
