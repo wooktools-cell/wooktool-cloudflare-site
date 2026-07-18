@@ -2,7 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
 import { site } from "../../siteData.js";
-import { breadcrumbSchema } from "../../schema.js";
+import { breadcrumbSchema, faqSchema } from "../../schema.js";
 
 export async function getStaticPaths() {
   const postModules = import.meta.glob("../../cms/blog/*.md", { eager: true });
@@ -46,6 +46,10 @@ const blogSchema = [
     { name: post.frontmatter.title, path }
   ])
 ];
+
+if (Array.isArray(post.frontmatter.faq) && post.frontmatter.faq.length > 0) {
+  blogSchema.push(faqSchema(post.frontmatter.faq));
+}
 ---
 
 <BaseLayout
@@ -66,5 +70,11 @@ const blogSchema = [
   <article class="article">
     <Content />
   </article>
-  <CTA title="Need help with your sourcing project?" />
+  <CTA
+    title="Need help with your sourcing project?"
+    text="Send your RFQ with product photos, quantity, packaging direction, and target market. The wooktools team can help match suitable WOOKTOOL product options."
+    primaryHref="/contact/#rfq-form"
+    secondaryLabel="View Buyer Guides"
+    secondaryHref="/buyer-guides/"
+  />
 </BaseLayout>

@@ -1,0 +1,160 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import { blogPosts } from "../siteData.js";
+import { breadcrumbSchema } from "../schema.js";
+
+const guideGroups = [
+  {
+    title: "Tape measure sourcing",
+    text: "Guides for buyers comparing tape measure specifications, factory capability, logo customization, blade options, and quality risks.",
+    links: [
+      "/blog/choose-tape-measure-manufacturer/",
+      "/blog/how-to-customize-tape-measures/",
+      "/blog/how-to-choose-tape-measure-blade-width/",
+      "/blog/tape-measure-quality-defects/",
+      "/blog/why-cheapest-tape-measure-costs-more/"
+    ]
+  },
+  {
+    title: "Private label and OEM/ODM",
+    text: "Resources for importers, distributors, wholesalers, hardware retailers, and private-label brands preparing custom hand tool programs.",
+    links: [
+      "/blog/what-is-private-label-hand-tools/",
+      "/blog/oem-vs-odm-hand-tools/",
+      "/blog/hand-tool-packaging-options/",
+      "/blog/low-moq-custom-hand-tools/",
+      "/blog/what-affects-moq-for-custom-hand-tools/"
+    ]
+  },
+  {
+    title: "Quality control and factory checks",
+    text: "Practical checklists for confirming quality expectations before sampling, mass production, packaging, and shipment.",
+    links: [
+      "/blog/hand-tool-quality-control-checklist-for-importers/",
+      "/blog/what-buyers-should-check-in-hand-tools-factory-china/",
+      "/blog/utility-knife-quality-checklist/",
+      "/blog/is-chinese-manufacturing-low-quality-hand-tools/"
+    ]
+  },
+  {
+    title: "Utility knives and screwdriver sets",
+    text: "Buyer guides for blade types, handle options, packaging, bit selection, retail channels, and RFQ preparation.",
+    links: [
+      "/blog/sourcing-utility-knives-from-china/",
+      "/blog/utility-knife-blade-types-for-b2b-buyers/",
+      "/blog/sourcing-screwdriver-sets-from-china/",
+      "/blog/how-to-source-hand-tools-from-china/"
+    ]
+  }
+];
+
+const postMap = new Map(blogPosts.map((post) => [post.href, post]));
+
+const buyerGuidesSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Hand Tools Buyer Guides",
+    description:
+      "Practical hand tools sourcing resources from wooktools for custom tape measures, utility knives, screwdriver sets, OEM/ODM, private label packaging, quality control, and China sourcing.",
+    url: "https://www.wooktools.com/buyer-guides/",
+    publisher: {
+      "@type": "Organization",
+      name: "wooktools",
+      brand: {
+        "@type": "Brand",
+        name: "WOOKTOOL"
+      }
+    }
+  },
+  breadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Buyer Guides", path: "/buyer-guides/" }
+  ])
+];
+---
+
+<BaseLayout
+  title="Hand Tools Buyer Guides | wooktools Sourcing Resources"
+  description="Explore practical hand tools buyer guides from wooktools, covering custom tape measures, utility knives, screwdriver sets, OEM/ODM tools, private label packaging, quality control, and China sourcing tips."
+  path="/buyer-guides/"
+  image="/images/hero/wooktool-hero-desktop.webp"
+  schema={buyerGuidesSchema}
+>
+  <section class="page-intro">
+    <div>
+      <p class="eyebrow">Buyer guides</p>
+      <h1>Hand Tools Buyer Guides for B2B Sourcing</h1>
+      <p>wooktools created this resource center for importers, distributors, wholesalers, hardware retailers, industrial supply buyers, and private-label brands comparing WOOKTOOL tape measures, utility knives, screwdriver sets, OEM/ODM services, packaging options, and quality-control requirements.</p>
+    </div>
+  </section>
+
+  <section class="content-section answer-block">
+    <p class="eyebrow">Short answer</p>
+    <h2>What can buyers learn from these guides?</h2>
+    <p>These guides help B2B buyers define product specifications, compare OEM and ODM options, prepare clearer RFQs, understand private-label packaging, reduce quality risk, and communicate with a hand tools factory before sample confirmation or bulk production.</p>
+  </section>
+
+  <section class="content-section">
+    <div class="section-heading">
+      <p class="eyebrow">Resource map</p>
+      <h2>Choose a sourcing topic</h2>
+      <p>Start from the buyer question closest to your current project, then use the internal links to move from sourcing research to product pages and RFQ submission.</p>
+    </div>
+    <div class="card-grid guide-grid">
+      {guideGroups.map((group) => (
+        <article class="info-card">
+          <h3>{group.title}</h3>
+          <p>{group.text}</p>
+          <ul class="link-list">
+            {group.links.map((href) => {
+              const post = postMap.get(href);
+              return post ? <li><a href={href} data-track="buyer_guide_article_click">{post.title}</a></li> : null;
+            })}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="content-section split-section">
+    <div>
+      <p class="eyebrow">Before inquiry</p>
+      <h2>Prepare a clearer RFQ</h2>
+      <p>A clear RFQ helps wooktools recommend the right WOOKTOOL product option instead of guessing from a generic product name. Buyers should confirm the use case, target market, logo requirement, packaging direction, estimated quantity, quality expectation, and delivery schedule.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <tbody>
+          <tr><th>Product direction</th><td>Tape measure, utility knife, screwdriver set, tool kit, replacement blade, or OEM hand tool.</td></tr>
+          <tr><th>Customization</th><td>Logo, color, blade marking, handle color, package artwork, barcode, carton mark, or mold direction.</td></tr>
+          <tr><th>Commercial details</th><td>Estimated quantity, target market, retail channel, target price, sample plan, and shipment timing.</td></tr>
+          <tr><th>Quality expectation</th><td>Material, function, appearance, packaging strength, inspection method, and certificate requirements.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="section-heading">
+      <p class="eyebrow">Core pages</p>
+      <h2>Move from research to product selection</h2>
+    </div>
+    <div class="card-grid four-up">
+      <article class="info-card"><h3>Tape measures</h3><p>Compare tape measure lengths, blade widths, case materials, locks, hooks, logo options, and packaging.</p><a href="/tape-measures/">View tape measures</a></article>
+      <article class="info-card"><h3>Utility knives</h3><p>Review box cutters, snap-off knives, folding knives, safety cutters, blade packs, handles, and retail packaging.</p><a href="/utility-knives/">View utility knives</a></article>
+      <article class="info-card"><h3>Screwdriver sets</h3><p>Compare bit sets, ratchet screwdrivers, household sets, handles, cases, and private-label packaging.</p><a href="/screwdriver-sets/">View screwdriver sets</a></article>
+      <article class="info-card"><h3>OEM/ODM</h3><p>Plan logo, color, packaging, sample confirmation, production workflow, QC, and export support.</p><a href="/oem-odm/">View OEM/ODM</a></article>
+    </div>
+  </section>
+
+  <CTA
+    title="Ready to turn a guide into a real RFQ?"
+    text="Send your product type, logo requirement, packaging style, target market, and estimated quantity. The wooktools team will help review suitable WOOKTOOL options."
+    primaryHref="/contact/#rfq-form"
+    secondaryLabel="View Products"
+    secondaryHref="/products/"
+  />
+</BaseLayout>
+

@@ -34,7 +34,8 @@ import { site } from "../siteData.js";
     </label>
     <label>
       Product Interest
-      <input type="text" name="product_interest" list="product-interest-options" placeholder="Tape measures, utility knives, OEM/ODM..." required />
+      <input type="text" name="product_interest" list="product-interest-options" aria-describedby="product-interest-note" required />
+      <span class="field-note" id="product-interest-note">Examples: tape measures, utility knives, screwdriver sets, OEM/ODM hand tools.</span>
       <datalist id="product-interest-options">
         <option value="Tape Measures"></option>
         <option value="Custom Tape Measure"></option>

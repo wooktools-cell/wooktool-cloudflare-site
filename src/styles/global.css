@@ -1289,6 +1289,7 @@ textarea {
 }
 
 small,
+.field-note,
 .form-note {
   color: var(--muted);
   font-size: 0.9rem;

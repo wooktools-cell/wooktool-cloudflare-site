@@ -27,6 +27,7 @@ export const navItems = [
   { label: "Screwdriver Sets", href: "/screwdriver-sets/" },
   { label: "OEM/ODM", href: "/oem-odm/" },
   { label: "Factory", href: "/factory/" },
+  { label: "Buyer Guides", href: "/buyer-guides/" },
   { label: "Blog", href: "/blog/" },
   { label: "Contact", href: "/contact/" }
 ];
