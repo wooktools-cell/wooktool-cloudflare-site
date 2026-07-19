@@ -1,61 +1,43 @@
 {
-  "summary": "Aluminum utility knife with level ruler for industrial cutting, DIY measuring tasks, wallpaper trimming, jobsite tool kits, and private-label programs with aluminum alloy body, clear scale design, replaceable blade, OEM logo, and retail packaging.",
+  "order": 11.7,
+  "slug": "aluminum-utility-knife-with-level-ruler",
+  "title": "Aluminum Utility Knife with Level Ruler",
+  "category": "Utility Knives",
+  "metaTitle": "Aluminum Utility Knife with Level Ruler Supplier | WOOKTOOL",
+  "metaDescription": "Source aluminum utility knives with level ruler design for industrial cutting, measuring support, OEM logo, retail packaging, and export QC.",
+  "image": "/images/products/catalog/aluminum-utility-knife-with-level-ruler-main.webp",
   "detailImages": [
-    "/images/uploads/aluminum-utility-knife-with-level-ruler_02.png",
+    "/images/products/catalog/aluminum-utility-knife-with-level-ruler-detail-1.webp",
     "/images/products/catalog/aluminum-utility-knife-with-level-ruler-detail-2.webp",
     "/images/products/catalog/aluminum-utility-knife-with-level-ruler-detail-3.webp",
     "/images/products/catalog/aluminum-utility-knife-with-level-ruler-detail-4.webp"
   ],
+  "summary": "Aluminum utility knife with level ruler for industrial cutting, DIY measuring tasks, wallpaper trimming, jobsite tool kits, and private-label programs with aluminum alloy body, clear scale design, replaceable blade, OEM logo, and retail packaging.",
+  "sellingPoints": [
+    "Utility knife body with measuring and level reference design",
+    "Aluminum alloy body for durable tool kit programs",
+    "Differentiated product option for retail and DIY channels"
+  ],
+  "specs": [
+    { "label": "Blade", "value": "Replaceable utility blade" },
+    { "label": "Material", "value": "Thickened aluminum alloy body with steel blade" },
+    { "label": "Customization", "value": "Logo marking, body color direction, ruler scale, packaging artwork, and carton mark" },
+    { "label": "Packaging", "value": "Blister card, color box, hanging card, display box, bulk pack, and export carton" },
+    { "label": "MOQ", "value": "Flexible MOQ, to be reviewed by model and packaging requirement" },
+    { "label": "Lead time", "value": "Sample and bulk lead time can be reviewed after specification confirmation" }
+  ],
+  "quality": [
+    "Blade lock and replacement function check",
+    "Aluminum body surface and ruler scale review",
+    "Level or measuring feature appearance inspection",
+    "Packaging artwork and carton quantity verification"
+  ],
+  "targetBuyers": "DIY tool retailers, construction tool distributors, hardware wholesalers, online sellers, promotional tool buyers, and private-label utility knife brands",
   "keywords": [
     "utility knife with level ruler",
     "aluminum utility knife supplier",
     "multi function box cutter",
     "OEM measuring utility knife",
     "private label DIY cutter"
-  ],
-  "slug": "aluminum-utility-knife-with-level-ruler",
-  "order": 11.7,
-  "targetBuyers": "DIY tool retailers, construction tool distributors, hardware wholesalers, online sellers, promotional tool buyers, and private-label utility knife brands",
-  "sellingPoints": [
-    "Utility knife body with measuring and level reference design",
-    "Aluminum alloy body for durable tool kit programs",
-    "Differentiated product option for retail and DIY channels"
-  ],
-  "metaTitle": "Aluminum Utility Knife with Level Ruler Supplier | WOOKTOOL",
-  "metaDescription": "Source aluminum utility knives with level ruler design for industrial cutting, measuring support, OEM logo, retail packaging, and export QC.",
-  "specs": [
-    {
-      "label": "Blade",
-      "value": "Replaceable utility blade"
-    },
-    {
-      "label": "Material",
-      "value": "Thickened aluminum alloy body with steel blade"
-    },
-    {
-      "label": "Customization",
-      "value": "Logo marking, body color direction, ruler scale, packaging artwork, and carton mark"
-    },
-    {
-      "label": "Packaging",
-      "value": "Blister card, color box, hanging card, display box, bulk pack, and export carton"
-    },
-    {
-      "label": "MOQ",
-      "value": "Flexible MOQ, to be reviewed by model and packaging requirement"
-    },
-    {
-      "label": "Lead time",
-      "value": "Sample and bulk lead time can be reviewed after specification confirmation"
-    }
-  ],
-  "title": "Aluminum Utility Knife with Level Ruler",
-  "image": "/images/uploads/aluminum-utility-knife-with-level-ruler_08.png",
-  "category": "Utility Knives",
-  "quality": [
-    "Blade lock and replacement function check",
-    "Aluminum body surface and ruler scale review",
-    "Level or measuring feature appearance inspection",
-    "Packaging artwork and carton quantity verification"
   ]
 }
