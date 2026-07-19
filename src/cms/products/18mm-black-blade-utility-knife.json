@@ -1,43 +1,61 @@
 {
-  "order": 10.2,
-  "slug": "18mm-black-blade-utility-knife",
-  "title": "18mm Black Blade Utility Knife",
-  "category": "Utility Knives",
-  "metaTitle": "18mm Black Blade Utility Knife Supplier | WOOKTOOL",
-  "metaDescription": "Source 18mm black blade utility knives with self-lock slider, spare blade storage, OEM handle color, logo, blister packaging, and export QC support.",
-  "image": "/images/products/catalog/18mm-black-blade-utility-knife-main.webp",
+  "summary": "18mm black blade utility knife for hardware retail, carton opening, DIY cutting, warehouse supplies, and private-label programs, featuring a reinforced plastic handle, self-lock slider, spare blade storage, OEM color, and retail packaging support.",
   "detailImages": [
     "/images/products/catalog/18mm-black-blade-utility-knife-detail-1.webp",
     "/images/products/catalog/18mm-black-blade-utility-knife-detail-2.webp",
-    "/images/products/catalog/18mm-black-blade-utility-knife-detail-3.webp",
+    "/images/uploads/18mm-black-blade-heavy-duty-utility-knife_01.png",
     "/images/products/catalog/18mm-black-blade-utility-knife-detail-4.webp"
   ],
-  "summary": "18mm black blade utility knife for hardware retail, carton opening, DIY cutting, warehouse supplies, and private-label programs, featuring a reinforced plastic handle, self-lock slider, spare blade storage, OEM color, and retail packaging support.",
-  "sellingPoints": [
-    "18mm black snap-off blade for stronger cutting programs",
-    "Self-lock slider helps keep blade position secure",
-    "Spare blade storage for retail value packaging"
-  ],
-  "specs": [
-    { "label": "Blade", "value": "18mm black snap-off blade" },
-    { "label": "Material", "value": "ABS handle with carbon steel or SK5 blade option by project" },
-    { "label": "Customization", "value": "Handle color, logo printing, blade pack quantity, barcode, and carton mark" },
-    { "label": "Packaging", "value": "Blister card, hanging card, color card, display box, bulk pack, and export carton" },
-    { "label": "MOQ", "value": "Flexible MOQ, to be confirmed by customization and packaging requirements" },
-    { "label": "Lead time", "value": "Sample and production timing can be reviewed after model, packaging, and logo confirmation" }
-  ],
-  "quality": [
-    "Blade sharpness and black blade coating review",
-    "Slider movement and self-lock function test",
-    "Spare blade storage and handle assembly inspection",
-    "Packaging artwork, barcode, and carton condition check"
-  ],
-  "targetBuyers": "Hardware retailers, warehouse supply buyers, online tool sellers, DIY tool distributors, wholesalers, and private-label utility knife brands",
   "keywords": [
     "18mm black blade utility knife",
     "heavy duty snap off knife supplier",
     "OEM utility knife China",
     "custom box cutter manufacturer",
     "retail utility knife supplier"
+  ],
+  "slug": "18mm-black-blade-utility-knife",
+  "order": 10.2,
+  "targetBuyers": "Hardware retailers, warehouse supply buyers, online tool sellers, DIY tool distributors, wholesalers, and private-label utility knife brands",
+  "sellingPoints": [
+    "18mm black snap-off blade for stronger cutting programs",
+    "Self-lock slider helps keep blade position secure",
+    "Spare blade storage for retail value packaging"
+  ],
+  "metaTitle": "18mm Black Blade Utility Knife Supplier | WOOKTOOL",
+  "metaDescription": "Source 18mm black blade utility knives with self-lock slider, spare blade storage, OEM handle color, logo, blister packaging, and export QC support.",
+  "specs": [
+    {
+      "label": "Blade",
+      "value": "18mm black snap-off blade"
+    },
+    {
+      "label": "Material",
+      "value": "ABS handle with carbon steel or SK5 blade option by project"
+    },
+    {
+      "label": "Customization",
+      "value": "Handle color, logo printing, blade pack quantity, barcode, and carton mark"
+    },
+    {
+      "label": "Packaging",
+      "value": "Blister card, hanging card, color card, display box, bulk pack, and export carton"
+    },
+    {
+      "label": "MOQ",
+      "value": "Flexible MOQ, to be confirmed by customization and packaging requirements"
+    },
+    {
+      "label": "Lead time",
+      "value": "Sample and production timing can be reviewed after model, packaging, and logo confirmation"
+    }
+  ],
+  "title": "18mm Black Blade Utility Knife",
+  "image": "/images/uploads/18mm-black-blade-heavy-duty-utility-knife_04.png",
+  "category": "Utility Knives",
+  "quality": [
+    "Blade sharpness and black blade coating review",
+    "Slider movement and self-lock function test",
+    "Spare blade storage and handle assembly inspection",
+    "Packaging artwork, barcode, and carton condition check"
   ]
 }
