@@ -91,7 +91,7 @@ For more detail, review the wooktools [quality-control process](/quality-control
 
 To receive a faster and more useful quotation, include product photos or links, target market, quantity, logo file, packaging direction, barcode needs, carton mark requirements, target delivery time, and any quality standard. If the product is for a retail channel, include packaging size and artwork expectations early.
 
-wooktools can help buyers compare WOOKTOOL tape measures, utility knives, box cutters, screwdriver sets, private-label packaging, OEM changes, and bulk supply options before sampling.
+wooktools can help buyers compare WOOKTOOL tape measures, utility knives, box cutters, screwdriver sets, private-label packaging, OEM changes, and bulk supply options before sampling. For a more detailed inquiry format, use the [hand tools RFQ checklist](/blog/hand-tools-rfq-checklist-before-ordering/) before contacting the team.
 
 ## Sources
 
