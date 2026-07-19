@@ -32,9 +32,11 @@ collections:
     identifier_field: title
     summary: "{{title}} - {{category}}"
     fields:
-      - { label: Display Order, name: order, widget: number, value_type: int, min: 1, default: 100 }
+      - { label: Display Order, name: order, widget: number, value_type: float, min: 1, step: 0.1, default: 100 }
       - { label: URL Slug, name: slug, widget: string, hint: "Use lowercase English words separated by hyphens." }
       - { label: Product Name, name: title, widget: string }
+      - { label: SEO Title, name: metaTitle, widget: string, required: false, hint: "Optional but recommended. Keep it unique for Google search results." }
+      - { label: Meta Description, name: metaDescription, widget: text, required: false, hint: "Optional but recommended. Summarize buyer value in 140-160 characters." }
       - label: Category
         name: category
         widget: select
@@ -47,7 +49,7 @@ collections:
         name: detailImages
         widget: list
         min: 0
-        max: 2
+        max: 4
         field: { label: Detail Image, name: image, widget: image, hint: "Recommended: 1000 x 1000 px, white background." }
       - { label: Short Summary, name: summary, widget: text }
       - label: Selling Points
@@ -66,6 +68,11 @@ collections:
         widget: list
         field: { label: Quality Note, name: note, widget: string }
       - { label: Target Buyers, name: targetBuyers, widget: text, default: "Importers, distributors, wholesalers, and private-label brands" }
+      - label: SEO Keywords
+        name: keywords
+        widget: list
+        required: false
+        field: { label: Keyword, name: keyword, widget: string }
 
   - name: factory
     label: Factory Page
