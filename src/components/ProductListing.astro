@@ -11,8 +11,14 @@ const {
   paginationPages = catalogPages,
   moreHref,
   moreLabel = "View more products",
+  visibleCount = products.length,
+  collapseRemaining = false,
   sectionClass = "section"
 } = Astro.props;
+
+const primaryProducts = collapseRemaining ? products.slice(0, visibleCount) : products;
+const remainingProducts = collapseRemaining ? products.slice(visibleCount) : [];
+const hasRemainingProducts = remainingProducts.length > 0;
 ---
 
 <section class={sectionClass}>
@@ -25,9 +31,17 @@ const {
       <p>{description}</p>
     </div>
     <div class="catalog-grid">
-      {products.map((product) => <CatalogProductCard product={product} />)}
+      {primaryProducts.map((product) => <CatalogProductCard product={product} />)}
     </div>
-    {moreHref && (
+    {hasRemainingProducts && (
+      <details class="catalog-disclosure">
+        <summary>{moreLabel} ({remainingProducts.length})</summary>
+        <div class="catalog-grid">
+          {remainingProducts.map((product) => <CatalogProductCard product={product} />)}
+        </div>
+      </details>
+    )}
+    {moreHref && !hasRemainingProducts && (
       <div class="product-action-row">
         <a class="button button-secondary" href={moreHref}>{moreLabel}</a>
       </div>

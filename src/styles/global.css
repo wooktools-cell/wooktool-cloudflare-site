@@ -616,6 +616,45 @@ main {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.catalog-disclosure {
+  margin-top: 1.4rem;
+}
+
+.catalog-disclosure summary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.78rem 1.05rem;
+  color: var(--steel-dark);
+  background: #fff;
+  border: 1px solid #bfc7d0;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 20px rgba(16, 22, 29, 0.06);
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.catalog-disclosure summary::-webkit-details-marker {
+  display: none;
+}
+
+.catalog-disclosure summary::after {
+  content: "+";
+  margin-left: 0.65rem;
+  color: var(--accent-dark);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.catalog-disclosure[open] summary {
+  margin-bottom: 1rem;
+}
+
+.catalog-disclosure[open] summary::after {
+  content: "-";
+}
+
 .catalog-card {
   overflow: hidden;
   background: #fff;
