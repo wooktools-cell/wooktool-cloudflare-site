@@ -46,7 +46,7 @@ const packagingText =
   "Blister card, color box, display box, hang card, bulk pack, export carton, buyer barcode, and carton mark";
 const packagingOptions = packagingText
   .split(",")
-  .map((item) => item.trim())
+  .map((item) => item.trim().replace(/^and\s+/i, ""))
   .filter(Boolean)
   .slice(0, 8);
 const qualitySummary =
@@ -320,7 +320,7 @@ const productPageSchema = [productSchema, breadcrumbSchema, faqSchema(productFaq
             <p class="eyebrow">Product photos</p>
             <h2>Main details and packaging views</h2>
           </div>
-          <p>Each product page keeps one main image and two detail images to balance clear product presentation with fast page loading.</p>
+          <p>Each product page keeps one main image and selected detail views to balance clear product presentation with fast page loading.</p>
         </div>
         <div class="product-gallery">
           {product.detailImages.map((image, index) => (

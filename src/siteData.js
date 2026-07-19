@@ -62,6 +62,9 @@ export const productCategories = [
       { label: "Snap-Off Utility Knives", href: "/products/snap-off-utility-knife/" },
       { label: "Safety Utility Knives", href: "/products/safety-utility-knife/" },
       { label: "Replacement Blades", href: "/products/replacement-utility-knife-blades/" },
+      { label: "9mm Plastic Utility Knives", href: "/products/9mm-plastic-utility-knife-box-cutter/" },
+      { label: "25mm Heavy Duty Utility Knives", href: "/products/25mm-extra-large-utility-knife/" },
+      { label: "Folding Metal Utility Knives", href: "/products/aluminum-folding-utility-knife/" },
       { label: "OEM Utility Knives", href: "/products/oem-utility-knife/" },
       { label: "Private Label Box Cutters", href: "/products/private-label-box-cutter/" }
     ]
