@@ -1,43 +1,61 @@
 {
-  "order": 11.8,
-  "slug": "zinc-alloy-folding-multi-function-utility-knife",
-  "title": "Zinc Alloy Folding Multi Function Utility Knife",
-  "category": "Utility Knives",
-  "metaTitle": "Zinc Alloy Folding Multi Function Utility Knife Supplier | WOOKTOOL",
-  "metaDescription": "Source zinc alloy folding multi function utility knives with blade size display, quick-change blade, OEM logo, retail packaging, and QC support.",
-  "image": "/images/products/catalog/zinc-alloy-folding-multi-function-utility-knife-main.webp",
-  "detailImages": [
-    "/images/products/catalog/zinc-alloy-folding-multi-function-utility-knife-detail-1.webp",
-    "/images/products/catalog/zinc-alloy-folding-multi-function-utility-knife-detail-2.webp",
-    "/images/products/catalog/zinc-alloy-folding-multi-function-utility-knife-detail-3.webp",
-    "/images/products/catalog/zinc-alloy-folding-multi-function-utility-knife-detail-4.webp"
-  ],
   "summary": "Zinc alloy folding multi function utility knife for hardware retail, DIY cutting, electrician tool kits, carton opening, and private-label programs with folding body, quick-change blade, adjustable blade direction, OEM logo, and custom packaging.",
-  "sellingPoints": [
-    "Zinc alloy folding body for stronger retail positioning",
-    "Quick-change blade direction for easier replacement",
-    "Multi-function design for DIY and hardware channels"
+  "detailImages": [
+    "/images/products/catalog/zinc-alloy-folding-multi-function-utility-knife-detail-3.webp",
+    "/images/products/catalog/zinc-alloy-folding-multi-function-utility-knife-detail-4.webp",
+    "/images/products/catalog/zinc-alloy-folding-multi-function-utility-knife-detail-1.webp",
+    "/images/products/catalog/zinc-alloy-folding-multi-function-utility-knife-detail-2.webp"
   ],
-  "specs": [
-    { "label": "Blade", "value": "Trapezoid utility blade with quick-change direction" },
-    { "label": "Material", "value": "Zinc alloy folding body with steel blade" },
-    { "label": "Customization", "value": "Logo marking, handle color direction, blade pack, packaging artwork, barcode, and carton mark" },
-    { "label": "Packaging", "value": "Blister card, color box, display box, replacement blade pack, bulk pack, and export carton" },
-    { "label": "MOQ", "value": "Flexible MOQ, to be confirmed by logo, packaging, and quantity" },
-    { "label": "Lead time", "value": "Lead time depends on sample approval, packaging artwork, and order quantity" }
-  ],
-  "quality": [
-    "Folding structure and lock function check",
-    "Quick-change blade mechanism inspection",
-    "Zinc alloy body surface and screw assembly review",
-    "Retail packaging and blade pack quantity verification"
-  ],
-  "targetBuyers": "Hardware retailers, DIY tool distributors, electrician tool buyers, online sellers, wholesalers, and private-label folding utility knife brands",
   "keywords": [
     "zinc alloy folding utility knife",
     "multi function utility knife supplier",
     "quick change folding box cutter",
     "OEM zinc alloy cutter",
     "private label folding utility knife"
+  ],
+  "slug": "zinc-alloy-folding-multi-function-utility-knife",
+  "order": 11.8,
+  "targetBuyers": "Hardware retailers, DIY tool distributors, electrician tool buyers, online sellers, wholesalers, and private-label folding utility knife brands",
+  "sellingPoints": [
+    "Zinc alloy folding body for stronger retail positioning",
+    "Quick-change blade direction for easier replacement",
+    "Multi-function design for DIY and hardware channels"
+  ],
+  "metaTitle": "Zinc Alloy Folding Multi Function Utility Knife Supplier | WOOKTOOL",
+  "metaDescription": "Source zinc alloy folding multi function utility knives with blade size display, quick-change blade, OEM logo, retail packaging, and QC support.",
+  "specs": [
+    {
+      "label": "Blade",
+      "value": "Trapezoid utility blade with quick-change direction"
+    },
+    {
+      "label": "Material",
+      "value": "Zinc alloy folding body with steel blade"
+    },
+    {
+      "label": "Customization",
+      "value": "Logo marking, handle color direction, blade pack, packaging artwork, barcode, and carton mark"
+    },
+    {
+      "label": "Packaging",
+      "value": "Blister card, color box, display box, replacement blade pack, bulk pack, and export carton"
+    },
+    {
+      "label": "MOQ",
+      "value": "Flexible MOQ, to be confirmed by logo, packaging, and quantity"
+    },
+    {
+      "label": "Lead time",
+      "value": "Lead time depends on sample approval, packaging artwork, and order quantity"
+    }
+  ],
+  "title": "Zinc Alloy Folding Multi Function Utility Knife",
+  "image": "/images/uploads/zinc-alloy-folding-multi-function-utility-knife_10.jpg",
+  "category": "Utility Knives",
+  "quality": [
+    "Folding structure and lock function check",
+    "Quick-change blade mechanism inspection",
+    "Zinc alloy body surface and screw assembly review",
+    "Retail packaging and blade pack quantity verification"
   ]
 }
