@@ -38,3 +38,5 @@ For hardware stores, clean packaging and clear product information can improve s
 Quality checks should cover blade sharpness, lock function, blade replacement fit, handle surface, assembly, packaging, barcode, carton quantity, and carton condition. Buyers can provide their own quality checklist if they have retailer or distributor standards.
 
 For sourcing support, review the [utility knives category](/utility-knives/), compare [OEM/ODM hand tool services](/oem-odm/), or [send your RFQ to wooktools](/contact/) with product photos, quantity, packaging style, and target market.
+
+If your project requires custom handle color, logo, barcode, and retail packaging, compare the [OEM utility knife](/products/oem-utility-knife/) and [private label box cutter](/products/private-label-box-cutter/) pages before requesting a quote.

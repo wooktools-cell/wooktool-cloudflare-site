@@ -4,6 +4,7 @@ import CTA from "../components/CTA.astro";
 import CompactRFQ from "../components/CompactRFQ.astro";
 import FAQ from "../components/FAQ.astro";
 import ProductListing from "../components/ProductListing.astro";
+import SeoResourceLinks from "../components/SeoResourceLinks.astro";
 import { categoryCatalogs } from "../siteData.js";
 import { breadcrumbSchema, faqSchema, productCollectionSchema } from "../schema.js";
 
@@ -138,6 +139,11 @@ const riskChecks = [
 
 const relatedGuides = [
   {
+    title: "Private label, OEM, or bulk hand tools",
+    text: "Compare sourcing paths before deciding whether your utility knife project needs a fast bulk order, private-label packaging, or OEM development.",
+    href: "/blog/private-label-oem-or-bulk-hand-tools/"
+  },
+  {
     title: "Sourcing utility knives from China",
     text: "Review blade format, handle material, safety design, packaging, MOQ, samples, and quality control before ordering.",
     href: "/blog/sourcing-utility-knives-from-china/"
@@ -179,6 +185,38 @@ const qualityFlow = [
     step: "04",
     title: "Packing and shipment check",
     text: "Review blade pack quantity, retail packaging, barcode label, carton mark, master carton condition, and pre-shipment readiness."
+  }
+];
+
+const utilityKnifeSeoClusters = [
+  {
+    title: "OEM and private-label utility knives",
+    text: "Use these pages when buyers need handle color, logo position, blade format, barcode, blister card, and carton mark support.",
+    links: [
+      { label: "OEM utility knife", href: "/products/oem-utility-knife/" },
+      { label: "Private label box cutter", href: "/products/private-label-box-cutter/" },
+      { label: "OEM/ODM hand tools", href: "/oem-odm/" },
+      { label: "Private label sourcing guide", href: "/blog/private-label-oem-or-bulk-hand-tools/" }
+    ]
+  },
+  {
+    title: "Utility knife product choices",
+    text: "Compare product directions before requesting a quote for retail, industrial, warehouse, and replacement blade programs.",
+    links: [
+      { label: "Heavy duty utility knife", href: "/products/heavy-duty-utility-knife/" },
+      { label: "Snap-off utility knife", href: "/products/snap-off-utility-knife/" },
+      { label: "Safety utility knife", href: "/products/safety-utility-knife/" },
+      { label: "Replacement utility blades", href: "/products/replacement-utility-blades/" }
+    ]
+  },
+  {
+    title: "Quality and RFQ preparation",
+    text: "Review blade safety, lock function, packaging accuracy, sample approval, and inspection points before placing bulk orders.",
+    links: [
+      { label: "Utility knife quality checklist", href: "/blog/utility-knife-quality-checklist/" },
+      { label: "Hand tools quality control", href: "/quality-control/" },
+      { label: "Send utility knife RFQ", href: "/contact/#rfq-form" }
+    ]
   }
 ];
 
@@ -408,6 +446,13 @@ const utilitySchema = [
       </div>
     </div>
   </section>
+
+  <SeoResourceLinks
+    eyebrow="Utility knife SEO cluster"
+    title="Related utility knife sourcing paths"
+    description="These pages connect OEM utility knife, private-label box cutter, replacement blade, and quality-control search intent with quote-ready product pages."
+    clusters={utilityKnifeSeoClusters}
+  />
 
   <section class="section dark">
     <div class="section-inner content-grid">

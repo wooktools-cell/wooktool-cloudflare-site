@@ -34,6 +34,8 @@ Buyers should send product reference photos, expected quantity, logo file, targe
 
 For product examples, review [custom logo tape measures](/products/custom-logo-tape-measure/), [25ft steel tape measures](/products/25ft-steel-tape-measure/), [auto-lock tape measures](/products/auto-lock-tape-measure/), and [wide blade tape measures](/products/wide-blade-tape-measure/).
 
+If the project is mainly a brand program, compare the [private label tape measure](/products/private-label-tape-measure/) and [OEM tape measure China](/products/oem-tape-measure/) pages before sending an RFQ. Buyers preparing distributor replenishment can also review the [bulk 25ft tape measure](/products/bulk-25ft-tape-measure/) page.
+
 ## FAQ
 
 ### Can custom tape measures use both metric and inch markings?
@@ -47,4 +49,3 @@ Blister card, color box, and display box are common retail options. Bulk packagi
 ### What affects custom tape measure MOQ?
 
 Logo method, shell color, blade printing, packaging artwork, barcode requirements, and whether existing models can be used all affect MOQ.
-

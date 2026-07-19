@@ -110,7 +110,8 @@ When sending an RFQ, include enough information for the supplier to quote the ri
 
 If you are preparing a retail, wholesale, or private-label screwdriver set program, you can [send a screwdriver set RFQ to WOOKTOOL](/contact/#rfq-form) with your product photos, quantity, packaging direction, and target market.
 
+For quote-ready product paths, compare the [custom screwdriver set](/products/custom-screwdriver-set/) and [private label screwdriver set](/products/private-label-screwdriver-set/) pages. Buyers who are still choosing a sourcing model can also read the [private label, OEM, or bulk hand tools guide](/blog/private-label-oem-or-bulk-hand-tools/).
+
 ## Sources
 
 - U.S. Census Bureau, [Quarterly Retail E-Commerce Sales Report](https://www.census.gov/retail/ecommerce.html), 2026 Q1 supplemental table.
-

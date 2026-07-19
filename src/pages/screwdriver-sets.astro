@@ -4,6 +4,7 @@ import CTA from "../components/CTA.astro";
 import CompactRFQ from "../components/CompactRFQ.astro";
 import FAQ from "../components/FAQ.astro";
 import ProductListing from "../components/ProductListing.astro";
+import SeoResourceLinks from "../components/SeoResourceLinks.astro";
 import { categoryCatalogs } from "../siteData.js";
 import { breadcrumbSchema, faqSchema, productCollectionSchema } from "../schema.js";
 
@@ -88,6 +89,38 @@ const qualityFlow = [
     step: "04",
     title: "Pre-shipment check",
     text: "Confirm set quantity, retail packaging, barcode, carton mark, master carton condition, and shipment readiness."
+  }
+];
+
+const screwdriverSeoClusters = [
+  {
+    title: "Custom and private-label screwdriver sets",
+    text: "Use these pages when buyers need selected bits, handle color, logo, case layout, barcode labels, and retail packaging.",
+    links: [
+      { label: "Custom screwdriver set", href: "/products/custom-screwdriver-set/" },
+      { label: "Private label screwdriver set", href: "/products/private-label-screwdriver-set/" },
+      { label: "OEM/ODM hand tools", href: "/oem-odm/" },
+      { label: "Private label sourcing guide", href: "/blog/private-label-oem-or-bulk-hand-tools/" }
+    ]
+  },
+  {
+    title: "Screwdriver set product choices",
+    text: "Compare standard, household, multi-bit, ratchet, and hex key options before sending configuration requirements.",
+    links: [
+      { label: "Standard screwdriver set", href: "/products/screwdriver-set/" },
+      { label: "Household screwdriver set", href: "/products/household-screwdriver-set/" },
+      { label: "Multi-bit screwdriver set", href: "/products/multi-bit-screwdriver-set/" },
+      { label: "Ratchet screwdriver set", href: "/products/ratchet-screwdriver-set/" }
+    ]
+  },
+  {
+    title: "Screwdriver sourcing support",
+    text: "Review screwdriver set sourcing, inspection points, packaging direction, and RFQ details before sample approval.",
+    links: [
+      { label: "Screwdriver set sourcing guide", href: "/blog/sourcing-screwdriver-sets-from-china/" },
+      { label: "Hand tools quality control", href: "/quality-control/" },
+      { label: "Send screwdriver set RFQ", href: "/contact/#rfq-form" }
+    ]
   }
 ];
 
@@ -261,6 +294,13 @@ const screwdriverSchema = [
       </div>
     </div>
   </section>
+
+  <SeoResourceLinks
+    eyebrow="Screwdriver set SEO cluster"
+    title="Related screwdriver set sourcing paths"
+    description="These links connect custom screwdriver set, private-label screwdriver set, OEM hand tools, and quality-control search intent with quote-ready pages."
+    clusters={screwdriverSeoClusters}
+  />
 
   <FAQ items={screwdriverFaq} title="Screwdriver set sourcing FAQ" />
   <section class="section soft">
