@@ -509,6 +509,75 @@ main {
   color: var(--accent-dark);
 }
 
+.geo-answer-section {
+  background: #fff;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.geo-answer {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.6fr);
+  gap: 1.2rem;
+}
+
+.geo-answer-main {
+  padding-right: 1rem;
+}
+
+.geo-answer-main p {
+  color: var(--muted);
+}
+
+.geo-answer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.geo-answer-card {
+  padding: 1rem;
+  background: #f7f8fa;
+  border: 1px solid #d7dde3;
+  border-radius: var(--radius);
+}
+
+.geo-answer-card h3 {
+  margin-bottom: 0.45rem;
+  font-size: 0.98rem;
+}
+
+.geo-answer-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.geo-answer-links {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  padding-top: 0.2rem;
+}
+
+.geo-answer-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  padding: 0.45rem 0.7rem;
+  color: #1d252f;
+  font-size: 0.9rem;
+  font-weight: 800;
+  background: #fff;
+  border: 1px solid #cfd6dd;
+  border-radius: 6px;
+}
+
+.geo-answer-links a:hover {
+  color: var(--accent-dark);
+  border-color: rgba(216, 95, 18, 0.45);
+}
+
 .product-card span,
 .blog-card span {
   display: inline-flex;
@@ -1531,6 +1600,11 @@ small,
     grid-template-columns: 1fr;
   }
 
+  .geo-answer,
+  .geo-answer-grid {
+    grid-template-columns: 1fr;
+  }
+
   .compact-rfq,
   .compact-rfq-form .form-grid {
     grid-template-columns: 1fr;
@@ -1614,6 +1688,10 @@ small,
 
   .catalog-page-links {
     justify-content: flex-start;
+  }
+
+  .geo-answer-links a {
+    width: 100%;
   }
 
   .quote-checklist dl {

@@ -8,7 +8,23 @@ export const organizationSchema = {
   url: site.domain,
   logo: new URL("/images/logo/wooktool-logo-new.webp", site.domain).toString(),
   description: site.description,
-  email: site.email
+  email: site.email,
+  brand: {
+    "@type": "Brand",
+    name: "WOOKTOOL"
+  },
+  sameAs: [site.linkedinUrl, site.facebookUrl, site.alibabaUrl].filter(Boolean),
+  knowsAbout: [
+    "hand tools manufacturing",
+    "custom tape measures",
+    "utility knives",
+    "screwdriver sets",
+    "OEM hand tools",
+    "ODM hand tools",
+    "private label tool packaging",
+    "hand tool quality control"
+  ],
+  areaServed: "Global"
 };
 
 export const websiteSchema = {
@@ -17,7 +33,15 @@ export const websiteSchema = {
   name: "wooktools",
   alternateName: "WOOKTOOL",
   url: site.domain,
-  description: site.description
+  description: site.description,
+  publisher: {
+    "@type": "Organization",
+    name: "wooktools",
+    brand: {
+      "@type": "Brand",
+      name: "WOOKTOOL"
+    }
+  }
 };
 
 export const breadcrumbSchema = (items = []) => ({

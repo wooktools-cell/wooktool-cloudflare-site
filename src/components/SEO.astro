@@ -12,7 +12,30 @@ const {
 
 const canonical = new URL(path, site.domain).toString();
 const ogImage = new URL(image, site.domain).toString();
-const structuredData = schema ? JSON.stringify(schema) : null;
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: title,
+  description,
+  url: canonical,
+  image: ogImage,
+  isPartOf: {
+    "@type": "WebSite",
+    name: "wooktools",
+    url: site.domain
+  },
+  publisher: {
+    "@type": "Organization",
+    name: site.companyName,
+    brand: {
+      "@type": "Brand",
+      name: site.name
+    }
+  },
+  inLanguage: "en"
+};
+const suppliedSchema = Array.isArray(schema) ? schema : schema ? [schema] : [];
+const structuredData = JSON.stringify([webPageSchema, ...suppliedSchema]);
 ---
 
 <title>{title}</title>
@@ -29,4 +52,4 @@ const structuredData = schema ? JSON.stringify(schema) : null;
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={ogImage} />
-{structuredData && <script type="application/ld+json" set:html={structuredData} />}
+<script type="application/ld+json" set:html={structuredData} />

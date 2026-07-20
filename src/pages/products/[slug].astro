@@ -4,6 +4,7 @@ import CTA from "../../components/CTA.astro";
 import CompactRFQ from "../../components/CompactRFQ.astro";
 import FAQ from "../../components/FAQ.astro";
 import CatalogProductCard from "../../components/CatalogProductCard.astro";
+import GeoAnswerBlock from "../../components/GeoAnswerBlock.astro";
 import { catalogProducts, productRoutes, site } from "../../siteData.js";
 import { faqSchema } from "../../schema.js";
 
@@ -134,6 +135,28 @@ const buyerGuideLinks = [
         : "hand tool quality control checklist"
   }
 ];
+const geoAnswer =
+  `wooktools supplies ${product.title} as a WOOKTOOL ${categoryLabel} option for global B2B buyers. This page helps importers compare specification, customization, packaging, quality control, and RFQ details before confirming samples or bulk production.`;
+const geoAnswerPoints = [
+  {
+    label: "Best-fit buyers",
+    text: `${product.title} is suitable for ${buyerText.toLowerCase()}.`
+  },
+  {
+    label: "Customization scope",
+    text:
+      product.specs.Customization ||
+      "Logo, product color, packaging artwork, barcode labels, carton marks, and private-label details can be reviewed by project."
+  },
+  {
+    label: "RFQ details to send",
+    text: "Share quantity, target market, logo file, packaging direction, target price, reference photos, and delivery schedule for a faster quote."
+  }
+];
+const geoAnswerLinks = [
+  ...internalLinks.slice(0, 3),
+  ...buyerGuideLinks.slice(0, 2)
+];
 const longTailLandingLinksByCategory = {
   "Tape Measures": [
     { href: "/products/private-label-tape-measure/", label: "private label tape measure" },
@@ -235,6 +258,13 @@ const productPageSchema = [productSchema, breadcrumbSchema, faqSchema(productFaq
       <p>{product.summary}</p>
     </div>
   </section>
+
+  <GeoAnswerBlock
+    title={`${product.title}: quick sourcing answer`}
+    answer={geoAnswer}
+    points={geoAnswerPoints}
+    links={geoAnswerLinks}
+  />
 
   <section class="section">
     <div class="section-inner product-detail-layout">

@@ -1,0 +1,32 @@
+---
+const {
+  eyebrow = "AI sourcing summary",
+  title,
+  answer,
+  points = [],
+  links = []
+} = Astro.props;
+---
+
+<section class="section geo-answer-section">
+  <div class="section-inner geo-answer">
+    <div class="geo-answer-main">
+      <p class="eyebrow">{eyebrow}</p>
+      <h2>{title}</h2>
+      <p>{answer}</p>
+    </div>
+    <div class="geo-answer-grid">
+      {points.map((point) => (
+        <article class="geo-answer-card">
+          <h3>{point.label}</h3>
+          <p>{point.text}</p>
+        </article>
+      ))}
+    </div>
+    {links.length > 0 && (
+      <div class="geo-answer-links" aria-label="Related sourcing links">
+        {links.map((link) => <a href={link.href}>{link.label}</a>)}
+      </div>
+    )}
+  </div>
+</section>

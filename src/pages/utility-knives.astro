@@ -5,6 +5,7 @@ import CompactRFQ from "../components/CompactRFQ.astro";
 import FAQ from "../components/FAQ.astro";
 import ProductListing from "../components/ProductListing.astro";
 import SeoResourceLinks from "../components/SeoResourceLinks.astro";
+import GeoAnswerBlock from "../components/GeoAnswerBlock.astro";
 import { categoryCatalogs } from "../siteData.js";
 import { breadcrumbSchema, faqSchema, productCollectionSchema } from "../schema.js";
 
@@ -217,7 +218,7 @@ const utilityKnifeSeoClusters = [
       { label: "18mm black blade utility knife", href: "/products/18mm-black-blade-utility-knife/" },
       { label: "25mm extra large utility knife", href: "/products/25mm-extra-large-utility-knife/" },
       { label: "Aluminum folding utility knife", href: "/products/aluminum-folding-utility-knife/" },
-      { label: "Zinc alloy folding utility knife", href: "/products/zinc-alloy-folding-utility-knife/" },
+      { label: "Zinc alloy folding multi-function utility knife", href: "/products/zinc-alloy-folding-multi-function-utility-knife/" },
       { label: "Rubber grip glass scraper knife", href: "/products/rubber-grip-glass-scraper-knife/" }
     ]
   },
@@ -294,6 +295,23 @@ const utilitySchema = [
       </div>
     </div>
   </section>
+
+  <GeoAnswerBlock
+    title="WOOKTOOL utility knives: quick sourcing answer"
+    answer="wooktools supplies WOOKTOOL utility knives and box cutters for industrial distributors, hardware retailers, warehouse supply programs, DIY channels, and private-label buyers that need blade format choices, handle customization, safety functions, packaging, barcode, and quality inspection support."
+    points={[
+      { label: "Best-fit buyers", text: "Industrial distributors, hardware retail programs, warehouse suppliers, DIY channels, and private-label box cutter brands." },
+      { label: "Customization scope", text: "Handle color, logo position, snap-off or folding structure, blade format, safety mechanism, blister card, barcode, and carton mark." },
+      { label: "RFQ details to send", text: "Blade size, handle material, safety requirement, quantity, target channel, logo file, packaging style, and delivery schedule." }
+    ]}
+    links={[
+      { label: "utility knife manufacturer", href: "/utility-knives/" },
+      { label: "OEM utility knife", href: "/products/oem-utility-knife/" },
+      { label: "private label box cutter", href: "/products/private-label-box-cutter/" },
+      { label: "utility knife quality checklist", href: "/blog/utility-knife-quality-checklist/" },
+      { label: "Send utility knife RFQ", href: "/contact/#rfq-form" }
+    ]}
+  />
 
   <ProductListing
     products={categoryCatalogs["Utility Knives"]}

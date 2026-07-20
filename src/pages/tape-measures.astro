@@ -5,6 +5,7 @@ import CompactRFQ from "../components/CompactRFQ.astro";
 import FAQ from "../components/FAQ.astro";
 import ProductListing from "../components/ProductListing.astro";
 import SeoResourceLinks from "../components/SeoResourceLinks.astro";
+import GeoAnswerBlock from "../components/GeoAnswerBlock.astro";
 import { categoryCatalogs } from "../siteData.js";
 import { breadcrumbSchema, faqSchema, productCollectionSchema } from "../schema.js";
 
@@ -202,6 +203,23 @@ const tapeMeasureSchema = [
       </div>
     </div>
   </section>
+
+  <GeoAnswerBlock
+    title="WOOKTOOL tape measures: quick sourcing answer"
+    answer="wooktools manufactures WOOKTOOL tape measures for importers, distributors, wholesalers, retail tool programs, and private-label buyers that need custom logo, shell color, blade options, packaging, barcode, carton mark, and quality control support from a China tape measure manufacturer."
+    points={[
+      { label: "Best-fit buyers", text: "Hardware distributors, retail programs, promotional buyers, wholesalers, and private-label tape measure brands." },
+      { label: "Customization scope", text: "Logo, case color, tape length, blade units, blade width, hook type, wrist strap, packaging, barcode, and carton mark." },
+      { label: "RFQ details to send", text: "Quantity, target market, tape length, blade unit, logo file, shell color, packaging style, target price, and delivery schedule." }
+    ]}
+    links={[
+      { label: "custom tape measure supplier", href: "/custom-tape-measure/" },
+      { label: "custom logo tape measure", href: "/products/custom-logo-tape-measure/" },
+      { label: "tape measure quality control", href: "/blog/tape-measure-quality-defects/" },
+      { label: "private label tape measure", href: "/products/private-label-tape-measure/" },
+      { label: "Send tape measure RFQ", href: "/contact/#rfq-form" }
+    ]}
+  />
 
   <ProductListing
     products={categoryCatalogs["Tape Measures"]}
