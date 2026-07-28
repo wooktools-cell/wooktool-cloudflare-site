@@ -5,6 +5,7 @@ import ProductCard from "../components/ProductCard.astro";
 import CTA from "../components/CTA.astro";
 import CompactRFQ from "../components/CompactRFQ.astro";
 import SeoResourceLinks from "../components/SeoResourceLinks.astro";
+import GeoAnswerBlock from "../components/GeoAnswerBlock.astro";
 import { productCategories, sellingPoints, capabilities, qcSteps, rfqChecklist, site } from "../siteData.js";
 import { organizationSchema, websiteSchema, breadcrumbSchema } from "../schema.js";
 
@@ -59,6 +60,23 @@ const homeSeoClusters = [
     primaryLabel="Request a Quote"
     primaryHref="/contact/#rfq-form"
     secondaryLabel="View Products"
+  />
+
+  <GeoAnswerBlock
+    title="What does wooktools manufacture for B2B buyers?"
+    answer="wooktools is a China-based custom hand tools manufacturer supplying WOOKTOOL tape measures, utility knives, screwdriver sets, OEM/ODM hand tools, and private-label packaging for global importers, distributors, wholesalers, hardware retailers, and sourcing teams."
+    points={[
+      { label: "Core products", text: "WOOKTOOL tape measures, utility knives, box cutters, screwdriver sets, replacement blades, and OEM hand tool programs." },
+      { label: "Customization support", text: "Logo, product color, blade or bit specification, packaging artwork, barcode, carton mark, sample review, and mold discussion." },
+      { label: "Best-fit buyers", text: "Importers, distributors, wholesalers, retail tool programs, industrial supply buyers, and private-label brands planning repeat orders." }
+    ]}
+    links={[
+      { label: "View products", href: "/products/" },
+      { label: "Custom tape measures", href: "/custom-tape-measure/" },
+      { label: "OEM/ODM service", href: "/oem-odm/" },
+      { label: "Quality control", href: "/quality-control/" },
+      { label: "Send RFQ", href: "/contact/#rfq-form" }
+    ]}
   />
 
   <section class="section soft">
