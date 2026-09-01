@@ -1,7 +1,7 @@
 import { catalogPages, productRoutes, site } from "../siteData.js";
 import { cmsBlogPosts } from "../blogData.js";
 
-const lastModified = "2026-07-28";
+const lastModified = "2026-09-01";
 
 const staticPaths = [
   "/",

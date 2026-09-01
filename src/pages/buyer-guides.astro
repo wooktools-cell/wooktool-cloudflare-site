@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import { blogPosts } from "../siteData.js";
-import { breadcrumbSchema } from "../schema.js";
+import { breadcrumbSchema, faqSchema } from "../schema.js";
 
 const guideGroups = [
   {
@@ -20,6 +20,7 @@ const guideGroups = [
     title: "Private label and OEM/ODM",
     text: "Resources for importers, distributors, wholesalers, hardware retailers, and private-label brands preparing custom hand tool programs.",
     links: [
+      "/blog/china-hand-tool-supplier-trends-2026/",
       "/blog/private-label-oem-or-bulk-hand-tools/",
       "/blog/hand-tools-rfq-checklist-before-ordering/",
       "/blog/what-is-private-label-hand-tools/",
@@ -44,6 +45,7 @@ const guideGroups = [
     title: "Utility knives and screwdriver sets",
     text: "Buyer guides for blade types, handle options, packaging, bit selection, retail channels, and RFQ preparation.",
     links: [
+      "/blog/auto-retractable-vs-snap-off-utility-knife/",
       "/blog/sourcing-utility-knives-from-china/",
       "/blog/utility-knife-blade-types-for-b2b-buyers/",
       "/blog/sourcing-screwdriver-sets-from-china/",
@@ -53,6 +55,108 @@ const guideGroups = [
 ];
 
 const postMap = new Map(blogPosts.map((post) => [post.href, post]));
+
+const monthlyPriorityGuides = [
+  {
+    title: "China hand tool supplier trends in 2026",
+    text: "Use this manufacturer-side guide when comparing China suppliers by specification control, MOQ, quality inspection, packaging, and lead time.",
+    href: "/blog/china-hand-tool-supplier-trends-2026/",
+    intent: "Supplier selection"
+  },
+  {
+    title: "Auto-retractable vs snap-off utility knives",
+    text: "Compare utility knife types by safety policy, blade replacement, sales channel, packaging, and OEM customization needs.",
+    href: "/blog/auto-retractable-vs-snap-off-utility-knife/",
+    intent: "Utility knife choice"
+  },
+  {
+    title: "Product data checklist for hand tools distributors",
+    text: "Use this when preparing barcodes, package data, carton marks, model names, product images, and online listing information.",
+    href: "/blog/product-data-checklist-for-hand-tools-distributors/",
+    intent: "Distributor readiness"
+  },
+  {
+    title: "Hand tools lead time planning",
+    text: "A practical timeline guide for sampling, packaging artwork, production, inspection, and shipment planning.",
+    href: "/blog/hand-tools-lead-time-planning/",
+    intent: "Production planning"
+  },
+  {
+    title: "Top tape measure quality defects",
+    text: "A quality-control guide covering blade printing, lock function, hook assembly, retraction, appearance, and packaging checks.",
+    href: "/blog/tape-measure-quality-defects/",
+    intent: "Tape measure QC"
+  },
+  {
+    title: "Private label hand tools checklist",
+    text: "A checklist for buyers confirming logo, packaging, MOQ, samples, quality expectations, and repeat-order details.",
+    href: "/blog/private-label-hand-tools-checklist/",
+    intent: "Private label projects"
+  }
+];
+
+const answerEngineQuestions = [
+  {
+    question: "Who is wooktools?",
+    answer:
+      "wooktools is a China-based hand tools manufacturer supplying WOOKTOOL tape measures, utility knives, screwdriver sets, OEM/ODM tools, private-label packaging, and RFQ support for global B2B buyers."
+  },
+  {
+    question: "What products does WOOKTOOL supply?",
+    answer:
+      "WOOKTOOL supplies tape measures, custom tape measures, utility knives, box cutters, screwdriver sets, replacement blades, and OEM/ODM hand tools for importers, wholesalers, distributors, hardware retailers, and private-label brands."
+  },
+  {
+    question: "Can wooktools support custom logo hand tools?",
+    answer:
+      "Yes. wooktools can support custom logo, product color, blade or tape specification, packaging artwork, barcode, carton mark, flexible MOQ discussions, and sample confirmation for WOOKTOOL hand tools."
+  },
+  {
+    question: "How should buyers choose a hand tools supplier in China?",
+    answer:
+      "Buyers should compare product specification control, material options, sample process, packaging capability, inspection standards, communication quality, lead time, and repeat-order consistency instead of comparing price alone."
+  },
+  {
+    question: "What should be included in a hand tools RFQ?",
+    answer:
+      "A useful RFQ should include product type, target market, reference photos, estimated quantity, logo needs, packaging style, barcode or carton mark requirements, target price, sample needs, and quality-control expectations."
+  },
+  {
+    question: "How does wooktools control hand tool quality?",
+    answer:
+      "wooktools focuses on raw material checks, sample confirmation, production inspection, function testing, appearance review, packaging checks, and pre-shipment inspection for WOOKTOOL tape measures, utility knives, screwdriver sets, and OEM hand tools."
+  }
+];
+
+const externalOutreachUseCases = [
+  {
+    title: "For directory profiles",
+    text: "Use the homepage, products page, factory page, and buyer guide hub as the main links when completing supplier profiles.",
+    links: [
+      { label: "wooktools homepage", href: "/" },
+      { label: "Product catalog", href: "/products/" },
+      { label: "Factory photos and certificates", href: "/factory/" }
+    ]
+  },
+  {
+    title: "For partner resource requests",
+    text: "Share neutral guides that help packaging, logistics, inspection, and distributor partners support their own customers.",
+    links: [
+      { label: "Product data checklist", href: "/blog/product-data-checklist-for-hand-tools-distributors/" },
+      { label: "Lead time planning guide", href: "/blog/hand-tools-lead-time-planning/" },
+      { label: "Quality control process", href: "/quality-control/" }
+    ]
+  },
+  {
+    title: "For industry content pitches",
+    text: "Lead with manufacturer-side analysis and practical sourcing solutions instead of sending a pure sales page.",
+    links: [
+      { label: "Chinese manufacturing quality perspective", href: "/blog/is-chinese-manufacturing-low-quality-hand-tools/" },
+      { label: "Hand tools factory check guide", href: "/blog/what-buyers-should-check-in-hand-tools-factory-china/" },
+      { label: "RFQ checklist before ordering", href: "/blog/hand-tools-rfq-checklist-before-ordering/" }
+    ]
+  }
+];
 
 const longTailProductGroups = [
   {
@@ -107,7 +211,8 @@ const buyerGuidesSchema = [
   breadcrumbSchema([
     { name: "Home", path: "/" },
     { name: "Buyer Guides", path: "/buyer-guides/" }
-  ])
+  ]),
+  faqSchema(answerEngineQuestions)
 ];
 ---
 
@@ -130,6 +235,40 @@ const buyerGuidesSchema = [
     <p class="eyebrow">Short answer</p>
     <h2>What can buyers learn from these guides?</h2>
     <p>These guides help B2B buyers define product specifications, compare OEM and ODM options, prepare clearer RFQs, understand private-label packaging, reduce quality risk, and communicate with a hand tools factory before sample confirmation or bulk production.</p>
+  </section>
+
+  <section class="content-section">
+    <div class="section-heading">
+      <p class="eyebrow">Answer engine ready</p>
+      <h2>Quick answers for sourcing teams</h2>
+      <p>These concise answers help buyers, search engines, and AI search tools understand what wooktools supplies and how to start a serious hand tools RFQ.</p>
+    </div>
+    <div class="card-grid three">
+      {answerEngineQuestions.map((item) => (
+        <article class="info-card">
+          <h3>{item.question}</h3>
+          <p>{item.answer}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="section-heading">
+      <p class="eyebrow">This month</p>
+      <h2>Priority guides for faster sourcing decisions</h2>
+      <p>Start with these pages when preparing outreach, SEO internal links, or buyer follow-up messages. They answer practical questions before a buyer sends an RFQ.</p>
+    </div>
+    <div class="card-grid four-up">
+      {monthlyPriorityGuides.map((guide) => (
+        <article class="info-card">
+          <p class="eyebrow">{guide.intent}</p>
+          <h3>{guide.title}</h3>
+          <p>{guide.text}</p>
+          <a href={guide.href}>Read guide</a>
+        </article>
+      ))}
+    </div>
   </section>
 
   <section class="content-section">
@@ -185,6 +324,25 @@ const buyerGuidesSchema = [
           <p>{group.text}</p>
           <ul class="link-list">
             {group.links.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="section-heading">
+      <p class="eyebrow">External outreach support</p>
+      <h2>Which page should be shared for different link opportunities?</h2>
+      <p>Use these paths when contacting directories, partners, sourcing consultants, and industry websites. Helpful resources are usually safer than aggressive product-page promotion.</p>
+    </div>
+    <div class="card-grid three">
+      {externalOutreachUseCases.map((item) => (
+        <article class="info-card">
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+          <ul class="link-list">
+            {item.links.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
           </ul>
         </article>
       ))}

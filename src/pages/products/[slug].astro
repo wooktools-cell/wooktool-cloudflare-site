@@ -176,6 +176,7 @@ const longTailLandingLinks = longTailLandingLinksByCategory[product.category] ||
 const imageUrls = [product.image, ...(product.detailImages || [])].map((image) =>
   new URL(image, site.domain).toString()
 );
+const visibleProductImages = [product.image, ...(product.detailImages || [])].slice(0, 5);
 const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
@@ -194,15 +195,16 @@ const productSchema = {
   },
   category: product.category,
   keywords: product.keywords?.join(", "),
+  sku: product.slug,
+  mpn: product.slug,
   audience: {
     "@type": "BusinessAudience",
     audienceType: product.targetBuyers
   },
-  offers: {
-    "@type": "Offer",
-    priceCurrency: "USD",
-    availability: "https://schema.org/InStock",
-    url: productUrl
+  potentialAction: {
+    "@type": "ContactAction",
+    name: "Request Product Quote",
+    target: new URL(`/contact/?product=${product.slug}#rfq-form`, site.domain).toString()
   },
   additionalProperty: Object.entries(product.specs).map(([name, value]) => ({
     "@type": "PropertyValue",
@@ -251,24 +253,32 @@ const productPageSchema = [productSchema, breadcrumbSchema, faqSchema(productFaq
   type="product"
   schema={productPageSchema}
 >
-  <section class="page-intro">
-    <div>
-      <p class="eyebrow">{product.category}</p>
-      <h1>{product.title}</h1>
-      <p>{product.summary}</p>
+  <section class="page-intro product-page-intro">
+    <div class="product-intro-layout">
+      <div class="product-intro-copy">
+        <p class="eyebrow">{product.category}</p>
+        <h1>{product.title}</h1>
+        <p>{product.summary}</p>
+        <div class="product-action-row">
+          <a class="button button-primary" href="#product-rfq" data-track="product_intro_rfq_click">Request Product Quote</a>
+          <a class="button button-secondary" href={customizationPath} data-track="product_intro_custom_click">{customizationLabel}</a>
+        </div>
+      </div>
+      <div class="product-media-panel" aria-label={`${product.title} product image gallery`}>
+        <img class="product-square-image" src={product.image} alt={`${product.title} main product image on white background`} width="1000" height="1000" fetchpriority="high" />
+        {visibleProductImages.length > 1 && (
+          <div class="product-thumb-grid">
+            {visibleProductImages.slice(1).map((image, index) => (
+              <img src={image} alt={`${product.title} product detail view ${index + 1}`} width="1000" height="1000" loading="lazy" />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   </section>
 
-  <GeoAnswerBlock
-    title={`${product.title}: quick sourcing answer`}
-    answer={geoAnswer}
-    points={geoAnswerPoints}
-    links={geoAnswerLinks}
-  />
-
   <section class="section">
-    <div class="section-inner product-detail-layout">
-      <img class="product-square-image" src={product.image} alt={`${product.title} main product image on white background`} width="1000" height="1000" />
+    <div class="section-inner product-spec-layout">
       <div>
         <p class="eyebrow">Product details</p>
         <h2>Specifications</h2>
@@ -286,6 +296,13 @@ const productPageSchema = [productSchema, breadcrumbSchema, faqSchema(productFaq
       </div>
     </div>
   </section>
+
+  <GeoAnswerBlock
+    title={`${product.title}: quick sourcing answer`}
+    answer={geoAnswer}
+    points={geoAnswerPoints}
+    links={geoAnswerLinks}
+  />
 
   <section class="section soft">
     <div class="section-inner content-grid">
@@ -341,25 +358,6 @@ const productPageSchema = [productSchema, breadcrumbSchema, faqSchema(productFaq
       </article>
     </div>
   </section>
-
-  {product.detailImages?.length > 0 && (
-    <section class="section soft">
-      <div class="section-inner">
-        <div class="section-header">
-          <div>
-            <p class="eyebrow">Product photos</p>
-            <h2>Main details and packaging views</h2>
-          </div>
-          <p>Each product page keeps one main image and selected detail views to balance clear product presentation with fast page loading.</p>
-        </div>
-        <div class="product-gallery">
-          {product.detailImages.map((image, index) => (
-            <img src={image} alt={`${product.title} detail view ${index + 1} for OEM buyers`} width="1000" height="1000" loading="lazy" />
-          ))}
-        </div>
-      </div>
-    </section>
-  )}
 
   <section class="section">
     <div class="section-inner grid two">

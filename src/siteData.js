@@ -5,6 +5,7 @@ export const site = {
   companyName: "wooktools",
   domain: "https://www.wooktools.com",
   email: "winson@wooktools.com",
+  formSubmitEndpoint: "https://formsubmit.co/8651d4d61280ba17a1bd2dc05531d928",
   whatsapp: "+86 150 9060 8676",
   whatsappUrl: "https://wa.me/8615090608676",
   facebookUrl: "https://www.facebook.com/wooktools",

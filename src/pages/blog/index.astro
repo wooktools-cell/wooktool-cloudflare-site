@@ -2,6 +2,59 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
 import { blogPosts } from "../../siteData.js";
+
+const priorityTopics = [
+  {
+    title: "Tape measure sourcing cluster",
+    text: "Start here when buyers compare tape measure factories, custom logos, blade choices, quality defects, and low-price risk.",
+    links: [
+      { label: "Choose a tape measure manufacturer", href: "/blog/choose-tape-measure-manufacturer/" },
+      { label: "Custom tape measures guide", href: "/blog/custom-tape-measures-guide/" },
+      { label: "Tape measure quality defects", href: "/blog/tape-measure-quality-defects/" },
+      { label: "Why cheap tape measures cost more", href: "/blog/why-cheapest-tape-measure-costs-more/" }
+    ]
+  },
+  {
+    title: "Private-label and OEM buying cluster",
+    text: "Use these guides for buyers planning logo, packaging, MOQ, RFQ details, and OEM/ODM hand tool projects.",
+    links: [
+      { label: "China hand tool supplier trends in 2026", href: "/blog/china-hand-tool-supplier-trends-2026/" },
+      { label: "Private label hand tools checklist", href: "/blog/private-label-hand-tools-checklist/" },
+      { label: "Private label, OEM, or bulk hand tools", href: "/blog/private-label-oem-or-bulk-hand-tools/" },
+      { label: "MOQ for custom hand tools", href: "/blog/what-affects-moq-for-custom-hand-tools/" },
+      { label: "Hand tools RFQ checklist", href: "/blog/hand-tools-rfq-checklist-before-ordering/" }
+    ]
+  },
+  {
+    title: "Quality and factory trust cluster",
+    text: "Useful for outreach, AI search summaries, and buyers who need evidence before sample confirmation.",
+    links: [
+      { label: "Hand tool quality control checklist", href: "/blog/hand-tool-quality-control-checklist-for-importers/" },
+      { label: "Auto-retractable vs snap-off utility knives", href: "/blog/auto-retractable-vs-snap-off-utility-knife/" },
+      { label: "Check a hand tools factory in China", href: "/blog/what-buyers-should-check-in-hand-tools-factory-china/" },
+      { label: "Chinese manufacturing quality perspective", href: "/blog/is-chinese-manufacturing-low-quality-hand-tools/" },
+      { label: "Lead time planning for hand tools", href: "/blog/hand-tools-lead-time-planning/" }
+    ]
+  }
+];
+
+const outreachResources = [
+  {
+    title: "Best page for external resource links",
+    href: "/buyer-guides/",
+    text: "A neutral buyer guide hub that is safer to pitch than a product page when requesting references from partners, directories, or industry blogs."
+  },
+  {
+    title: "Best page for distributor audiences",
+    href: "/blog/product-data-checklist-for-hand-tools-distributors/",
+    text: "Useful for importers and distributors preparing barcodes, packaging data, carton marks, and product listing information."
+  },
+  {
+    title: "Best page for quality-control discussions",
+    href: "/quality-control/",
+    text: "A trust-building page to support inspection, sampling, and supplier evaluation conversations."
+  }
+];
 ---
 
 <BaseLayout
@@ -22,6 +75,51 @@ import { blogPosts } from "../../siteData.js";
       </p>
     </div>
   </section>
+
+  <section class="section soft">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">SEO topic map</p>
+          <h2>Read by sourcing intent</h2>
+        </div>
+        <p>These clusters help Google understand the site structure and help buyers move from research to product selection and RFQ.</p>
+      </div>
+      <div class="grid three">
+        {priorityTopics.map((topic) => (
+          <article class="info-card">
+            <h3>{topic.title}</h3>
+            <p>{topic.text}</p>
+            <ul class="link-list">
+              {topic.links.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Outreach-ready resources</p>
+          <h2>Useful pages to share with partners and industry sites</h2>
+        </div>
+        <p>When doing external outreach, lead with practical buyer resources instead of hard-selling product pages.</p>
+      </div>
+      <div class="grid three">
+        {outreachResources.map((resource) => (
+          <article class="info-card">
+            <h3>{resource.title}</h3>
+            <p>{resource.text}</p>
+            <a class="button button-secondary" href={resource.href}>Open resource</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="section-inner grid three">
       {blogPosts.map((post) => (

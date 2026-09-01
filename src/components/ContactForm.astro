@@ -4,7 +4,7 @@ import { site } from "../siteData.js";
 
 <form
   class="contact-form"
-  action={`https://formsubmit.co/${site.email}`}
+  action={site.formSubmitEndpoint}
   method="post"
   data-track="form_submit"
 >
