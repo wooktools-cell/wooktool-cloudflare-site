@@ -1,0 +1,257 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import CompactRFQ from "../../components/CompactRFQ.astro";
+import FAQ from "../../components/FAQ.astro";
+import { breadcrumbSchema, faqSchema } from "../../schema.js";
+
+const checklistFaq = [
+  {
+    question: "Who should use this tape measure RFQ checklist?",
+    answer: "This checklist is for importers, distributors, wholesalers, hardware retailers, sourcing teams, and private-label buyers preparing WOOKTOOL tape measure orders with wooktools."
+  },
+  {
+    question: "What information should buyers send before asking for a quote?",
+    answer: "Buyers should send product type, target market, tape length, blade unit, shell color, logo requirement, packaging style, estimated quantity, target price, and delivery schedule."
+  },
+  {
+    question: "Can this checklist be used for custom logo tape measures?",
+    answer: "Yes. It is especially useful for custom logo tape measure and private-label tape measure projects because logo, packaging, barcode, carton mark, and sample approval details should be confirmed early."
+  },
+  {
+    question: "Which quality points matter most for tape measure orders?",
+    answer: "Important checks include blade printing readability, lock function, retraction smoothness, hook assembly, shell appearance, belt clip, strap, packaging artwork, barcode labels, carton marks, and export carton condition."
+  },
+  {
+    question: "Can wooktools help review the checklist before production?",
+    answer: "Yes. wooktools can review the checklist with buyers before sampling or bulk production and recommend suitable WOOKTOOL model, customization, packaging, and quality-control direction."
+  }
+];
+
+const rfqChecklist = [
+  ["Product direction", "Heavy-duty tape measure, auto-lock tape measure, wide blade tape measure, pocket tape measure, promotional tape measure, or custom logo tape measure."],
+  ["Target market", "Country, sales channel, retail price level, buyer type, and any market-specific packaging or measurement unit requirements."],
+  ["Tape specification", "Length, blade width, metric/inch/dual-unit markings, blade coating, hook type, lock structure, belt clip, and strap requirement."],
+  ["Logo and color", "Logo file, case logo position, label method, shell color, accent color, brand guide, and approval sample needs."],
+  ["Packaging", "OPP bag, blister card, hang card, color box, display box, barcode label, carton mark, inner quantity, and master carton setup."],
+  ["Commercial details", "Estimated quantity, sample needs, target price, preferred delivery time, shipment method, and repeat-order plan."]
+];
+
+const qcChecklist = [
+  ["Blade printing", "Check number readability, unit accuracy, contrast, red marks, logo or compliance marks, and whether printing matches the target market."],
+  ["Lock and retraction", "Check lock holding force, rewind smoothness, spring feeling, blade movement, and safety during repeated use."],
+  ["Hook assembly", "Check hook shape, rivets, looseness, magnet option, edge finish, and suitability for the user's measuring scenario."],
+  ["Case and accessories", "Check ABS or rubberized shell appearance, screw assembly, belt clip, wrist strap, surface scratches, color match, and hand feel."],
+  ["Packaging review", "Check artwork, barcode, carton mark, package strength, hang-hole position, inner quantity, and export carton condition."],
+  ["Pre-shipment sample", "Keep an approved sample, compare bulk goods against the sample, and confirm photo/video evidence before shipment when needed."]
+];
+
+const buyerScenarios = [
+  {
+    title: "Hardware distributors",
+    text: "Focus on stable repeat specifications, clear carton marks, durable packaging, and balanced price-grade choices.",
+    link: "/tape-measures/"
+  },
+  {
+    title: "Private-label brands",
+    text: "Confirm logo placement, shell color, packaging artwork, barcode labels, sample approval, and repeat-order consistency.",
+    link: "/custom-tape-measure/"
+  },
+  {
+    title: "Online sellers",
+    text: "Prepare product images, barcode data, package dimensions, carton quantities, and consistent model naming before launch.",
+    link: "/blog/product-data-checklist-for-hand-tools-distributors/"
+  },
+  {
+    title: "Sourcing teams",
+    text: "Use the checklist to compare suppliers by specification control, sample process, QC checkpoints, and communication quality.",
+    link: "/quality-control/"
+  }
+];
+
+const schema = [
+  breadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Resources", path: "/buyer-guides/" },
+    { name: "Tape Measure RFQ and Quality Control Checklist", path: "/resources/tape-measure-rfq-quality-checklist/" }
+  ]),
+  faqSchema(checklistFaq),
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "Tape Measure RFQ and Quality Control Checklist for Importers",
+    description: "A practical checklist for preparing custom tape measure RFQs, quality-control points, packaging requirements, and buyer details.",
+    totalTime: "PT20M",
+    supply: [
+      { "@type": "HowToSupply", name: "Reference product photo or sample" },
+      { "@type": "HowToSupply", name: "Logo file and packaging direction" },
+      { "@type": "HowToSupply", name: "Estimated quantity and target market" }
+    ],
+    step: rfqChecklist.map(([name, text]) => ({
+      "@type": "HowToStep",
+      name,
+      text
+    }))
+  }
+];
+---
+
+<BaseLayout
+  title="Tape Measure RFQ & Quality Control Checklist | wooktools"
+  description="Use this WOOKTOOL tape measure RFQ and QC checklist to confirm specs, logo, packaging, MOQ, samples, and inspection points before ordering."
+  path="/resources/tape-measure-rfq-quality-checklist/"
+  image="/images/products/catalog/custom-logo-tape-measure-main.webp"
+  schema={schema}
+>
+  <section class="page-intro">
+    <div>
+      <p class="eyebrow">Buyer resource</p>
+      <h1>Tape Measure RFQ and Quality Control Checklist for Importers</h1>
+      <p>Use this checklist before asking wooktools for a WOOKTOOL tape measure quotation. It helps buyers prepare product specifications, logo requirements, packaging details, quality-control points, and sample approval notes before production starts.</p>
+      <div class="button-row">
+        <a class="button button-primary" href="/contact/#rfq-form" data-track="resource_rfq_click">Request Product Quote</a>
+        <a class="button button-secondary" href="/custom-tape-measure/" data-track="resource_custom_tape_click">View Custom Tape Measures</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section compact-section">
+    <div class="section-inner split-panel">
+      <div>
+        <p class="eyebrow">Short answer</p>
+        <h2>What should a tape measure RFQ include?</h2>
+      </div>
+      <p>A useful tape measure RFQ should include target market, tape length, blade unit, blade width, case material, lock type, hook type, logo file, shell color, packaging style, barcode or carton mark needs, estimated quantity, target price, sample requirement, and quality-control expectations.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner content-grid">
+      <div class="content-copy">
+        <p class="eyebrow">RFQ preparation</p>
+        <h2>Confirm these details before quotation</h2>
+        <p>Many tape measure sourcing problems begin before production, when the buyer and supplier are using the same product name but different expectations. A 25ft tape measure for retail packaging, a promotional custom logo tape measure, and a heavy-duty contractor model may require different blade widths, shell materials, hook types, packaging, and inspection focus.</p>
+        <p>wooktools uses RFQ details to recommend whether an existing WOOKTOOL model, private-label packaging option, or adjusted custom tape measure direction is most suitable for the buyer's channel.</p>
+      </div>
+      <img class="product-square-image" src="/images/products/catalog/custom-logo-tape-measure-main.webp" alt="WOOKTOOL custom logo tape measure for private label RFQ preparation" width="1000" height="1000" />
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">RFQ checklist</p>
+          <h2>Information to send with your inquiry</h2>
+        </div>
+        <p>Use this table when preparing a quote request for custom tape measures, bulk tape measures, or private-label tape measure programs.</p>
+      </div>
+      <table class="spec-table">
+        <tbody>
+          {rfqChecklist.map(([label, detail]) => (
+            <tr><th>{label}</th><td>{detail}</td></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Inspection checklist</p>
+          <h2>Tape measure quality points to confirm</h2>
+        </div>
+        <p>These checkpoints help importers reduce sampling mistakes, quality complaints, packaging rework, and shipment delays.</p>
+      </div>
+      <div class="grid three">
+        {qcChecklist.map(([title, text], index) => (
+          <article class="packaging-card">
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <h3>{title}</h3>
+            <p>{text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="section-inner content-grid">
+      <img class="wide-image" src="/images/factory/tape-measure-quality-inspection.jpg" alt="Tape measure quality inspection at wooktools factory" width="1920" height="1080" />
+      <div class="content-copy">
+        <p class="eyebrow">Factory proof</p>
+        <h2>Use real samples and inspection points, not only catalog photos</h2>
+        <p>For custom tape measure supplier selection, buyers should review real product photos, sample details, packaging artwork, and inspection points. A low unit price may not help if the blade printing is unclear, the hook feels weak, the lock slips, or the packaging is not ready for retail and warehouse handling.</p>
+        <ul class="check-list">
+          <li><a href="/blog/tape-measure-quality-defects/">Review common tape measure quality defects</a></li>
+          <li><a href="/quality-control/">Check the wooktools quality-control process</a></li>
+          <li><a href="/factory/">View factory photos and certificates</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Buyer scenarios</p>
+          <h2>Use the checklist by sourcing goal</h2>
+        </div>
+        <p>The same tape measure model can be prepared differently depending on buyer channel, packaging needs, and repeat-order expectations.</p>
+      </div>
+      <div class="grid four">
+        {buyerScenarios.map((scenario) => (
+          <article class="info-card">
+            <h3>{scenario.title}</h3>
+            <p>{scenario.text}</p>
+            <a href={scenario.link}>Open related page</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark">
+    <div class="section-inner content-grid">
+      <div class="content-copy">
+        <p class="eyebrow">Shareable resource</p>
+        <h2>For partners, sourcing teams, and industry references</h2>
+        <p>This page can be shared with sourcing consultants, inspection partners, distributor teams, and industry resource pages because it gives practical RFQ and QC details instead of only promoting a product page.</p>
+      </div>
+      <div class="quote-checklist">
+        <h3>Best internal links after this checklist</h3>
+        <dl>
+          <dt>Product range</dt><dd><a href="/tape-measures/">Tape measure manufacturer page</a></dd>
+          <dt>Customization</dt><dd><a href="/custom-tape-measure/">Custom tape measure supplier page</a></dd>
+          <dt>OEM/ODM</dt><dd><a href="/oem-odm/">OEM hand tools service</a></dd>
+          <dt>RFQ</dt><dd><a href="/contact/#rfq-form">Send a product quote request</a></dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={checklistFaq} title="Tape measure RFQ checklist FAQ" />
+
+  <section class="section soft">
+    <div class="section-inner">
+      <CompactRFQ
+        title="Send a Tape Measure RFQ"
+        eyebrow="Use the checklist"
+        productInterest="Custom tape measures"
+        source="resource-tape-measure-rfq-quality-checklist"
+      />
+    </div>
+  </section>
+
+  <CTA
+    title="Ready to quote a WOOKTOOL tape measure project?"
+    text="Send your model, length, logo, shell color, packaging, quantity, target market, and inspection requirements. wooktools will review the right direction for your order."
+    primaryLabel="Request Product Quote"
+    primaryHref="/contact/#rfq-form"
+    secondaryLabel="View Tape Measures"
+    secondaryHref="/tape-measures/"
+  />
+</BaseLayout>

@@ -16,6 +16,7 @@ const staticPaths = [
   "/factory/",
   "/contact/",
   "/buyer-guides/",
+  "/resources/tape-measure-rfq-quality-checklist/",
   "/blog/",
   "/blog/choose-tape-measure-manufacturer/",
   "/blog/custom-tape-measures-guide/",

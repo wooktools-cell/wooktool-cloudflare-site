@@ -21,6 +21,7 @@ const corePages = [
   ["/quality-control/", "Quality control process for hand tools"],
   ["/factory/", "Factory capability, production, testing, and certificates"],
   ["/buyer-guides/", "Buyer guides for sourcing hand tools"],
+  ["/resources/tape-measure-rfq-quality-checklist/", "Tape measure RFQ and quality control checklist for importers"],
   ["/blog/", "Sourcing blog and procurement guides"],
   ["/contact/", "RFQ and contact page"]
 ];
@@ -67,6 +68,7 @@ const lines = [
   "## Latest GEO-focused buyer guides",
   `- China hand tool supplier trends in 2026: ${absoluteUrl("/blog/china-hand-tool-supplier-trends-2026/")}`,
   `- Auto-retractable vs snap-off utility knives: ${absoluteUrl("/blog/auto-retractable-vs-snap-off-utility-knife/")}`,
+  `- Tape measure RFQ and quality control checklist: ${absoluteUrl("/resources/tape-measure-rfq-quality-checklist/")}`,
   "",
   "## Main product categories",
   ...productCategories.map((category) => `- ${cleanText(category.title)}: ${cleanText(category.text)} ${absoluteUrl(category.href)}`),

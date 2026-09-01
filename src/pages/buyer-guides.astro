@@ -9,6 +9,7 @@ const guideGroups = [
     title: "Tape measure sourcing",
     text: "Guides for buyers comparing tape measure specifications, factory capability, logo customization, blade options, and quality risks.",
     links: [
+      "/resources/tape-measure-rfq-quality-checklist/",
       "/blog/choose-tape-measure-manufacturer/",
       "/blog/how-to-customize-tape-measures/",
       "/blog/how-to-choose-tape-measure-blade-width/",
@@ -55,6 +56,9 @@ const guideGroups = [
 ];
 
 const postMap = new Map(blogPosts.map((post) => [post.href, post]));
+postMap.set("/resources/tape-measure-rfq-quality-checklist/", {
+  title: "Tape measure RFQ and quality control checklist"
+});
 
 const monthlyPriorityGuides = [
   {
@@ -142,6 +146,7 @@ const externalOutreachUseCases = [
     title: "For partner resource requests",
     text: "Share neutral guides that help packaging, logistics, inspection, and distributor partners support their own customers.",
     links: [
+      { label: "Tape measure RFQ checklist", href: "/resources/tape-measure-rfq-quality-checklist/" },
       { label: "Product data checklist", href: "/blog/product-data-checklist-for-hand-tools-distributors/" },
       { label: "Lead time planning guide", href: "/blog/hand-tools-lead-time-planning/" },
       { label: "Quality control process", href: "/quality-control/" }
@@ -356,6 +361,7 @@ const buyerGuidesSchema = [
     </div>
     <div class="card-grid four-up">
       <article class="info-card"><h3>Tape measures</h3><p>Compare tape measure lengths, blade widths, case materials, locks, hooks, logo options, and packaging.</p><a href="/tape-measures/">View tape measures</a></article>
+      <article class="info-card"><h3>RFQ checklist</h3><p>Prepare tape measure specifications, logo, packaging, quality-control points, and sample approval details before quotation.</p><a href="/resources/tape-measure-rfq-quality-checklist/">Open checklist</a></article>
       <article class="info-card"><h3>Utility knives</h3><p>Review box cutters, snap-off knives, folding knives, safety cutters, blade packs, handles, and retail packaging.</p><a href="/utility-knives/">View utility knives</a></article>
       <article class="info-card"><h3>Screwdriver sets</h3><p>Compare bit sets, ratchet screwdrivers, household sets, handles, cases, and private-label packaging.</p><a href="/screwdriver-sets/">View screwdriver sets</a></article>
       <article class="info-card"><h3>OEM/ODM</h3><p>Plan logo, color, packaging, sample confirmation, production workflow, QC, and export support.</p><a href="/oem-odm/">View OEM/ODM</a></article>

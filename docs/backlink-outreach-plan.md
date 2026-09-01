@@ -58,6 +58,7 @@ Primary assets to promote:
 | Factory page | `/factory/` | Real workshop photos, certificates, testing reports. |
 | Quality control page | `/quality-control/` | Trust page for buyer verification. |
 | Custom tape measure page | `/custom-tape-measure/` | Commercial landing page for OEM/private-label buyers. |
+| Tape measure RFQ and QC checklist | `/resources/tape-measure-rfq-quality-checklist/` | Shareable resource for importers preparing RFQ details and inspection points. |
 | Future custom tape measure manufacturer page | `/custom-tape-measure-manufacturer/` | High-intent GEO and ad landing page. |
 
 ## Target Link Types
@@ -301,13 +302,13 @@ Quality target:
    - 10 industry resource pages.
 6. Start outreach with the resource citation template.
 
-## Next Website Asset to Support Link Building
+## Website Asset to Support Link Building
 
-Create a downloadable checklist:
+Created checklist:
 
 Title: Tape Measure RFQ and Quality Control Checklist for Importers
 
-Recommended URL:
+URL:
 
 `/resources/tape-measure-rfq-quality-checklist/`
 
