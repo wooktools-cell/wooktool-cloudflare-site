@@ -108,7 +108,7 @@ Before contacting a utility knife manufacturer, prepare:
 - Sample approval requirements
 - Inspection points before shipment
 
-wooktools can review these details and recommend suitable WOOKTOOL utility knife options. Send the project through the [RFQ form](/contact/#rfq-form).
+wooktools can review these details and recommend suitable WOOKTOOL utility knife options. [Request Product Quote](/contact/#rfq-form) with your utility knife type, packaging plan, and estimated quantity.
 
 ## Practical buyer decision table
 
@@ -137,4 +137,3 @@ Yes. wooktools can support custom handle color, logo, blade pack, blister card, 
 ### What should be checked before shipment?
 
 Check blade sharpness, blade movement, lock function, handle assembly, surface finish, packaging artwork, barcode, warning label, pack quantity, carton mark, and export carton condition.
-
