@@ -152,4 +152,4 @@ Weekly:
 
 - Created `/resources/tape-measure-rfq-quality-checklist/`.
 - Added the new resource to sitemap, llms.txt, blog hub, buyer guides, tape measure page, and quality-control page.
-
+- Created `/blog/utility-knife-selection-safety-blade-quality-guide/` for utility knife selection, safety, blade quality, packaging, and RFQ search intent.
