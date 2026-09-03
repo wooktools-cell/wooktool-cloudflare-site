@@ -69,6 +69,7 @@ const lines = [
   `- China hand tool supplier trends in 2026: ${absoluteUrl("/blog/china-hand-tool-supplier-trends-2026/")}`,
   `- Auto-retractable vs snap-off utility knives: ${absoluteUrl("/blog/auto-retractable-vs-snap-off-utility-knife/")}`,
   `- Tape measure RFQ and quality control checklist: ${absoluteUrl("/resources/tape-measure-rfq-quality-checklist/")}`,
+  `- Private-label tape measure manufacturer guide: ${absoluteUrl("/blog/choose-tape-measure-manufacturer-private-label/")}`,
   `- Utility knife selection, safety, and blade quality guide: ${absoluteUrl("/blog/utility-knife-selection-safety-blade-quality-guide/")}`,
   "",
   "## Main product categories",
