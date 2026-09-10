@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
+import CompactRFQ from "../../components/CompactRFQ.astro";
 import { site } from "../../siteData.js";
 import { breadcrumbSchema, faqSchema } from "../../schema.js";
 
@@ -19,12 +20,14 @@ const { post } = Astro.props;
 const { Content } = post;
 const slug = post.frontmatter.slug || Astro.params.slug;
 const path = `/blog/${slug}/`;
+const rfqEnabled = Boolean(post.frontmatter.rfq);
 const blogSchema = [
   {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.frontmatter.title,
     description: post.frontmatter.description,
+    image: post.frontmatter.image ? new URL(post.frontmatter.image, site.domain).toString() : undefined,
     datePublished: post.frontmatter.date,
     author: {
       "@type": "Organization",
@@ -70,6 +73,17 @@ if (Array.isArray(post.frontmatter.faq) && post.frontmatter.faq.length > 0) {
   <article class="article">
     <Content />
   </article>
+  {rfqEnabled && (
+    <section class="section soft">
+      <div class="section-inner">
+        <CompactRFQ
+          title={post.frontmatter.rfqTitle || "Request a Tape Measure Quote"}
+          productInterest={post.frontmatter.rfqProduct || "Steel tape measure"}
+          source={`blog-${slug}`}
+        />
+      </div>
+    </section>
+  )}
   <CTA
     title="Need help with your sourcing project?"
     text="Send your RFQ with product photos, quantity, packaging direction, and target market. The wooktools team can help match suitable WOOKTOOL product options."
