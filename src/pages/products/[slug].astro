@@ -180,10 +180,12 @@ const visibleProductImages = [product.image, ...(product.detailImages || [])].sl
 const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
+  "@id": `${productUrl}#product`,
   name: product.title,
-  description: product.summary,
+  description: productSeoDescription,
   image: imageUrls,
   url: productUrl,
+  mainEntityOfPage: productUrl,
   brand: {
     "@type": "Brand",
     name: site.name
@@ -253,6 +255,9 @@ const productPageSchema = [productSchema, breadcrumbSchema, faqSchema(productFaq
   type="product"
   schema={productPageSchema}
 >
+  <Fragment slot="head">
+    <link rel="preload" as="image" href={product.image} fetchpriority="high" />
+  </Fragment>
   <section class="page-intro product-page-intro">
     <div class="product-intro-layout">
       <div class="product-intro-copy">
