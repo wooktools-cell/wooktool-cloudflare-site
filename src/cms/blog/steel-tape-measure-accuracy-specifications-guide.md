@@ -1,7 +1,7 @@
 ---
-title: "Steel Tape Measure Accuracy, Specifications, and Component Guide"
+title: "Steel Tape Measure Specifications, Accuracy, and Components Guide"
 slug: "steel-tape-measure-accuracy-specifications-guide"
-description: "A practical guide to steel tape measure components, common sizes, dual-scale blade markings, moving hooks, and accuracy classes for importers and private-label buyers."
+description: "A steel tape measure manufacturer guide for buyers comparing components, common sizes, dual-scale blade markings, moving hooks, magnetic hooks, and accuracy classes."
 date: "2026-09-10"
 order: 35
 image: "/images/blog/steel-tape-measure-guide/magnetic-hook-abs-tape-measure.jpg"

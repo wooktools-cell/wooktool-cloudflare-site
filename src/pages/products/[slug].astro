@@ -177,6 +177,9 @@ const imageUrls = [product.image, ...(product.detailImages || [])].map((image) =
   new URL(image, site.domain).toString()
 );
 const visibleProductImages = [product.image, ...(product.detailImages || [])].slice(0, 5);
+const hasPublicOffer = Boolean(
+  product.offer?.price && product.offer?.priceCurrency && product.offer?.availability
+);
 const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
@@ -244,7 +247,14 @@ const breadcrumbSchema = {
     }
   ]
 };
-const productPageSchema = [productSchema, breadcrumbSchema, faqSchema(productFaq)];
+// These B2B pages use an RFQ workflow and do not publish a verifiable retail price.
+// Google Product rich results require an offer, review, or aggregate rating; only
+// include Product markup when a complete, public offer is available.
+const productPageSchema = [
+  ...(hasPublicOffer ? [productSchema] : []),
+  breadcrumbSchema,
+  faqSchema(productFaq)
+];
 ---
 
 <BaseLayout
