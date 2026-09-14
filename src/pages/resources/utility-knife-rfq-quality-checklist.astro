@@ -1,0 +1,137 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CompactRFQ from "../../components/CompactRFQ.astro";
+import CTA from "../../components/CTA.astro";
+import FAQ from "../../components/FAQ.astro";
+import { breadcrumbSchema, faqSchema } from "../../schema.js";
+
+const rfqChecklist = [
+  ["Knife type and use case", "State whether the project is for a snap-off knife, folding utility knife, safety cutter, heavy-duty box cutter, or replacement blade pack. Include the target cutting material and sales channel."],
+  ["Blade specification", "Confirm 9 mm, 18 mm, 25 mm, trapezoid, or other blade format; selected material, thickness direction, blade color, replacement plan, and pack quantity."],
+  ["Handle and mechanism", "Specify handle material, color, grip, lock structure, folding or retractable action, blade storage, belt clip, and safety requirement."],
+  ["Brand and packaging", "Send logo files, handle-color reference, product label, blister card or color-box artwork direction, barcode, warning text, inner quantity, and carton mark."],
+  ["Commercial plan", "Share estimated quantity, target price, target market, sample requirement, delivery expectation, and whether this is a repeat-order program."],
+  ["Quality standard", "List the practical sample checks: blade fit, sharpness, lock stability, moving parts, handle assembly, surface finish, packaging accuracy, and carton condition."]
+];
+
+const qcChecklist = [
+  ["Blade and edge", "Check blade size, fit, sharpness, surface condition, corrosion protection where required, and whether the blade matches the approved pack."],
+  ["Lock and movement", "Test slider, folding lock, auto-retraction, or safety mechanism repeatedly. Confirm that the blade does not shift unexpectedly in the intended working position."],
+  ["Handle and assembly", "Review grip, mold finish, screws, rivets, blade track, storage compartment, logo appearance, and any sharp or loose edges."],
+  ["Replacement process", "Confirm tool-free or manual blade change steps, compatibility with refills, spare blade quantity, and user instructions or warnings."],
+  ["Retail data and packaging", "Check product name, blade size, barcode, warning text, hang hole, pack quantity, artwork, carton mark, and scan-ready SKU data."],
+  ["Pre-shipment comparison", "Keep an approved sample and compare bulk products, packaging, labels, and carton quantity against it before shipment."]
+];
+
+const checklistFaq = [
+  {
+    question: "What should a utility knife RFQ include?",
+    answer: "A useful RFQ includes knife type, target cutting use, blade format, handle material, lock or safety mechanism, logo, packaging, barcode, quantity, target market, sample need, and required inspection points."
+  },
+  {
+    question: "How should buyers check utility knife quality before shipment?",
+    answer: "Buyers should compare the goods with an approved sample and check blade fit, sharpness, lock stability, moving parts, handle assembly, warning text, packaging artwork, barcode, pack quantity, and carton marks."
+  },
+  {
+    question: "Can WOOKTOOL support private-label box cutter packaging?",
+    answer: "Yes. wooktools can review custom handle color, logo, blister card, hanging card, color box, barcode label, warning text, inner packing, carton mark, and export carton requirements for a private-label utility knife program."
+  },
+  {
+    question: "Which utility knife type is suitable for warehouse buyers?",
+    answer: "Warehouse buyers often compare heavy-duty utility knives and safety cutters. The right choice depends on cutting material, blade-exposure requirement, lock or retraction mechanism, replacement process, user training, and local safety requirements."
+  }
+];
+
+const schema = [
+  breadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Resources", path: "/buyer-guides/" },
+    { name: "Utility Knife RFQ and Quality Control Checklist", path: "/resources/utility-knife-rfq-quality-checklist/" }
+  ]),
+  faqSchema(checklistFaq),
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "Prepare a Utility Knife RFQ and Quality Control Checklist",
+    description: "A practical sequence for defining utility knife specifications, packaging, sample approval, and quality-control points before ordering.",
+    totalTime: "PT20M",
+    step: rfqChecklist.map(([name, text]) => ({ "@type": "HowToStep", name, text }))
+  }
+];
+---
+
+<BaseLayout
+  title="Utility Knife RFQ & Quality Control Checklist | WOOKTOOL"
+  description="Use this utility knife RFQ and quality-control checklist to confirm blade type, lock, safety features, packaging, barcode, samples, and inspection points before ordering."
+  path="/resources/utility-knife-rfq-quality-checklist/"
+  image="/images/products/catalog/heavy-duty-utility-knife-main.webp"
+  schema={schema}
+>
+  <section class="page-intro">
+    <div>
+      <p class="eyebrow">Buyer resource</p>
+      <h1>Utility Knife RFQ and Quality Control Checklist for Importers</h1>
+      <p>Use this practical checklist to prepare a utility knife, box cutter, safety cutter, or replacement blade inquiry before sampling and bulk production.</p>
+      <div class="button-row">
+        <a class="button button-primary" href="#product-rfq" data-track="utility_resource_rfq_click">Request Product Quote</a>
+        <a class="button button-secondary" href="/utility-knives/" data-track="utility_resource_category_click">View Utility Knives</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section compact-section">
+    <div class="section-inner split-panel">
+      <div>
+        <p class="eyebrow">Short answer</p>
+        <h2>Prepare the specification before comparing prices</h2>
+      </div>
+      <p>Two utility knife quotations can look similar while using different blade formats, lock structures, handles, refill packs, packaging, or quality checks. Send the same complete RFQ to each supplier for a meaningful comparison.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner content-grid">
+      <div class="content-copy">
+        <p class="eyebrow">Product direction</p>
+        <h2>Match the knife to the real cutting scenario</h2>
+        <p>A warehouse safety program, a hardware retail box cutter, a DIY snap-off knife, and a replacement-blade refill line do not need the same product specification. Confirm cutting material, user environment, safety expectation, sales channel, and price position before selecting the model.</p>
+        <p>For model directions, compare the <a href="/utility-knives/">WOOKTOOL utility knife range</a>, <a href="/products/safety-utility-knife/">safety utility knives</a>, <a href="/products/folding-utility-knife/">folding utility knives</a>, and <a href="/products/replacement-utility-blades/">replacement utility blades</a>.</p>
+      </div>
+      <img class="product-square-image" src="/images/products/catalog/heavy-duty-utility-knife-main.webp" alt="WOOKTOOL heavy duty utility knife for importer RFQ preparation" width="1000" height="1000" />
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="section-inner">
+      <div class="section-header"><div><p class="eyebrow">RFQ checklist</p><h2>Information to send with your inquiry</h2></div><p>Use this specification sheet before asking for a utility knife, box cutter, or private-label quotation.</p></div>
+      <table class="spec-table"><tbody>{rfqChecklist.map(([label, detail]) => (<tr><th>{label}</th><td>{detail}</td></tr>))}</tbody></table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header"><div><p class="eyebrow">Inspection checklist</p><h2>Quality points to confirm before shipment</h2></div><p>Use the approved sample as the reference point for product function, appearance, packaging, and quantity checks.</p></div>
+      <div class="grid three">{qcChecklist.map(([title, text], index) => (<article class="packaging-card"><span>{String(index + 1).padStart(2, "0")}</span><h3>{title}</h3><p>{text}</p></article>))}</div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="section-inner content-grid">
+      <img class="wide-image" src="/images/products/catalog/18mm-black-blade-utility-knife-detail-1.webp" alt="WOOKTOOL utility knife blade and handle detail for quality control" width="1000" height="1000" />
+      <div class="content-copy">
+        <p class="eyebrow">Sample approval</p>
+        <h2>Approve function and packaging together</h2>
+        <p>A logo on the handle is not enough for a private-label utility knife. Review blade fit, lock operation, product warnings, barcode data, artwork, pack quantity, and export-carton marks as one approved selling unit.</p>
+        <ul class="check-list">
+          <li><a href="/blog/utility-knife-selection-safety-blade-quality-guide/">Read the utility knife selection and blade quality guide</a></li>
+          <li><a href="/blog/utility-knife-quality-checklist/">Review common utility knife quality checks</a></li>
+          <li><a href="/quality-control/">Check the WOOKTOOL quality-control process</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft"><div class="section-inner"><CompactRFQ title="Request a Utility Knife Quote" productInterest="Utility knife, box cutter, or replacement blade program" source="utility-knife-rfq-checklist" /></div></section>
+  <FAQ items={checklistFaq} title="Utility knife RFQ FAQ" />
+  <CTA title="Need a quote for utility knives or box cutters?" text="Send your blade format, safety direction, handle color, logo, packaging, quantity, and target market. WOOKTOOL will review a suitable product and sample plan." primaryLabel="Request Product Quote" primaryHref="/contact/#rfq-form" secondaryLabel="View Utility Knives" secondaryHref="/utility-knives/" />
+</BaseLayout>

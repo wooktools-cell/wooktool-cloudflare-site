@@ -19,6 +19,9 @@ Increase qualified B2B impressions, organic clicks, referral visits, and RFQ sta
 | Technical buyer research | `/blog/steel-tape-measure-accuracy-specifications-guide/` | steel tape measure specifications, tape measure accuracy class, dual scale tape measure, magnetic tape measure hook | Guide → category → RFQ |
 | RFQ preparation | `/resources/tape-measure-rfq-quality-checklist/` | tape measure RFQ template, tape measure specification sheet, tape measure quality checklist | Resource → RFQ |
 | Product selection | Individual product pages | 25ft tape measure supplier, wide blade tape measure, auto-lock tape measure, magnetic hook tape measure | Product → RFQ |
+| Utility knife manufacturer comparison | `/utility-knives/` | utility knife manufacturer, box cutter manufacturer, OEM utility knife China, wholesale utility knives | Category → product → RFQ |
+| Utility knife technical sourcing | `/blog/utility-knife-selection-safety-blade-quality-guide/` | safety utility knife, snap-off knife, folding box cutter, utility knife blade quality | Guide → category → RFQ |
+| Utility knife RFQ preparation | `/resources/utility-knife-rfq-quality-checklist/` | utility knife RFQ template, box cutter quality checklist, private label utility knife packaging | Resource → RFQ |
 
 ## Priority 3 — Content sequence for the next 60 days
 
@@ -26,6 +29,8 @@ Increase qualified B2B impressions, organic clicks, referral visits, and RFQ sta
 2. **Magnetic Tape Measure vs Standard Hook: Buyer Selection Guide** — covers hook use case, pull strength, rivets, coating, and sample checks. Link to the heavy-duty and 10m/33ft product directions.
 3. **How to Read Imperial Tape Measure Fractions for Hardware Buyers** — targets metric-to-imperial sourcing questions and links naturally to dual-unit blade products.
 4. **Tape Measure Packaging Guide: Blister Card, Color Box, Display Box, and Carton Mark** — supports private-label and distributor inquiries.
+5. **Utility Knife RFQ and Quality Control Checklist** — now published as a linkable resource for importers comparing blade type, safety mechanism, packaging, and inspection points.
+6. **Magnetic Tape Measure vs Standard Hook** and **Utility Knife Packaging Guide** — keep these as separate future pages so they do not repeat the current component, safety, and RFQ guides.
 
 Each new page should answer one distinct buyer question, include a decision table, use only genuine product/factory images, link to one primary category and one RFQ resource, and contain one non-repeated call to action.
 
@@ -36,6 +41,7 @@ Each new page should answer one distinct buyer question, include a decision tabl
 3. Build listings on legitimate manufacturer, trade-association, chamber, and industrial directory profiles that allow a company website link. Keep company name, site URL, business email, and product categories consistent.
 4. Offer the RFQ checklist to inspection partners, sourcing consultants, hardware distributor blogs, and trade-publication resource pages as a practical reference. Pitch the resource page rather than a sales page.
 5. Request supplier/customer case-study mentions only where the relationship is real and the content can describe a genuine product program or sourcing process.
+6. Pitch the utility knife RFQ checklist to warehouse-safety consultants, packaging/distribution blogs, tool-industry resource pages, and inspection partners; use the resource page rather than a commercial product page.
 
 Avoid paid link farms, mass guest-post packages, automated comments, reciprocal-link pages with no relevance, copied articles, and fabricated review/rating schema. These can create short-lived link counts but weaken trust and add manual-action risk.
 

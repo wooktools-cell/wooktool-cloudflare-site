@@ -101,6 +101,42 @@ LinkedIn:
 
 `https://www.wooktools.com/blog/utility-knife-selection-safety-blade-quality-guide/?utm_source=linkedin&utm_medium=social&utm_campaign=utility_knife_guide_2026_09`
 
+## Utility Knife RFQ Checklist Distribution
+
+URL:
+
+`https://www.wooktools.com/resources/utility-knife-rfq-quality-checklist/`
+
+LinkedIn:
+
+`https://www.wooktools.com/resources/utility-knife-rfq-quality-checklist/?utm_source=linkedin&utm_medium=social&utm_campaign=utility_knife_checklist_2026_09`
+
+Facebook:
+
+`https://www.wooktools.com/resources/utility-knife-rfq-quality-checklist/?utm_source=facebook&utm_medium=social&utm_campaign=utility_knife_checklist_2026_09`
+
+Outreach:
+
+`https://www.wooktools.com/resources/utility-knife-rfq-quality-checklist/?utm_source=outreach&utm_medium=referral&utm_campaign=utility_knife_checklist_2026_09`
+
+LinkedIn post:
+
+Utility knife sourcing is not only choosing a handle style or a blade size.
+
+Before sampling, importers and private-label buyers should align the cutting use case, blade format, lock or safety mechanism, replacement process, warning text, barcode, packaging, sample approval, and quality-control points.
+
+wooktools prepared a practical utility knife RFQ and quality-control checklist for hardware distributors, warehouse suppliers, retailers, and private-label buyers:
+
+`https://www.wooktools.com/resources/utility-knife-rfq-quality-checklist/?utm_source=linkedin&utm_medium=social&utm_campaign=utility_knife_checklist_2026_09`
+
+Facebook post:
+
+Preparing a utility knife or box cutter order?
+
+Use the WOOKTOOL checklist to confirm blade type, lock and safety needs, packaging, barcode, sample approval, and pre-shipment checks before production:
+
+`https://www.wooktools.com/resources/utility-knife-rfq-quality-checklist/?utm_source=facebook&utm_medium=social&utm_campaign=utility_knife_checklist_2026_09`
+
 ## Private Label Tape Measure Article Distribution
 
 URL:

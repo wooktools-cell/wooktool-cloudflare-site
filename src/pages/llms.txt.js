@@ -22,6 +22,7 @@ const corePages = [
   ["/factory/", "Factory capability, production, testing, and certificates"],
   ["/buyer-guides/", "Buyer guides for sourcing hand tools"],
   ["/resources/tape-measure-rfq-quality-checklist/", "Tape measure RFQ and quality control checklist for importers"],
+  ["/resources/utility-knife-rfq-quality-checklist/", "Utility knife RFQ and quality control checklist for importers"],
   ["/blog/", "Sourcing blog and procurement guides"],
   ["/contact/", "RFQ and contact page"]
 ];
