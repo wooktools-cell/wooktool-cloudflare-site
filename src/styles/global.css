@@ -767,6 +767,11 @@ main {
   border-bottom: 1px solid #cfd6dd;
 }
 
+.catalog-card img.catalog-product-image--extra-white-space {
+  box-sizing: border-box;
+  padding: 7%;
+}
+
 .catalog-card > div {
   padding: 1rem;
 }

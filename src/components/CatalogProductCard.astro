@@ -1,11 +1,14 @@
 ---
 const { product } = Astro.props;
 const rfqHref = `/contact/?product=${encodeURIComponent(product.slug)}#rfq-form`;
+const imageClass = product.slug === "stainless-steel-waterproof-tape-measure"
+  ? "catalog-product-image catalog-product-image--extra-white-space"
+  : "catalog-product-image";
 ---
 
 <article class="catalog-card">
   <a class="catalog-media-link" href={`/products/${product.slug}/`} aria-label={`View ${product.title}`}>
-    <img src={product.image} alt={`${product.title} product image on white background`} width="1000" height="1000" loading="lazy" />
+    <img class={imageClass} src={product.image} alt={`${product.title} product image on white background`} width="1000" height="1000" loading="lazy" />
   </a>
   <div>
     <p class="catalog-category">{product.category}</p>
