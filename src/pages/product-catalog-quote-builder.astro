@@ -1,0 +1,308 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../siteData.js";
+import { breadcrumbSchema, productCollectionSchema } from "../schema.js";
+
+const isCrmPreview = Astro.url.pathname === "/request-quote/";
+const path = isCrmPreview ? "/request-quote/" : "/product-catalog-quote-builder/";
+const title = isCrmPreview ? "Select Hand Tool Models and Request a Factory Quote | wooktools" : "Product Selector & Multi-Model RFQ | WOOKTOOL";
+const description = "Select WOOKTOOL tape measure and utility knife models, add specifications, quantities and OEM requirements, then send one organized multi-model RFQ.";
+const schema = [
+  breadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: isCrmPreview ? "Request a Quote" : "Product Selector", path }
+  ]),
+  productCollectionSchema({
+    name: "WOOKTOOL Product Selector & RFQ Builder",
+    description,
+    path,
+    image: "/images/products/category-tape-measures.png"
+  })
+];
+---
+
+<BaseLayout title={title} description={description} path={path} image="/images/products/category-tape-measures.png" schema={schema}>
+  <section class="page-intro catalog-quote-hero">
+    <div>
+      <p class="eyebrow">Multi-model sourcing</p>
+      <h1>{isCrmPreview ? "Select Hand Tool Models and Request a Factory Quote" : "Build a clear product inquiry in one place"}</h1>
+      <p>Browse WOOKTOOL tape measure and utility knife models, select the versions you need, then send your quantities and private-label requirements as one organized RFQ.</p>
+      <div class="catalog-quote-steps" aria-label="How the product selector works">
+        <span>1. Choose models</span><span>2. Add specifications</span><span>3. Send your RFQ</span>
+      </div>
+      {isCrmPreview && <p class="catalog-preview-notice">CRM 3.0 preview: this version demonstrates the structured RFQ flow and lead scoring only. It does not send customer data or files.</p>}
+    </div>
+  </section>
+
+  <section class="section catalog-quote-section" aria-labelledby="selector-title">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Product catalog</p>
+          <h2 id="selector-title">Select models for your inquiry</h2>
+        </div>
+        <p class="catalog-quote-disclaimer">Models and specifications are provided for selection. Final quotation, MOQ, packaging and lead time are confirmed after review.</p>
+      </div>
+
+      <div class="catalog-quote-toolbar">
+        <div class="catalog-filter-tabs" role="group" aria-label="Product category">
+          <button class="catalog-filter is-active" type="button" data-family="all">All models</button>
+          <button class="catalog-filter" type="button" data-family="tape">Tape Measures</button>
+          <button class="catalog-filter" type="button" data-family="knife">Utility Knives</button>
+          <button class="catalog-filter" type="button" data-family="screwdriver">Screwdriver Sets</button>
+        </div>
+        <label class="catalog-search"><span class="sr-only">Search models</span><input id="catalog-search" type="search" placeholder="Search model or specification" autocomplete="off" /></label>
+      </div>
+
+      <div class="catalog-quote-layout">
+        <div>
+          <p class="catalog-result-count" aria-live="polite" id="catalog-result-count">Loading catalog…</p>
+          <div class="catalog-quote-grid" id="catalog-products" aria-live="polite"></div>
+        </div>
+
+        <aside class="catalog-rfq-panel" id="rfq-builder" aria-labelledby="rfq-title">
+          <p class="eyebrow">Your inquiry</p>
+          <h2 id="rfq-title">Selected models <span id="selected-count">0</span></h2>
+          <p class="catalog-rfq-empty" id="catalog-rfq-empty">Choose one or more models to create your inquiry list.</p>
+          <p class="catalog-rfq-hint">Keep selecting products from the catalog. You can also add the same model again when you need different specifications or customization.</p>
+          <div class="catalog-rfq-lines" id="catalog-rfq-lines"></div>
+
+          <form id="catalog-rfq-form" class="catalog-rfq-form" action={site.formSubmitEndpoint} method="POST" data-track="catalog_rfq_submit" data-crm-preview={isCrmPreview ? "true" : undefined}>
+            <input type="hidden" name="_subject" value="New multi-model product inquiry from WOOKTOOL Product Selector" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value={`${site.domain}/contact/thank-you/`} />
+            <input type="hidden" name="Lead Source" value="product-catalog-quote-builder" />
+            <input type="hidden" name="Selected Product Lines" id="selected-product-lines" />
+            <input class="form-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" />
+            <div class="catalog-contact-fields">
+              <label>Name<input type="text" name="Name" autocomplete="name" required /></label>
+              <label>Business Email<input type="email" name="Email" autocomplete="email" required /></label>
+              <label>Company<input type="text" name="Company" autocomplete="organization" /></label>
+              <label>WhatsApp / Phone<input type="tel" name="WhatsApp or Phone" autocomplete="tel" /></label>
+              <label>Country / Market<input type="text" name="Country or Market" autocomplete="country-name" /></label>
+              <label>Website<input type="url" name="Website" placeholder="https://" autocomplete="url" /></label>
+              <label>Target Market<input type="text" name="Target Market" placeholder="e.g. Germany, USA, Amazon" /></label>
+              <label>Expected Delivery<input type="text" name="Expected Delivery Time" placeholder="e.g. 45 days after approval" /></label>
+              <label>Target Price (optional)<input type="text" name="Target Price" placeholder="Optional buyer target only" /></label>
+              <fieldset class="catalog-requirements catalog-field-wide"><legend>Requirements</legend><label><input type="checkbox" name="Need Custom Logo" value="Yes" /> Custom logo</label><label><input type="checkbox" name="Need Custom Packaging" value="Yes" /> Custom packaging</label><label><input type="checkbox" name="Need Sample" value="Yes" /> Sample required</label></fieldset>
+              <label class="catalog-field-wide">Supporting files<input type="file" name="Preview Files" accept=".pdf,.png,.jpg,.jpeg,.webp,.ai,.zip" multiple /><span>Preview only. Files remain in this browser and are not uploaded.</span></label>
+              <label class="catalog-field-wide">Additional requirements<textarea name="Additional Requirements" rows="3" placeholder="Target delivery date, certification, packaging or other notes"></textarea></label>
+            </div>
+            {isCrmPreview && <div class="crm-preview-card" id="crm-preview-card" aria-live="polite"><strong>CRM 3.0 preview</strong><span>Choose models and complete fields to view a simulated lead score, grade and follow-up tasks.</span><output id="crm-preview-output">Lead score: 0 · Grade D · Task: First response within 24 hours</output></div>}
+            <p class="catalog-form-status" id="catalog-form-status" role="alert"></p>
+            <button class="button button-primary" type="submit">Send Product Inquiry</button>
+          </form>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="section-inner catalog-quote-help">
+      <div>
+        <p class="eyebrow">For a faster reply</p>
+        <h2>What to include in your RFQ</h2>
+      </div>
+      <ul>
+        <li>Preferred model and specification for each item</li>
+        <li>Expected order quantity and target market</li>
+        <li>Logo, color, scale, blade, packaging or label requirements</li>
+        <li>Any required test reports, compliance documents or delivery timing</li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const productGrid = document.querySelector("#catalog-products");
+  const resultCount = document.querySelector("#catalog-result-count");
+  const searchInput = document.querySelector("#catalog-search");
+  const filterButtons = [...document.querySelectorAll(".catalog-filter")];
+  const selectedLines = document.querySelector("#catalog-rfq-lines");
+  const selectedCount = document.querySelector("#selected-count");
+  const emptyState = document.querySelector("#catalog-rfq-empty");
+  const summaryField = document.querySelector("#selected-product-lines");
+  const form = document.querySelector("#catalog-rfq-form");
+  const formStatus = document.querySelector("#catalog-form-status");
+  let catalog = [];
+  let family = "all";
+  const selected = [];
+  const expandedFamilies = new Set();
+  const crmPreview = form.dataset.crmPreview === "true";
+  let lineSequence = 0;
+
+  const productCode = (product) => product.displayCode || product.code;
+  const productTitle = (product) => product.family === "tape" ? `Tape Measure ${productCode(product)}` : product.family === "knife" ? `Utility Knife ${productCode(product)}` : product.name || `Screwdriver Set ${productCode(product)}`;
+  const familyLabel = (product) => product.family === "tape" ? "Tape Measure" : product.family === "knife" ? "Utility Knife" : "Screwdriver Set";
+  const escapeHtml = (value) => String(value || "").replace(/[&<>'"]/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[character]));
+
+  function visibleProducts() {
+    const term = searchInput.value.trim().toLowerCase();
+    return catalog.filter((product) => {
+      const searchable = `${product.code} ${productTitle(product)} ${product.specifications.map((item) => item.value).join(" ")}`.toLowerCase();
+      return (family === "all" || product.family === family) && (!term || searchable.includes(term));
+    });
+  }
+
+  function renderCatalog() {
+    const products = visibleProducts();
+    resultCount.textContent = `${products.length} models available`;
+    const searchActive = Boolean(searchInput.value.trim());
+    const families = family === "all" ? ["tape", "knife", "screwdriver"] : [family];
+    productGrid.innerHTML = families.map((activeFamily) => {
+      const group = products.filter((product) => product.family === activeFamily).sort((a, b) => (a.featuredOrder || 999) - (b.featuredOrder || 999) || a.code.localeCompare(b.code));
+      if (!group.length) return "";
+      const collapsed = !searchActive && !expandedFamilies.has(activeFamily) && group.length > 10;
+      const visibleGroup = collapsed ? group.slice(0, 10) : group;
+      const cards = visibleGroup.map((product) => {
+      const primarySpecification = product.specifications[0]?.value || "Specification on request";
+      const alreadySelected = selected.some((line) => line.product.code === product.code);
+      const thumbnailStyle = product.thumbnail
+        ? `style="--thumbnail-scale:${product.thumbnail.scale};--thumbnail-shift-x:${product.thumbnail.shiftX}%;--thumbnail-shift-y:${product.thumbnail.shiftY}%"`
+        : "";
+      return `<article class="catalog-quote-card catalog-quote-card--${escapeHtml(product.family)}">
+        <div class="catalog-quote-image"><img src="${escapeHtml(product.image)}" alt="${escapeHtml(productTitle(product))}" loading="lazy" width="500" height="500" ${thumbnailStyle} /></div>
+        <div class="catalog-quote-card-body">
+          <p class="catalog-model-family">${familyLabel(product)}</p>
+          <h3>${escapeHtml(productTitle(product))}</h3>
+          <p class="catalog-model-spec">${escapeHtml(primarySpecification)}${product.specifications.length > 1 ? ` + ${product.specifications.length - 1} option${product.specifications.length === 2 ? "" : "s"}` : ""}</p>
+          <button class="button button-secondary catalog-add-button" type="button" data-add="${escapeHtml(product.code)}">${alreadySelected ? "Add another option" : "Add to inquiry"}</button>
+        </div>
+      </article>`;
+      }).join("");
+      const label = activeFamily === "tape" ? "Tape Measures" : activeFamily === "knife" ? "Utility Knives" : "Screwdriver Sets";
+      const toggle = group.length > 10 && !searchActive ? `<button class="catalog-show-more" type="button" data-expand="${activeFamily}">${collapsed ? `Show all ${group.length} ${label}` : `Show fewer ${label}`}</button>` : "";
+      return `<section class="catalog-family-group"><div class="catalog-family-heading"><h3>${label}</h3><span>${group.length} models</span></div><div class="catalog-quote-grid">${cards}</div>${toggle}</section>`;
+    }).join("") || `<p class="catalog-no-results">No matching models found. Try another model code or specification.</p>`;
+  }
+
+  function updateSummary() {
+    const lines = selected;
+    selectedCount.textContent = String(lines.length);
+    emptyState.hidden = lines.length > 0;
+    summaryField.value = lines.map((line, index) => [
+      `${index + 1}. ${productTitle(line.product)}`,
+      `Specification: ${line.specification}`,
+      `Quantity: ${line.quantity || "To be confirmed"}`,
+      `Customization: ${line.customization || "To be confirmed"}`
+    ].join(" | ")).join("\n");
+    updateCrmPreview();
+  }
+
+  function hasValue(name) {
+    const field = form.elements.namedItem(name);
+    return field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement ? Boolean(field.value.trim()) : false;
+  }
+
+  function updateCrmPreview() {
+    if (!crmPreview) return;
+    let score = selected.length ? 20 : 0;
+    if (selected.some((line) => line.quantity.trim())) score += 20;
+    if (form.querySelector('[name="Need Custom Logo"]')?.checked) score += 10;
+    if (form.querySelector('[name="Need Custom Packaging"]')?.checked) score += 10;
+    if (form.querySelector('[name="Preview Files"]')?.files?.length) score += 25;
+    if (hasValue("Company")) score += 10;
+    if (hasValue("WhatsApp or Phone")) score += 10;
+    if (hasValue("Website")) score += 10;
+    if (form.querySelector('[name="Need Sample"]')?.checked) score += 10;
+    const grade = score >= 80 ? "A" : score >= 60 ? "B" : score >= 40 ? "C" : "D";
+    const tasks = ["First response within 24 hours"];
+    if (grade === "A") tasks.push("High-priority follow-up");
+    if (form.querySelector('[name="Need Sample"]')?.checked) tasks.push("Sample quotation");
+    if (form.querySelector('[name="Need Custom Logo"]')?.checked || form.querySelector('[name="Need Custom Packaging"]')?.checked) tasks.push("OEM specification review");
+    if (form.querySelector('[name="Preview Files"]')?.files?.length) tasks.push("File review");
+    document.querySelector("#crm-preview-output").textContent = `Lead score: ${score} · Grade ${grade} · Tasks: ${tasks.join("; ")}`;
+  }
+
+  function renderSelected() {
+    const lines = selected;
+    selectedLines.innerHTML = lines.map((line) => {
+      const options = line.product.specifications.map((item) => `<option value="${escapeHtml(item.value)}"${item.value === line.specification ? " selected" : ""}>${escapeHtml(item.value)}</option>`).join("");
+      return `<section class="catalog-rfq-line" data-line="${escapeHtml(line.id)}">
+        <div class="catalog-rfq-line-heading"><strong>${escapeHtml(productTitle(line.product))}</strong><button type="button" class="catalog-remove" data-remove="${escapeHtml(line.id)}" aria-label="Remove ${escapeHtml(productTitle(line.product))}">Remove</button></div>
+        <label>Specification<select data-field="specification">${options}</select></label>
+        <label>Estimated quantity<input data-field="quantity" type="text" value="${escapeHtml(line.quantity)}" placeholder="e.g. 1,000 pcs" /></label>
+        <label>Customization<input data-field="customization" type="text" value="${escapeHtml(line.customization)}" placeholder="Logo, color, packaging…" /></label>
+      </section>`;
+    }).join("");
+    updateSummary();
+  }
+
+  function addProduct(code) {
+    const product = catalog.find((item) => item.code === code);
+    if (!product) return;
+    selected.push({ id: `line-${++lineSequence}`, product, specification: product.specifications[0]?.value || "", quantity: "", customization: "" });
+    renderSelected();
+    renderCatalog();
+  }
+
+  productGrid.addEventListener("click", (event) => {
+    const expandButton = event.target.closest("[data-expand]");
+    if (expandButton) {
+      const targetFamily = expandButton.dataset.expand;
+      if (expandedFamilies.has(targetFamily)) expandedFamilies.delete(targetFamily);
+      else expandedFamilies.add(targetFamily);
+      renderCatalog();
+      return;
+    }
+    const button = event.target.closest("[data-add]");
+    if (button) addProduct(button.dataset.add);
+  });
+
+  selectedLines.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-remove]");
+    if (!button) return;
+    const index = selected.findIndex((line) => line.id === button.dataset.remove);
+    if (index >= 0) selected.splice(index, 1);
+    renderSelected();
+    renderCatalog();
+  });
+
+  selectedLines.addEventListener("input", (event) => {
+    const line = event.target.closest("[data-line]");
+    if (!line || !event.target.dataset.field) return;
+    const item = selected.find((entry) => entry.id === line.dataset.line);
+    if (!item) return;
+    item[event.target.dataset.field] = event.target.value;
+    updateSummary();
+  });
+
+  selectedLines.addEventListener("change", (event) => {
+    if (event.target.dataset.field === "specification") {
+      const line = event.target.closest("[data-line]");
+      const item = selected.find((entry) => entry.id === line?.dataset.line);
+      if (item) item.specification = event.target.value;
+      updateSummary();
+    }
+  });
+
+  filterButtons.forEach((button) => button.addEventListener("click", () => {
+    family = button.dataset.family;
+    filterButtons.forEach((item) => item.classList.toggle("is-active", item === button));
+    renderCatalog();
+  }));
+  searchInput.addEventListener("input", renderCatalog);
+
+  form.addEventListener("submit", (event) => {
+    updateSummary();
+    if (!selected.length) {
+      event.preventDefault();
+      formStatus.textContent = "Please add at least one product model before sending your inquiry.";
+      document.querySelector("#catalog-products")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    if (crmPreview) {
+      event.preventDefault();
+      formStatus.textContent = "Preview validated. A production submission will save this RFQ locally, then send it to CRM 3.0 without exposing CRM credentials in the browser.";
+      updateCrmPreview();
+    }
+  });
+
+  form.addEventListener("input", updateCrmPreview);
+  form.addEventListener("change", updateCrmPreview);
+
+  fetch("/catalog-quote-data.json")
+    .then((response) => response.ok ? response.json() : Promise.reject(new Error("Catalog unavailable")))
+    .then((data) => { catalog = data.products || []; renderCatalog(); renderSelected(); })
+    .catch(() => { resultCount.textContent = "Catalog is temporarily unavailable."; productGrid.innerHTML = "<p class=\"catalog-no-results\">Please use the contact page and tell us the product family you need.</p>"; });
+</script>

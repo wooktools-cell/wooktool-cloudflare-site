@@ -23,6 +23,7 @@ export const site = {
 export const navItems = [
   { label: "Home", href: "/" },
   { label: "Products", href: "/products/" },
+  { label: "Request a Quote", href: "/request-quote/" },
   { label: "Tape Measures", href: "/tape-measures/" },
   { label: "Utility Knives", href: "/utility-knives/" },
   { label: "Screwdriver Sets", href: "/screwdriver-sets/" },

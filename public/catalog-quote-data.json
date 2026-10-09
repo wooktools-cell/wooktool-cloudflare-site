@@ -1,0 +1,2096 @@
+{
+  "updated": "2026-10-04",
+  "categories": [
+    {
+      "id": "tape",
+      "label": "Tape Measures"
+    },
+    {
+      "id": "knife",
+      "label": "Utility Knives"
+    },
+    {
+      "id": "screwdriver",
+      "label": "Screwdriver Sets"
+    }
+  ],
+  "products": [
+    {
+      "family": "tape",
+      "code": "TM-1",
+      "image": "/images/catalog-quote/tape_measure_r003_c02_002.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "120pcs",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "120pcs",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "60pcs",
+          "cartonSize": ""
+        },
+        {
+          "value": "10m25mm",
+          "carton": "60pcs",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 0.955,
+        "shiftX": 7.049,
+        "shiftY": -0.682
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-10",
+      "image": "/images/catalog-quote/tape_measure_r039_c02_011.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 1.286,
+        "shiftX": 0.0,
+        "shiftY": -2.143
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-11",
+      "image": "/images/catalog-quote/tape_measure_r043_c02_012.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 1.14,
+        "shiftX": 0.814,
+        "shiftY": -1.086
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-12",
+      "image": "/images/catalog-quote/tape_measure_r047_c02_013.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 1.23,
+        "shiftX": 0.293,
+        "shiftY": 0.879
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-13",
+      "image": "/images/catalog-quote/tape_measure_r051_c02_014.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 0.977,
+        "shiftX": 8.142,
+        "shiftY": 2.326
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-14",
+      "image": "/images/catalog-quote/tape_measure_r055_c02_015.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 0.977,
+        "shiftX": 8.142,
+        "shiftY": -2.326
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-15",
+      "image": "/images/catalog-quote/tape_measure_r059_c02_016.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 0.859,
+        "shiftX": 1.023,
+        "shiftY": -4.295
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-16",
+      "image": "/images/catalog-quote/tape_measure_r063_c02_017.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 0.94,
+        "shiftX": 6.267,
+        "shiftY": -7.833
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-17",
+      "image": "/images/catalog-quote/tape_measure_r067_c02_018.jpg",
+      "specifications": [
+        {
+          "value": "3m16mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 1.336,
+        "shiftX": 5.726,
+        "shiftY": -2.227
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-18",
+      "image": "/images/catalog-quote/tape_measure_r071_c02_019.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "10m25mm",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 0.859,
+        "shiftX": 0.614,
+        "shiftY": -0.205
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-19",
+      "image": "/images/catalog-quote/tape_measure_r075_c02_020.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "10m25mm",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 0.895,
+        "shiftX": 0.639,
+        "shiftY": -1.065
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-2",
+      "image": "/images/catalog-quote/tape_measure_r007_c02_003.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "120pcs",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "120pcs",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "60pcs",
+          "cartonSize": ""
+        },
+        {
+          "value": "10m25mm",
+          "carton": "60pcs",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 1.204,
+        "shiftX": -2.293,
+        "shiftY": -2.58
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-20",
+      "image": "/images/catalog-quote/tape_measure_r079_c02_021.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "10m25mm",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 1.069,
+        "shiftX": 0.0,
+        "shiftY": 0.509
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-21",
+      "image": "/images/catalog-quote/tape_measure_r083_c02_022.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "10m25mm",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 1.188,
+        "shiftX": 0.566,
+        "shiftY": -4.526
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-22",
+      "image": "/images/catalog-quote/tape_measure_r087_c02_023.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "10m25mm",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 0.934,
+        "shiftX": 6.004,
+        "shiftY": 1.334
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-23",
+      "image": "/images/catalog-quote/tape_measure_r091_c02_024.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "10m25mm",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 0.972,
+        "shiftX": 8.1,
+        "shiftY": -6.943
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-24",
+      "image": "/images/catalog-quote/tape_measure_r095_c02_025.jpg",
+      "specifications": [
+        {
+          "value": "3m12mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 0.977,
+        "shiftX": 7.211,
+        "shiftY": 4.187
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-3",
+      "image": "/images/catalog-quote/tape_measure_r011_c02_004.jpg",
+      "specifications": [
+        {
+          "value": "3m16mm",
+          "carton": "120pcs",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "120pcs",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "60pcs",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 0.955,
+        "shiftX": 5.685,
+        "shiftY": -2.274
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-4",
+      "image": "/images/catalog-quote/tape_measure_r015_c02_005.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "120pcs",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "120pcs",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "60pcs",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 0.95,
+        "shiftX": 7.012,
+        "shiftY": -6.333
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-5",
+      "image": "/images/catalog-quote/tape_measure_r019_c02_006.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "120pcs",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "120pcs",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "60pcs",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 0.834,
+        "shiftX": -0.596,
+        "shiftY": 5.759
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-6",
+      "image": "/images/catalog-quote/tape_measure_r023_c02_007.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "120pcs",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "120pcs",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "60pcs",
+          "cartonSize": ""
+        },
+        {
+          "value": "10m25mm",
+          "carton": "60pcs",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 1.103,
+        "shiftX": 0.525,
+        "shiftY": -4.99
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-7",
+      "image": "/images/catalog-quote/tape_measure_r027_c02_008.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "120pcs",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "120pcs",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "60pcs",
+          "cartonSize": ""
+        },
+        {
+          "value": "10m25mm",
+          "carton": "60pcs",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 0.961,
+        "shiftX": 7.322,
+        "shiftY": 2.059
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-8",
+      "image": "/images/catalog-quote/tape_measure_r031_c02_009.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 0.988,
+        "shiftX": 8.704,
+        "shiftY": -0.235
+      }
+    },
+    {
+      "family": "tape",
+      "code": "TM-9",
+      "image": "/images/catalog-quote/tape_measure_r035_c02_010.jpg",
+      "specifications": [
+        {
+          "value": "3m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m19mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        },
+        {
+          "value": "7.5m25mm",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, shell color, metric/inch scale, OEM packaging",
+      "thumbnail": {
+        "scale": 0.94,
+        "shiftX": 4.476,
+        "shiftY": -0.224
+      }
+    },
+    {
+      "family": "knife",
+      "code": "UK-01",
+      "image": "/images/catalog-quote/utility_knife_r035_c01_030.jpg",
+      "specifications": [
+        {
+          "value": "66g",
+          "carton": "50/400PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-02",
+      "image": "/images/catalog-quote/utility_knife_r060_c01_080.jpg",
+      "specifications": [
+        {
+          "value": "35g",
+          "carton": "100/800PCS",
+          "cartonSize": "65*42*41"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-03",
+      "image": "/images/catalog-quote/utility_knife_r055_c01_072.jpg",
+      "specifications": [
+        {
+          "value": "82g",
+          "carton": "50/400PCS",
+          "cartonSize": "65*42*41"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-04",
+      "image": "/images/catalog-quote/utility_knife_r061_c01_086.jpg",
+      "specifications": [
+        {
+          "value": "81g",
+          "carton": "50/400PCS",
+          "cartonSize": "65*42*41"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-05",
+      "image": "/images/catalog-quote/utility_knife_r058_c01_077.jpg",
+      "specifications": [
+        {
+          "value": "67g",
+          "carton": "50/400PCS",
+          "cartonSize": "65*42*41"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
+      "displayCode": "WT-K05",
+      "featuredOrder": 5
+    },
+    {
+      "family": "knife",
+      "code": "UK-06",
+      "image": "/images/catalog-quote/utility_knife_r005_c01_003.jpg",
+      "specifications": [
+        {
+          "value": "83g",
+          "carton": "50/400PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-07",
+      "image": "/images/catalog-quote/utility_knife_r006_c01_005.jpg",
+      "specifications": [
+        {
+          "value": "85g",
+          "carton": "45/360PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-08",
+      "image": "/images/catalog-quote/utility_knife_r007_c01_006.jpg",
+      "specifications": [
+        {
+          "value": "54g",
+          "carton": "50/400PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
+      "displayCode": "WT-K08",
+      "featuredOrder": 4
+    },
+    {
+      "family": "knife",
+      "code": "UK-09",
+      "image": "/images/catalog-quote/utility_knife_r008_c01_008.jpg",
+      "specifications": [
+        {
+          "value": "55g",
+          "carton": "45/360PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-10",
+      "image": "/images/catalog-quote/utility_knife_r008_c01_008.jpg",
+      "specifications": [
+        {
+          "value": "43g",
+          "carton": "50/400PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-11",
+      "image": "/images/catalog-quote/utility_knife_r087_c01_064.jpg",
+      "specifications": [
+        {
+          "value": "133g",
+          "carton": "24/240PCS",
+          "cartonSize": "56*29*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
+      "displayCode": "WT-K11",
+      "featuredOrder": 3
+    },
+    {
+      "family": "knife",
+      "code": "UK-12",
+      "image": "/images/catalog-quote/utility_knife_r088_c01_065.jpg",
+      "specifications": [
+        {
+          "value": "103g",
+          "carton": "24/240PCS",
+          "cartonSize": "56*29*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-13",
+      "image": "/images/catalog-quote/utility_knife_r088_c01_065.jpg",
+      "specifications": [
+        {
+          "value": "118g",
+          "carton": "50/300pcs",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
+      "displayCode": "WT-K13",
+      "featuredOrder": 2
+    },
+    {
+      "family": "knife",
+      "code": "UK-14",
+      "image": "/images/catalog-quote/utility_knife_r003_c01_002.jpg",
+      "specifications": [
+        {
+          "value": "75g",
+          "carton": "50/400PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-15",
+      "image": "/images/catalog-quote/utility_knife_r003_c01_002.jpg",
+      "specifications": [
+        {
+          "value": "76g",
+          "carton": "45/360PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
+      "displayCode": "WT-K15",
+      "featuredOrder": 6
+    },
+    {
+      "family": "knife",
+      "code": "UK-16",
+      "image": "/images/catalog-quote/utility_knife_r043_c01_039.jpg",
+      "specifications": [
+        {
+          "value": "67g",
+          "carton": "50/400PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-17",
+      "image": "/images/catalog-quote/utility_knife_r056_c01_074.jpg",
+      "specifications": [
+        {
+          "value": "62g",
+          "carton": "50/400PCS",
+          "cartonSize": "65*42*41"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-18",
+      "image": "/images/catalog-quote/utility_knife_r059_c01_078.jpg",
+      "specifications": [
+        {
+          "value": "61g",
+          "carton": "50/400PCS",
+          "cartonSize": "65*42*41"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-19",
+      "image": "/images/catalog-quote/utility_knife_r053_c01_070.jpg",
+      "specifications": [
+        {
+          "value": "58g",
+          "carton": "50/400PCS",
+          "cartonSize": "65*42*41"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-20",
+      "image": "/images/catalog-quote/utility_knife_r084_c01_061.jpg",
+      "specifications": [
+        {
+          "value": "84g",
+          "carton": "24/240PCS",
+          "cartonSize": "56*29*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-21",
+      "image": "/images/catalog-quote/utility_knife_r010_c01_009.jpg",
+      "specifications": [
+        {
+          "value": "50g",
+          "carton": "50/400PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-22",
+      "image": "/images/catalog-quote/utility_knife_r069_c01_079.jpg",
+      "specifications": [
+        {
+          "value": "72g",
+          "carton": "24/240PCS",
+          "cartonSize": "56*29*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-23",
+      "image": "/images/catalog-quote/utility_knife_r053_c01_070.jpg",
+      "specifications": [
+        {
+          "value": "76g",
+          "carton": "50/400PCS",
+          "cartonSize": "65*42*41"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
+      "displayCode": "WT-K23",
+      "featuredOrder": 7
+    },
+    {
+      "family": "knife",
+      "code": "UK-24",
+      "image": "/images/catalog-quote/utility_knife_r038_c01_034.jpg",
+      "specifications": [
+        {
+          "value": "",
+          "carton": "50/400PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-25",
+      "image": "/images/catalog-quote/utility_knife_r042_c01_038.jpg",
+      "specifications": [
+        {
+          "value": "",
+          "carton": "50/400PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-26",
+      "image": "/images/catalog-quote/utility_knife_r044_c01_040.jpg",
+      "specifications": [
+        {
+          "value": "63g",
+          "carton": "50/400PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-27",
+      "image": "/images/catalog-quote/utility_knife_r012_c01_011.jpg",
+      "specifications": [
+        {
+          "value": "37g",
+          "carton": "60/480PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-28",
+      "image": "/images/catalog-quote/utility_knife_r056_c01_074.jpg",
+      "specifications": [
+        {
+          "value": "74g",
+          "carton": "50/400PCS",
+          "cartonSize": "65*42*41"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-29",
+      "image": "/images/catalog-quote/utility_knife_r070_c01_076.jpg",
+      "specifications": [
+        {
+          "value": "82g",
+          "carton": "24/240PCS",
+          "cartonSize": "56*29*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-30",
+      "image": "/images/catalog-quote/utility_knife_r010_c01_009.jpg",
+      "specifications": [
+        {
+          "value": "31g",
+          "carton": "60/480PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-31",
+      "image": "/images/catalog-quote/utility_knife_r063_c01_088.jpg",
+      "specifications": [
+        {
+          "value": "92g",
+          "carton": "50/300pcs",
+          "cartonSize": "63*34*39"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-32",
+      "image": "/images/catalog-quote/utility_knife_r048_c01_043.jpg",
+      "specifications": [
+        {
+          "value": "23g",
+          "carton": "125/1000PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-33",
+      "image": "/images/catalog-quote/utility_knife_r050_c01_046.jpg",
+      "specifications": [
+        {
+          "value": "34g",
+          "carton": "100/800PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
+      "displayCode": "9MM286",
+      "featuredOrder": 10
+    },
+    {
+      "family": "knife",
+      "code": "UK-34",
+      "image": "/images/catalog-quote/utility_knife_r050_c01_046.jpg",
+      "specifications": [
+        {
+          "value": "28g",
+          "carton": "150/1200PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-35",
+      "image": "/images/catalog-quote/utility_knife_r061_c01_086.jpg",
+      "specifications": [
+        {
+          "value": "50g",
+          "carton": "125/750pcs",
+          "cartonSize": "63*34*39"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-36",
+      "image": "/images/catalog-quote/utility_knife_r049_c01_045.jpg",
+      "specifications": [
+        {
+          "value": "16g",
+          "carton": "150/1200PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-37",
+      "image": "/images/catalog-quote/utility_knife_r072_c01_048.jpg",
+      "specifications": [
+        {
+          "value": "140g",
+          "carton": "24/240PCS",
+          "cartonSize": "56*29*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-38",
+      "image": "/images/catalog-quote/utility_knife_r067_c01_082.jpg",
+      "specifications": [
+        {
+          "value": "125g",
+          "carton": "24/288pcs",
+          "cartonSize": "82*41*52"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-39",
+      "image": "/images/catalog-quote/utility_knife_r066_c01_083.jpg",
+      "specifications": [
+        {
+          "value": "106g",
+          "carton": "30/240PCS",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-40",
+      "image": "/images/catalog-quote/utility_knife_r074_c01_050.jpg",
+      "specifications": [
+        {
+          "value": "123g",
+          "carton": "24/240PCS",
+          "cartonSize": "56*29*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-41",
+      "image": "/images/catalog-quote/utility_knife_r075_c01_052.jpg",
+      "specifications": [
+        {
+          "value": "70g",
+          "carton": "24/240PCS",
+          "cartonSize": "56*29*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-42",
+      "image": "/images/catalog-quote/utility_knife_r032_c01_068.jpg",
+      "specifications": [
+        {
+          "value": "103g",
+          "carton": "12/240PCS",
+          "cartonSize": "62*45*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-43",
+      "image": "/images/catalog-quote/utility_knife_r040_c01_036.jpg",
+      "specifications": [
+        {
+          "value": "61g",
+          "carton": "50/400PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-44",
+      "image": "/images/catalog-quote/utility_knife_r085_c01_062.jpg",
+      "specifications": [
+        {
+          "value": "83g",
+          "carton": "24/240PCS",
+          "cartonSize": "56*29*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-45",
+      "image": "/images/catalog-quote/utility_knife_r030_c01_067.jpg",
+      "specifications": [
+        {
+          "value": "150g",
+          "carton": "12/180PCS",
+          "cartonSize": "73*24*66"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-46",
+      "image": "/images/catalog-quote/utility_knife_r064_c01_084.jpg",
+      "specifications": [
+        {
+          "value": "30g",
+          "carton": "24/240PCS",
+          "cartonSize": "63*33*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-47",
+      "image": "/images/catalog-quote/utility_knife_r052_c01_047.jpg",
+      "specifications": [
+        {
+          "value": "44g",
+          "carton": "125/600PCS",
+          "cartonSize": "43*34*40CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-48",
+      "image": "/images/catalog-quote/utility_knife_r079_c01_055.jpg",
+      "specifications": [
+        {
+          "value": "95g",
+          "carton": "24/240PCS",
+          "cartonSize": "56*29*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-49",
+      "image": "/images/catalog-quote/utility_knife_r046_c01_041.jpg",
+      "specifications": [
+        {
+          "value": "70g",
+          "carton": "50/400PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-50",
+      "image": "/images/catalog-quote/utility_knife_r041_c01_037.jpg",
+      "specifications": [
+        {
+          "value": "95g",
+          "carton": "50/300pcs",
+          "cartonSize": "63*34*39"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-51",
+      "image": "/images/catalog-quote/utility_knife_r083_c01_060.jpg",
+      "specifications": [
+        {
+          "value": "109g",
+          "carton": "24/240PCS",
+          "cartonSize": "56*29*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-52",
+      "image": "/images/catalog-quote/utility_knife_r080_c01_057.jpg",
+      "specifications": [
+        {
+          "value": "87g",
+          "carton": "24/240PCS",
+          "cartonSize": "56*29*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-53",
+      "image": "/images/catalog-quote/utility_knife_r037_c01_033.jpg",
+      "specifications": [
+        {
+          "value": "105g",
+          "carton": "50/400PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-54",
+      "image": "/images/catalog-quote/utility_knife_r068_c01_081.jpg",
+      "specifications": [
+        {
+          "value": "90g",
+          "carton": "24/288pcs",
+          "cartonSize": "82*41*52"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
+      "displayCode": "WT-K54",
+      "featuredOrder": 1
+    },
+    {
+      "family": "knife",
+      "code": "UK-55",
+      "image": "/images/catalog-quote/utility_knife_r065_c01_085.jpg",
+      "specifications": [
+        {
+          "value": "53g",
+          "carton": "30/240PCS",
+          "cartonSize": "65*42*41"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-56",
+      "image": "/images/catalog-quote/utility_knife_r082_c01_059.jpg",
+      "specifications": [
+        {
+          "value": "81g",
+          "carton": "24/240PCS",
+          "cartonSize": "56*29*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-57",
+      "image": "/images/catalog-quote/utility_knife_r081_c01_058.jpg",
+      "specifications": [
+        {
+          "value": "83g",
+          "carton": "24/240PCS",
+          "cartonSize": "56*29*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-58",
+      "image": "/images/catalog-quote/utility_knife_r071_c01_075.jpg",
+      "specifications": [
+        {
+          "value": "87g",
+          "carton": "24/240PCS",
+          "cartonSize": "56*29*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-59",
+      "image": "/images/catalog-quote/utility_knife_r032_c01_068.jpg",
+      "specifications": [
+        {
+          "value": "59g",
+          "carton": "12/240PCS",
+          "cartonSize": "54*40*47"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-60",
+      "image": "/images/catalog-quote/utility_knife_r072_c01_048.jpg",
+      "specifications": [
+        {
+          "value": "125g",
+          "carton": "24/240PCS",
+          "cartonSize": "56*29*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-61",
+      "image": "/images/catalog-quote/utility_knife_r047_c01_042.jpg",
+      "specifications": [
+        {
+          "value": "69g",
+          "carton": "50/400PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-62",
+      "image": "/images/catalog-quote/utility_knife_r039_c01_035.jpg",
+      "specifications": [
+        {
+          "value": "77g",
+          "carton": "50/400PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-63",
+      "image": "/images/catalog-quote/utility_knife_r044_c01_040.jpg",
+      "specifications": [
+        {
+          "value": "110g",
+          "carton": "50/400PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-64",
+      "image": "/images/catalog-quote/utility_knife_r036_c01_032.jpg",
+      "specifications": [
+        {
+          "value": "96g",
+          "carton": "50/400PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-65",
+      "image": "/images/catalog-quote/utility_knife_r077_c01_054.jpg",
+      "specifications": [
+        {
+          "value": "85g",
+          "carton": "24/240PCS",
+          "cartonSize": "56*29*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-66",
+      "image": "/images/catalog-quote/utility_knife_r086_c01_063.jpg",
+      "specifications": [
+        {
+          "value": "94g",
+          "carton": "24/240PCS",
+          "cartonSize": "56*29*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-67",
+      "image": "/images/catalog-quote/utility_knife_r030_c01_067.jpg",
+      "specifications": [
+        {
+          "value": "93g",
+          "carton": "12/240PCS",
+          "cartonSize": "54*40*47"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-68",
+      "image": "/images/catalog-quote/utility_knife_r027_c01_026.jpg",
+      "specifications": [
+        {
+          "value": "75g",
+          "carton": "12/240PCS",
+          "cartonSize": "54*40*47"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-69",
+      "image": "/images/catalog-quote/utility_knife_r029_c01_028.jpg",
+      "specifications": [
+        {
+          "value": "112g",
+          "carton": "12/240PCS",
+          "cartonSize": "54*40*47"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-70",
+      "image": "/images/catalog-quote/utility_knife_r028_c01_027.jpg",
+      "specifications": [
+        {
+          "value": "59g",
+          "carton": "12/240PCS",
+          "cartonSize": "54*40*47"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-71",
+      "image": "/images/catalog-quote/utility_knife_r076_c01_053.jpg",
+      "specifications": [
+        {
+          "value": "113g",
+          "carton": "24/240PCS",
+          "cartonSize": "56*29*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-72",
+      "image": "/images/catalog-quote/utility_knife_r077_c01_054.jpg",
+      "specifications": [
+        {
+          "value": "119g",
+          "carton": "24/240PCS",
+          "cartonSize": "56*29*46"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-73",
+      "image": "/images/catalog-quote/utility_knife_r015_c01_014.jpg",
+      "specifications": [
+        {
+          "value": "96g",
+          "carton": "40/240PCS",
+          "cartonSize": "63*34*39"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-74",
+      "image": "/images/catalog-quote/utility_knife_r016_c01_016.jpg",
+      "specifications": [
+        {
+          "value": "98g",
+          "carton": "40/240PCS",
+          "cartonSize": "63*34*39"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-75",
+      "image": "/images/catalog-quote/utility_knife_r016_c01_016.jpg",
+      "specifications": [
+        {
+          "value": "73g",
+          "carton": "40/240PCS",
+          "cartonSize": "63*34*39"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
+      "displayCode": "AD223",
+      "featuredOrder": 8
+    },
+    {
+      "family": "knife",
+      "code": "UK-76",
+      "image": "/images/catalog-quote/utility_knife_r019_c01_017.jpg",
+      "specifications": [
+        {
+          "value": "63g",
+          "carton": "40/240PCS",
+          "cartonSize": "63*34*39"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-77",
+      "image": "/images/catalog-quote/utility_knife_r013_c01_013.jpg",
+      "specifications": [
+        {
+          "value": "95g",
+          "carton": "40/240PCS",
+          "cartonSize": "63*34*39"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-78",
+      "image": "/images/catalog-quote/utility_knife_r013_c01_013.jpg",
+      "specifications": [
+        {
+          "value": "96g",
+          "carton": "40/240PCS",
+          "cartonSize": "63*34*39"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-79",
+      "image": "/images/catalog-quote/utility_knife_r018_c01_066.jpg",
+      "specifications": [
+        {
+          "value": "78g",
+          "carton": "40/240PCS",
+          "cartonSize": "63*34*39"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-80",
+      "image": "/images/catalog-quote/utility_knife_r020_c01_018.jpg",
+      "specifications": [
+        {
+          "value": "73g",
+          "carton": "40/240PCS",
+          "cartonSize": "63*34*39"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-81",
+      "image": "/images/catalog-quote/utility_knife_r022_c01_007.jpg",
+      "specifications": [
+        {
+          "value": "56g",
+          "carton": "50/300pcs",
+          "cartonSize": "63*34*39"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-82",
+      "image": "/images/catalog-quote/utility_knife_r021_c01_020.jpg",
+      "specifications": [
+        {
+          "value": "51g",
+          "carton": "50/300pcs",
+          "cartonSize": "63*34*39"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
+      "displayCode": "AD87",
+      "featuredOrder": 9
+    },
+    {
+      "family": "knife",
+      "code": "UK-83",
+      "image": "/images/catalog-quote/utility_knife_r023_c01_022.jpg",
+      "specifications": [
+        {
+          "value": "40g",
+          "carton": "50/300pcs",
+          "cartonSize": "63*34*39"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-84",
+      "image": "/images/catalog-quote/utility_knife_r025_c01_024.jpg",
+      "specifications": [
+        {
+          "value": "46g",
+          "carton": "40/240PCS",
+          "cartonSize": "63*34*39"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-85",
+      "image": "/images/catalog-quote/utility_knife_r024_c01_023.jpg",
+      "specifications": [
+        {
+          "value": "102g",
+          "carton": "40/240PCS",
+          "cartonSize": "63*34*39"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-86",
+      "image": "/images/catalog-quote/utility_knife_r026_c01_025.jpg",
+      "specifications": [
+        {
+          "value": "83g",
+          "carton": "30/240PCS",
+          "cartonSize": "76*47*35"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "knife",
+      "code": "UK-87",
+      "image": "/images/catalog-quote/utility_knife_r034_c01_029.jpg",
+      "specifications": [
+        {
+          "value": "90g",
+          "carton": "50/400PCS",
+          "cartonSize": "66*42*41CM"
+        }
+      ],
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+    },
+    {
+      "family": "screwdriver",
+      "code": "SD-01",
+      "name": "Standard Chrome Vanadium Screwdriver Set",
+      "image": "/images/products/catalog/screwdriver-set-main.webp",
+      "specifications": [
+        {
+          "value": "4-piece: 6x105mm, 6x130mm, 6x150mm, 8x200mm",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Logo, handle color, bit configuration, case layout and retail packaging"
+    },
+    {
+      "family": "screwdriver",
+      "code": "SD-02",
+      "name": "Household Screwdriver Set",
+      "image": "/images/products/catalog/household-screwdriver-set-main.webp",
+      "specifications": [
+        {
+          "value": "Household repair configuration",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Logo, handle color, bit configuration, case layout and retail packaging"
+    },
+    {
+      "family": "screwdriver",
+      "code": "SD-03",
+      "name": "Multi-Bit Screwdriver Set",
+      "image": "/images/products/catalog/multi-bit-screwdriver-set-main.webp",
+      "specifications": [
+        {
+          "value": "Multi-bit handle and selected bits",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Logo, handle color, bit configuration, case layout and retail packaging"
+    },
+    {
+      "family": "screwdriver",
+      "code": "SD-04",
+      "name": "Ratchet Screwdriver Set",
+      "image": "/images/products/catalog/ratchet-screwdriver-set-main.webp",
+      "specifications": [
+        {
+          "value": "Ratchet handle and bit assortment",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Logo, handle color, bit configuration, case layout and retail packaging"
+    },
+    {
+      "family": "screwdriver",
+      "code": "SD-05",
+      "name": "Custom Screwdriver Set",
+      "image": "/images/products/catalog/custom-screwdriver-set-main.jpg",
+      "specifications": [
+        {
+          "value": "Custom bit, handle, case and packaging",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Logo, handle color, bit configuration, case layout and retail packaging"
+    },
+    {
+      "family": "screwdriver",
+      "code": "SD-06",
+      "name": "Private Label Screwdriver Set",
+      "image": "/images/products/catalog/private-label-screwdriver-set-main.jpg",
+      "specifications": [
+        {
+          "value": "Private label set and retail packaging",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Logo, handle color, bit configuration, case layout and retail packaging"
+    }
+  ]
+}

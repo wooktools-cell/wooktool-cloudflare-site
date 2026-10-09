@@ -7,6 +7,8 @@ const staticPaths = [
   "/",
   "/about/",
   "/products/",
+  "/product-catalog-quote-builder/",
+  "/request-quote/",
   "/tape-measures/",
   "/custom-tape-measure/",
   "/utility-knives/",
