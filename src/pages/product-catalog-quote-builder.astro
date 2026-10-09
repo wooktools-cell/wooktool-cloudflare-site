@@ -1,23 +1,43 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import GeoAnswerBlock from "../components/GeoAnswerBlock.astro";
 import { site } from "../siteData.js";
-import { breadcrumbSchema, productCollectionSchema } from "../schema.js";
+import { breadcrumbSchema, faqSchema, productCollectionSchema } from "../schema.js";
 
 const isCrmPreview = Astro.url.pathname === "/request-quote/";
 const path = isCrmPreview ? "/request-quote/" : "/product-catalog-quote-builder/";
-const title = isCrmPreview ? "Select Hand Tool Models and Request a Factory Quote | wooktools" : "Product Selector & Multi-Model RFQ | WOOKTOOL";
-const description = "Select WOOKTOOL tape measure and utility knife models, add specifications, quantities and OEM requirements, then send one organized multi-model RFQ.";
+const title = isCrmPreview ? "Hand Tool RFQ | Tape Measures, Utility Knives & Screwdriver Sets | WOOKTOOL" : "Product Selector & Multi-Model RFQ | WOOKTOOL";
+const description = "Request a factory quote for WOOKTOOL tape measures, utility knives and screwdriver sets. Select models, add specifications, quantities, custom logo and private-label packaging requirements in one B2B RFQ.";
+const rfqFaq = [
+  {
+    question: "How do I request a quote for multiple hand tool models?",
+    answer: "Select each tape measure, utility knife or screwdriver set you need, then add the specification, quantity and customization request for every line. Submit the completed RFQ so the factory can review the full project together."
+  },
+  {
+    question: "What customization can I request for tape measures and utility knives?",
+    answer: "Depending on the model, buyers can discuss logo printing, shell or handle color, metric or inch scale, blade or hook configuration, retail packaging, barcode labels and carton marks. Final feasibility and MOQ are confirmed after review."
+  },
+  {
+    question: "What information helps a hand tool manufacturer quote faster?",
+    answer: "Include your preferred model, specification, order quantity, destination market, logo or artwork, packaging direction, required compliance documents and expected delivery date."
+  },
+  {
+    question: "Can I add the same model with different specifications?",
+    answer: "Yes. Add the model again and create a separate line for each length, blade width, configuration or customization option you want quoted."
+  }
+];
 const schema = [
   breadcrumbSchema([
     { name: "Home", path: "/" },
     { name: isCrmPreview ? "Request a Quote" : "Product Selector", path }
   ]),
   productCollectionSchema({
-    name: "WOOKTOOL Product Selector & RFQ Builder",
+    name: "WOOKTOOL Hand Tool RFQ: Tape Measures, Utility Knives and Screwdriver Sets",
     description,
     path,
     image: "/images/products/category-tape-measures.png"
-  })
+  }),
+  faqSchema(rfqFaq)
 ];
 ---
 
@@ -110,6 +130,39 @@ const schema = [
         <li>Logo, color, scale, blade, packaging or label requirements</li>
         <li>Any required test reports, compliance documents or delivery timing</li>
       </ul>
+    </div>
+  </section>
+
+  <GeoAnswerBlock
+    eyebrow="AI sourcing summary"
+    title="How to send a clear OEM hand tool RFQ"
+    answer="WOOKTOOL supports global B2B buyers sourcing tape measures, utility knives and screwdriver sets from China. Use this multi-model RFQ page to organize model selections, specifications, quantities and private-label requirements before factory review."
+    points={[
+      { label: "Choose product models", text: "Compare available tape measure, utility knife and screwdriver set models in one catalog." },
+      { label: "Define the specification", text: "State the length, blade width, set configuration or other model-specific option required for each line." },
+      { label: "Add private-label needs", text: "Include logo, color, packaging, barcode, carton mark, target market and order quantity for a more accurate quote." }
+    ]}
+    links={[
+      { label: "Tape measure manufacturer", href: "/tape-measures/" },
+      { label: "Utility knife manufacturer", href: "/utility-knives/" },
+      { label: "Screwdriver set supplier", href: "/screwdriver-sets/" },
+      { label: "OEM & private label services", href: "/oem-odm/" },
+      { label: "Hand tool quality control", href: "/quality-control/" }
+    ]}
+  />
+
+  <section class="section" aria-labelledby="rfq-faq-title">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">RFQ questions</p>
+          <h2 id="rfq-faq-title">Hand tool quotation FAQ</h2>
+        </div>
+        <p>Useful details for importers, distributors and private-label tool buyers preparing a factory inquiry.</p>
+      </div>
+      <div class="faq-list">
+        {rfqFaq.map((item) => <article class="faq-item"><h3>{item.question}</h3><p>{item.answer}</p></article>)}
+      </div>
     </div>
   </section>
 </BaseLayout>
