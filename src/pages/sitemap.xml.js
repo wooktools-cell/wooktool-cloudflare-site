@@ -1,13 +1,12 @@
 import { catalogPages, productRoutes, site } from "../siteData.js";
 import { cmsBlogPosts } from "../blogData.js";
 
-const lastModified = "2026-09-01";
+const lastModified = "2026-10-12";
 
 const staticPaths = [
   "/",
   "/about/",
   "/products/",
-  "/product-catalog-quote-builder/",
   "/request-quote/",
   "/tape-measures/",
   "/custom-tape-measure/",
@@ -49,7 +48,7 @@ const pageSignals = (path) => {
     return { priority: "1.0", changefreq: "weekly", lastmod: lastModified };
   }
 
-  if (["/products/", "/tape-measures/", "/custom-tape-measure/", "/utility-knives/", "/screwdriver-sets/", "/oem-odm/", "/quality-control/", "/factory/", "/contact/", "/buyer-guides/", "/blog/"].includes(path)) {
+  if (["/products/", "/request-quote/", "/tape-measures/", "/custom-tape-measure/", "/utility-knives/", "/screwdriver-sets/", "/oem-odm/", "/quality-control/", "/factory/", "/contact/", "/buyer-guides/", "/blog/"].includes(path)) {
     return { priority: "0.9", changefreq: "weekly", lastmod: lastModified };
   }
 

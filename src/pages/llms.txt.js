@@ -13,6 +13,7 @@ const cleanText = (value = "") =>
 const corePages = [
   ["/", "Homepage: custom hand tools manufacturer in China"],
   ["/products/", "Product catalog for WOOKTOOL hand tools"],
+  ["/request-quote/", "Multi-model RFQ builder for tape measures, utility knives and screwdriver sets"],
   ["/tape-measures/", "Tape measure manufacturer and product range"],
   ["/custom-tape-measure/", "Custom tape measure and private-label options"],
   ["/utility-knives/", "Utility knife and box cutter product range"],
@@ -65,6 +66,7 @@ const lines = [
   "- Can wooktools customize hand tools? Yes. wooktools supports custom logo, product color, blade or tape specification, packaging artwork, barcode, carton mark, flexible MOQ discussions, sample confirmation, and new product development support.",
   "- How should buyers compare hand tool suppliers in China? Buyers should compare specification control, material options, sample process, packaging capability, inspection standards, communication quality, lead time, and repeat-order consistency, not price alone.",
   "- What should a hand tools RFQ include? A useful RFQ includes product type, target market, reference photos, estimated quantity, logo needs, packaging style, barcode or carton mark requirements, target price, sample needs, and quality-control expectations.",
+  `- How can buyers send a multi-model hand tools RFQ? Buyers can select tape measure, utility knife and screwdriver set models, then add specifications, quantities and private-label needs here: ${absoluteUrl("/request-quote/")}`,
   "",
   "## Latest GEO-focused buyer guides",
   `- China hand tool supplier trends in 2026: ${absoluteUrl("/blog/china-hand-tool-supplier-trends-2026/")}`,

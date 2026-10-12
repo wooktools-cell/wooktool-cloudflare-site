@@ -5,12 +5,13 @@ const {
   title,
   description,
   path = "/",
+  canonicalPath,
   image = "/images/hero/wooktool-hero-desktop.webp",
   type = "website",
   schema
 } = Astro.props;
 
-const canonical = new URL(path, site.domain).toString();
+const canonical = new URL(canonicalPath || path, site.domain).toString();
 const ogImage = new URL(image, site.domain).toString();
 const webPageSchema = {
   "@context": "https://schema.org",
