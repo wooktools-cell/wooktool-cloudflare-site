@@ -894,7 +894,9 @@
           "cartonSize": "65*42*41"
         }
       ],
-      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
+      "displayCode": "WT-K23",
+      "featuredOrder": 7
     },
     {
       "family": "knife",
@@ -920,9 +922,7 @@
           "cartonSize": "65*42*41"
         }
       ],
-      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
-      "displayCode": "WT-K05",
-      "featuredOrder": 5
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
     },
     {
       "family": "knife",
@@ -961,9 +961,7 @@
           "cartonSize": "66*42*41CM"
         }
       ],
-      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
-      "displayCode": "WT-K08",
-      "featuredOrder": 4
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
     },
     {
       "family": "knife",
@@ -1002,9 +1000,7 @@
           "cartonSize": "56*29*46"
         }
       ],
-      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
-      "displayCode": "WT-K11",
-      "featuredOrder": 3
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
     },
     {
       "family": "knife",
@@ -1030,9 +1026,7 @@
           "cartonSize": ""
         }
       ],
-      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
-      "displayCode": "WT-K13",
-      "featuredOrder": 2
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
     },
     {
       "family": "knife",
@@ -1058,9 +1052,7 @@
           "cartonSize": "66*42*41CM"
         }
       ],
-      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
-      "displayCode": "WT-K15",
-      "featuredOrder": 6
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
     },
     {
       "family": "knife",
@@ -1164,9 +1156,7 @@
           "cartonSize": "65*42*41"
         }
       ],
-      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
-      "displayCode": "WT-K23",
-      "featuredOrder": 7
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
     },
     {
       "family": "knife",
@@ -1454,7 +1444,9 @@
           "cartonSize": "73*24*66"
         }
       ],
-      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
+      "displayCode": "WT-K08",
+      "featuredOrder": 4
     },
     {
       "family": "knife",
@@ -1519,7 +1511,9 @@
           "cartonSize": "63*34*39"
         }
       ],
-      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
+      "displayCode": "WT-K15",
+      "featuredOrder": 6
     },
     {
       "family": "knife",
@@ -1571,9 +1565,7 @@
           "cartonSize": "82*41*52"
         }
       ],
-      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
-      "displayCode": "WT-K54",
-      "featuredOrder": 1
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
     },
     {
       "family": "knife",
@@ -1677,7 +1669,9 @@
           "cartonSize": "66*42*41CM"
         }
       ],
-      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
+      "displayCode": "WT-K13",
+      "featuredOrder": 2
     },
     {
       "family": "knife",
@@ -1703,7 +1697,9 @@
           "cartonSize": "66*42*41CM"
         }
       ],
-      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
+      "displayCode": "WT-K11",
+      "featuredOrder": 3
     },
     {
       "family": "knife",
@@ -1729,7 +1725,9 @@
           "cartonSize": "56*29*46"
         }
       ],
-      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
+      "displayCode": "WT-K54",
+      "featuredOrder": 1
     },
     {
       "family": "knife",
@@ -1781,7 +1779,9 @@
           "cartonSize": "54*40*47"
         }
       ],
-      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ"
+      "customization": "OEM color, private label logo, blister/card packaging, flexible MOQ",
+      "displayCode": "WT-K05",
+      "featuredOrder": 5
     },
     {
       "family": "knife",
