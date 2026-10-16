@@ -39,5 +39,7 @@
     "trapezoid blade utility knife",
     "OEM folding utility knife",
     "private label folding cutter"
-  ]
+  ],
+  "introduction": ["WOOKTOOL aluminum folding utility knives are for hardware, electrician-tool, DIY and private-label programs that need a compact folding cutter with a trapezoid blade format. Buyers should review the folding and locking structure, blade replacement direction and intended sales channel before sampling.", "Share the preferred branding, body color, quantity, blade-pack requirement, retail package and market so the factory can review a practical product and QC plan."],
+  "faq": [{"question":"What should buyers confirm for a folding utility knife?","answer":"Confirm the folding and self-locking behavior, blade format, body finish, logo, package and intended application before approving a sample."},{"question":"Can the aluminum body be branded?","answer":"Logo marking, body color direction, packaging artwork, barcode and carton mark requirements can be reviewed."},{"question":"Can replacement blades be included?","answer":"Blade-pack quantity and packaging can be specified as part of the product configuration."},{"question":"What quality checks are relevant?","answer":"Typical checks include folding-joint function, self-locking behavior, blade fit, body finish, screw assembly and finished packaging."}]
 }

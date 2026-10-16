@@ -39,5 +39,7 @@
     "quick change utility knife",
     "SK5 blade box cutter",
     "OEM heavy duty utility knife"
-  ]
+  ],
+  "introduction": ["WOOKTOOL industrial heavy duty box cutters serve warehouse, construction, hardware and private-label programs that require a zinc alloy body and quick-change blade direction. Buyers can review the blade option, lock function and packaging around their intended operating environment.", "A useful inquiry includes the target use case, blade requirement, quantity, market, logo file and packaging brief. This lets the factory prepare an appropriate sample and confirm inspection of quick-change function, blade fit and body finish."],
+  "faq": [{"question":"What is a quick-change utility knife?","answer":"A quick-change structure is intended to make blade replacement more efficient; confirm the selected mechanism and blade format with the supplier."},{"question":"Can the industrial box cutter use an OEM logo?","answer":"Logo marking, body color, blade-pack, packaging artwork and barcode requirements can be reviewed."},{"question":"Which blade options can be discussed?","answer":"The page lists a trapezoid blade with SK5 or selected blade option; confirm the required blade specification in the RFQ."},{"question":"What quality checks matter?","answer":"Inspection can cover quick-change function, blade fit and sharpness, lock behavior, zinc alloy body finish, packing and replacement blade quantity."}]
 }

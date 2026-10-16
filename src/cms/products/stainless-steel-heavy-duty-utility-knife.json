@@ -39,5 +39,7 @@
     "industrial utility knife manufacturer",
     "OEM stainless steel cutter",
     "private label utility knife"
-  ]
+  ],
+  "introduction": ["WOOKTOOL stainless steel heavy duty utility knives suit industrial, warehouse and hardware programs that prefer an all-steel body and trapezoid blade format. Buyers can define the product around the intended cutting task, retail presentation and private-label requirements.", "For a detailed quote, provide the expected quantity, target market, logo or label direction, blade-pack requirement and packaging reference. This supports sample planning and inspection of blade fit, welded structure and finished packaging."],
+  "faq": [{"question":"What applications suit a stainless steel utility knife?","answer":"It can be considered for carton opening, warehouse, hardware and industrial cutting programs; buyers should confirm the target material and user requirements."},{"question":"Can the steel body carry a logo?","answer":"Logo marking, retail labels, barcode and carton marks can be reviewed for private-label projects."},{"question":"What should be checked before bulk ordering?","answer":"Confirm blade fit, body and rivet finish, welded structure, blade-pack requirement, packaging and target market labeling."},{"question":"Can retail packaging be supplied?","answer":"Blister cards, color boxes, hanging cards, bulk packs and export cartons can be reviewed."}]
 }
