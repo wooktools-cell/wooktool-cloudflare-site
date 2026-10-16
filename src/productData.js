@@ -1,4 +1,5 @@
 import { categorySeoDefaults, productSeoEnhancements } from "./productSeoEnhancements.js";
+import { productApplicationProfiles } from "./productApplicationProfiles.js";
 
 const productModules = import.meta.glob("./cms/products/*.json", { eager: true });
 
@@ -36,6 +37,7 @@ const normalizeProduct = (product) => {
     sellingPoints: normalizeTextList(merged.sellingPoints),
     specs: normalizeSpecs(merged.specs),
     quality: normalizeTextList(merged.quality),
+    applications: normalizeTextList(productApplicationProfiles[merged.slug] || merged.applications || []),
     targetBuyers: merged.targetBuyers || "Importers, distributors, wholesalers, and private-label brands",
     keywords: normalizeTextList(merged.keywords || categoryDefault.keywords),
     buyerFit: merged.buyerFit || categoryDefault.buyerFit || [],

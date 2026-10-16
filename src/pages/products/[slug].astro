@@ -61,6 +61,13 @@ const productIntroParagraphs =
     `For OEM and ODM projects, buyers can discuss logo position, product color, market packaging, barcode labels, carton marks, and target price with the wooktools team. We can help review whether an existing WOOKTOOL model, adjusted specification, or custom packaging direction is most suitable for your sales channel.`,
     `Before quotation, send your estimated quantity, target market, preferred packaging, logo file, delivery schedule, and any reference product photos. This helps us confirm material selection, sample direction, inspection points, and bulk production feasibility more quickly. Each order can be reviewed around function, appearance, packaging, and pre-shipment quality control.`
   ];
+const productApplications = product.applications?.length
+  ? product.applications
+  : [
+      `B2B ${categoryLabel} sourcing and private-label product programs`,
+      "Retail, wholesale and distributor assortments matched to the selected specification",
+      "Projects that require confirmed packaging, quality-control and export details"
+    ];
 const productFaq =
   product.faq || [
     {
@@ -332,6 +339,19 @@ const productPageSchema = [
           {internalLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
         </ul>
       </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner grid two">
+      <div>
+        <p class="eyebrow">Application scenarios</p>
+        <h2>Where {product.title} fits</h2>
+        <p>Use cases should be confirmed against the selected specification, intended cutting or measuring task, target market and user instructions.</p>
+      </div>
+      <ul class="check-list">
+        {productApplications.map((application) => <li>{application}</li>)}
+      </ul>
     </div>
   </section>
 
