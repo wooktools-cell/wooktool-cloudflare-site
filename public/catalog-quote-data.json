@@ -618,6 +618,63 @@
     },
     {
       "family": "tape",
+      "code": "WK-25",
+      "name": "Chrome-Plated Tape Measure",
+      "image": "/images/products/catalog/chrome-plated-tape-measure-main.jpg",
+      "specifications": [
+        {
+          "value": "5m (shown configuration)",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, chrome-finish case label, metric/inch scale and OEM packaging",
+      "thumbnail": {
+        "scale": 0.96,
+        "shiftX": 0,
+        "shiftY": 0
+      }
+    },
+    {
+      "family": "tape",
+      "code": "WK-26",
+      "name": "TPR Rubber Grip Tape Measure",
+      "image": "/images/products/catalog/tpr-rubber-grip-tape-measure-main.jpg",
+      "specifications": [
+        {
+          "value": "5m / 16ft (shown configuration)",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, Pantone shell color, metric/inch scale and OEM packaging",
+      "thumbnail": {
+        "scale": 0.96,
+        "shiftX": 0,
+        "shiftY": 0
+      }
+    },
+    {
+      "family": "tape",
+      "code": "WK-27",
+      "name": "Rubberized Heavy Duty Tape Measure",
+      "image": "/images/products/catalog/rubberized-heavy-duty-tape-measure-main.jpg",
+      "specifications": [
+        {
+          "value": "7.5m / 25ft (shown configuration)",
+          "carton": "",
+          "cartonSize": ""
+        }
+      ],
+      "customization": "Custom logo, rubberized ABS case, metric/inch scale and OEM packaging",
+      "thumbnail": {
+        "scale": 0.96,
+        "shiftX": 0,
+        "shiftY": 0
+      }
+    },
+    {
+      "family": "tape",
       "code": "WK-3",
       "image": "/images/catalog-quote/tape_measure_r011_c02_004.jpg",
       "specifications": [

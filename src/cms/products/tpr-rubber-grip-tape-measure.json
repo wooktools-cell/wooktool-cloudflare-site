@@ -1,0 +1,44 @@
+{
+  "slug": "tpr-rubber-grip-tape-measure",
+  "order": 30,
+  "category": "Tape Measures",
+  "title": "TPR Rubber Grip Tape Measure",
+  "summary": "Shock-resistant ABS and TPR rubber grip tape measure for construction and hardware programs, with custom Pantone color, logo and scale options.",
+  "image": "/images/products/catalog/tpr-rubber-grip-tape-measure-main.jpg",
+  "detailImages": [
+    "/images/products/catalog/tpr-rubber-grip-tape-measure-detail-1.jpg",
+    "/images/products/catalog/tpr-rubber-grip-tape-measure-detail-2.jpg"
+  ],
+  "targetBuyers": "Construction-tool distributors, hardware wholesalers, OEM brands and importers needing a rubber-grip tape measure",
+  "sellingPoints": [
+    "ABS case with TPR outer grip for a shock-resistant, wear-resistant handling surface",
+    "Pantone color direction, logo and packaging can be discussed for private-label programs",
+    "5m / 16ft configuration is shown in the supplied product material"
+  ],
+  "specs": [
+    { "label": "Shown configuration", "value": "5m / 16ft configuration shown; final length and blade width should be confirmed in the RFQ" },
+    { "label": "Case material", "value": "ABS housing with TPR rubber grip, as described in the supplied product material" },
+    { "label": "Performance focus", "value": "Shock resistance and wear resistance for daily hardware and jobsite handling" },
+    { "label": "Customization", "value": "Pantone case color, logo, blade scale, packaging, barcode and carton mark" },
+    { "label": "Scale", "value": "Metric, imperial or dual-unit blade layout can be reviewed by market requirement" }
+  ],
+  "quality": [
+    "Inspect TPR-to-ABS fit, shell finish and color consistency",
+    "Check blade printing, lock holding, retraction and hook assembly",
+    "Confirm logo, packaging artwork, barcode and carton details before shipment"
+  ],
+  "introduction": [
+    "This TPR rubber grip tape measure is designed for buyers who need a more protected, comfortable case for construction, hardware and everyday measuring programs. The supplied material identifies an ABS housing with a TPR outer layer for shock and wear resistance.",
+    "The reference item shows 5m / 16ft. Buyers can discuss the final blade length, unit layout, Pantone shell color, logo, packaging and retail presentation before sampling.",
+    "Include the intended channel, quantity, logo file, target market and packaging format in your request so the product and quality-control plan can be confirmed accurately." 
+  ],
+  "faq": [
+    { "question": "What is the benefit of a TPR rubber grip tape measure?", "answer": "The supplied material describes the ABS and TPR case as shock-resistant and wear-resistant, supporting a more protected grip surface for daily use." },
+    { "question": "Can the case color be customized?", "answer": "Pantone color direction can be discussed together with logo, packaging and the selected production configuration." },
+    { "question": "Which length is shown in the product material?", "answer": "The supplied reference shows 5m / 16ft. Confirm the final length, blade width and scale before sampling." },
+    { "question": "What should be approved before bulk production?", "answer": "Approve shell color and fit, logo, blade printing, lock and retraction, hook, packaging and carton requirements." }
+  ],
+  "metaTitle": "TPR Rubber Grip Tape Measure Manufacturer | Custom OEM | WOOKTOOL",
+  "metaDescription": "Source ABS and TPR rubber grip tape measures with custom Pantone color, logo, blade scale and packaging. Review the shown 5m / 16ft configuration with WOOKTOOL.",
+  "keywords": ["TPR rubber grip tape measure", "rubberized tape measure", "shockproof tape measure", "custom color tape measure", "OEM tape measure manufacturer"]
+}
