@@ -17,7 +17,7 @@
   "products": [
     {
       "family": "tape",
-      "code": "TM-1",
+      "code": "WK-1",
       "image": "/images/catalog-quote/tape_measure_r003_c02_002.jpg",
       "specifications": [
         {
@@ -55,7 +55,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-10",
+      "code": "WK-10",
       "image": "/images/catalog-quote/tape_measure_r039_c02_011.jpg",
       "specifications": [
         {
@@ -88,7 +88,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-11",
+      "code": "WK-11",
       "image": "/images/catalog-quote/tape_measure_r043_c02_012.jpg",
       "specifications": [
         {
@@ -121,7 +121,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-12",
+      "code": "WK-12",
       "image": "/images/catalog-quote/tape_measure_r047_c02_013.jpg",
       "specifications": [
         {
@@ -154,7 +154,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-13",
+      "code": "WK-13",
       "image": "/images/catalog-quote/tape_measure_r051_c02_014.jpg",
       "specifications": [
         {
@@ -187,7 +187,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-14",
+      "code": "WK-14",
       "image": "/images/catalog-quote/tape_measure_r055_c02_015.jpg",
       "specifications": [
         {
@@ -220,7 +220,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-15",
+      "code": "WK-15",
       "image": "/images/catalog-quote/tape_measure_r059_c02_016.jpg",
       "specifications": [
         {
@@ -253,7 +253,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-16",
+      "code": "WK-16",
       "image": "/images/catalog-quote/tape_measure_r063_c02_017.jpg",
       "specifications": [
         {
@@ -286,7 +286,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-17",
+      "code": "WK-17",
       "image": "/images/catalog-quote/tape_measure_r067_c02_018.jpg",
       "specifications": [
         {
@@ -319,7 +319,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-18",
+      "code": "WK-18",
       "image": "/images/catalog-quote/tape_measure_r071_c02_019.jpg",
       "specifications": [
         {
@@ -357,7 +357,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-19",
+      "code": "WK-19",
       "image": "/images/catalog-quote/tape_measure_r075_c02_020.jpg",
       "specifications": [
         {
@@ -395,7 +395,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-2",
+      "code": "WK-2",
       "image": "/images/catalog-quote/tape_measure_r007_c02_003.jpg",
       "specifications": [
         {
@@ -433,7 +433,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-20",
+      "code": "WK-20",
       "image": "/images/catalog-quote/tape_measure_r079_c02_021.jpg",
       "specifications": [
         {
@@ -471,7 +471,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-21",
+      "code": "WK-21",
       "image": "/images/catalog-quote/tape_measure_r083_c02_022.jpg",
       "specifications": [
         {
@@ -509,7 +509,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-22",
+      "code": "WK-22",
       "image": "/images/catalog-quote/tape_measure_r087_c02_023.jpg",
       "specifications": [
         {
@@ -547,7 +547,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-23",
+      "code": "WK-23",
       "image": "/images/catalog-quote/tape_measure_r091_c02_024.jpg",
       "specifications": [
         {
@@ -585,7 +585,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-24",
+      "code": "WK-24",
       "image": "/images/catalog-quote/tape_measure_r095_c02_025.jpg",
       "specifications": [
         {
@@ -618,7 +618,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-3",
+      "code": "WK-3",
       "image": "/images/catalog-quote/tape_measure_r011_c02_004.jpg",
       "specifications": [
         {
@@ -651,7 +651,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-4",
+      "code": "WK-4",
       "image": "/images/catalog-quote/tape_measure_r015_c02_005.jpg",
       "specifications": [
         {
@@ -684,7 +684,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-5",
+      "code": "WK-5",
       "image": "/images/catalog-quote/tape_measure_r019_c02_006.jpg",
       "specifications": [
         {
@@ -717,7 +717,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-6",
+      "code": "WK-6",
       "image": "/images/catalog-quote/tape_measure_r023_c02_007.jpg",
       "specifications": [
         {
@@ -755,7 +755,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-7",
+      "code": "WK-7",
       "image": "/images/catalog-quote/tape_measure_r027_c02_008.jpg",
       "specifications": [
         {
@@ -793,7 +793,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-8",
+      "code": "WK-8",
       "image": "/images/catalog-quote/tape_measure_r031_c02_009.jpg",
       "specifications": [
         {
@@ -826,7 +826,7 @@
     },
     {
       "family": "tape",
-      "code": "TM-9",
+      "code": "WK-9",
       "image": "/images/catalog-quote/tape_measure_r035_c02_010.jpg",
       "specifications": [
         {
