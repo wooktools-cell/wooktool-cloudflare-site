@@ -168,6 +168,7 @@ const schema = [
 </BaseLayout>
 
 <script>
+  import imageVariants from "../image-variants.json";
   const productGrid = document.querySelector("#catalog-products");
   const resultCount = document.querySelector("#catalog-result-count");
   const searchInput = document.querySelector("#catalog-search");
@@ -215,7 +216,7 @@ const schema = [
         ? `style="--thumbnail-scale:${product.thumbnail.scale};--thumbnail-shift-x:${product.thumbnail.shiftX}%;--thumbnail-shift-y:${product.thumbnail.shiftY}%"`
         : "";
       return `<article class="catalog-quote-card catalog-quote-card--${escapeHtml(product.family)}">
-        <div class="catalog-quote-image"><img src="${escapeHtml(product.image)}" alt="${escapeHtml(productTitle(product))}" loading="lazy" width="500" height="500" ${thumbnailStyle} /></div>
+        <div class="catalog-quote-image"><img src="${escapeHtml(imageVariants[product.image]?.thumbnail || product.image)}" alt="${escapeHtml(productTitle(product))}" loading="lazy" decoding="async" width="480" height="480" ${thumbnailStyle} /></div>
         <div class="catalog-quote-card-body">
           <p class="catalog-model-family">${familyLabel(product)}</p>
           <h3>${escapeHtml(productTitle(product))}</h3>

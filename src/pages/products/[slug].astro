@@ -7,6 +7,7 @@ import CatalogProductCard from "../../components/CatalogProductCard.astro";
 import GeoAnswerBlock from "../../components/GeoAnswerBlock.astro";
 import { catalogProducts, productRoutes, site } from "../../siteData.js";
 import { faqSchema } from "../../schema.js";
+import imageVariants from "../../image-variants.json";
 
 export function getStaticPaths() {
   return productRoutes.map((product) => ({
@@ -184,6 +185,7 @@ const imageUrls = [product.image, ...(product.detailImages || [])].map((image) =
   new URL(image, site.domain).toString()
 );
 const visibleProductImages = [product.image, ...(product.detailImages || [])].slice(0, 5);
+const displayImage = (image) => imageVariants[image]?.display || image;
 const hasPublicOffer = Boolean(
   product.offer?.price && product.offer?.priceCurrency && product.offer?.availability
 );
@@ -273,7 +275,7 @@ const productPageSchema = [
   schema={productPageSchema}
 >
   <Fragment slot="head">
-    <link rel="preload" as="image" href={product.image} fetchpriority="high" />
+    <link rel="preload" as="image" href={displayImage(product.image)} fetchpriority="high" />
   </Fragment>
   <section class="page-intro product-page-intro">
     <div class="product-intro-layout">
@@ -287,17 +289,27 @@ const productPageSchema = [
         </div>
       </div>
       <div class="product-media-panel" aria-label={`${product.title} product image gallery`}>
-        <img class="product-square-image" src={product.image} alt={`${product.title} main product image on white background`} width="1000" height="1000" fetchpriority="high" />
+        <a class="product-image-zoom" href={product.image} aria-label={`Enlarge ${product.title} main image`}>
+          <img class="product-square-image" src={displayImage(product.image)} alt={`${product.title} main product image on white background`} width="1000" height="1000" fetchpriority="high" />
+          <span class="product-image-zoom-hint" aria-hidden="true">Click to enlarge</span>
+        </a>
         {visibleProductImages.length > 1 && (
           <div class="product-thumb-grid">
             {visibleProductImages.slice(1).map((image, index) => (
-              <img src={image} alt={`${product.title} product detail view ${index + 1}`} width="1000" height="1000" loading="lazy" />
+              <a class="product-image-zoom" href={image} aria-label={`Enlarge ${product.title} detail image ${index + 1}`}>
+                <img src={displayImage(image)} alt={`${product.title} product detail view ${index + 1}`} width="1000" height="1000" loading="lazy" decoding="async" />
+              </a>
             ))}
           </div>
         )}
       </div>
     </div>
   </section>
+
+  <dialog class="product-lightbox" aria-label="Enlarged product image">
+    <button class="product-lightbox-close" type="button" aria-label="Close enlarged image">×</button>
+    <img alt="" />
+  </dialog>
 
   <section class="section">
     <div class="section-inner product-spec-layout">
@@ -477,3 +489,21 @@ const productPageSchema = [
     secondaryHref={customizationPath}
   />
 </BaseLayout>
+
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>(".product-lightbox");
+  const image = dialog?.querySelector<HTMLImageElement>("img");
+  if (dialog && image && typeof dialog.showModal === "function") {
+    document.querySelectorAll<HTMLAnchorElement>(".product-image-zoom").forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        image.src = link.href;
+        image.alt = link.querySelector("img")?.alt || "Enlarged product image";
+        dialog.showModal();
+      });
+    });
+    dialog.querySelector(".product-lightbox-close")?.addEventListener("click", () => dialog.close());
+    dialog.addEventListener("click", (event) => { if (event.target === dialog) dialog.close(); });
+    dialog.addEventListener("close", () => { image.removeAttribute("src"); });
+  }
+</script>
