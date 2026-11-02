@@ -4,9 +4,10 @@ import GeoAnswerBlock from "../components/GeoAnswerBlock.astro";
 import { site } from "../siteData.js";
 import { breadcrumbSchema, faqSchema, productCollectionSchema } from "../schema.js";
 
-const isCrmPreview = Astro.url.pathname === "/request-quote/";
-const path = isCrmPreview ? "/request-quote/" : "/product-catalog-quote-builder/";
-const title = isCrmPreview ? "Hand Tool RFQ | Tape Measures, Utility Knives & Screwdriver Sets | WOOKTOOL" : "Product Selector & Multi-Model RFQ | WOOKTOOL";
+const isRequestQuotePage = Astro.url.pathname === "/request-quote/";
+const isCrmPreview = false;
+const path = isRequestQuotePage ? "/request-quote/" : "/product-catalog-quote-builder/";
+const title = isRequestQuotePage ? "Hand Tool RFQ | Tape Measures, Utility Knives & Screwdriver Sets | WOOKTOOL" : "Product Selector & Multi-Model RFQ | WOOKTOOL";
 const description = "Request a factory quote for WOOKTOOL tape measures, utility knives and screwdriver sets. Select models, add specifications, quantities, custom logo and private-label packaging requirements in one B2B RFQ.";
 const rfqFaq = [
   {
@@ -87,17 +88,18 @@ const schema = [
           <p class="catalog-rfq-hint">Keep selecting products from the catalog. You can also add the same model again when you need different specifications or customization.</p>
           <div class="catalog-rfq-lines" id="catalog-rfq-lines"></div>
 
-          <form id="catalog-rfq-form" class="catalog-rfq-form" action={site.formSubmitEndpoint} method="POST" data-track="catalog_rfq_submit" data-crm-preview={isCrmPreview ? "true" : undefined}>
+          <form id="catalog-rfq-form" class="catalog-rfq-form" action={site.formSubmitEndpoint} method="POST" enctype="multipart/form-data" data-track="catalog_rfq_submit" data-crm-preview={isCrmPreview ? "true" : undefined}>
             <input type="hidden" name="_subject" value="New multi-model product inquiry from WOOKTOOL Product Selector" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value={`${site.domain}/contact/thank-you/`} />
-            <input type="hidden" name="Lead Source" value="product-catalog-quote-builder" />
+            <input type="hidden" name="Lead Source" value={isRequestQuotePage ? "request-quote" : "product-catalog-quote-builder"} />
+            <input type="hidden" name="Source Page" value={`${site.domain}${path}`} />
             <input type="hidden" name="Selected Product Lines" id="selected-product-lines" />
             <input class="form-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" />
             <div class="catalog-contact-fields">
               <label>Name<input type="text" name="Name" autocomplete="name" required /></label>
-              <label>Business Email<input type="email" name="Email" autocomplete="email" required /></label>
+              <label>Business Email<input type="email" name="email" autocomplete="email" required /></label>
               <label>Company<input type="text" name="Company" autocomplete="organization" /></label>
               <label>WhatsApp / Phone<input type="tel" name="WhatsApp or Phone" autocomplete="tel" /></label>
               <label>Country / Market<input type="text" name="Country or Market" autocomplete="country-name" /></label>
@@ -106,7 +108,7 @@ const schema = [
               <label>Expected Delivery<input type="text" name="Expected Delivery Time" placeholder="e.g. 45 days after approval" /></label>
               <label>Target Price (optional)<input type="text" name="Target Price" placeholder="Optional buyer target only" /></label>
               <fieldset class="catalog-requirements catalog-field-wide"><legend>Requirements</legend><label><input type="checkbox" name="Need Custom Logo" value="Yes" /> Custom logo</label><label><input type="checkbox" name="Need Custom Packaging" value="Yes" /> Custom packaging</label><label><input type="checkbox" name="Need Sample" value="Yes" /> Sample required</label></fieldset>
-              <label class="catalog-field-wide">Supporting files<input type="file" name="Preview Files" accept=".pdf,.png,.jpg,.jpeg,.webp,.ai,.zip" multiple /><span>Preview only. Files remain in this browser and are not uploaded.</span></label>
+              <label class="catalog-field-wide">Supporting file<input type="file" name="attachment" accept=".pdf,.png,.jpg,.jpeg,.webp,.ai,.zip" /><span>Optional. Attach one file up to 10 MB; combine multiple files into a ZIP. Your file will be sent with this inquiry.</span></label>
               <label class="catalog-field-wide">Additional requirements<textarea name="Additional Requirements" rows="3" placeholder="Target delivery date, certification, packaging or other notes"></textarea></label>
             </div>
             {isCrmPreview && <div class="crm-preview-card" id="crm-preview-card" aria-live="polite"><strong>CRM 3.0 preview</strong><span>Choose models and complete fields to view a simulated lead score, grade and follow-up tasks.</span><output id="crm-preview-output">Lead score: 0 · Grade D · Task: First response within 24 hours</output></div>}
@@ -344,7 +346,15 @@ const schema = [
       event.preventDefault();
       formStatus.textContent = "Please add at least one product model before sending your inquiry.";
       document.querySelector("#catalog-products")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
     }
+    const attachment = form.querySelector('[name="attachment"]')?.files?.[0];
+    if (attachment && attachment.size > 10 * 1024 * 1024) {
+      event.preventDefault();
+      formStatus.textContent = "Please attach a file smaller than 10 MB.";
+      return;
+    }
+    formStatus.textContent = "Sending your inquiry…";
     if (crmPreview) {
       event.preventDefault();
       formStatus.textContent = "Preview validated. A production submission will save this RFQ locally, then send it to CRM 3.0 without exposing CRM credentials in the browser.";
