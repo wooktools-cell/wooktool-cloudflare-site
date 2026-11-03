@@ -109,3 +109,6 @@ For many hand tools, a clean 1:1 product image is more useful than a dramatic li
 
 Before placing a private-label hand tools order, buyers should prepare a product data file, not only a price request. Send wooktools your preferred model, product photos, logo, packaging style, barcode needs, carton mark, estimated quantity, and target market. The wooktools team can help match suitable WOOKTOOL products and review the details through the [RFQ form](/contact/#rfq-form).
 
+
+
+For EU-facing projects, also review our [EU-facing product listing information](/blog/eu-gpsr-private-label-hand-tools-checklist/) before finalizing your product information and packaging brief.

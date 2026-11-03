@@ -52,3 +52,6 @@ Yes. The same product model may use bulk packing for wholesalers and blister car
 
 Yes. Packaging inspection should include product placement, barcode, labels, warning text, artwork, carton marks, and carton strength.
 
+
+
+For EU-facing projects, also review our [EU packaging preparation checklist](/blog/eu-ppwr-private-label-hand-tools-packaging/) before finalizing your product information and packaging brief.

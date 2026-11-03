@@ -1,7 +1,7 @@
 ---
 import imageVariants from "../image-variants.json";
 const { product } = Astro.props;
-const rfqHref = `/contact/?product=${encodeURIComponent(product.slug)}#rfq-form`;
+const rfqHref = product.catalogCode ? `/request-quote/?model=${encodeURIComponent(product.catalogCode)}#rfq-title` : `/contact/?product=${encodeURIComponent(product.slug)}#rfq-form`;
 const thumbnail = imageVariants[product.image]?.thumbnail || product.image;
 ---
 

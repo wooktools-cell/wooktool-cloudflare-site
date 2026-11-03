@@ -46,16 +46,6 @@ const { metaPixelId = "" } = site.analytics || {};
 )}
 
 <script>
-  const getFormValue = (form, names) => {
-    for (const name of names) {
-      const field = form.elements.namedItem(name);
-      if (field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement || field instanceof HTMLSelectElement) {
-        if (field.value) return field.value;
-      }
-    }
-    return "";
-  };
-
   const trackEvent = (eventName, params = {}) => {
     if (!eventName) return;
     if (typeof window.gtag === "function") {
@@ -74,46 +64,35 @@ const { metaPixelId = "" } = site.analytics || {};
     if (!target) return;
     const eventName = target.getAttribute("data-track");
     const params = {
-      link_url: target.getAttribute("href") || "",
-      link_text: target.textContent?.trim() || "",
-      page_location: window.location.href,
       page_path: window.location.pathname
     };
     trackEvent(eventName, params);
 
     if (eventName === "whatsapp_click" || eventName === "email_click") {
-      trackEvent("generate_lead", {
-        ...params,
-        method: eventName === "whatsapp_click" ? "whatsapp" : "email"
-      });
-      if (typeof window.fbq === "function") {
-        window.fbq("track", "Lead", params);
-      }
+      trackEvent("contact_click", { method: eventName === "whatsapp_click" ? "whatsapp" : "email", page_path: window.location.pathname });
     }
+  });
+
+  const startedForms = new WeakSet();
+  document.addEventListener("focusin", (event) => {
+    const form = event.target instanceof Element ? event.target.closest("form[data-track]") : null;
+    if (!form || startedForms.has(form)) return;
+    startedForms.add(form);
+    trackEvent("rfq_start", { form_id: form.id || form.getAttribute("data-track"), page_path: window.location.pathname });
   });
 
   document.addEventListener("submit", (event) => {
     const form = event.target instanceof HTMLFormElement ? event.target.closest("[data-track]") : null;
     if (!form) return;
-    const eventName = form.getAttribute("data-track");
-    const leadParams = {
-      form_id: form.getAttribute("id") || "",
-      form_name: form.getAttribute("class") || "",
-      page_location: window.location.href,
-      page_path: window.location.pathname,
-      lead_source: getFormValue(form, ["lead_source", "Lead Source"]) || "website",
-      product_interest: getFormValue(form, ["product_interest", "Product Interest"]),
-      estimated_quantity: getFormValue(form, ["estimated_quantity", "Estimated Quantity"]),
-      country: getFormValue(form, ["country", "Country"])
-    };
-
-    trackEvent(eventName, leadParams);
-    trackEvent("generate_lead", {
-      ...leadParams,
-      method: "rfq_form"
+    // Defer until all form validation/preview handlers have run.
+    queueMicrotask(() => {
+      if (event.defaultPrevented) return;
+      trackEvent("rfq_submit_attempt", {
+        form_id: form.id || form.getAttribute("data-track") || "rfq",
+        page_path: window.location.pathname,
+        method: "native_form_handoff",
+        product_line_count: form.closest("aside")?.querySelectorAll("[data-line]").length || 0
+      });
     });
-    if (typeof window.fbq === "function") {
-      window.fbq("track", "Lead", leadParams);
-    }
   });
 </script>

@@ -1,7 +1,7 @@
 import { catalogPages, productRoutes, site } from "../siteData.js";
 import { cmsBlogPosts } from "../blogData.js";
 
-const lastModified = "2026-10-12";
+const lastModified = undefined; // Omit unknown dates; blog publication dates remain available.
 
 const staticPaths = [
   "/",
@@ -74,7 +74,7 @@ export function GET() {
       return [
         "  <url>",
         `    <loc>${escapeXml(new URL(path, site.domain).toString())}</loc>`,
-        `    <lastmod>${escapeXml(signals.lastmod)}</lastmod>`,
+        ...(signals.lastmod ? [`    <lastmod>${escapeXml(signals.lastmod)}</lastmod>`] : []),
         `    <changefreq>${signals.changefreq}</changefreq>`,
         `    <priority>${signals.priority}</priority>`,
         "  </url>"

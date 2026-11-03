@@ -3,7 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
 import CompactRFQ from "../../components/CompactRFQ.astro";
 import { site } from "../../siteData.js";
-import { breadcrumbSchema, faqSchema } from "../../schema.js";
+import { breadcrumbSchema } from "../../schema.js";
 
 export async function getStaticPaths() {
   const postModules = import.meta.glob("../../cms/blog/*.md", { eager: true });
@@ -50,9 +50,7 @@ const blogSchema = [
   ])
 ];
 
-if (Array.isArray(post.frontmatter.faq) && post.frontmatter.faq.length > 0) {
-  blogSchema.push(faqSchema(post.frontmatter.faq));
-}
+// The visible article is the source of truth; keep Article and breadcrumb markup.
 ---
 
 <BaseLayout

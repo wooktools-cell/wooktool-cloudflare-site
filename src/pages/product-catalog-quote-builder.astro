@@ -367,6 +367,15 @@ const schema = [
 
   fetch("/catalog-quote-data.json")
     .then((response) => response.ok ? response.json() : Promise.reject(new Error("Catalog unavailable")))
-    .then((data) => { catalog = data.products || []; renderCatalog(); renderSelected(); })
+    .then((data) => {
+      catalog = data.products || [];
+      const requestedModel = new URLSearchParams(window.location.search).get("model");
+      const match = requestedModel && catalog.find((item) => item.code.toLowerCase() === requestedModel.toLowerCase());
+      if (match) addProduct(match.code);
+      else {
+        renderCatalog(); renderSelected();
+        if (requestedModel) formStatus.textContent = "This model could not be matched. Please search the catalog or contact us to confirm the model.";
+      }
+    })
     .catch(() => { resultCount.textContent = "Catalog is temporarily unavailable."; productGrid.innerHTML = "<p class=\"catalog-no-results\">Please use the contact page and tell us the product family you need.</p>"; });
 </script>
