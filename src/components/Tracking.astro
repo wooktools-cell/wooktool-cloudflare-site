@@ -61,7 +61,7 @@ const { metaPixelId = "" } = site.analytics || {};
 
   document.addEventListener("click", (event) => {
     const target = event.target instanceof Element ? event.target.closest("[data-track]") : null;
-    if (!target) return;
+    if (!target || target instanceof HTMLFormElement) return;
     const eventName = target.getAttribute("data-track");
     const params = {
       page_path: window.location.pathname
