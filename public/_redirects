@@ -22,3 +22,6 @@ https://wooktools.com/* https://www.wooktools.com/:splat 301
 /products/Tape-Measure-Portable-Steel-Frame-Ruler-Galvanized-Iron-Stainless-Steel-measuring-tape.html /products/heavy-duty-tape-measure/ 301
 /products/Utility-Knife-Box-Cutter-Retractable-Blade-Storage-Design-Quick-Change-Blades.html /products/heavy-duty-utility-knife/ 301
 /products/Ratchet-Screwdriver-with-Soft-Rubber-Handle-Easy-to-Switch-and-Replace-Bits.html /products/ratchet-screwdriver-set/ 301
+
+# The public catalog now fits on nine pages.
+/products/page/10/ /products/page/9/ 301
