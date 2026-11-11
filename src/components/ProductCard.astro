@@ -1,5 +1,5 @@
 ---
-const { title, text, href, image, alt, subcategories = [] } = Astro.props;
+const { title, text, href, image, alt, subcategories = [], collapseSubcategories = false } = Astro.props;
 ---
 
 <article class="product-card">
@@ -14,10 +14,17 @@ const { title, text, href, image, alt, subcategories = [] } = Astro.props;
     </div>
   </a>
   {subcategories.length > 0 && (
-    <nav class="category-submenu" aria-label={`${title} product detail links`}>
-      {subcategories.map((item) => (
-        <a href={item.href}>{item.label}</a>
-      ))}
-    </nav>
+    collapseSubcategories ? (
+      <details class="category-options">
+        <summary>Explore product options</summary>
+        <nav class="category-submenu" aria-label={`${title} product detail links`}>
+          {subcategories.map((item) => <a href={item.href}>{item.label}</a>)}
+        </nav>
+      </details>
+    ) : (
+      <nav class="category-submenu" aria-label={`${title} product detail links`}>
+        {subcategories.map((item) => <a href={item.href}>{item.label}</a>)}
+      </nav>
+    )
   )}
 </article>

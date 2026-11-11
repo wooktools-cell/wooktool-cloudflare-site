@@ -2,12 +2,26 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import ProductCard from "../components/ProductCard.astro";
+import imageVariants from "../image-variants.json";
 import CTA from "../components/CTA.astro";
 import CompactRFQ from "../components/CompactRFQ.astro";
 import SeoResourceLinks from "../components/SeoResourceLinks.astro";
 import GeoAnswerBlock from "../components/GeoAnswerBlock.astro";
-import { productCategories, sellingPoints, capabilities, qcSteps, rfqChecklist, site } from "../siteData.js";
+import { catalogProducts, productCategories, sellingPoints, capabilities, qcSteps, rfqChecklist, site } from "../siteData.js";
 import { organizationSchema, websiteSchema, breadcrumbSchema } from "../schema.js";
+
+const featuredProducts = [
+  "custom-logo-tape-measure",
+  "custom-logo-self-winding-tape-measure",
+  "folding-utility-knife",
+  "snap-off-utility-knife",
+  "multi-bit-screwdriver-set",
+  "hex-key-wrench-set"
+].map((slug) => {
+  const product = catalogProducts.find((item) => item.slug === slug);
+  if (!product) throw new Error(`Missing homepage featured product: ${slug}`);
+  return product;
+});
 
 const homeSchema = [organizationSchema, websiteSchema, breadcrumbSchema([{ name: "Home", path: "/" }])];
 const homeSeoClusters = [
@@ -103,8 +117,8 @@ const homeSeoClusters = [
         </div>
         <p>Start with standard WOOKTOOL product lines or request a custom solution for your brand, channel, and market.</p>
       </div>
-      <div class="grid four">
-        {productCategories.map((item) => <ProductCard {...item} />)}
+      <div class="grid four home-product-categories">
+        {productCategories.map((item) => <ProductCard {...item} collapseSubcategories={true} />)}
       </div>
     </div>
   </section>
@@ -149,17 +163,26 @@ const homeSeoClusters = [
     </div>
   </section>
 
-  <section class="section soft">
+  <section id="featured-oem-products" class="section soft">
     <div class="section-inner">
       <div class="section-header">
         <div>
           <p class="eyebrow">Featured products</p>
           <h2>Popular product categories for OEM sourcing</h2>
         </div>
-        <p>Explore tape measures, utility knives, and screwdriver sets with product photos, B2B customization options, and quality-control notes.</p>
+        <p>Explore individual models and review their specifications and customization options.</p>
       </div>
-      <div class="grid three">
-        {productCategories.slice(0, 3).map((item) => <ProductCard {...item} />)}
+      <div class="home-featured-grid">
+        {featuredProducts.map((product) => (
+          <a class="home-featured" href={`/products/${product.slug}/`}>
+            <img src={imageVariants[product.image]?.thumbnail || product.image} alt="" loading="lazy" decoding="async" width="480" height="300" />
+            <div>
+              <p>{product.category}</p>
+              <h3>{product.title}</h3>
+              <span>View model <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        ))}
       </div>
     </div>
   </section>
@@ -239,3 +262,91 @@ const homeSeoClusters = [
     secondaryHref="/oem-odm/"
   />
 </BaseLayout>
+
+<style>
+  .home-product-categories {
+    align-items: stretch;
+  }
+
+  .home-product-categories :global(.product-card-main) {
+    height: auto;
+  }
+
+  .home-product-categories :global(.product-card-media) {
+    padding: .65rem;
+    aspect-ratio: 4 / 3;
+  }
+  .home-product-categories :global(.product-card-main > div:last-child) {
+    padding: .85rem 1rem .5rem;
+  }
+  .home-product-categories :global(.product-card h2) {
+    margin: 0 0 .5rem;
+  }
+  .home-product-categories :global(.product-card p) {
+    margin: 0 0 .5rem;
+    line-height: 1.5;
+  }
+  .home-product-categories :global(.category-options) {
+    margin: .25rem 1rem .85rem;
+  }
+  .home-product-categories :global(.category-options summary) {
+    cursor: pointer;
+    font-size: .9rem;
+  }
+  .home-product-categories :global(.category-submenu) {
+    margin: .6rem 0 0;
+  }
+
+  .home-featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .85rem;
+  }
+
+  @media (max-width: 680px) {
+    .home-featured-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .65rem;
+    }
+  }
+
+  .home-featured {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+
+  .home-featured > div {
+    padding: .7rem .85rem;
+  }
+
+  .home-featured h3 {
+    margin: 0 0 .4rem;
+    font-size: 1.1rem;
+  }
+
+  .home-featured p {
+    margin: 0 0 .55rem;
+  }
+
+  .home-featured > div > span {
+    text-decoration: underline;
+    text-underline-offset: .2em;
+  }
+
+  .home-featured {
+    display: block;
+    overflow: hidden;
+  }
+
+  .home-featured img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    padding: .25rem;
+    object-fit: contain;
+    background: #f6f7f8;
+    border-bottom: 1px solid var(--line);
+  }
+</style>

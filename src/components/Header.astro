@@ -1,5 +1,5 @@
 ---
-import { navItems, site } from "../siteData.js";
+import { productCategories } from "../siteData.js";
 ---
 
 <header class="site-header">
@@ -13,8 +13,19 @@ import { navItems, site } from "../siteData.js";
     <span class="sr-only">Menu</span>
   </button>
   <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-    {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
-    <a class="nav-quote" href="/contact/" data-track="request_quote_click">Request a Quote</a>
+    <details class="products-menu">
+      <summary>Products</summary>
+      <div class="products-menu-links">
+        <a href="/products/">All Products</a>
+        {productCategories.map((category) => <a href={category.href}>{category.title}</a>)}
+      </div>
+    </details>
+    <a href="/oem-odm/">Customization</a>
+    <a href="/buyer-guides/">Buyer Guides</a>
+    <a href="/blog/">Blog</a>
+    <a href="/factory/">Factory</a>
+    <a href="/contact/">Contact</a>
+    <a class="nav-quote" href="/request-quote/" data-track="request_quote_click">Request a Quote</a>
   </nav>
 </header>
 
@@ -26,4 +37,51 @@ import { navItems, site } from "../siteData.js";
     navToggle.setAttribute("aria-expanded", String(!expanded));
     nav?.classList.toggle("is-open", !expanded);
   });
+  const productsMenu = document.querySelector<HTMLDetailsElement>(".products-menu");
+  let closeProductsMenu: ReturnType<typeof setTimeout> | undefined;
+  productsMenu?.addEventListener("pointerenter", (event) => {
+    if (event.pointerType !== "mouse") return;
+    clearTimeout(closeProductsMenu);
+    productsMenu.open = true;
+  });
+  productsMenu?.addEventListener("pointerleave", (event) => {
+    if (event.pointerType !== "mouse") return;
+    closeProductsMenu = setTimeout(() => {
+      if (!productsMenu.contains(document.activeElement)) productsMenu.open = false;
+    }, 180);
+  });
+  productsMenu?.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      productsMenu.open = false;
+      productsMenu.querySelector("summary")?.focus();
+    }
+  });
+  document.addEventListener("click", (event) => {
+    if (event.target instanceof Node && productsMenu && !productsMenu.contains(event.target)) {
+      productsMenu.open = false;
+    }
+  });
 </script>
+
+<style>
+  .products-menu { position: relative; }
+  .products-menu summary { cursor: pointer; padding: .55rem 0; }
+  .products-menu-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 15rem;
+    display: grid;
+    gap: .15rem;
+    padding: .65rem 1rem;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: 0 10px 25px #10161d20;
+  }
+  .products-menu-links a { display: block; }
+  @media (max-width: 980px) {
+    .products-menu summary { padding: .85rem 0; }
+    .products-menu-links { position: static; width: 100%; box-shadow: none; }
+  }
+</style>
