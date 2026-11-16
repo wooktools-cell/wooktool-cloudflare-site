@@ -23,3 +23,13 @@
 - Retain the existing 20-page priority and six-model evidence plan. Reassess page/query performance after access is restored; do not bulk-create unverified screwdriver or knife variants.
 
 Full local diagnosis and verification scripts: `E:/WOOKTOOLS/.scratch/website-seo-review-2026-11-03/`.
+
+## Follow-up — 2026-11-16
+
+- Replaced buyer-facing internal SEO/GEO labels with sourcing-oriented wording on the five category and sourcing pages, buyer guide hub, and RFQ builder.
+- Added consistent first-touch, last-touch, UTM, source-page, referrer, form-type, and submission-time fields to compact RFQs, the contact form, and the multi-model quote builder.
+- Preserved product prefill, multi-model line items, quantity, customization, and attachment fields so new CRM records can be attributed without changing the buyer workflow.
+- Production build passed (120 pages). Browser verification passed across the homepage, contact form, and request-quote flow; no form or email was submitted. The CRM FormSubmit parser test suite passed (7 tests).
+- Existing inquiries are not retroactively attributed. Search Console API measurement remains unavailable until the Google connection includes read-only Search Console scope.
+
+Full local audit and verification script: `E:/WOOKTOOLS/.scratch/website-seo-review-2026-11-16/`.

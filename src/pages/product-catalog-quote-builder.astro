@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import GeoAnswerBlock from "../components/GeoAnswerBlock.astro";
+import RfqAttributionFields from "../components/RfqAttributionFields.astro";
 import { site } from "../siteData.js";
 import { breadcrumbSchema, faqSchema, productCollectionSchema } from "../schema.js";
 
@@ -88,28 +89,27 @@ const schema = [
           <p class="catalog-rfq-hint">Keep selecting products from the catalog. You can also add the same model again when you need different specifications or customization.</p>
           <div class="catalog-rfq-lines" id="catalog-rfq-lines"></div>
 
-          <form id="catalog-rfq-form" class="catalog-rfq-form" action={site.formSubmitEndpoint} method="POST" enctype="multipart/form-data" data-track="catalog_rfq_submit" data-crm-preview={isCrmPreview ? "true" : undefined}>
+          <form id="catalog-rfq-form" class="catalog-rfq-form" action={site.formSubmitEndpoint} method="POST" enctype="multipart/form-data" data-track="catalog_rfq_submit" data-crm-preview={isCrmPreview ? "true" : undefined} data-rfq-form>
             <input type="hidden" name="_subject" value="New multi-model product inquiry from WOOKTOOL Product Selector" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value={`${site.domain}/contact/thank-you/`} />
-            <input type="hidden" name="Lead Source" value={isRequestQuotePage ? "request-quote" : "product-catalog-quote-builder"} />
-            <input type="hidden" name="Source Page" value={`${site.domain}${path}`} />
-            <input type="hidden" name="Selected Product Lines" id="selected-product-lines" />
+            <RfqAttributionFields formType={isRequestQuotePage ? "request_quote" : "product_catalog_quote_builder"} />
+            <input type="hidden" name="selected_product_lines" id="selected-product-lines" />
             <input class="form-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" />
             <div class="catalog-contact-fields">
-              <label>Name<input type="text" name="Name" autocomplete="name" required /></label>
+              <label>Name<input type="text" name="name" autocomplete="name" required /></label>
               <label>Business Email<input type="email" name="email" autocomplete="email" required /></label>
-              <label>Company<input type="text" name="Company" autocomplete="organization" /></label>
-              <label>WhatsApp / Phone<input type="tel" name="WhatsApp or Phone" autocomplete="tel" /></label>
-              <label>Country / Market<input type="text" name="Country or Market" autocomplete="country-name" /></label>
-              <label>Website<input type="url" name="Website" placeholder="https://" autocomplete="url" /></label>
-              <label>Target Market<input type="text" name="Target Market" placeholder="e.g. Germany, USA, Amazon" /></label>
-              <label>Expected Delivery<input type="text" name="Expected Delivery Time" placeholder="e.g. 45 days after approval" /></label>
-              <label>Target Price (optional)<input type="text" name="Target Price" placeholder="Optional buyer target only" /></label>
-              <fieldset class="catalog-requirements catalog-field-wide"><legend>Requirements</legend><label><input type="checkbox" name="Need Custom Logo" value="Yes" /> Custom logo</label><label><input type="checkbox" name="Need Custom Packaging" value="Yes" /> Custom packaging</label><label><input type="checkbox" name="Need Sample" value="Yes" /> Sample required</label></fieldset>
+              <label>Company<input type="text" name="company" autocomplete="organization" /></label>
+              <label>WhatsApp / Phone<input type="tel" name="phone" autocomplete="tel" /></label>
+              <label>Country / Market<input type="text" name="country" autocomplete="country-name" /></label>
+              <label>Website<input type="url" name="website" placeholder="https://" autocomplete="url" /></label>
+              <label>Target Market<input type="text" name="target_market" placeholder="e.g. Germany, USA, Amazon" /></label>
+              <label>Expected Delivery<input type="text" name="expected_delivery_time" placeholder="e.g. 45 days after approval" /></label>
+              <label>Target Price (optional)<input type="text" name="target_price" placeholder="Optional buyer target only" /></label>
+              <fieldset class="catalog-requirements catalog-field-wide"><legend>Requirements</legend><label><input type="checkbox" name="need_custom_logo" value="yes" /> Custom logo</label><label><input type="checkbox" name="need_custom_packaging" value="yes" /> Custom packaging</label><label><input type="checkbox" name="need_sample" value="yes" /> Sample required</label></fieldset>
               <label class="catalog-field-wide">Supporting file<input type="file" name="attachment" accept=".pdf,.png,.jpg,.jpeg,.webp,.ai,.zip" /><span>Optional. Attach one file up to 10 MB; combine multiple files into a ZIP. Your file will be sent with this inquiry.</span></label>
-              <label class="catalog-field-wide">Additional requirements<textarea name="Additional Requirements" rows="3" placeholder="Target delivery date, certification, packaging or other notes"></textarea></label>
+              <label class="catalog-field-wide">Additional requirements<textarea name="additional_requirements" rows="3" placeholder="Target delivery date, certification, packaging or other notes"></textarea></label>
             </div>
             {isCrmPreview && <div class="crm-preview-card" id="crm-preview-card" aria-live="polite"><strong>CRM 3.0 preview</strong><span>Choose models and complete fields to view a simulated lead score, grade and follow-up tasks.</span><output id="crm-preview-output">Lead score: 0 · Grade D · Task: First response within 24 hours</output></div>}
             <p class="catalog-form-status" id="catalog-form-status" role="alert"></p>
@@ -136,7 +136,7 @@ const schema = [
   </section>
 
   <GeoAnswerBlock
-    eyebrow="AI sourcing summary"
+    eyebrow="RFQ preparation summary"
     title="How to send a clear OEM hand tool RFQ"
     answer="WOOKTOOL supports global B2B buyers sourcing tape measures, utility knives and screwdriver sets from China. Use this multi-model RFQ page to organize model selections, specifications, quantities and private-label requirements before factory review."
     points={[
@@ -255,19 +255,19 @@ const schema = [
     if (!crmPreview) return;
     let score = selected.length ? 20 : 0;
     if (selected.some((line) => line.quantity.trim())) score += 20;
-    if (form.querySelector('[name="Need Custom Logo"]')?.checked) score += 10;
-    if (form.querySelector('[name="Need Custom Packaging"]')?.checked) score += 10;
-    if (form.querySelector('[name="Preview Files"]')?.files?.length) score += 25;
-    if (hasValue("Company")) score += 10;
-    if (hasValue("WhatsApp or Phone")) score += 10;
-    if (hasValue("Website")) score += 10;
-    if (form.querySelector('[name="Need Sample"]')?.checked) score += 10;
+    if (form.querySelector('[name="need_custom_logo"]')?.checked) score += 10;
+    if (form.querySelector('[name="need_custom_packaging"]')?.checked) score += 10;
+    if (form.querySelector('[name="attachment"]')?.files?.length) score += 25;
+    if (hasValue("company")) score += 10;
+    if (hasValue("phone")) score += 10;
+    if (hasValue("website")) score += 10;
+    if (form.querySelector('[name="need_sample"]')?.checked) score += 10;
     const grade = score >= 80 ? "A" : score >= 60 ? "B" : score >= 40 ? "C" : "D";
     const tasks = ["First response within 24 hours"];
     if (grade === "A") tasks.push("High-priority follow-up");
-    if (form.querySelector('[name="Need Sample"]')?.checked) tasks.push("Sample quotation");
-    if (form.querySelector('[name="Need Custom Logo"]')?.checked || form.querySelector('[name="Need Custom Packaging"]')?.checked) tasks.push("OEM specification review");
-    if (form.querySelector('[name="Preview Files"]')?.files?.length) tasks.push("File review");
+    if (form.querySelector('[name="need_sample"]')?.checked) tasks.push("Sample quotation");
+    if (form.querySelector('[name="need_custom_logo"]')?.checked || form.querySelector('[name="need_custom_packaging"]')?.checked) tasks.push("OEM specification review");
+    if (form.querySelector('[name="attachment"]')?.files?.length) tasks.push("File review");
     document.querySelector("#crm-preview-output").textContent = `Lead score: ${score} · Grade ${grade} · Tasks: ${tasks.join("; ")}`;
   }
 

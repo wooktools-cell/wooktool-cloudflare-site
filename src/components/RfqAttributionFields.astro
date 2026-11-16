@@ -1,0 +1,79 @@
+---
+const { formType = "website_rfq" } = Astro.props;
+---
+
+<input type="hidden" name="lead_source" value="website" />
+<input type="hidden" name="form_type" value={formType} />
+<input type="hidden" name="source_page_url" data-rfq-attribution="source_page_url" />
+<input type="hidden" name="referrer_url" data-rfq-attribution="referrer_url" />
+<input type="hidden" name="submitted_at" data-rfq-attribution="submitted_at" />
+<input type="hidden" name="utm_source" data-rfq-attribution="utm_source" />
+<input type="hidden" name="utm_medium" data-rfq-attribution="utm_medium" />
+<input type="hidden" name="utm_campaign" data-rfq-attribution="utm_campaign" />
+<input type="hidden" name="utm_content" data-rfq-attribution="utm_content" />
+<input type="hidden" name="utm_term" data-rfq-attribution="utm_term" />
+<input type="hidden" name="first_touch_page_url" data-rfq-attribution="first_touch_page_url" />
+<input type="hidden" name="first_touch_referrer_url" data-rfq-attribution="first_touch_referrer_url" />
+<input type="hidden" name="first_touch_at" data-rfq-attribution="first_touch_at" />
+<input type="hidden" name="first_touch_utm_source" data-rfq-attribution="first_touch_utm_source" />
+<input type="hidden" name="first_touch_utm_medium" data-rfq-attribution="first_touch_utm_medium" />
+<input type="hidden" name="first_touch_utm_campaign" data-rfq-attribution="first_touch_utm_campaign" />
+<input type="hidden" name="first_touch_utm_content" data-rfq-attribution="first_touch_utm_content" />
+<input type="hidden" name="first_touch_utm_term" data-rfq-attribution="first_touch_utm_term" />
+<input type="hidden" name="last_touch_page_url" data-rfq-attribution="last_touch_page_url" />
+<input type="hidden" name="last_touch_at" data-rfq-attribution="last_touch_at" />
+<input type="hidden" name="last_touch_utm_source" data-rfq-attribution="last_touch_utm_source" />
+<input type="hidden" name="last_touch_utm_medium" data-rfq-attribution="last_touch_utm_medium" />
+<input type="hidden" name="last_touch_utm_campaign" data-rfq-attribution="last_touch_utm_campaign" />
+<input type="hidden" name="last_touch_utm_content" data-rfq-attribution="last_touch_utm_content" />
+<input type="hidden" name="last_touch_utm_term" data-rfq-attribution="last_touch_utm_term" />
+
+<script>
+  const storageKey = "wooktool_first_touch_v1";
+  const utmKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+
+  function currentTouch() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+      page_url: window.location.href,
+      referrer_url: document.referrer || "",
+      at: new Date().toISOString(),
+      ...Object.fromEntries(utmKeys.map((key) => [key, params.get(key) || ""]))
+    };
+  }
+
+  function storedFirstTouch(fallback) {
+    try {
+      const saved = window.localStorage.getItem(storageKey);
+      if (saved) return JSON.parse(saved);
+      window.localStorage.setItem(storageKey, JSON.stringify(fallback));
+    } catch {
+      // Attribution must never block an RFQ form when storage is unavailable.
+    }
+    return fallback;
+  }
+
+  function setField(form, name, value) {
+    const field = form.querySelector(`[data-rfq-attribution="${name}"]`);
+    if (field instanceof HTMLInputElement) field.value = String(value || "");
+  }
+
+  const lastTouch = currentTouch();
+  const firstTouch = storedFirstTouch(lastTouch);
+
+  document.querySelectorAll("form[data-rfq-form]").forEach((form) => {
+    if (!(form instanceof HTMLFormElement)) return;
+    setField(form, "source_page_url", lastTouch.page_url);
+    setField(form, "referrer_url", lastTouch.referrer_url);
+    for (const key of utmKeys) setField(form, key, lastTouch[key]);
+    setField(form, "first_touch_page_url", firstTouch.page_url);
+    setField(form, "first_touch_referrer_url", firstTouch.referrer_url);
+    setField(form, "first_touch_at", firstTouch.at);
+    for (const key of utmKeys) setField(form, `first_touch_${key}`, firstTouch[key]);
+    setField(form, "last_touch_page_url", lastTouch.page_url);
+    setField(form, "last_touch_at", lastTouch.at);
+    for (const key of utmKeys) setField(form, `last_touch_${key}`, lastTouch[key]);
+    form.addEventListener("submit", () => setField(form, "submitted_at", new Date().toISOString()));
+  });
+</script>
+
