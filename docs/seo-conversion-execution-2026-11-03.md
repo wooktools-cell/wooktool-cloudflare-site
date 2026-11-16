@@ -33,3 +33,11 @@ Full local diagnosis and verification scripts: `E:/WOOKTOOLS/.scratch/website-se
 - Existing inquiries are not retroactively attributed. Search Console API measurement remains unavailable until the Google connection includes read-only Search Console scope.
 
 Full local audit and verification script: `E:/WOOKTOOLS/.scratch/website-seo-review-2026-11-16/`.
+
+## Search Console evidence refresh — 2026-11-16
+
+- Search Console URL-prefix data for 2026-10-16 through 2026-11-14 showed 18 clicks and 2,213 impressions. The latest seven-day window showed 7 clicks and 666 impressions versus 7 clicks and 463 impressions in the preceding seven days.
+- Prioritized existing pages instead of creating more URLs. `bulk tape measures` recorded 71 impressions at average position 15.66 with no clicks, all on the bulk 25ft tape measure page.
+- The private-label box cutter page recorded 203 total impressions and one click. Its `custom box cutter` query recorded 26 impressions at average position 14.65 with no clicks.
+- Updated the two evidence-backed pages with query-aligned title, description, and visible FAQ wording. Kept the custom tape measure manufacturer page unchanged because its matched query already showed a 12.5% CTR.
+- Deferred a title change to the blade-width article: the page had 73 impressions at average position 3.42, but the available query export did not expose the corresponding terms, so a rewrite would be speculative.

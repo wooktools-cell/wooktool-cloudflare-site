@@ -72,9 +72,9 @@ export const categorySeoDefaults = {
 
 const secondBatchProductSeoEnhancements = {
   "bulk-25ft-tape-measure": {
-    metaTitle: "Bulk 25ft Tape Measure Supplier | WOOKTOOL Wholesale",
+    metaTitle: "Bulk Tape Measures Wholesale | 25ft OEM Supplier",
     metaDescription:
-      "Bulk 25ft tape measure supplier for distributors, hardware stores, and private-label buyers. Source WOOKTOOL steel tape measures with OEM logo, packaging, barcode, QC, and export support.",
+      "Source 25ft tape measures in bulk for hardware and construction programs. WOOKTOOL supports OEM logo, packaging, barcode, QC, and export supply.",
     keywords: ["bulk 25ft tape measure", "25ft tape measure supplier", "tape measure manufacturer", "private label tape measure", "steel tape measure wholesale"],
     introduction: [
       "Bulk 25ft tape measures are high-frequency SKUs for North American hardware stores, construction supply channels, retail assortments, and distributor catalogs. wooktools supplies WOOKTOOL 25ft steel tape measure options for buyers who need consistent blade readability, stable lock function, export packaging, barcode control, and repeatable bulk supply.",
@@ -83,8 +83,8 @@ const secondBatchProductSeoEnhancements = {
     ],
     faq: [
       {
-        question: "Is this 25ft tape measure suitable for wholesale orders?",
-        answer: "Yes. This page is intended for bulk 25ft tape measure programs, including hardware distributors, retail chains, private-label buyers, and promotional tool buyers."
+        question: "Does wooktools supply bulk tape measures wholesale?",
+        answer: "Yes. wooktools supplies WOOKTOOL 25ft tape measures in bulk for hardware distributors, construction tool buyers, retail programs, wholesalers, and private-label brands."
       },
       {
         question: "Can wooktools add my logo and barcode?",
@@ -222,9 +222,9 @@ const secondBatchProductSeoEnhancements = {
     inquiryChecklist: utilityKnifeChecklist
   },
   "private-label-box-cutter": {
-    metaTitle: "Private Label Box Cutter Supplier | WOOKTOOL Utility Knives",
+    metaTitle: "Custom Box Cutter Manufacturer | Private Label WOOKTOOL",
     metaDescription:
-      "Private label box cutter supplier for retail, warehouse, and industrial cutting programs. Customize WOOKTOOL logo, handle color, blade options, packaging, barcode, QC, and MOQ.",
+      "Custom box cutter manufacturer for retail, warehouse, and industrial buyers. Add your logo, handle color, blade format, packaging, barcode, and carton marks.",
     keywords: ["private label box cutter", "box cutter OEM China", "utility knife manufacturer", "private label utility knife", "custom box cutter supplier"],
     introduction: [
       "Private-label box cutters can serve many channels, from warehouse supply and carton-opening programs to hardware retail and DIY tool assortments. wooktools helps buyers build WOOKTOOL utility knife and box cutter programs with logo, handle color, blade options, packaging artwork, barcode labels, carton marks, and export-ready supply.",
@@ -233,8 +233,8 @@ const secondBatchProductSeoEnhancements = {
     ],
     faq: [
       {
-        question: "Can wooktools make private-label box cutters for retail programs?",
-        answer: "Yes. wooktools can support WOOKTOOL box cutters with custom logo, handle color, packaging artwork, barcode labels, carton marks, and export packaging."
+        question: "Can wooktools manufacture custom box cutters?",
+        answer: "Yes. wooktools manufactures custom and private-label WOOKTOOL box cutters with buyer logos, handle colors, packaging artwork, barcode labels, carton marks, and export packaging."
       },
       {
         question: "Which box cutter styles are available for private label?",
