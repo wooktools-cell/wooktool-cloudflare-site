@@ -10,9 +10,9 @@ const { metaPixelId = "" } = site.analytics || {};
     <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`}></script>
     <script define:vars={{ ga4Id }}>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", ga4Id);
+      window.gtag = window.gtag || function(){window.dataLayer.push(arguments);};
+      window.gtag("js", new Date());
+      window.gtag("config", ga4Id);
     </script>
   </>
 )}
@@ -46,6 +46,9 @@ const { metaPixelId = "" } = site.analytics || {};
 )}
 
 <script>
+  const rfqHandoffStorageKey = "wooktool_rfq_handoff_v1";
+  const rfqHandoffMaxAgeMs = 30 * 60 * 1000;
+
   const trackEvent = (eventName, params = {}) => {
     if (!eventName) return;
     if (typeof window.gtag === "function") {
@@ -58,6 +61,54 @@ const { metaPixelId = "" } = site.analytics || {};
       window.fbq("trackCustom", eventName, params);
     }
   };
+
+  const saveRfqHandoff = (form) => {
+    try {
+      const eventId = typeof window.crypto?.randomUUID === "function"
+        ? window.crypto.randomUUID()
+        : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+      window.sessionStorage.setItem(rfqHandoffStorageKey, JSON.stringify({
+        event_id: eventId,
+        form_id: form.id || form.getAttribute("data-track") || "rfq",
+        source_page: `${window.location.pathname}${window.location.search}`,
+        submitted_at: Date.now()
+      }));
+    } catch {
+      // Storage or privacy settings must never block the native form handoff.
+    }
+  };
+
+  const consumeRfqHandoff = () => {
+    if (window.location.pathname !== "/contact/thank-you/") return null;
+    try {
+      const stored = window.sessionStorage.getItem(rfqHandoffStorageKey);
+      if (!stored) return null;
+      window.sessionStorage.removeItem(rfqHandoffStorageKey);
+      const handoff = JSON.parse(stored);
+      const age = Date.now() - Number(handoff?.submitted_at || 0);
+      if (!handoff?.event_id || age < 0 || age > rfqHandoffMaxAgeMs) return null;
+      return handoff;
+    } catch {
+      try {
+        window.sessionStorage.removeItem(rfqHandoffStorageKey);
+      } catch {
+        // Ignore storage restrictions on the thank-you page.
+      }
+      return null;
+    }
+  };
+
+  const confirmedHandoff = consumeRfqHandoff();
+  if (confirmedHandoff) {
+    trackEvent("rfq_submit_success", {
+      event_id: confirmedHandoff.event_id,
+      form_id: confirmedHandoff.form_id,
+      source_page: confirmedHandoff.source_page,
+      page_path: window.location.pathname,
+      method: "thank_you_redirect",
+      confirmation_level: "browser_redirect"
+    });
+  }
 
   document.addEventListener("click", (event) => {
     const target = event.target instanceof Element ? event.target.closest("[data-track]") : null;
@@ -87,6 +138,7 @@ const { metaPixelId = "" } = site.analytics || {};
     // Defer until all form validation/preview handlers have run.
     queueMicrotask(() => {
       if (event.defaultPrevented) return;
+      saveRfqHandoff(form);
       trackEvent("rfq_submit_attempt", {
         form_id: form.id || form.getAttribute("data-track") || "rfq",
         page_path: window.location.pathname,

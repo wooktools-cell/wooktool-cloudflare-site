@@ -41,3 +41,12 @@ Full local audit and verification script: `E:/WOOKTOOLS/.scratch/website-seo-rev
 - The private-label box cutter page recorded 203 total impressions and one click. Its `custom box cutter` query recorded 26 impressions at average position 14.65 with no clicks.
 - Updated the two evidence-backed pages with query-aligned title, description, and visible FAQ wording. Kept the custom tape measure manufacturer page unchanged because its matched query already showed a 12.5% CTR.
 - Deferred a title change to the blade-width article: the page had 73 impressions at average position 3.42, but the available query export did not expose the corresponding terms, so a rewrite would be speculative.
+
+## RFQ success measurement repair — 2026-11-16
+
+- GA4 showed page views and automatic `form_start`/`form_submit` events but none of the site's custom RFQ events. The root cause was that the Astro-generated GA initializer kept `gtag` inside a local wrapper while the event tracker correctly expected `window.gtag`.
+- Exposed the existing GA command function as `window.gtag`, restoring custom click, RFQ start, and RFQ handoff event delivery.
+- Added a session-scoped RFQ handoff marker. A valid, non-prevented form handoff that returns to `/contact/thank-you/` now records one `rfq_submit_success` event with form ID, source page, unique event ID, and `browser_redirect` confirmation level.
+- Direct thank-you visits, repeat refreshes, expired markers, invalid forms, and prevented preview submissions do not record success. The marker expires after 30 minutes and is consumed before tracking to prevent duplicate events.
+- This event confirms a browser return from FormSubmit, not mailbox delivery or CRM import. It is intentionally not sent as `generate_lead` and should not become a GA4 key event until a real submission is matched to the received email and CRM record.
+- Production build passed (120 pages). Browser tests covered positive, direct-visit, refresh, and prevented-submit paths; attribution and multi-model RFQ tests also passed. No external form or email was sent during verification.
