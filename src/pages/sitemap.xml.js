@@ -13,6 +13,7 @@ const staticPaths = [
   "/utility-knives/",
   "/screwdriver-sets/",
   "/oem-odm/",
+  "/custom-tool-projects/",
   "/quality-control/",
   "/factory/",
   "/contact/",
