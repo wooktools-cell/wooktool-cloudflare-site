@@ -62,11 +62,21 @@ const { metaPixelId = "" } = site.analytics || {};
     }
   };
 
-  const saveRfqHandoff = (form) => {
-    try {
-      const eventId = typeof window.crypto?.randomUUID === "function"
+  const ensureRfqEventId = (form) => {
+    const field = form.querySelector('[data-rfq-attribution="rfq_event_id"]');
+    if (!(field instanceof HTMLInputElement)) return "";
+    if (!field.value) {
+      field.value = typeof window.crypto?.randomUUID === "function"
         ? window.crypto.randomUUID()
         : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+    }
+    return field.value;
+  };
+
+  const saveRfqHandoff = (form) => {
+    try {
+      const eventId = ensureRfqEventId(form);
+      if (!eventId) return;
       window.sessionStorage.setItem(rfqHandoffStorageKey, JSON.stringify({
         event_id: eventId,
         form_id: form.id || form.getAttribute("data-track") || "rfq",
