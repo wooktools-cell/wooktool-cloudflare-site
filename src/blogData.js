@@ -9,7 +9,11 @@ export const cmsBlogPosts = Object.entries(cmsBlogModules)
       title: module.frontmatter.title,
       href: `/blog/${slug}/`,
       description: module.frontmatter.description,
+      image: module.frontmatter.image,
+      imageAlt: module.frontmatter.imageAlt,
+      caseStudy: Boolean(module.frontmatter.caseStudy),
       date: module.frontmatter.date || "",
+      updated: module.frontmatter.updated,
       order: module.frontmatter.order || 999
     };
   })

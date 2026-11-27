@@ -31,7 +31,7 @@ const productCatalogPagePaths = catalogPages
   .filter((page) => page.page > 1)
   .map((page) => page.href);
 const cmsBlogPaths = cmsBlogPosts.map((post) => post.href);
-const cmsBlogDateMap = new Map(cmsBlogPosts.map((post) => [post.href, post.date]));
+const cmsBlogDateMap = new Map(cmsBlogPosts.map((post) => [post.href, post.updated || post.date]));
 
 const uniquePaths = [
   ...new Set([...staticPaths, ...productCatalogPagePaths, ...productPaths, ...cmsBlogPaths])

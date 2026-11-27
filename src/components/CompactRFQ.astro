@@ -5,6 +5,7 @@ import RfqAttributionFields from "./RfqAttributionFields.astro";
 const {
   title = "Request Product Quote",
   eyebrow = "Fast RFQ",
+  description = "Send your product interest, quantity, country, and custom requirements. wooktools will review the WOOKTOOL model, packaging direction, and quotation details.",
   productInterest = "WOOKTOOL hand tools",
   source = "compact-rfq"
 } = Astro.props;
@@ -14,7 +15,7 @@ const {
   <div class="compact-rfq-copy">
     <p class="eyebrow">{eyebrow}</p>
     <h2>{title}</h2>
-    <p>Send your product interest, quantity, country, and custom requirements. wooktools will review the WOOKTOOL model, packaging direction, and quotation details.</p>
+    <p>{description}</p>
   </div>
   <form
     class="compact-rfq-form"

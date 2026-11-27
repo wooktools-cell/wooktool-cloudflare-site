@@ -3,6 +3,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
 import { blogPosts } from "../../siteData.js";
 
+const caseStudies = blogPosts.filter((post) => post.caseStudy);
+const guides = blogPosts.filter((post) => !post.caseStudy);
+
 const priorityTopics = [
   {
     title: "Tape measure sourcing cluster",
@@ -72,6 +75,23 @@ const outreachResources = [
 >
   <section class="page-intro"><div><p class="eyebrow">Blog</p><h1>Hand Tool Sourcing Blog</h1><p>Practical sourcing articles for importers, wholesalers, distributors, and private-label buyers sourcing tape measures and hand tools from China.</p></div></section>
   <section class="section compact-section">
+    <div class="section-inner">
+      <h2>Hand tool customization case studies</h2>
+      <div class="grid two">
+        {caseStudies.map((post) => (
+          <article class="blog-card case-study-card">
+            <a href={post.href}>
+              <img src={post.image} alt={post.imageAlt} loading="lazy" decoding="async" />
+              <h3>{post.title}</h3>
+              <p>{post.description}</p>
+              <span>Read case study</span>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="section compact-section">
     <div class="section-inner split-panel">
       <div>
         <p class="eyebrow">Buyer guide hub</p>
@@ -130,7 +150,7 @@ const outreachResources = [
 
   <section class="section">
     <div class="section-inner grid three">
-      {blogPosts.map((post) => (
+      {guides.map((post) => (
         <article class="blog-card">
           <a href={post.href}>
             <p class="eyebrow">{post.date}</p>
@@ -142,5 +162,27 @@ const outreachResources = [
       ))}
     </div>
   </section>
-  <CTA title="Need help choosing the right hand tool supplier?" />
+  <CTA
+    title="Planning a custom hand tool order?"
+    text="Send a model link, reference photo or sketch, along with your target quantity and the changes you need."
+    primaryLabel="Request a custom project quote"
+    primaryHref="/contact/#rfq-form"
+    secondaryLabel="Explore OEM and ODM services"
+    secondaryHref="/oem-odm/"
+  />
 </BaseLayout>
+
+<style>
+  .case-study-card a {
+    height: 100%;
+  }
+
+  .case-study-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background: white;
+    border-radius: var(--radius);
+  }
+</style>
